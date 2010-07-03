@@ -29,12 +29,20 @@ gem 'haml'
 #   gem 'webrat'
 # end
 
-# rspec
-gem 'rspec-rails',        :git => 'git://github.com/rspec/rspec-rails.git'
-gem 'rspec',              :git => 'git://github.com/rspec/rspec.git'
-gem 'rspec-core',         :git => 'git://github.com/rspec/rspec-core.git'
-gem 'rspec-expectations', :git => 'git://github.com/rspec/rspec-expectations.git'
-gem 'rspec-mocks',        :git => 'git://github.com/rspec/rspec-mocks.git'
+group :test do
+  # rspec
+  gem 'rspec-rails',        :git => 'git://github.com/rspec/rspec-rails.git'
+  gem 'rspec',              :git => 'git://github.com/rspec/rspec.git'
+  gem 'rspec-core',         :git => 'git://github.com/rspec/rspec-core.git'
+  gem 'rspec-expectations', :git => 'git://github.com/rspec/rspec-expectations.git'
+  gem 'rspec-mocks',        :git => 'git://github.com/rspec/rspec-mocks.git'
+
+  # cucumber
+  gem 'cucumber'
+
+  # capybara
+  gem 'capybara'
+end
 
 # devise
 gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
