@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 54250a5
+  revision: c6843e2
   specs:
     actionmailer (3.0.0.beta4)
       actionpack (= 3.0.0.beta4)
@@ -90,7 +90,7 @@ GIT
 
 GIT
   remote: git://github.com/rspec/rspec-core.git
-  revision: b66e0c8
+  revision: f201089
   specs:
     rspec-core (2.0.0.beta.15)
     rspec-core (2.0.0.beta.15)
@@ -106,14 +106,14 @@ GIT
 
 GIT
   remote: git://github.com/rspec/rspec-mocks.git
-  revision: db925f8
+  revision: e8b3fde
   specs:
     rspec-mocks (2.0.0.beta.15)
     rspec-mocks (2.0.0.beta.15)
 
 GIT
   remote: git://github.com/rspec/rspec-rails.git
-  revision: 9b88941
+  revision: 072286d
   specs:
     rspec-rails (2.0.0.beta.15)
       rspec (>= 2.0.0.beta.14)
@@ -141,10 +141,11 @@ GIT
   branch: rails3
   specs:
     factory_girl (1.2.3)
+    factory_girl (1.2.3)
 
 GIT
   remote: http://github.com/plataformatec/devise.git
-  revision: 18cccae
+  revision: 7113dfe
   specs:
     devise (1.1.rc2)
       bcrypt-ruby (~> 2.1.2)
@@ -164,22 +165,24 @@ GEM
     bcrypt-ruby (2.1.2)
     builder (2.1.2)
     builder (2.1.2)
-    capybara (0.3.8)
+    capybara (0.3.9)
       culerity (>= 0.2.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
-      rack-test (>= 0.5.2)
+      rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.3)
-    capybara (0.3.8)
+    capybara (0.3.9)
       culerity (>= 0.2.4)
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
       rack (>= 1.0.0)
-      rack-test (>= 0.5.2)
+      rack-test (>= 0.5.4)
       selenium-webdriver (>= 0.0.3)
     columnize (0.3.1)
     columnize (0.3.1)
+    configuration (1.1.0)
+    configuration (1.1.0)
     cucumber (0.8.3)
       builder (~> 2.1.2)
       diff-lcs (~> 1.1.2)
@@ -192,8 +195,14 @@ GEM
       gherkin (~> 2.0.2)
       json_pure (~> 1.4.3)
       term-ansicolor (~> 1.0.4)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
+    cucumber-rails (0.3.2)
+      cucumber (>= 0.8.0)
     culerity (0.2.10)
     culerity (0.2.10)
+    database_cleaner (0.5.2)
+    database_cleaner (0.5.2)
     diff-lcs (1.1.2)
     diff-lcs (1.1.2)
     erubis (2.6.6)
@@ -214,6 +223,12 @@ GEM
     i18n (0.4.1)
     json_pure (1.4.3)
     json_pure (1.4.3)
+    launchy (0.3.5)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
+    launchy (0.3.5)
+      configuration (>= 0.0.5)
+      rake (>= 0.8.1)
     linecache19 (0.5.11)
       ruby_core_source (>= 0.1.4)
     linecache19 (0.5.11)
@@ -266,6 +281,8 @@ GEM
     selenium-webdriver (0.0.24)
       ffi (>= 0.6.1)
       json_pure
+    spork (0.8.4)
+    spork (0.8.4)
     sqlite3-ruby (1.3.0)
     sqlite3-ruby (1.3.0)
     term-ansicolor (1.0.5)
@@ -300,9 +317,12 @@ DEPENDENCIES
   arel!
   capybara
   cucumber
+  cucumber-rails
+  database_cleaner
   devise!
   factory_girl!
   haml
+  launchy
   rails!
   rspec!
   rspec-core!
@@ -310,4 +330,5 @@ DEPENDENCIES
   rspec-mocks!
   rspec-rails!
   ruby-debug19
+  spork
   sqlite3-ruby

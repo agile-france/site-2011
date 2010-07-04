@@ -42,9 +42,15 @@ group :test do
 
   # cucumber
   gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'database_cleaner'
+
+  # spork, drb server ?
+  gem 'spork'
 
   # capybara
   gem 'capybara'
+  gem 'launchy'
 end
 
 # devise
