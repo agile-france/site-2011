@@ -1,4 +1,4 @@
-ConferenceOnEdgeRails::Application.configure do
+ConferenceOnRails::Application.configure do
   # Settings specified here will take precedence over those in config/environment.rb
   config.active_support.deprecation = :log
 
