@@ -51,6 +51,9 @@ group :test do
   # capybara
   gem 'capybara'
   gem 'launchy'
+
+  # autospec
+  gem 'ZenTest'
 end
 
 # devise
