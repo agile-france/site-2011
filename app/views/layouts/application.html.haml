@@ -16,6 +16,12 @@
             = link_to('Register', new_user_registration_path)
             or
             = link_to('Sign in', new_user_session_path)
+
+        - if flash[:notice]
+          #notice= flash[:notice]
+        - if flash[:alert]
+          #alert= flash[:alert]
+                      
       #content= yield
 
       #footer
