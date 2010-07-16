@@ -17,5 +17,4 @@ Feature: Authentication
     When I fill in "user_email" with "gitster@git.org"
       And I fill in "user_password" with "git rocks"
       And I press "user_submit"
-    Then show me the page
-      And I should see "Signed in as gitster@git.org"
+    Then I should see "Signed in as gitster@git.org"
