@@ -12,10 +12,10 @@ Feature: Authentication
 
   @failed
   Scenario: I should sign in using email and password
-    Given I am not authenticated
+    Given I have one user "gitster@git.org" with password "git rocks"
     When I go to the user session page
-    When I fill in "user_email" with "thierry.henrio@gmail.com"
-      And I fill in "user_password" with "devise_rocks"
+    When I fill in "user_email" with "gitster@git.org"
+      And I fill in "user_password" with "git rocks"
       And I press "user_submit"
     Then show me the page
-      And I should see "Signed in as thierry.henrio@gmail.com"
+      And I should see "Signed in as gitster@git.org"
