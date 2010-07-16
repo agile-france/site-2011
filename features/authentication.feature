@@ -10,7 +10,6 @@ Feature: Authentication
       And I press "user_submit"
     Then I should see "Signed in as thierry.henrio@gmail.com"
 
-  @failed
   Scenario: I should sign in using email and password
     Given I have one user "gitster@git.org" with password "git rocks"
     When I go to the user session page
