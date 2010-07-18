@@ -24,4 +24,7 @@ RSpec.configure do |config|
   # examples within a transaction, comment the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  # weird webrat dependency for such a matcher, exposing to undefined has_tag? on rendered String
+  config.include Webrat::HaveTagMatcher
 end

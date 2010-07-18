@@ -54,6 +54,8 @@ group :test do
 
   # autospec
   gem 'ZenTest'
+  gem 'autotest-growl'
+  gem 'autotest-fsevent'
 end
 
 # devise
