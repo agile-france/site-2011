@@ -9,10 +9,8 @@ describe "home/index.html.haml" do
       render
     end
 
-    it 'should have h1. Conférence Agile France' do
-      rendered.should have_tag('h3') do |h3|
-        h3.should contain 'Conférence Agile France'
-      end
+    it 'should have h3. Conférence Agile France' do
+      rendered.should have_tag('h3', :content => 'Conférence')
     end
   end
 
@@ -22,10 +20,8 @@ describe "home/index.html.haml" do
       render
     end
 
-    it 'should have h1. Conference Agile France' do
-      rendered.should have_tag('h3') do |h3|
-        h3.should contain 'Agile France Conference'
-      end
+    it 'should have h3. Agile France Conference' do
+      rendered.should have_tag('h3', :content => 'Conference')
     end
   end
 end
