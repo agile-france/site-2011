@@ -56,6 +56,9 @@ group :test do
   gem 'ZenTest'
   gem 'autotest-growl'
   gem 'autotest-fsevent'
+
+  # rcov
+  gem 'rcov' 
 end
 
 # devise

@@ -161,6 +161,7 @@ GEM
     rack-test (0.5.4)
       rack (>= 1.0)
     rake (0.8.7)
+    rcov (0.9.8)
     ruby-debug-base19 (0.11.23)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -209,6 +210,7 @@ DEPENDENCIES
   haml
   launchy
   rails!
+  rcov
   rspec!
   rspec-core!
   rspec-expectations!
