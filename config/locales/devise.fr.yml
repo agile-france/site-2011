@@ -23,6 +23,8 @@ fr:
     sessions:
       signed_in: "Réussite de la connexion."
       signed_out: "Réussite de la deconnexion."
+      new:
+        remember_me: 'Se souvenir de moi'      
     passwords:
       send_instructions: "Vous allez recevoir un email avec des instructions pour changer votre mot de passe."
       updated: "Votre mot de passe a été changé. Vous êtes maintenant connecté."
@@ -105,6 +107,3 @@ fr:
     unlocks:
       new:
         resend_unlock_instructions: "Renvoyez le mail pour déverrouiller mon compte"
-    sessions:
-      new:
-        remember_me: 'Se souvenir de moi'
