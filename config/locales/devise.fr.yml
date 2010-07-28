@@ -16,7 +16,7 @@ fr:
       unauthenticated: "Vous devez vous connecter ou vous inscrire pour continuer."
       unconfirmed: "Vous devez confirmer votre compte pour continuer."
       locked: "Votre compte est verrouillé."
-      invalid: "Courriel ou mot de passe incorrect."
+      invalid: "Email ou mot de passe incorrect."
       invalid_token: "Jeton d'authentification incorrect."
       timeout: "Votre séance est expiré, Veuillez vous reconnecter pour continuer."
       inactive: "Votre compte n'est pas encore activé."
@@ -24,17 +24,17 @@ fr:
       signed_in: "Réussite de la connexion."
       signed_out: "Réussite de la deconnexion."
     passwords:
-      send_instructions: "Vous allez recevoir un courriel avec des instructions pour changer votre mot de passe."
+      send_instructions: "Vous allez recevoir un email avec des instructions pour changer votre mot de passe."
       updated: "Votre mot de passe a été changé. Vous êtes maintenant connecté."
     confirmations:
-      send_instructions: "Vous allez recevoir un courriel avec des instructions pour confimer votre compte."
+      send_instructions: "Vous allez recevoir un email avec des instructions pour confimer votre compte."
       confirmed: "Votre compte a été confirmé. Vous êtes maintenant connecté."
     registrations:
-      signed_up: "Votre inscription est enregistrée. Si c'est activé, un courriel de confirmation vous a été envoyé."
+      signed_up: "Votre inscription est enregistrée. Si c'est activé, un email de confirmation vous a été envoyé."
       updated: "Votre mise à jour est prise en compte."
       destroyed: "Bye! Votre compte est annulé. Nous souhaitons vous revoir bientôt."
     unlocks:
-      send_instructions: "Vous allez recevoir un courriel avec des instructions pour déverrouiller votre compte."
+      send_instructions: "Vous allez recevoir un email avec des instructions pour déverrouiller votre compte."
       unlocked: "Votre compte est déverrouillé. Vous êtes maintenant connecté."
     mailer:
       confirmation_instructions: "Instructions de confirmation"
