@@ -56,6 +56,8 @@ fr:
       sign_in: "Se connecter"
       sign_out: "Se déconnecter"
       sign_up: "Ouvrir un compte"
+      email: 'email'
+      password: 'mot de passe'
     shared:
       links:
         didnt_receive_confirmation_instructions?: "Vous n'avez pas reçu de mail de confirmation?"
@@ -103,3 +105,6 @@ fr:
     unlocks:
       new:
         resend_unlock_instructions: "Renvoyez le mail pour déverrouiller mon compte"
+    sessions:
+      new:
+        remember_me: 'Se souvenir de moi'
