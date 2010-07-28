@@ -54,7 +54,8 @@ fr:
       forgot_your_password?: "Mot de passe oublié?"
       hello: "Bonjour"
       sign_in: "Se connecter"
-      sign_up: "Se déconnecter"
+      sign_out: "Se déconnecter"
+      sign_up: "Ouvrir un compte"
     shared:
       links:
         didnt_receive_confirmation_instructions?: "Vous n'avez pas reçu de mail de confirmation?"
