@@ -11,11 +11,10 @@
         #user_navigation
           - if user_signed_in?
             Signed in as #{current_user.email}. Not you?
-            = link_to 'Sign out', destroy_user_session_path
+            #sign_out= link_to t('devise.common.sign_out'), destroy_user_session_path
           - else
-            = link_to('Register', new_user_registration_path)
-            or
-            = link_to('Sign in', new_user_session_path)
+            #sign_up= link_to t('devise.common.sign_up'), new_user_registration_path
+            #sign_in= link_to t('devise.common.sign_in'), new_user_session_path
 
         - if flash[:notice]
           #notice= flash[:notice]
@@ -23,5 +22,4 @@
           #alert= flash[:alert]
                       
       #content= yield
-
       #footer
