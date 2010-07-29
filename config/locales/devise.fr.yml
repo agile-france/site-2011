@@ -54,7 +54,7 @@ fr:
     ##########################################################################################################
     common:
       forgot_your_password?: "Mot de passe oublié?"
-      hello: "Bonjour"
+      greet: "Bonjour %{user}"
       sign_in: "Se connecter"
       sign_out: "Se déconnecter"
       sign_up: "Ouvrir un compte"
