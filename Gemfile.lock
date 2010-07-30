@@ -162,6 +162,11 @@ GEM
       rack (>= 1.0)
     rake (0.8.7)
     rcov (0.9.8)
+    remarkable (4.0.0.alpha4)
+      rspec (>= 2.0.0.alpha11)
+    remarkable_activemodel (4.0.0.alpha4)
+      remarkable (~> 4.0.0.alpha4)
+      rspec (>= 2.0.0.alpha11)
     ruby-debug-base19 (0.11.23)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -211,6 +216,7 @@ DEPENDENCIES
   launchy
   rails!
   rcov
+  remarkable_activemodel (~> 4.0.0)
   rspec!
   rspec-core!
   rspec-expectations!

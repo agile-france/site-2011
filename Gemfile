@@ -37,6 +37,9 @@ group :test do
   gem 'rspec-expectations', :git => 'git://github.com/rspec/rspec-expectations.git'
   gem 'rspec-mocks',        :git => 'git://github.com/rspec/rspec-mocks.git'
 
+  # remarkable : active_record
+  gem 'remarkable_activemodel', '~> 4.0.0'
+
   # factory
   gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git', :branch => 'rails3'
 
