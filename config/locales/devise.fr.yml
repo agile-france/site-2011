@@ -31,8 +31,8 @@ fr:
     confirmations:
       send_instructions: "Vous allez recevoir un email avec des instructions pour confimer votre compte."
       confirmed: "Votre compte a été confirmé. Vous êtes maintenant connecté."
-    registrations:
-      signed_up: "Votre inscription est enregistrée. Si c'est activé, un email de confirmation vous a été envoyé."
+    registrations: &registrations
+      signed_up: "Votre inscription est enregistrée."
       updated: "Votre mise à jour est prise en compte."
       destroyed: "Bye! Votre compte est annulé. Nous souhaitons vous revoir bientôt."
     unlocks:
@@ -93,6 +93,7 @@ fr:
       new:
         send_me_reset_password_instructions: "Envoyez-moi un mail pour changer mon mot de passe"
     registrations:
+      <<: *registrations
       edit:
         edit: "Modifier"
         # For "leave blank if you don't want to change it"
