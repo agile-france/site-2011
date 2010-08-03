@@ -12,12 +12,10 @@ describe User do
 
   describe 'names' do
     it ', first name should be capitalized on validation' do
-      john = Factory.create(:user, :first_name => 'john')
-      john.first_name.should == 'John'  
+      Factory.create(:user, :first_name => 'john').first_name.should == 'John'
     end
     it ', last name should be capitalized on validation' do
-      john = Factory.create(:user, :last_name => 'doe')
-      john.last_name.should == 'Doe'  
+      Factory.create(:user, :last_name => 'doe').last_name.should == 'Doe'  
     end
   end
 end
