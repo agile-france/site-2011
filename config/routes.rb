@@ -1,6 +1,4 @@
-ConferenceOnRails::Application.routes.draw do |map|
-  get "home/index"
-
+ConferenceOnRails::Application.routes do
   devise_for :users
   root :to => 'home#index'
 end
