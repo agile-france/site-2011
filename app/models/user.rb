@@ -7,10 +7,12 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
-  # out of framework
+  # names are required
   validates_presence_of :first_name, :last_name
-  # cross create/update workflow
-  before_validation(:on => :create)
+  # names are capitalized
+  before_validation do
+    self.first_name.capitalize! if attribute_present? :first_name
+  end
 
   def full_name
     "#{first_name} #{last_name}"

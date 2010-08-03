@@ -5,7 +5,15 @@ describe User do
 
   describe 'full_name' do
     it 'should return John Doe' do
-      Factory.create(:user).full_name.should == 'John Doe'
+      Factory.create(:user, :first_name => 'John', :last_name =>'Doe').
+              full_name.should == 'John Doe'
+    end
+  end
+
+  describe 'names' do
+    it 'should be capitalized on validation' do
+      john = Factory.create(:user, :first_name => 'john')
+      john.first_name.should == 'John'  
     end
   end
 end
