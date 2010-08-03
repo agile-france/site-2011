@@ -11,7 +11,9 @@ class User < ActiveRecord::Base
   validates_presence_of :first_name, :last_name
   # names are capitalized
   before_validation do
-    self.first_name.capitalize! if attribute_present? :first_name
+    [:first_name].each do |symbol|
+      self.send(symbol).capitalize! if attribute_present? symbol
+    end
   end
 
   def full_name
