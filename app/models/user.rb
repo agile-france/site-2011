@@ -16,6 +16,6 @@ class User < ActiveRecord::Base
 
   def greeter_name
     return email if(first_name.nil? and last_name.nil?)
-    "#{first_name} #{last_name}"
+    "#{first_name} #{last_name}".strip
   end
 end
