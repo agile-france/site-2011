@@ -7,8 +7,6 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
-  # names are required
-  validates_presence_of :first_name, :last_name
   # names are capitalized
   before_validation do
     [:first_name, :last_name].each do |symbol|

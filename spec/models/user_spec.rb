@@ -1,12 +1,13 @@
 require 'spec_helper'
 describe User do
-  it {should validate_presence_of :first_name}
-  it {should validate_presence_of :last_name}
-
   describe 'full_name' do
-    it 'should return John Doe' do
+    it 'should return John Doe for john' do
       Factory.create(:user, :first_name => 'John', :last_name =>'Doe').
               full_name.should == 'John Doe'
+    end
+
+    it 'should be nil if first name and last name are nil' do
+      Factory.create(:user).full_name.should be_nil
     end
   end
 
