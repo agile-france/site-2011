@@ -8,7 +8,7 @@ Feature: Authentication
       And I fill in "user_password" with "devise_rocks"
       And I fill in "user_password_confirmation" with "devise_rocks"
       And I press "user_submit"
-    Then I should see "Signed in as thierry.henrio@gmail.com"
+    Then I should see "Bonjour thierry.henrio@gmail.com"
 
   Scenario: I should sign in using email and password
     Given I have one user "gitster@git.org" with password "git rocks"
@@ -16,4 +16,4 @@ Feature: Authentication
     When I fill in "user_email" with "gitster@git.org"
       And I fill in "user_password" with "git rocks"
       And I press "user_submit"
-    Then I should see "Signed in as gitster@git.org"
+    Then I should see "Bonjour gitster@git.org"
