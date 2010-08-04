@@ -14,8 +14,8 @@ class User < ActiveRecord::Base
     end
   end
 
-  def full_name
-    return nil if(first_name.nil? and last_name.nil?)
+  def greeter_name
+    return email if(first_name.nil? and last_name.nil?)
     "#{first_name} #{last_name}"
   end
 end

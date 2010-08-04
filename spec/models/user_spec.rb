@@ -1,13 +1,13 @@
 require 'spec_helper'
 describe User do
-  describe 'full_name' do
+  describe 'greeter_name' do
     it 'should return John Doe for john' do
       Factory.create(:user, :first_name => 'John', :last_name =>'Doe').
-              full_name.should == 'John Doe'
+              greeter_name.should == 'John Doe'
     end
 
-    it 'should be nil if first name and last name are nil' do
-      Factory.create(:user).full_name.should be_nil
+    it 'should be john@doe.com if no names' do
+      Factory.create(:user).greeter_name.should == 'john@doe.com'
     end
   end
 
