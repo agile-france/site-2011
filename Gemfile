@@ -17,17 +17,8 @@ gem 'ruby-debug19'
 # views
 gem 'haml'
 
-# Bundle the extra gems:
-# gem 'bj'
-# gem 'nokogiri', '1.4.1'
-# gem 'sqlite3-ruby', :require => 'sqlite3'
-# gem 'aws-s3', :require => 'aws/s3'
-
-# Bundle gems for certain environments:
-# gem 'rspec', :group => :test
-# group :test do
-#   gem 'webrat'
-# end
+# devise
+gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
 
 group :test do
   # rspec
@@ -41,7 +32,7 @@ group :test do
   gem 'remarkable_activemodel', '~> 4.0.0'
 
   # factory
-  gem 'factory_girl', :git => 'git://github.com/thoughtbot/factory_girl.git', :branch => 'rails3'
+  gem 'factory_girl_rails'
 
   # cucumber
   gem 'cucumber'
@@ -61,8 +52,5 @@ group :test do
   gem 'autotest-fsevent'
 
   # rcov
-  gem 'rcov' 
+  gem 'rcov'
 end
-
-# devise
-gem 'devise', :git => 'http://github.com/plataformatec/devise.git'

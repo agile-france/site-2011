@@ -1,10 +1,10 @@
 ConferenceOnRails::Application.configure do
-  # Settings specified here will take precedence over those in config/environment.rb
+                                           # Settings specified here will take precedence over those in config/environment.rb
 
-  # The test environment is used exclusively to run your application's
-  # test suite.  You never need to work with it otherwise.  Remember that
-  # your test database is "scratch space" for the test suite and is wiped
-  # and recreated between test runs.  Don't rely on the data there!
+                                           # The test environment is used exclusively to run your application's
+                                           # test suite.  You never need to work with it otherwise.  Remember that
+                                           # your test database is "scratch space" for the test suite and is wiped
+                                           # and recreated between test runs.  Don't rely on the data there!
   config.cache_classes = true
 
   # Log error messages when you accidentally call methods on nil.
@@ -29,4 +29,7 @@ ConferenceOnRails::Application.configure do
   # This is necessary if your schema can't be completely dumped by the schema dumper,
   # like if you have constraints or database-specific column types
   # config.active_record.schema_format = :sql
+
+  # ~> 3.0.0.rc
+  config.active_support.deprecation = :stderr
 end
