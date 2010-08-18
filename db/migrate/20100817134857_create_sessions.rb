@@ -3,8 +3,8 @@ class CreateSessions < ActiveRecord::Migration
     create_table :sessions do |t|
       t.string :title
       t.string :description
-      t.integer :conference_id
-      t.integer :user_id
+      t.references :conference
+      t.references :user
 
       t.timestamps
     end
