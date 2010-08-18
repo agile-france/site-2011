@@ -33,6 +33,7 @@ describe User do
     it ', should add session to user' do
       cheddar = Factory.create(:session, :title => 'cheddar')
       @john.propose(cheddar).should == cheddar
+      @john.sessions.should include(cheddar)
     end
   end
 end
