@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem 'arel',  :git => 'git://github.com/rails/arel.git'
+gem 'rails', '~> 3.0.0.rc'
+gem 'arel',  '>= 0.4.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
 
@@ -18,7 +18,7 @@ gem 'ruby-debug19'
 gem 'haml'
 
 # devise
-gem 'devise', :git => 'http://github.com/plataformatec/devise.git'
+gem 'devise', '>= 1.1'
 
 group :test do
   # rspec

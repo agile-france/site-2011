@@ -1,55 +1,4 @@
 GIT
-  remote: git://github.com/rails/arel.git
-  revision: 8543c9d
-  specs:
-    arel (0.4.0)
-      activesupport (>= 3.0.0.beta)
-
-GIT
-  remote: git://github.com/rails/rails.git
-  revision: 6e41cfb
-  specs:
-    actionmailer (3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      mail (~> 2.2.5)
-    actionpack (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      builder (~> 2.1.2)
-      erubis (~> 2.6.6)
-      i18n (~> 0.4.1)
-      rack (~> 1.2.1)
-      rack-mount (~> 0.6.9)
-      rack-test (~> 0.5.4)
-      tzinfo (~> 0.3.22)
-    activemodel (3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      builder (~> 2.1.2)
-      i18n (~> 0.4.1)
-    activerecord (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      arel (~> 0.4.0)
-      tzinfo (~> 0.3.22)
-    activeresource (3.0.0.rc)
-      activemodel (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-    activesupport (3.0.0.rc)
-    rails (3.0.0.rc)
-      actionmailer (= 3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      activerecord (= 3.0.0.rc)
-      activeresource (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      bundler (>= 1.0.0.rc.2)
-      railties (= 3.0.0.rc)
-    railties (3.0.0.rc)
-      actionpack (= 3.0.0.rc)
-      activesupport (= 3.0.0.rc)
-      rake (>= 0.8.3)
-      thor (~> 0.14.0)
-
-GIT
   remote: git://github.com/rspec/rspec-core.git
   revision: fae5db0
   specs:
@@ -85,20 +34,40 @@ GIT
       rspec-expectations (= 2.0.0.beta.19)
       rspec-mocks (= 2.0.0.beta.19)
 
-GIT
-  remote: http://github.com/plataformatec/devise.git
-  revision: 81c49c6
-  specs:
-    devise (1.2.0)
-      bcrypt-ruby (~> 2.1.2)
-      warden (~> 0.10.7)
-
 GEM
   remote: http://rubygems.org/
   specs:
     ZenTest (4.3.3)
     abstract (1.0.0)
+    actionmailer (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      mail (~> 2.2.5)
+    actionpack (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4.1)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.9)
+      rack-test (~> 0.5.4)
+      tzinfo (~> 0.3.22)
+    activemodel (3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      builder (~> 2.1.2)
+      i18n (~> 0.4.1)
+    activerecord (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      arel (~> 0.4.0)
+      tzinfo (~> 0.3.22)
+    activeresource (3.0.0.rc)
+      activemodel (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+    activesupport (3.0.0.rc)
     archive-tar-minitar (0.5.2)
+    arel (0.4.0)
+      activesupport (>= 3.0.0.beta)
     autotest (4.3.2)
     autotest-fsevent (0.2.2)
       autotest (>= 4.2.4)
@@ -126,6 +95,9 @@ GEM
       cucumber (>= 0.8.0)
     culerity (0.2.10)
     database_cleaner (0.5.2)
+    devise (1.1.1)
+      bcrypt-ruby (~> 2.1.2)
+      warden (~> 0.10.7)
     diff-lcs (1.1.2)
     erubis (2.6.6)
       abstract (>= 1.0.0)
@@ -157,6 +129,19 @@ GEM
       rack (>= 1.0.0)
     rack-test (0.5.4)
       rack (>= 1.0)
+    rails (3.0.0.rc)
+      actionmailer (= 3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activerecord (= 3.0.0.rc)
+      activeresource (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      bundler (>= 1.0.0.rc.1)
+      railties (= 3.0.0.rc)
+    railties (3.0.0.rc)
+      actionpack (= 3.0.0.rc)
+      activesupport (= 3.0.0.rc)
+      rake (>= 0.8.3)
+      thor (~> 0.14.0)
     rake (0.8.7)
     rcov (0.9.8)
     remarkable (4.0.0.alpha4)
@@ -200,18 +185,18 @@ PLATFORMS
 
 DEPENDENCIES
   ZenTest
-  arel!
+  arel (>= 0.4.0)
   autotest-fsevent
   autotest-growl
   capybara
   cucumber
   cucumber-rails
   database_cleaner
-  devise!
+  devise (>= 1.1)
   factory_girl_rails
   haml
   launchy
-  rails!
+  rails (~> 3.0.0.rc)
   rcov
   remarkable_activemodel (~> 4.0.0)
   rspec!
