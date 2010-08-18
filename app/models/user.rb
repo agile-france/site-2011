@@ -17,8 +17,14 @@ class User < ActiveRecord::Base
     end
   end
 
+  # greeter_name is used to greet user
   def greeter_name
     return email if(first_name.nil? and last_name.nil?)
     "#{first_name} #{last_name}".strip
+  end
+
+  # propose a session to a conference
+  def propose(session)
+    session
   end
 end

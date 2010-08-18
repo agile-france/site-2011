@@ -24,13 +24,15 @@ describe User do
     end
   end
 
-  describe 'propose' do
+  describe 'can propose a session to a conference' do
     before do
       @john = Factory.create(:user)
+      @cheesy = Factory.create(:conference, :name => 'cheesy')
     end
 
     it ', should add session to user' do
-      @john.sessions.should == []  
+      cheddar = Factory.create(:session, :title => 'cheddar')
+      @john.propose(cheddar).should == cheddar
     end
   end
 end
