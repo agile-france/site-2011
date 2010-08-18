@@ -30,7 +30,7 @@ describe User do
     end
 
     it ', should add session to user' do
-      @john.sessions.should = []  
+      @john.sessions.should == []  
     end
   end
 end
