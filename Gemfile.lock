@@ -74,6 +74,9 @@ GEM
     gherkin (2.1.5)
       trollop (~> 1.16.2)
     haml (3.0.17)
+    haml-rails (0.2)
+      haml (~> 3.0)
+      rails (~> 3.0.0.rc)
     i18n (0.4.1)
     json_pure (1.4.6)
     launchy (0.3.7)
@@ -108,11 +111,6 @@ GEM
       thor (~> 0.14.0)
     rake (0.8.7)
     rcov (0.9.8)
-    remarkable (4.0.0.alpha4)
-      rspec (>= 2.0.0.alpha11)
-    remarkable_activemodel (4.0.0.alpha4)
-      remarkable (~> 4.0.0.alpha4)
-      rspec (>= 2.0.0.alpha11)
     rspec (2.0.0.beta.19)
       rspec-core (= 2.0.0.beta.19)
       rspec-expectations (= 2.0.0.beta.19)
@@ -170,10 +168,10 @@ DEPENDENCIES
   devise (>= 1.1)
   factory_girl_rails
   haml
+  haml-rails
   launchy
   rails (~> 3.0.0.rc)
   rcov
-  remarkable_activemodel (~> 4.0.0)
   rspec-rails (>= 2.0.0.beta.19)
   ruby-debug19
   spork

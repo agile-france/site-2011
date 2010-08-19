@@ -16,6 +16,7 @@ gem 'ruby-debug19'
 
 # views
 gem 'haml'
+gem 'haml-rails'
 
 # devise
 gem 'devise', '>= 1.1'
@@ -23,9 +24,6 @@ gem 'devise', '>= 1.1'
 group :test, :development do
   # rspec
   gem "rspec-rails", ">= 2.0.0.beta.19"
-
-  # remarkable : active_record
-  gem 'remarkable_activemodel', '~> 4.0.0'
 
   # factory
   gem 'factory_girl_rails'
