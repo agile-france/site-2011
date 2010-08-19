@@ -30,11 +30,15 @@ describe User do
       @cheesy = Factory.create(:conference, :name => 'cheesy')
       @cheddar = Factory.create(:session, :title => 'cheddar')
 
-      @john.propose(@cheddar).should == @john
+      @john.propose(@cheddar, @cheesy).should == @john
     end
 
     it ', should add session to user' do
       @john.sessions.should include(@cheddar)
+    end
+
+    it ', should add session to conference' do
+      @cheesy.sessions.should include(@cheddar)
     end
   end
 end
