@@ -24,8 +24,9 @@ class User < ActiveRecord::Base
   end
 
   # propose a session to a conference
-  def propose(session, options={})
-    sessions << session
+  def propose(session, conference)
+    self.sessions << session
+    conference.sessions << session
     self
   end
 end
