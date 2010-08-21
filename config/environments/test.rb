@@ -32,4 +32,10 @@ ConferenceOnRails::Application.configure do
 
   # ~> 3.0.0.rc
   config.active_support.deprecation = :stderr
+
+  # Part of a Spork hack. See http://bit.ly/arY19y
+  initializer :after => :initialize_dependency_mechanism do
+    # Work around initializer in railties/lib/rails/application/bootstrap.rb
+    ActiveSupport::Dependencies.mechanism = :load
+  end
 end
