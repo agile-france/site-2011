@@ -14,7 +14,7 @@ describe "home/index.html.haml" do
     end
 
     it 'should have a link Proposer une session' do
-      rendered.should have_tag('a', :href => '/session/new', :content => 'Proposer une session')
+      rendered.should have_tag('a', :href => '/sessions/new', :content => 'Proposer une session')
     end
   end
 
