@@ -1,4 +1,4 @@
-class SessionsController < ApplicationController
+class Conference::SessionsController < ApplicationController
   respond_to :html, :json
 
   def new

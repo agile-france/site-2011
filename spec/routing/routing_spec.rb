@@ -6,6 +6,6 @@ end
 
 describe 'sessions' do
   it 'should' do
-    {:post => '/sessions'}.should route_to :controller => 'sessions', :action => 'create'
+    {:post => '/conference/sessions'}.should route_to :controller => 'conference/sessions', :action => 'create'
   end
 end
