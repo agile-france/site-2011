@@ -27,10 +27,14 @@ describe Conference::SessionsController do
 
   describe ', with a signed off user' do
     describe ", GET new" do
-      it "should not be granted and have a flash notice" do
+      before do
         get :new
-        response.should redirect_to root_path
-        flash[:notice].should == 'Vous devez etre connecté'
+      end
+      it "should redirect user to sign_in url" do
+        response.should redirect_to new_user_session_path
+      end
+      it "should have a flash alert" do
+        flash[:alert].should_not be_nil
       end
     end
   end
