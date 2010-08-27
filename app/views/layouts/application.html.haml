@@ -16,10 +16,8 @@
             #sign_up= link_to t('devise.common.sign_up'), new_user_registration_path
             #sign_in= link_to t('devise.common.sign_in'), new_user_session_path
 
-        - if flash[:notice]
-          #notice= flash[:notice]
-        - if flash[:alert]
-          #alert= flash[:alert]
+        - flash.each_key do |key|
+          #flash{:class => key}= flash[key]
                       
       #content= yield
       #footer
