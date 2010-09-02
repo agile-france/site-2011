@@ -1,5 +1,14 @@
 require 'spec_helper'
 
 describe "conference/sessions/new.html.haml" do
-  pending "add some examples to (or delete) #{__FILE__}"
+  before do
+    assign(:session, Factory(:session))
+    render
+  end
+  it 'should have a title text field' do
+    rendered.should have_tag('label', :content => 'Titre')
+  end
+  it 'should have a description text field' do
+    rendered.should have_tag('label', :content => 'Description')
+  end
 end

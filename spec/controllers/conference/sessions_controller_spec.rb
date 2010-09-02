@@ -13,14 +13,28 @@ describe Conference::SessionsController do
     describe ", GET new" do
       it "should be successful" do
         get :new
+        assigns(:session).should be_a_new(Session)
         response.should be_success
       end
     end
 
     describe ", POST create" do
-      it "should be successful" do
-        post :create
+      before do
+        @params={:title => 'amazing story', :description => '...'}
+        Session.where(@params).first.should be_nil
+        post :create, :session => @params
+      end
+
+      it 'should create a new record' do
+        Session.where(@params).first.should_not be_nil  
+      end
+
+      it "should redirect to home" do
         response.should redirect_to root_path
+      end
+
+      it "should flash success" do
+        flash[:notice].should =~ /créée!/
       end
     end
   end

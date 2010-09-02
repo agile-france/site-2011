@@ -41,7 +41,7 @@ group :test, :development do
   gem 'launchy'
 
   # autospec
-  gem 'ZenTest'
+  gem 'autotest'
   gem 'autotest-growl'
   gem 'autotest-fsevent'
 

@@ -3,10 +3,13 @@ class Conference::SessionsController < ApplicationController
   respond_to :html, :json
 
   def new
+    @session = Session.new
+    respond_with @session
   end
 
   def create
-    @product = Session.new(params[:session])
-    respond_with @product, :location => root_path
+    @session = Session.new(params[:session])
+    flash[:notice] = t('conference.session.new.success!') if @session.save
+    respond_with @session, :location => root_path
   end
 end

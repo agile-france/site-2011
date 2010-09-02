@@ -1,7 +1,6 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    ZenTest (4.3.3)
     abstract (1.0.0)
     actionmailer (3.0.0.rc)
       actionpack (= 3.0.0.rc)
@@ -157,8 +156,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ZenTest
   arel (>= 0.4.0)
+  autotest
   autotest-fsevent
   autotest-growl
   capybara
