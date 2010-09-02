@@ -1,5 +1,5 @@
 class Conference::SessionsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, :except => :index
   respond_to :html, :json
 
   def new
@@ -11,5 +11,10 @@ class Conference::SessionsController < ApplicationController
     @session = Session.new(params[:session])
     flash[:notice] = t('conference.session.new.success!') if @session.save
     respond_with @session, :location => root_path
+  end
+
+  def index
+    @sessions = Session.all
+    respond_with @sessions
   end
 end

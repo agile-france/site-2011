@@ -1,10 +1,11 @@
 fr:
   common:
-    cancel: 'Annuler'
-    validate: 'Valider'
+    cancel: Annuler
+    title: Titre
+    validate: Valider
 
   conference:
     propose_a_new_session?: Proposer une session ?
     session:
       new:
-        success! : Session créée!
+        success!: Session créée!

@@ -52,4 +52,16 @@ describe Conference::SessionsController do
       end
     end
   end
+
+  describe 'index' do
+    before do
+      @sessions = ['courage', 'respect'].map {|title| Factory(:session, :title => title)}
+    end
+    
+    it 'should show proposed sessions' do
+      get :index
+      assigns(:sessions).should == @sessions
+      response.should be_success
+    end
+  end
 end

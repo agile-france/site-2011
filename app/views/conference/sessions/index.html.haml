@@ -1,0 +1,8 @@
+
+%table
+  %tr
+    %th= t('common.title')
+  - @sessions.each do |session|
+    %tr
+      %td= "#{session.title}"
+    
