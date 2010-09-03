@@ -1,4 +1,4 @@
-%h1 t('conference.propose_a_new_session?')
+%h1= t('conference.propose_a_new_session?')
 = form_for([:conference, @session]) do |f|
   %p
     = f.label :title, 'Titre'
