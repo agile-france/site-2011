@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '~> 3.0.0.rc'
+gem 'rails', '>= 3.0.0'
 gem 'arel',  '>= 0.4.0'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
@@ -19,11 +19,15 @@ gem 'haml'
 gem 'haml-rails'
 
 # devise
-gem 'devise', '>= 1.1'
+gem 'devise', '>= 1.1.2'
 
-group :test, :development do
+group :development do
   # rspec
-  gem "rspec-rails", ">= 2.0.0.beta.19"
+  gem "rspec-rails", ">= 2.0.0.beta.20"
+end
+
+group :test do
+  gem "rspec_tag_matchers"
 
   # factory
   gem 'factory_girl_rails'

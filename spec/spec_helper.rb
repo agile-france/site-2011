@@ -12,6 +12,7 @@ Spork.prefork do
   require 'rspec/rails'
   require 'factory_girl'
   require 'ruby-debug'
+  require 'rspec_tag_matchers'
 
 # Requires supporting files with custom matchers and macros, etc,
 # in ./support/ and its subdirectories.
@@ -32,8 +33,8 @@ Spork.prefork do
     # instead of true.
     config.use_transactional_fixtures = true
 
-    # weird webrat dependency for such a matcher, exposing to undefined has_tag? on rendered String
-    config.include Webrat::HaveTagMatcher
+    # custom content/tag matcher
+    config.include(RspecTagMatchers)
 
     ### Part of a Spork hack. See http://bit.ly/arY19y
     # Emulate initializer set_clear_dependencies_hook in
