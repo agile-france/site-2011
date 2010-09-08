@@ -5,10 +5,10 @@ describe 'home' do
 end
 
 describe 'conferences' do
-# it 'routes GET :name/:edition' do
-#   {:get => '/conferences/agile-france/2011'}.should route_to :controller => 'conference/conferences',
-#                                      :action => 'get', :name => 'agile-france', :edition => '2011'
-# end
+it 'routes GET :name/:edition' do
+   {:get => '/conferences/agile-france/2011'}.should route_to :controller => 'conference/conferences',
+                                      :action => 'show', :name => 'agile-france', :edition => '2011'
+end
 end
 
 describe 'sessions' do

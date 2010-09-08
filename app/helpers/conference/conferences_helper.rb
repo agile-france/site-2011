@@ -1,0 +1,2 @@
+module Conference::ConferencesHelper
+end

@@ -137,4 +137,6 @@ fr:
         odd: "doit être impair"
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
-        
+
+  resources:
+    not_found: "Aucun(e) %{model} : %{params}"
