@@ -1,7 +1,7 @@
 #encoding: utf-8
 require 'spec_helper'
 
-describe Conference::SessionsController do
+describe Party::SessionsController do
   include Devise::TestHelpers
 
   describe ', with a signed in user' do
@@ -13,7 +13,7 @@ describe Conference::SessionsController do
     describe ", GET new" do
       it "should be successful" do
         get :new
-        assigns(:session).should be_a_new(::Session)
+        assigns(:session).should be_a_new(Party::Session)
         response.should be_success
       end
     end
@@ -21,12 +21,12 @@ describe Conference::SessionsController do
     describe ", POST create" do
       before do
         @params={:title => 'amazing story', :description => '...'}
-        ::Session.where(@params).first.should be_nil
+        Party::Session.where(@params).first.should be_nil
         post :create, :session => @params
       end
 
       it 'should create a new record' do
-        ::Session.where(@params).first.should_not be_nil
+        Party::Session.where(@params).first.should_not be_nil
       end
 
       it "should redirect to home" do

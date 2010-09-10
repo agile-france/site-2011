@@ -1,4 +1,4 @@
-Factory.define :conference do |u|
+Factory.define(:conference, :class => Party::Conference) do |u|
   u.name 'cheese'
-  u.edition  'smelly'
+  u.edition  'cheddar'
 end

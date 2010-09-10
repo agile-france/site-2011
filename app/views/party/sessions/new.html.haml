@@ -1,5 +1,5 @@
-%h1= t('conference.propose_a_new_session?')
-= form_for([:conference, @session]) do |f|
+%h1= t('party.propose_a_new_session?')
+= form_for(@session) do |f|
   %p
     = f.label :title, 'Titre'
     %br/

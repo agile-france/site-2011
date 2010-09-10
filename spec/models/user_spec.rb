@@ -24,7 +24,7 @@ describe User do
     end
   end
 
-  describe 'can propose a session to a conference' do
+  describe 'can propose a session to a party' do
     before do
       @john = Factory.create(:user)
       @cheesy = Factory.create(:conference, :name => 'cheesy')
@@ -37,7 +37,7 @@ describe User do
       @john.sessions.should include(@cheddar)
     end
 
-    it ', should add session to conference' do
+    it ', should add session to party' do
       @cheesy.sessions.should include(@cheddar)
     end
   end

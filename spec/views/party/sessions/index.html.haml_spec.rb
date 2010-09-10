@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'conference/sessions/index.html.haml' do
+describe 'party/sessions/index.html.haml' do
   before do
     @titles = ['courage', 'respect']
     assign(:sessions, @titles.map {|title| Factory(:session, :title => title)})

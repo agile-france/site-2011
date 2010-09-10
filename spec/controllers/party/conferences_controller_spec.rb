@@ -1,20 +1,19 @@
 #encoding: utf-8
 require 'spec_helper'
 
-describe Conference::ConferencesController do
-
+describe Party::ConferencesController do
   describe "GET 'show'" do
     before do
       @deep = {:name => 'deep', :edition => '2011'}
       Factory(:conference, @deep)
     end
 
-    it "should be successful for an existing conference" do
+    it "should be successful for an existing party" do
       get :show, @deep
       response.should be_success
     end
 
-    describe ', with flunky conference parameters' do
+    describe ', with flunky party parameters' do
       before do
         get :show, {:name => 'space', :edition => '2001'}
       end
@@ -24,7 +23,7 @@ describe Conference::ConferencesController do
       end
 
       it 'should flash ya' do
-        flash[:notice].should =~ /Aucun\(e\) Conference/
+        flash[:notice].should =~ /Aucun\(e\) (?:.*)Conference/
       end
     end
   end

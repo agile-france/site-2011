@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
 
-  has_many :sessions
+  has_many :sessions, :class_name => 'Party::Session'
 
   # names are capitalized before validation
   before_validation do
@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     "#{first_name} #{last_name}".strip
   end
 
-  # propose a session to a conference
+  # propose a session to a party
   def propose(session, conference)
     self.sessions << session
     conference.sessions << session
