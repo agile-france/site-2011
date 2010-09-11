@@ -11,6 +11,9 @@ describe Party::UrlHelper do
       conference_path(:name => 'deep', :edition => 2011).should == 'conferences/deep/2011'
     end
 
-    it 'should make '
+    it 'should make path out a conference' do
+      deep = Factory(:conference, :name => 'deep', :edition => '2011')
+      conference_path(deep).should ==  'conferences/deep/2011'
+    end
   end
 end
