@@ -49,6 +49,9 @@ group :test do
   gem 'autotest-growl'
   gem 'autotest-fsevent'
 
+  # rr
+  gem 'rr'
+
   # rcov
   gem 'rcov'
 end

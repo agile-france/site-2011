@@ -2,6 +2,7 @@ require 'spec_helper'
 
   describe "party/sessions/new.html.haml" do
   before do
+    assign(:conference, Factory(:conference))
     assign(:session, Factory(:session))
     render
   end

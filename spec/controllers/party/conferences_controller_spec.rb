@@ -2,20 +2,27 @@
 require 'spec_helper'
 
 describe Party::ConferencesController do
-  describe "GET 'show'" do
-    before do
-      @deep = {:name => 'deep', :edition => '2011'}
-      Factory(:conference, @deep)
+  describe ', self' do
+    it 'should know about conference_path' do
+      Party::ConferencesController.new.should respond_to(:conference_path)
     end
+  end
 
-    it "should be successful for an existing party" do
-      get :show, @deep
-      response.should be_success
+  describe "GET 'show'" do
+    describe ', with existing conference params' do
+      before do
+        @deep = Factory(:conference, {:name => 'deep', :edition => '2011'})
+      end
+
+      it "should be successful for an existing party" do
+        get :show, {:id => @deep.id}
+        response.should be_success
+      end
     end
 
     describe ', with flunky party parameters' do
       before do
-        get :show, {:name => 'space', :edition => '2001'}
+        get :show, {:id => 42}
       end
 
       it 'should redirect to root_path' do
@@ -23,7 +30,7 @@ describe Party::ConferencesController do
       end
 
       it 'should flash ya' do
-        flash[:notice].should =~ /Aucun\(e\) (?:.*)Conference/
+        flash[:error].should_not be_nil
       end
     end
   end

@@ -1,13 +1,11 @@
 ConferenceOnRails::Application.routes.draw do
   devise_for :users
 
-  namespace 'party' do
-    resources :sessions
-  end
-
   # conferences
   scope :module => 'party' do
-    get 'conferences/:name/:edition' => 'conferences#show'
+    resources :conferences do
+      resources :sessions
+    end
   end
 
   root :to => 'home#index'

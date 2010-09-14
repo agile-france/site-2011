@@ -9,6 +9,8 @@ class Party::SessionsController < ApplicationController
 
   def create
     @session = Party::Session.new(params[:session])
+    conference = Party::Conference.find(params[:conference_id])
+    current_user.propose(@session, conference)
     flash[:notice] = t('party.session.new.success!') if @session.save
     respond_with @session, :location => root_path
   end

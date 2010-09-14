@@ -110,6 +110,7 @@ GEM
       thor (~> 0.14.0)
     rake (0.8.7)
     rcov (0.9.8)
+    rr (1.0.0)
     rspec (2.0.0.beta.20)
       rspec-core (= 2.0.0.beta.20)
       rspec-expectations (= 2.0.0.beta.20)
@@ -169,6 +170,7 @@ DEPENDENCIES
   launchy
   rails (>= 3.0.0)
   rcov
+  rr
   rspec-rails (>= 2.0.0.beta.20)
   rspec_tag_matchers
   ruby-debug19

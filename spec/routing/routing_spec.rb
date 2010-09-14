@@ -5,14 +5,20 @@ describe 'home' do
 end
 
 describe 'conferences' do
-it 'routes GET :name/:edition' do
-   {:get => '/conferences/agile-france/2011'}.should route_to :controller => 'party/conferences',
-                                      :action => 'show', :name => 'agile-france', :edition => '2011'
-end
-end
+  before do
+    @cheesy = Factory(:conference)
+  end
+  it 'routes GET :id' do
+    {:get => '/conferences/1'}.should route_to :controller => 'party/conferences',
+                                               :action => 'show', :id => "1"
+  end
 
-describe 'sessions' do
-  it 'should' do
-    {:post => '/party/sessions'}.should route_to :controller => 'party/sessions', :action => 'create'
+  describe 'with nested sessions' do
+    # XXX rails do not generate reversible nested resources path
+    it 'should recognize a nested session POST' do
+      assert_recognizes({:controller => 'party/sessions', :action => 'create', :conference_id => '1'},
+                        {:path => '/conferences/1/sessions', :method => :post})
+    end
   end
 end
+

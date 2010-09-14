@@ -12,10 +12,6 @@ describe "home/index.html.haml" do
     it 'should have h3. Conférence Agile France' do
       rendered.should have_tag('h3', :content => 'Conférence')
     end
-
-    it 'should have a link Proposer une session' do
-      rendered.should have_tag('a', :href => '/party/sessions/new', :content => 'Proposer une session')
-    end
   end
 
   describe ', with en locale' do
