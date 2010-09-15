@@ -1,1 +1,3 @@
+%h1= render :partial => 'party/conferences/conference', :locals => {:conference => @conference}
+
 = link_to t('party.propose_a_new_session?'), new_conference_session_path(@conference)

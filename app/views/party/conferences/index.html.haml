@@ -1,0 +1,6 @@
+%table
+  %tr
+    %th
+  - @conferences.each do |conference|
+    %tr
+      %td= link_to introduce(conference), conference_path(conference)

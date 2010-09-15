@@ -8,15 +8,19 @@ class Party::SessionsController < ApplicationController
   end
 
   def create
-    @session = Party::Session.new(params[:session])
-    conference = Party::Conference.find(params[:conference_id])
-    current_user.propose(@session, conference)
+    @session = Party::Session.new(params[:party_session])
+    current_user.propose(@session, current_conference)
     flash[:notice] = t('party.session.new.success!') if @session.save
-    respond_with @session, :location => root_path
+    respond_with @session, :location => conference_sessions_path(@conference)
   end
 
   def index
-    @sessions = Party::Session.all
+    @sessions = current_conference.sessions
     respond_with @sessions
+  end
+
+  private
+  def current_conference
+    @conference = Party::Conference.find(params[:conference_id])
   end
 end

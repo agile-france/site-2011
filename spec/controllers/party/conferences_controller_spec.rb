@@ -34,4 +34,19 @@ describe Party::ConferencesController do
       end
     end
   end
+
+  describe 'index' do
+    before do
+      # XXX weird isolation there :)
+      # what use is use_transactional_fixtures ??
+      Party::Conference.delete_all unless Party::Conference.all.empty?
+    end
+
+    it 'should show available conferences' do
+      conferences = (2030..2032).map {|edition| Factory(:conference, :name => 'deep', :edition => edition)}
+      get :index
+      assigns(:conferences).should == conferences
+      response.should be_success
+    end
+  end
 end

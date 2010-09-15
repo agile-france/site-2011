@@ -23,7 +23,7 @@ gem 'devise', '>= 1.1.2'
 
 group :development do
   # rspec
-  gem "rspec-rails", ">= 2.0.0.beta.20"
+  gem "rspec-rails", ">= 2.0.0.beta.22"
 end
 
 group :test do

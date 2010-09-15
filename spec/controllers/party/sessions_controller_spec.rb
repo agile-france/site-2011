@@ -27,16 +27,15 @@ describe Party::SessionsController do
       end
     end
 
-
     describe ", POST create" do
       before do
         @params = {:title => 'ancient', :description => 'and toxic'}
-        post :create, :conference_id => @cheese.id, :session => @params
+        post :create, :conference_id => @cheese.id, :party_session => @params
       end
 
       it ', should wire session to user and conference' do
         # XXX
-        # at least, failed to spec it with mocks with rr+rspec+devise :)
+        # at least, failed to spec it with mocks using rr+rspec+devise :)
         # devise current_user is not available in this spec ...
         ancient = Party::Session.where(@params).first
         ancient.should_not be_nil
@@ -44,8 +43,8 @@ describe Party::SessionsController do
         ancient.user.should == @john
       end
 
-      it "should redirect to home" do
-        response.should redirect_to root_path
+      it "should redirect to conference_path" do
+        response.should redirect_to(conference_sessions_path(@cheese))
       end
 
       it "should flash success" do
@@ -71,13 +70,17 @@ describe Party::SessionsController do
 
   describe 'index' do
     before do
-      @sessions = ['courage', 'respect'].map {|title| Factory(:session, :title => title)}
+      @vegetables = ['carrot'].map {|t| Factory(:session, :title => t) }
+      @cheeses = ['stilton'].map {|t| @cheese.sessions.create(:title => t)}
     end
-    
-    it 'should show proposed sessions' do
+
+    it 'should show proposed sessions for a conference' do
+      @cheese.sessions.should == @cheeses
+
       get :index, {:conference_id => @cheese.id}
-      assigns(:sessions).should == @sessions
+      assigns(:sessions).should == @cheese.sessions
       response.should be_success
     end
+
   end
 end

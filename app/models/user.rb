@@ -25,8 +25,10 @@ class User < ActiveRecord::Base
 
   # propose a session to a party
   def propose(session, conference)
-    self.sessions << session
-    conference.sessions << session
+    session.tap do |s|
+      s.user = self
+      s.conference = conference
+    end.save
     self
   end
 end
