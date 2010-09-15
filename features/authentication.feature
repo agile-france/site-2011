@@ -17,12 +17,3 @@ Feature: Authentication
       And I fill in "user_password" with "git rocks"
       And I press "user_submit"
     Then I should see "Bonjour gitster@git.org"
-
-  Scenario: I should be redirected to current conference when signing in
-    Given I am not authenticated
-      And I am on conferences/agile-france/2011
-    When I go to the user session page
-      And I fill in "user_email" with "gitster@git.org"
-      And I fill in "user_password" with "git rocks"
-      And I press "user_submit"
-    Then I should be on conferences/agile-france/2011

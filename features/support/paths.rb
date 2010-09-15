@@ -11,8 +11,8 @@ module NavigationHelpers
         '/'
       when /register/
         new_user_registration_path
-      when /conferences\/(.+)\/(.+)/
-        options = {:name => $1, :edition => $2}
+      when /conferences\/(.+)/
+        options = {:id => $1}
         conference_path(options)
       else
         begin
