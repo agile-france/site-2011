@@ -23,4 +23,4 @@
                       
       #content= yield
       #footer
-        = render :partial => 'debug/show'
+        = render :partial => 'debug/show' if Rails.env.development?
