@@ -53,21 +53,27 @@ describe Party::SessionsController do
     end
 
     describe 'PUT /conferences/1/sessions/1' do
+      def new_title
+        'do not forget the donuts'
+      end
+
       before do
         @session = Factory(:session, :conference => @cheese)
+        put :update, :conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}
       end
 
       it 'should update session' do
-        new_title = 'do not forget the donuts'
-        put :edit, :conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}
-        response.should be_success
-        session.reload.title.should == new_title
+        @session.reload.title.should == new_title
+      end
+
+      it 'should redirect to session' do
+        response.should redirect_to(conference_session_path(@session))
       end
     end
   end
 
   describe ', with a signed off user' do
-    describe ", GET new" do
+    describe ", GET /conferences/1/sessions/new" do
       before do
         get :new, {:conference_id => @cheese.id}
       end
@@ -80,7 +86,7 @@ describe Party::SessionsController do
     end
   end
 
-  describe 'index' do
+  describe '/conferences/1/sessions' do
     before do
       @vegetables = ['carrot'].map {|t| Factory(:session, :title => t) }
       @cheeses = ['stilton'].map {|t| @cheese.sessions.create(:title => t)}
@@ -93,6 +99,16 @@ describe Party::SessionsController do
       assigns(:sessions).should == @cheese.sessions
       response.should be_success
     end
+  end
 
+  describe 'conferences/1/sessions/1' do
+    before do
+      @session = Factory(:session, :conference => @cheese, :title => 'stunning')
+    end
+
+    it 'should show me the session' do
+      get :edit, :conference_id => @cheese.id, :id => @session.id
+      response.should contain('stunning')
+    end
   end
 end

@@ -14,6 +14,12 @@ class Party::SessionsController < ApplicationController
     respond_with @session, :location => conference_sessions_path(@conference)
   end
 
+  def update
+    @session = Party::Session.find(params[:id])
+    flash[:notice] = t('party.session.edit.success!') if @session.update_attributes(params[:party_sessions])
+    respond_with @session, :location => conference_session_path(@session)
+  end
+
   def index
     @sessions = current_conference.sessions
     respond_with @sessions

@@ -9,3 +9,5 @@ fr:
     session:
       new:
         success!: Session créée!
+      edit:
+        success!: Session mise à jour!
