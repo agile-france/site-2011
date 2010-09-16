@@ -1,0 +1,1 @@
+ActionView::Helpers::AssetTagHelper.register_javascript_expansion(:jquery_1_4_2 => %w(jquery/jquery-1.4.2.min rails))
