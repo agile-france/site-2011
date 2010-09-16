@@ -3,5 +3,5 @@
     %th= t('common.title')
   - @sessions.each do |session|
     %tr
-      %td= "#{session.title}"
+      %td= link_to "#{session.title}", edit_conference_session_path(session.conference, session)
     

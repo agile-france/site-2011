@@ -52,14 +52,14 @@ describe Party::SessionsController do
       end
     end
 
-    describe 'PUT /conferences/1/sessions/1' do
+    describe ', PUT /conferences/1/sessions/1' do
       def new_title
         'do not forget the donuts'
       end
 
       before do
         @session = Factory(:session, :conference => @cheese)
-        put :update, :conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}
+        put :update, {:conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}}
       end
 
       it 'should update session' do
@@ -86,7 +86,7 @@ describe Party::SessionsController do
     end
   end
 
-  describe '/conferences/1/sessions' do
+  describe 'GET /conferences/1/sessions' do
     before do
       @vegetables = ['carrot'].map {|t| Factory(:session, :title => t) }
       @cheeses = ['stilton'].map {|t| @cheese.sessions.create(:title => t)}
@@ -101,14 +101,14 @@ describe Party::SessionsController do
     end
   end
 
-  describe 'conferences/1/sessions/1' do
+  describe 'GET conferences/1/sessions/1' do
     before do
-      @session = Factory(:session, :conference => @cheese, :title => 'stunning')
+      @session = Factory(:session, :conference => @cheese)
     end
 
     it 'should show me the session' do
-      get :edit, :conference_id => @cheese.id, :id => @session.id
-      response.should contain('stunning')
+      get :show, {:conference_id => @cheese.id, :id => @session.id}
+      response.should be_success
     end
   end
 end

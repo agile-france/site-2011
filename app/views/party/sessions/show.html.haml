@@ -1,0 +1,6 @@
+%h3= @session.title
+%p= @session.description
+
+%p
+  = link_to t('common.update'), conference_session_path(@session)
+  = link_to t('common.back'), conference_sessions_path(@session.conference)

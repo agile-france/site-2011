@@ -1,5 +1,5 @@
 class Party::SessionsController < ApplicationController
-  before_filter :authenticate_user!, :except => :index
+  before_filter :authenticate_user!, :except => [:index, :show]
   respond_to :html, :json
 
   def new
@@ -12,6 +12,15 @@ class Party::SessionsController < ApplicationController
     current_user.propose(@session, current_conference)
     flash[:notice] = t('party.session.new.success!') if @session.save
     respond_with @session, :location => conference_sessions_path(@conference)
+  end
+
+  def show
+    @session = Party::Session.find(params[:id])
+    respond_with @session
+  end
+
+  def edit
+    @session = Party::Session.find(params[:id])
   end
 
   def update

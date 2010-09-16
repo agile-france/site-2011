@@ -9,7 +9,7 @@ describe 'party/sessions/index.html.haml' do
   it 'should show list of proposed sessions' do
     render
     @titles.each do |title|
-      rendered.should have_tag('td', :content => title)
+      rendered.should have_tag('td a', :content => title)
     end
   end
 end
