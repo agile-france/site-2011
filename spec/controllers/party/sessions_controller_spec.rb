@@ -14,7 +14,7 @@ describe Party::SessionsController do
       sign_in @john
     end
 
-    describe ", GET new" do
+    describe ", GET /conferences/1/sessions/new" do
       before do
         @stilton = Factory(:session)
         stub(Party::Session).new {@stilton}
@@ -27,7 +27,7 @@ describe Party::SessionsController do
       end
     end
 
-    describe ", POST create" do
+    describe ", POST /conferences/1/sessions" do
       before do
         @params = {:title => 'ancient', :description => 'and toxic'}
         post :create, :conference_id => @cheese.id, :party_session => @params
@@ -52,6 +52,18 @@ describe Party::SessionsController do
       end
     end
 
+    describe 'PUT /conferences/1/sessions/1' do
+      before do
+        @session = Factory(:session, :conference => @cheese)
+      end
+
+      it 'should update session' do
+        new_title = 'do not forget the donuts'
+        put :edit, :conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}
+        response.should be_success
+        session.reload.title.should == new_title
+      end
+    end
   end
 
   describe ', with a signed off user' do
