@@ -1,0 +1,10 @@
+= form_for(@session, :url => url, :html => {:method => verb}) do |f|
+  %p
+    = f.label :title, 'Titre'
+    %br/
+    = f.text_field :title, :size => '32'
+  %p
+    = f.label :description, 'Description'
+    %br/
+    = f.text_area :description, :size => '28x12'
+  %p= f.submit t('common.validate')

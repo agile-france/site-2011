@@ -25,7 +25,7 @@ class Party::SessionsController < ApplicationController
 
   def update
     @session = Party::Session.find(params[:id])
-    flash[:notice] = t('party.session.edit.success!') if @session.update_attributes(params[:party_sessions])
+    flash[:notice] = t('party.session.update.success!') if @session.update_attributes(params[:party_sessions])
     respond_with @session, :location => conference_session_path(@session)
   end
 

@@ -1,11 +1,2 @@
-%h1= t('party.propose_a_new_session?')
-= form_for(@session, :url => conference_sessions_path(@conference)) do |f|
-  %p
-    = f.label :title, 'Titre'
-    %br/
-    = f.text_field :title, :size => '32'
-  %p
-    = f.label :description, 'Description'
-    %br/
-    = f.text_area :description, :size => '28x12'
-  %p= f.submit t('common.validate')
+%h1= t('party.session.new?')
+= render :partial => 'form', :locals => {:session => @session, :url => conference_sessions_path(@conference), :verb => :post}

@@ -1,3 +1,2 @@
-%p= @session.title
-%br\
-%p= @session.description
+%h1= t('party.session.update?')
+= render :partial => 'form', :locals => {:session => @session, :verb => :put, :url => conference_session_path(@session.conference, @session)}

@@ -9,7 +9,9 @@ fr:
   party:
     propose_a_new_session?: Proposer une session ?
     session:
+      new?: Proposer une session ?
       new:
         success!: Session créée!
-      edit:
+      update?: Modifier une session ?
+      update:
         success!: Session mise à jour!
