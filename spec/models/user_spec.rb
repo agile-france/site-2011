@@ -12,6 +12,11 @@ describe User do
 
     it 'should be john@doe.com if no names' do
       Factory.create(:user).greeter_name.should == 'john@doe.com'
+      end
+
+    it 'should be john@doe.com if blank names' do
+      # this is actually what is submitted through POST form
+      Factory(:user, :first_name => '').greeter_name.should == 'john@doe.com'
     end
   end
 

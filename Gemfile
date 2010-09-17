@@ -21,6 +21,9 @@ gem 'haml-rails'
 # devise
 gem 'devise', '>= 1.1.2'
 
+# rdiscount
+gem 'rdiscount'
+
 group :development do
   # rspec
   gem "rspec-rails", ">= 2.0.0.beta.22"

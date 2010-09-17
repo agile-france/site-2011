@@ -20,7 +20,7 @@ see http://github.com/rspec/rspec
 ### flow them!
 		bundle exec autotest
 or for one shot,
-		rake spec
+		rspec spec/
 		
 ### dunno why it fails :(
 add a debugger statement, then go to irb, quit when more knowledge is gain (^D will go to rdb)
