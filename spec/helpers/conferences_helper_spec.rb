@@ -10,7 +10,7 @@ require 'spec_helper'
 #     end
 #   end
 # end
-describe Party::ConferencesHelper do
+describe ConferencesHelper do
   describe '#introduce' do
     it 'should slashify name and edition' do
       deep = Factory(:conference, :name => 'deep', :edition => 2011)

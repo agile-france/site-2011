@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "party/conferences/show.html.haml" do
+describe "conferences/show.html.haml" do
   before do
     @conference = Factory(:conference)
     assign(:conference, @conference)

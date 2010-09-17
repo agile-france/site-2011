@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "party/conferences/index.html.haml" do
+describe "conferences/index.html.haml" do
   before do
     @conferences = (2010..2012).map {|edition| Factory(:conference, :name => 'deep', :edition => edition)}
     assign(:conferences, @conferences)

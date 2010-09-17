@@ -1,7 +1,7 @@
 #encoding: utf-8
 require 'spec_helper'
 
-describe Party::SessionsController do
+describe SessionsController do
   include Devise::TestHelpers
 
   before do

@@ -1,13 +1,13 @@
-class Party::ConferencesController < ApplicationController
+class ConferencesController < ApplicationController
   respond_to :html, :json
 
   def index
-    @conferences = Party::Conference.all
+    @conferences = Conference.all
     respond_with @conferences
   end
 
   def show
-    @conference = Party::Conference.find(params[:id])
+    @conference = Conference.find(params[:id])
     respond_with @session
   end
 

@@ -1,10 +1,10 @@
 #encoding: utf-8
 require 'spec_helper'
 
-describe Party::ConferencesController do
+describe ConferencesController do
   describe ', self' do
     it 'should know about conference_path' do
-      Party::ConferencesController.new.should respond_to(:conference_path)
+      ConferencesController.new.should respond_to(:conference_path)
     end
   end
 
@@ -39,7 +39,7 @@ describe Party::ConferencesController do
     before do
       # XXX weird isolation there :)
       # what use is use_transactional_fixtures ??
-      Party::Conference.delete_all unless Party::Conference.all.empty?
+      Conference.delete_all unless Conference.all.empty?
     end
 
     it 'should show available conferences' do

@@ -1,11 +1,11 @@
 require 'spec_helper'
 
-describe "party/sessions/edit.html.haml" do
+describe "sessions/edit.html.haml" do
   before do
     @conference = Factory(:conference)
     @session = Factory(:session, :id => 123, :title => 'courage', :conference => @conference)
 
-    render :template => 'party/sessions/edit.html.haml',
+    render :template => 'sessions/edit.html.haml',
            :locals => {:session => @session}
   end
   it 'should use PUT to /conferences/1/sessions/123' do
