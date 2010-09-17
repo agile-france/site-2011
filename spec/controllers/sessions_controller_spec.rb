@@ -17,7 +17,7 @@ describe SessionsController do
     describe ", GET /conferences/1/sessions/new" do
       before do
         @stilton = Factory(:session)
-        stub(Party::Session).new { @stilton }
+        stub(::Session).new { @stilton }
       end
 
       it "should be successful" do
@@ -37,7 +37,7 @@ describe SessionsController do
         # XXX
         # at least, failed to spec it with mocks using rr+rspec+devise :)
         # devise current_user is not available in this spec ...
-        ancient = Party::Session.where(@params).first
+        ancient = ::Session.where(@params).first
         ancient.should_not be_nil
         ancient.conference.should == @cheese
         ancient.user.should == @john
