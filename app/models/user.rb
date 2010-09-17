@@ -19,7 +19,7 @@ class User < ActiveRecord::Base
 
   # greeter_name is used to greet user
   def greeter_name
-    return email if(first_name.nil? and last_name.nil?)
+    return email if(first_name.blank? and last_name.blank?)
     "#{first_name} #{last_name}".strip
   end
 
