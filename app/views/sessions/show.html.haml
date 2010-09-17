@@ -1,4 +1,4 @@
-= render :partial => 'session', :locals => {:session => @session}
+= render @session
 
 %p
   = link_to t('common.update'), edit_conference_session_path(@session.conference, @session)

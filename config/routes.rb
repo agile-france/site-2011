@@ -2,10 +2,8 @@ ConferenceOnRails::Application.routes.draw do
   devise_for :users
 
   # conferences
-  scope :module => 'party' do
-    resources :conferences do
-      resources :sessions
-    end
+  resources :conferences do
+    resources :sessions
   end
 
   root :to => 'home#index'

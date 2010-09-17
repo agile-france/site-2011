@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
 
-  has_many :sessions, :class_name => 'Party::Session'
+  has_many :sessions
 
   # names are capitalized before validation
   before_validation do
