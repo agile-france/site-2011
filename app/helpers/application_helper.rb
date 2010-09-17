@@ -8,6 +8,6 @@ module ApplicationHelper
   end
 
   def markup(string)
-    Markup.new(string).to_html.strip
+    Markup.new(string).to_html
   end
 end
