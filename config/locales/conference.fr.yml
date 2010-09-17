@@ -7,7 +7,6 @@ fr:
     validate: Valider
 
   party:
-    propose_a_new_session?: Proposer une session ?
     session:
       new?: Proposer une session ?
       new:

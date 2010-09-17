@@ -1,4 +1,16 @@
 en:
-  conference:
+  common:
+    back: Back
+    cancel: Cancel
+    title: Title
+    update: Update
+    validate: Validate
+
+  party:
     session:
-      propose_a_new_session?: Propose a new session ?
+      new?: Propose a session ?
+      new:
+        success!: Session created!
+      update?: Update session ?
+      update:
+        success!: Session updated!

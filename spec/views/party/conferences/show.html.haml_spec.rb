@@ -8,8 +8,8 @@ describe "party/conferences/show.html.haml" do
   end
 
   it 'should have a link to propose a new session' do
-    rendered.should have_tag('a', :href => new_conference_session_path(@conference),
-                             :content => t('party.propose_a_new_session?'))
+    rendered.should have_tag('a[href="/conferences/1/sessions/new"]',
+                             t('party.session.new?'))
   end
 
   it 'should have a nice title' do
