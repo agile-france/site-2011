@@ -10,11 +10,8 @@
 		rvm default 1.9.2
 
 ## get source
-		gem install bundler --pre
+		gem install bundler
 		bundle install
-
-# disclaimer
-rails, rspec2, devise gem are gitted
 
 # tests?
 ## unit style 
@@ -44,7 +41,9 @@ for unit test and cukes, do
 
 or for one shot
 
-		rake features
+		rake cucumber
+or
+    cucumber
 		
 ### dunno why it fails :(
 for jqueryless behavior, add a handy step before offending step
@@ -56,4 +55,3 @@ then you go and see
 # metrics
 ## rcov
 slow
-
