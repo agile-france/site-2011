@@ -30,7 +30,7 @@ describe SessionsController do
     describe ", POST /conferences/1/sessions" do
       before do
         @params = {:title => 'ancient', :description => 'and toxic'}
-        post :create, :conference_id => @cheese.id, :party_session => @params
+        post :create, :conference_id => @cheese.id, :session => @params
       end
 
       it ', should wire session to user and conference' do
@@ -59,7 +59,7 @@ describe SessionsController do
 
       before do
         @session = Factory(:session, :conference => @cheese, :id => 123)
-        put :update, {:conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}}
+        put :update, {:conference_id => @cheese.id, :id => @session.id, :session => {:title => new_title}}
       end
 
       it 'should update session' do
