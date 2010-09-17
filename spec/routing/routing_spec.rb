@@ -19,6 +19,11 @@ describe 'conferences' do
       assert_recognizes({:controller => 'party/sessions', :action => 'create', :conference_id => '1'},
                         {:path => '/conferences/1/sessions', :method => :post})
     end
+
+    it 'recognize PUT /conferences/12/sessions/23 as update of session' do
+      assert_recognizes({:controller => 'party/sessions', :action => 'update', :conference_id => '12', :id => '23'},
+                        {:path => '/conferences/12/sessions/23', :method => :put})
+    end
   end
 end
 
