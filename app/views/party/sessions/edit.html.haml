@@ -1,2 +1,3 @@
 %h1= t('party.session.update?')
-= render :partial => 'form', :locals => {:session => @session, :verb => :put, :url => conference_session_path(@session.conference, @session)}
+= render :partial => 'form', :locals => {:session => @session,
+  :url => conference_session_path(@session.conference, @session)}
