@@ -17,7 +17,7 @@ describe Party::SessionsController do
     describe ", GET /conferences/1/sessions/new" do
       before do
         @stilton = Factory(:session)
-        stub(Party::Session).new {@stilton}
+        stub(Party::Session).new { @stilton }
       end
 
       it "should be successful" do
@@ -58,7 +58,7 @@ describe Party::SessionsController do
       end
 
       before do
-        @session = Factory(:session, :conference => @cheese)
+        @session = Factory(:session, :conference => @cheese, :id => 123)
         put :update, {:conference_id => @cheese.id, :id => @session.id, :party_session => {:title => new_title}}
       end
 
@@ -67,7 +67,7 @@ describe Party::SessionsController do
       end
 
       it 'should redirect to session' do
-        response.should redirect_to(conference_session_path(@session))
+        response.should redirect_to('/conferences/1/sessions/123')
       end
     end
   end
@@ -88,8 +88,8 @@ describe Party::SessionsController do
 
   describe 'GET /conferences/1/sessions' do
     before do
-      @vegetables = ['carrot'].map {|t| Factory(:session, :title => t) }
-      @cheeses = ['stilton'].map {|t| @cheese.sessions.create(:title => t)}
+      @vegetables = ['carrot'].map { |t| Factory(:session, :title => t) }
+      @cheeses = ['stilton'].map { |t| @cheese.sessions.create(:title => t) }
     end
 
     it 'should show proposed sessions for a conference' do
