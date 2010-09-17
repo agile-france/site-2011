@@ -1,3 +1,5 @@
 %h1= render @conference
 
 = link_to t('party.session.new?'), new_conference_session_path(@conference)
+
+= render @conference.sessions
