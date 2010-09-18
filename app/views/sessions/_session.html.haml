@@ -1,6 +1,7 @@
-.title
-  = session.title
+%div{:id => "session_#{session.id}"}
+  .title
+    = session.title
 
-.description
-  :plain
-    #{markup(session.description)}
+  .description
+    :plain
+      #{markup(session.description)}
