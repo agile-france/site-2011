@@ -55,6 +55,6 @@ group :test do
   # rr
   gem 'rr'
 
-  # rcov
-  gem 'rcov'
+  # coverage
+  gem 'cover_me', :require => false
 end
