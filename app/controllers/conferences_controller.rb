@@ -10,9 +10,4 @@ class ConferencesController < ApplicationController
     @conference = Conference.find(params[:id])
     respond_with @session
   end
-
-  rescue_from ActiveRecord::RecordNotFound do |error|
-    flash[:error] = error.message
-    redirect_to root_path
-  end
 end
