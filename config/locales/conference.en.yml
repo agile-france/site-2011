@@ -14,3 +14,6 @@ en:
       update?: Update session ?
       update:
         success!: Session updated!
+
+  resources:
+    not_authorized: Not authorized

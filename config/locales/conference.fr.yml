@@ -14,3 +14,6 @@ fr:
       update?: Modifier une session ?
       update:
         success!: Session mise à jour!
+
+  resources:
+    not_authorized: Pas d'autorisation
