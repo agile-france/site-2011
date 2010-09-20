@@ -75,13 +75,17 @@ describe SessionsController do
       describe ', does not authorize a user to modify other sessions' do
         before do
           @aaron = Factory(:user, :email => 'aaron@paterson.com')
-          @nokogiri = Factory(:session, :user => @aaron, :title => 'nokogiri')
+          @nokogiri = Factory(:session, :user => @aaron, :id => 401, :title => 'nokogiri')
+          request.env["HTTP_REFERER"] = conference_session_path(@cheese, @nokogiri)
+          put :update, {:conference_id => @cheese.id, :id => @nokogiri.id, :session => {:title => new_title}}
         end
 
-        it 'should not authorize user' do
-          put :update, {:conference_id => @cheese.id, :id => @nokogiri.id, :session => {:title => new_title}}
-          debugger
-          response.code.should == 401
+        it 'should not redirect to session' do
+          response.should redirect_to('/conferences/1/sessions/401')
+        end
+
+        it 'should flash error' do
+          flash[:error].should =~ 'Pas autorisé'
         end
       end
     end

@@ -1,6 +1,9 @@
 %div{:id => "session_#{session.id}"}
-  .title
-    = session.title
+  .header
+    .author
+      %h4= session.user.greeter_name
+    .title
+      %h4= session.title
 
   .description
     :plain
