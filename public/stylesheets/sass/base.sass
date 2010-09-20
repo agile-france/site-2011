@@ -6,7 +6,6 @@ $orange: #FFA500
   border-radius: 5px 5px 5px 5px
   border: 5px solid darken($color, 10%)
   background-color: $color
-  height: 100%
 
 body
   font-family: Lucida Grande,Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif
@@ -28,5 +27,11 @@ body
 
   .header
     @include box($wood)
+    .author
+      float: left
+    .title
+      float: right
+    .clear
+      clear: both
 
 #footer

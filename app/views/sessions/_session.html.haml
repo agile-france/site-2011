@@ -1,9 +1,12 @@
 %div{:id => "session_#{session.id}"}
   .header
     .author
-      %h4= session.user.greeter_name
+      %h3
+        %span{:class => 'label'} #{t('roles.author')} :
+        =session.user.greeter_name
     .title
-      %h4= session.title
+      %h3= session.title
+    .clear
 
   .description
     :plain
