@@ -52,22 +52,37 @@ describe SessionsController do
       end
     end
 
-    describe ', PUT /conferences/1/sessions/1' do
+    describe ', PUT /conferences/1/sessions/123' do
       def new_title
         'do not forget the donuts'
       end
 
-      before do
-        @session = Factory(:session, :conference => @cheese, :id => 123)
-        put :update, {:conference_id => @cheese.id, :id => @session.id, :session => {:title => new_title}}
+      describe ', allows a user to update a session' do
+        before do
+          @session = Factory(:session, :conference => @cheese, :user => @john, :id => 123)
+          put :update, {:conference_id => @cheese.id, :id => @session.id, :session => {:title => new_title}}
+        end
+
+        it 'should update session' do
+          @session.reload.title.should == new_title
+        end
+
+        it 'should redirect to session' do
+          response.should redirect_to('/conferences/1/sessions/123')
+        end
       end
 
-      it 'should update session' do
-        @session.reload.title.should == new_title
-      end
+      describe ', does not authorize a user to modify other sessions' do
+        before do
+          @aaron = Factory(:user, :email => 'aaron@paterson.com')
+          @nokogiri = Factory(:session, :user => @aaron, :title => 'nokogiri')
+        end
 
-      it 'should redirect to session' do
-        response.should redirect_to('/conferences/1/sessions/123')
+        it 'should not authorize user' do
+          put :update, {:conference_id => @cheese.id, :id => @nokogiri.id, :session => {:title => new_title}}
+          debugger
+          response.code.should == 401
+        end
       end
     end
   end
