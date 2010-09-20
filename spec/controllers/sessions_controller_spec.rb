@@ -85,7 +85,7 @@ describe SessionsController do
         end
 
         it 'should flash error' do
-          flash[:error].should =~ 'Pas autorisé'
+          flash[:error].should =~ /Pas autorisé/
         end
       end
     end

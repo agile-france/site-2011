@@ -16,4 +16,4 @@ fr:
         success!: Session mise à jour!
 
   resources:
-    not_authorized: Pas d'autorisation
+    not_authorized: Pas autorisé

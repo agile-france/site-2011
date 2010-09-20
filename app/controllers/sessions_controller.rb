@@ -51,7 +51,7 @@ class SessionsController < ApplicationController
   # cancan is an option
   def authorize_user!
     unless can_edit?(current_user, current_session)
-      raise Failures::AccessDenied.new("#{current_user.greeter_name} can not edit #{current_session.title}")
+      raise Failures::AccessDenied.new(t('resources.not_authorized'))
     end
   end
 
