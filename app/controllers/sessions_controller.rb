@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
   before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authorize_user!, :only => [:edit, :update]
+
   respond_to :html, :json
 
   def new
@@ -15,19 +17,19 @@ class SessionsController < ApplicationController
   end
 
   def show
-    @session = Session.find(params[:id])
-    respond_with @session
+    respond_with current_session
   end
 
   def edit
-    @session = Session.find(params[:id])
-    respond_with @session
+    respond_with current_session
   end
 
   def update
-    @session = Session.find(params[:id])
-    flash[:notice] = t('party.session.update.success!') if @session.update_attributes(params[:session])
-    respond_with @session, :location => conference_session_path(@session.conference, @session)
+    if current_session.update_attributes(params[:session])
+      flash[:notice] = t('party.session.update.success!')
+    end
+    respond_with current_session,
+                 :location => conference_session_path(current_session.conference, current_session)
   end
 
   def index
@@ -36,7 +38,24 @@ class SessionsController < ApplicationController
   end
 
   private
+  # looks like this current_#{symbol} is a pattern
+  # is it a good one ?, dunno at this time ... and looks like symbol requested in params is a pain
   def current_conference
-    @conference = Conference.find(params[:conference_id])
+    @conference ||= Conference.find(params[:conference_id])
+  end
+
+  def current_session
+    @session ||= Session.find(params[:id])
+  end
+
+  # cancan is an option
+  def authorize_user!
+    unless can_edit?(current_user, current_session)
+      raise Failures::AccessDenied.new("#{current_user.greeter_name} can not edit #{current_session.title}")
+    end
+  end
+
+  def can_edit?(user, session)
+    user == session.user
   end
 end
