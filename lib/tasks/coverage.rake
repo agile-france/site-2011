@@ -1,5 +1,7 @@
 task :coverage do
-  require 'cover_me'
-  task(:rspec).invoke
+  require 'simplecov'
+  SimpleCov.start 'rails'
+
+  task(:spec).invoke
   task(:cucumber).invoke
 end
