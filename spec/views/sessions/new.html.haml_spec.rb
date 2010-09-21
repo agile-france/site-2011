@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-  describe "sessions/new.html.haml" do
+describe "sessions/new.html.haml" do
   before do
     assign(:conference, Factory(:conference))
     assign(:session, Factory(:session))
