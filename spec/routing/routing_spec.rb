@@ -8,21 +8,29 @@ describe 'conferences' do
   before do
     @cheesy = Factory(:conference)
   end
-  it 'routes GET :id' do
+  it 'routes GET /conferences/1' do
     {:get => '/conferences/1'}.should route_to :controller => 'conferences',
-                                               :action => 'show', :id => "1"
+    :action => 'show', :id => "1"
   end
 
-  describe 'with nested sessions' do
+  describe ', nests session creation' do
     # XXX rails do not generate reversible nested resources path
     it 'should recognize a nested session POST' do
       assert_recognizes({:controller => 'sessions', :action => 'create', :conference_id => '1'},
-                        {:path => '/conferences/1/sessions', :method => :post})
+        {:path => '/conferences/1/sessions', :method => :post})
     end
+  end
 
-    it 'recognize PUT /conferences/12/sessions/23 as update of session' do
-      assert_recognizes({:controller => 'sessions', :action => 'update', :conference_id => '12', :id => '23'},
-                        {:path => '/conferences/12/sessions/23', :method => :put})
+  describe 'sessions routes' do
+    it 'routes GET /sessions/1' do
+      {:get => '/sessions/1'}.should route_to :controller => 'sessions',
+        :action => 'show', :id => "1"      
+    end
+    it 'routes /sessions/1/edit and associate PUT' do
+      {:get => '/sessions/1/edit'}.should route_to :controller => 'sessions',
+        :action => 'edit', :id => "1" 
+      {:put => '/sessions/1'}.should route_to :controller => 'sessions',
+        :action => 'update', :id => "1"      
     end
   end
 end

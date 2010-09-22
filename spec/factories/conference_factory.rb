@@ -1,4 +1,4 @@
 Factory.define(:conference, :class => Conference) do |u|
-  u.name 'cheese'
-  u.edition  'cheddar'
+  u.name 'xp'
+  u.edition  '2011'
 end
