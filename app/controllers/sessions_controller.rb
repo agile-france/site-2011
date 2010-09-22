@@ -1,9 +1,13 @@
 class SessionsController < ApplicationController
+  # filters
+  # 1. authentication, for Create, Update
+  # 2. authorization, for Update
   before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :authorize_user!, :only => [:edit, :update]
 
+  # supported formats
   respond_to :html, :json
-
+  
   def new
     @session = Session.new
     respond_with @session
@@ -37,15 +41,20 @@ class SessionsController < ApplicationController
     respond_with @sessions
   end
 
+  helper_method :can_edit?, :current_session  
   private
+  def can_edit?(user, session)
+    user == session.user
+  end
+  
+  def current_session
+    @session ||= Session.find(params[:id])
+  end
+  
   # looks like this current_#{symbol} is a pattern
   # is it a good one ?, dunno at this time ... and looks like symbol requested in params is a pain
   def current_conference
     @conference ||= Conference.find(params[:conference_id])
-  end
-
-  def current_session
-    @session ||= Session.find(params[:id])
   end
 
   # cancan is an option
@@ -53,9 +62,5 @@ class SessionsController < ApplicationController
     unless can_edit?(current_user, current_session)
       raise Failures::AccessDenied.new(t('resources.not_authorized'))
     end
-  end
-
-  def can_edit?(user, session)
-    user == session.user
   end
 end
