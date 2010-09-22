@@ -112,8 +112,6 @@ describe SessionsController do
     end
 
     it 'should show proposed sessions for a conference' do
-      @cheese.sessions.should == @cheeses
-
       get :index, {:conference_id => @cheese.id}
       assigns(:sessions).should == @cheese.sessions
       response.should be_success
