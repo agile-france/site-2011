@@ -118,14 +118,42 @@ describe SessionsController do
     end
   end
 
-  describe 'GET conferences/1/sessions/1' do
+  # see http://github.com/rspec/rspec-rails/issues#issue/215
+  # can not test a view using any helper_method in controller
+  describe 'GET conferences/2/sessions/4' do
+    render_views
+    
     before do
-      @session = Factory(:session, :conference => @cheese)
+      @kent = Factory(:user, :email => "kent@beck.org")
+      @ron = Factory(:user, :email => "ron@jeffries.org")
+      @xp = Factory(:conference, :name => 'xp', :id => 2)
+      @explained = Factory(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => 4)
     end
 
-    it 'should show me the session' do
-      get :show, {:conference_id => @cheese.id, :id => @session.id}
-      response.should be_success
+    describe ', with author logged in' do
+      before do
+        sign_in(@kent)
+        get :show, :conference_id => @xp.to_param, :id => @explained.to_param
+      end
+
+      it 'should have an edit link' do
+        assigns(:session).should == @explained
+        response.should be_success
+        response.body.should have_tag('a[href="/conferences/2/sessions/4/edit"]')
+      end
     end
+
+    describe ', with reader logged in' do
+      before do
+        sign_in(@ron)      
+        get :show, :conference_id => @xp.to_param, :id => @explained.to_param
+      end
+    
+      it 'should have an edit link' do
+        assigns(:session).should == @explained
+        response.should be_success
+        response.body.should_not have_tag('a[href="/conferences/2/sessions/4/edit"]')
+      end
+    end    
   end
 end
