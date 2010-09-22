@@ -2,9 +2,6 @@
 ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
-require 'factory_girl'
-require 'ruby-debug'
-require 'rspec_tag_matchers'
 require 'rr'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
@@ -25,6 +22,4 @@ RSpec.configure do |config|
   # examples within a transaction, comment the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
-
-  config.include(RspecTagMatchers)
 end
