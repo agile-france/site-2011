@@ -1,5 +1,5 @@
 %h2= t('devise.common.sign_in')
-= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+= form_for(resource, :as => resource_name, :url => user_session_path) do |f|
   %p
     = f.label t('devise.common.email')
     %br/
