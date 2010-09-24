@@ -13,15 +13,18 @@ describe SessionsController do
     end
 
     describe ", GET /conferences/1/sessions/new" do
+      render_views
+      
       before do
-        @courage = Factory(:session)
+        @courage = Factory.build(:session)
         stub(::Session).new { @courage }
       end
 
       it "should be successful" do
-        get :new, {:conference_id => @courage.to_param}
+        get :new, {:conference_id => @xp.to_param}
         assigns(:session).should == @courage
         response.should be_success
+        response.body.should have_tag('form[action="/conferences/1/sessions"]')
       end
     end
 
