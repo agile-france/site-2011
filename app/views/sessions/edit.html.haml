@@ -1,2 +1,2 @@
 %h1= t('party.session.update?')
-= render 'form'
+= render :partial => 'form', :locals => {:url => session_path(@session)}

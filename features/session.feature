@@ -9,6 +9,5 @@ Feature: Session
     When I go to "/conferences/1/sessions/new"
       And I fill in "session_title" with "courage"
       And I press "session_submit"
-    Then show me the page
-      And I should be on "/conferences/1"
+    Then I should be on "/conferences/1"
       And I should see "courage"
