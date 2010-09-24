@@ -53,5 +53,9 @@ for jqueryless behavior, add a handy step before offending step
 then you go and see
 
 # metrics
-## rcov
+## coverage, using simplecov
 slow
+
+# rails s?
+rake db:migrate db:seed
+rails s
