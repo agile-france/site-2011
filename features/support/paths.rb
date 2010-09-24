@@ -7,13 +7,8 @@ module NavigationHelpers
   #
   def path_to(page_name)
     case page_name
-      when /the home\s?page/
-        '/'
-      when /register/
-        new_user_registration_path
-      when /conferences\/(.+)/
-        options = {:id => $1}
-        conference_path(options)
+      when /"([^"]*)"/
+        $1
       else
         begin
           page_name =~ /the (.*) page/
