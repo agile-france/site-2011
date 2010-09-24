@@ -1,0 +1,14 @@
+%div{:id => "session_#{session.id}"}
+  .header
+    .author
+      %h3
+        %span{:class => 'label'} #{t('roles.author')} :
+        = session.user.greeter_name
+    .title
+      %h3
+        = link_to session.title, session
+    .clear
+
+  .description
+    :plain
+      #{markup(session.description)}

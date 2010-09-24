@@ -4,8 +4,9 @@ describe "conferences/show.html.haml" do
   before do
     @xp = Factory(:conference, :id => 3)
     @kent = Factory(:user, :first_name => 'kent', :last_name => 'beck')
-    @kent.propose(Session.new({:id => 6, :title => 'explained'}), @xp)
-    assign(:conference, @xp)
+    @explained = Factory(:session, :id => 6, :title => 'explained')
+    @kent.propose(@explained, @xp)
+    assign(:conference, @xp.reload)
     render
   end
 
@@ -19,6 +20,7 @@ describe "conferences/show.html.haml" do
   end
   
   it 'should have a link to session' do
+    @xp.reload.sessions.should == [@explained]
     rendered.should have_tag('a[href="/sessions/6"]') 
   end
 end
