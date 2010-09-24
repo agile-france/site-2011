@@ -2,5 +2,4 @@
 
 = link_to t('party.session.new?'), new_conference_session_path(@conference)
 
-- @conference.sessions.each do |session|
-  = render :partial => 'sessions/preview', :locals => {:session => session}
+= render :partial => 'sessions/preview', :collection => @conference.sessions, :as => :session
