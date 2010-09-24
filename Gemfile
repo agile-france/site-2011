@@ -1,4 +1,7 @@
 source 'http://rubygems.org'
+def mac?
+  RUBY_PLATFORM =~ /darwin/
+end
 
 gem 'rails', '>= 3.0.0'
 gem 'arel',  '>= 0.4.0'
@@ -50,7 +53,7 @@ group :test do
   # autotest
   gem 'autotest'
   gem 'autotest-growl'
-  gem 'autotest-fsevent'
+  gem 'autotest-fsevent' if mac?
 
   # rr
   gem 'rr'
