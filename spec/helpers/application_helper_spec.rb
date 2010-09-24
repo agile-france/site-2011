@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe ApplicationHelper do
   describe 'markup' do
     it 'should render text using Markdown' do
