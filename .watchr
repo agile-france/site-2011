@@ -3,16 +3,6 @@ if __FILE__ == $0
   exit 1
 end
 
-# growl
-def growl(message)
-  growlnotify = `which growlnotify`.chomp
-  title = "Watchr Test Results"
-  image = message.include?('0 failures, 0 errors') ? "~/.watchr_images/passed.png" : "~/.watchr_images/failed.png"
-  options = "-w -n Watchr --image '#{File.expand_path(image)}' -m '#{message}' '#{title}'"
-  run %(#{growlnotify} #{options} &)
-end
-
-
 # --------------------------------------------------
 # Convenience Methods
 # --------------------------------------------------
@@ -22,12 +12,12 @@ def run(cmd)
 end
 
 def run_all_specs
-  run "rake -s spec"
+  run "rspec spec"
 end
 
 def run_single_spec *spec
   spec = spec.join(' ')
-  run "script/spec -O spec/spec.opts #{spec}"
+  run "rspec #{spec}"
 end
 
 def run_specs_with_shared_examples(shared_example_filename, spec_path = 'spec')
@@ -54,8 +44,7 @@ def run_specs_with_shared_examples(shared_example_filename, spec_path = 'spec')
 end
 
 def run_cucumber_scenario scenario_path
-  result = run "cucumber #{scenario_path}"
-
+  run "cucumber #{scenario_path}"
 end
 
 # --------------------------------------------------
@@ -82,4 +71,4 @@ end
 # Ctrl-C
 Signal.trap('INT') { abort("\n") }
 
-putc '.'
+puts "Watching.."
