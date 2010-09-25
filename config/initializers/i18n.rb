@@ -1,1 +1,1 @@
-I18n.exception_handler = lambda {|*args| raise args.first}
+I18n::Backend::Simple.send(:include, I18n::Backend::Fallbacks)
