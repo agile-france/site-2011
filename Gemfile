@@ -51,6 +51,9 @@ group :test do
   gem 'autotest'
   gem 'autotest-growl'
   gem 'autotest-fsevent'
+  
+  # watchr is an alternate to autotest ...
+  gem 'watchr'
 
   # rr
   gem 'rr'
