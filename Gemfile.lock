@@ -36,6 +36,8 @@ GEM
       sys-uname
     autotest-growl (0.2.6)
     bcrypt-ruby (2.1.2)
+    bson (1.0.4)
+    bson_ext (1.0.4)
     builder (2.1.2)
     capybara (0.3.9)
       culerity (>= 0.2.4)
@@ -89,6 +91,14 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
+    mongo (1.0.7)
+      bson (>= 1.0.4)
+    mongoid (2.0.0.beta.18)
+      activemodel (~> 3.0.0)
+      bson (= 1.0.4)
+      mongo (= 1.0.7)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     rack (1.2.1)
@@ -156,6 +166,7 @@ GEM
     warden (0.10.7)
       rack (>= 1.0.0)
     watchr (0.7)
+    will_paginate (3.0.pre2)
 
 PLATFORMS
   ruby
@@ -165,6 +176,7 @@ DEPENDENCIES
   autotest
   autotest-fsevent
   autotest-growl
+  bson_ext (= 1.0.4)
   capybara
   cucumber
   cucumber-rails
@@ -174,6 +186,7 @@ DEPENDENCIES
   haml
   haml-rails
   launchy
+  mongoid (>= 2.0.0.beta.18)
   rails (>= 3.0.0)
   rdiscount
   rr
