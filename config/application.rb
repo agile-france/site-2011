@@ -25,10 +25,10 @@ module ConferenceOnRails
     # Run "rake -D time" for a list of tasks for finding time zone names. Default is UTC.
     # config.time_zone = 'Central Time (US & Canada)'
 
-    # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
+    # The default locale is :fr and fallbacks to :en
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
-    config.i18n.default_locale = :en
-    config.i18n.locale = :fr
+    config.i18n.default_locale = :fr
+    config.fallbacks = {:fr => :en}
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
