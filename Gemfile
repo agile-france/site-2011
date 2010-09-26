@@ -47,8 +47,8 @@ group :test do
   gem 'cucumber-rails'
   gem 'database_cleaner'
 
-  # spork, drb server, is banned for a while, till integration is better
-  # gem 'spork'
+  # spork, drb server
+  gem 'spork'
 
   # capybara
   gem 'capybara'
