@@ -23,7 +23,11 @@ or for one shot,
 		rspec spec/
 		
 ### dunno why it fails :(
-add a debugger statement, then go to irb, quit when more knowledge is gain (^D will go to rdb)
+add a debugger statement, and type then
+
+    rspec -d spec/failing_spec.rb
+
+!!! caution : I do not recommand debugging with a running spork drb server (personal taste)!!!
 
 this practice is not related to rails (though pretty described in http://guides.rubyonrails.org/debugging_rails_applications.html)
 
@@ -41,21 +45,32 @@ for unit test and cukes, do
 
 or for one shot
 
-		rake cucumber
+    cucumber feature/this-one-is-red.feature
 or
-    cucumber
+
+    cucumber --tags @this_one_is_red
+
+see [cucumber and tags](http://github.com/aslakhellesoy/cucumber/wiki/tags), and [capybara tags](http://github.com/jnicklas/capybara)
+
 		
 ### dunno why it fails :(
 for jqueryless behavior, add a handy step before offending step
 
-	Then show me the page
+    Then show me the page
 
 then you go and see
 
 # metrics
 ## coverage, using simplecov
-slow
+kill any spork drb server before, otherwise, coverage is not generated (at_exit spork)
 
-# rails s?
-rake db:migrate db:seed
-rails s
+    COVERAGE=true rspec spec
+
+no support for cucumber provided coverage, at this time
+
+# where the bloody site ?
+at least once
+    rake db:setup
+    
+then
+    rails s
