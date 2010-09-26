@@ -66,5 +66,5 @@ group :test do
   gem 'rr'
 
   # coverage
-  gem 'simplecov', :require => false
+  gem 'simplecov', :require => false if RUBY_VERSION =~ /1\.9/
 end
