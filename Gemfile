@@ -48,7 +48,7 @@ group :test do
   gem 'database_cleaner'
 
   # spork, drb server
-  gem 'spork'
+  gem 'spork', '>= 0.9.0.rc2'
 
   # capybara
   gem 'capybara'
@@ -56,6 +56,7 @@ group :test do
 
   # autotest
   gem 'autotest'
+  gem 'autotest-rails-pure'
   gem 'autotest-growl'
   gem 'autotest-fsevent' if mac?
   

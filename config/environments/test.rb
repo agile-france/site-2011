@@ -35,10 +35,4 @@ ConferenceOnRails::Application.configure do
   
   # logger does not touch filesystem
   config.logger = nil
-
-  # Part of a Spork hack. See http://bit.ly/arY19y
-  initializer :after => :initialize_dependency_mechanism do
-    # Work around initializer in railties/lib/rails/application/bootstrap.rb
-    ActiveSupport::Dependencies.mechanism = :load
-  end
 end

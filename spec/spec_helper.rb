@@ -34,12 +34,16 @@ Spork.prefork do
     # If you're not using ActiveRecord, or you'd prefer not to run each of your
     # examples within a transaction, comment the following line or assign false
     # instead of true.
-    config.use_transactional_fixtures = true
+    config.use_transactional_fixtures = true 
   end  
 end
 
 Spork.each_run do
-  # This code will be run each time you run your specs.  
+  ### issues are
+  # http://github.com/rspec/rspec-core/issues/62
+  # http://github.com/thoughtbot/factory_girl/issues/55
+  # 
+  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }   
 end
 
 # --- Instructions ---
@@ -51,8 +55,3 @@ end
 #   and during each_run!
 # - These instructions should self-destruct in 10 seconds.  If they don't,
 #   feel free to delete them.
-#
-
-
-
-
