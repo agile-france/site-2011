@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'i18n configuration' do
   it 'has fr default locale' do
-    I18n.default_locale.should == :fr
+    I18n.default_locale.should == :en
   end
   
   it 'has fr locale' do
