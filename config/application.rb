@@ -28,7 +28,7 @@ module ConferenceOnRails
     # The default locale is :fr and fallbacks to :en
     config.i18n.load_path += Dir[Rails.root.join('config', 'locales', '**', '*.{rb,yml}')]
     config.i18n.default_locale = :fr
-    config.fallbacks = {:fr => :en}
+    config.i18n.fallbacks = {:fr => :en}
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
