@@ -27,10 +27,6 @@ gem 'devise', '>= 1.1.2'
 # rdiscount
 gem 'rdiscount'
 
-# mongo
-gem 'mongoid', '>= 2.0.0.beta.18'
-gem 'bson_ext', '1.0.4'
-
 group :development do
   # rspec
   gem "rspec-rails", ">= 2.0.0.beta.22"
