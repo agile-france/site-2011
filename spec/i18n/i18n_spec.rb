@@ -29,7 +29,7 @@ describe 'i18n configuration' do
     end
     
     it 'raises when no translation' do
-      I18n.translate(:goose).should == 'choose'
+      lambda{I18n.translate(:goose)}.should raise_error I18n::MissingTranslationData
     end
   end
 end
