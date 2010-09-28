@@ -1,0 +1,129 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Agile France Conférence 2011</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+body {
+	background-image: url('images/bluebackground.png');
+	background-repeat: repeat-x;
+	background-color: #2d578e;
+}
+a:link {
+	text-decoration: underline;
+	color: inherit;
+}
+a:visited {
+	color: #e2a1a1;
+}
+a img {
+	border: none;
+}
+#container {
+	width: 575px;
+	margin: 0 auto;
+	text-align: center;
+}
+#content {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+	margin-top: 4em;
+}
+#logo {
+	background-color: white;
+	margin-top: 0.25em;
+}
+h1 {
+	color: #e2a1a1;
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+	line-height: 0.75em;
+}
+#date{
+	text-transform: uppercase;
+}
+#twitter {
+	margin-top: 2em;
+}
+#sessions {
+	height: 1.25em;
+	overflow: hidden;
+}
+#sessions2010 {
+	margin-top: 2em;
+}
+.session {
+	padding-right: 2em;
+	font-size: 75%;
+}
+#comment {
+	color: #e2a1a1;
+	font-size: 75%;
+}
+</style>
+<script type="text/javascript" src="javascripts/jquery/jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery/jquery-ui-1.8.5.min.js"></script>
+<script type="text/javascript">
+	function displayNextMessage() {
+		var next = $('.session').first();
+		var margin = -next.outerWidth();
+		var delay = next.outerWidth() * 10
+		next.animate({
+			marginLeft: margin,
+			opacity: 0
+		}, delay, 'linear', function () {
+			var displayed = $(this).detach();
+			displayed.appendTo($('#sessions'));
+			displayed.removeAttr('style');
+		});
+		$('.session').slice(1, 2).animate({
+			color: '#e2a1a1'
+		}, delay, 'linear', function() {
+			$('#comment').hide();
+			$('#comment').text($(this).attr('title'));
+			$('#comment').fadeIn('slow');
+		});
+		$('#comment').fadeOut();
+	};
+	function timer() {
+		displayNextMessage();
+		window.setInterval(displayNextMessage, 6000);
+	};
+	$(document).ready(timer);
+</script>
+</head>
+<body>
+	<div id="container">
+		<div id="content">
+			<p>
+				<a href="http://wiki.agile-france.org/">Agile France</a> présente<br />
+				<img src="images/AgileFranceConference2011-logo.png" alt="Agile France Conférence 2011" title="Agile France Conférence 2011" id="logo"/>
+			</p>
+			<h1>Le rendez-vous incontournable <br /> de la <strong>communauté agile</strong> française.</h1>
+			<h2 id="date">Printemps 2011</h2>
+			<h2>Châlet de la Porte Jaune - Paris</h2>
+			<a href="http://www.twitter.com/AgileFrance"><img id="twitter" src="http://twitter-badges.s3.amazonaws.com/follow_us-b.png" alt="Suivre AgileFrance sur Twitter" title="Suivre AgileFrance sur Twitter"/></a>
+			<div id="sessions2010">Des sessions de Agile France Conférence 2010:
+				<div id="sessions">
+					<span class="session" title="Un retour d'expérience de Stéphane Hanser">10 leçons apprises en rétrospectives</span>
+					<span class="session" title="Un atelier de Emmanuel Gaillot">Kata robozzle en haskell</span>
+					<span class="session" title="Une présentation d'Iva Konstantinovic">DRH, agilité, WTF ?</span>
+					<span class="session" title="Une présentation d'Eric Mignot">Refactoring d'un legacy par les test</span>
+					<span class="session" title="Une présentation de Jean-Laurent de Morlhon">Comment j'ai remplacé 30% de mes développeurs en adoptant l'agilité</span>
+					<span class="session" title="Une présentation de Bernard Notarianni">Réussir ses projets à coûts, délais et qualité fixes</span>
+					<span class="session" title="Un atelier d'Alexandre Boutin">Behaviour Driven Metrics : même les chiffres peuvent être agiles !</span>
+					<span class="session" title="Un atelier de Pascal Van Cauwenberghe">Définir la Valeur Métier avec le Systems Thinking</span>
+					<span class="session" title="Un atelier de Pascal Van Cauwenberghe">Les jeux de l'estimation</span>
+					<span class="session" title="Un atelier de Portia Tung">Apprenez les techniques de coaching avec le magicien d'Oz</span>
+					<span class="session" title="Un retour d'expérience de Gilles Mantel">Transformation Agile à grande echelle</span>
+					<span class="session" title="Une présentation de Jean-Claude Grosjean">Personas: une dose d'Experience Utilisateur pour vos projets Agiles</span>
+					<span class="session" title="Une présentation d'Alexandre Boutin">La fable du PO et du MOA</span>
+				</div>
+				<div id="comment"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
