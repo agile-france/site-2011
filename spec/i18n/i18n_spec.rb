@@ -1,20 +1,7 @@
 require 'spec_helper'
 
-describe 'i18n configuration' do
-  it 'has fr default locale' do
-    I18n.default_locale.should == :en
-  end
-  
-  it 'has fr locale' do
-    I18n.locale.should == :fr
-  end
-  
-  it 'should fallback to :en when translation is missing' do
-    I18n.should respond_to(:fallbacks)
-    I18n.fallbacks[:fr].should == [:fr, :en]
-  end
-  
-  describe 'translate message' do
+describe 'i18n configuration' do    
+  describe 'translate message in :fr' do
     before do
       I18n.backend.store_translations(:fr, {:cheese => 'fromage'})
       I18n.backend.store_translations(:en, {:choose => 'choose'})
