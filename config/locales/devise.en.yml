@@ -37,3 +37,12 @@ en:
         subject: 'Reset password instructions'
       unlock_instructions:
         subject: 'Unlock Instructions'
+  ### added ###
+    common:
+      forgot_your_password?: "Forgot your password ?"
+      greet: "Hello %{user}"
+      sign_in: "Sign in"
+      sign_out: "Sign out"
+      sign_up: "Sign up"
+      email: 'Email'
+      password: 'Password'

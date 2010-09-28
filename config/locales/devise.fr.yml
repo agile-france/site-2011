@@ -58,8 +58,8 @@ fr:
       sign_in: "Se connecter"
       sign_out: "Se déconnecter"
       sign_up: "Ouvrir un compte"
-      email: 'email'
-      password: 'mot de passe'
+      email: 'Email'
+      password: 'Mot de passe'
     shared:
       links:
         didnt_receive_confirmation_instructions?: "Vous n'avez pas reçu de mail de confirmation?"
