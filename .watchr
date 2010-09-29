@@ -1,14 +1,29 @@
+require 'ruby-debug'
+
 if __FILE__ == $0
   puts "Run with: watchr #{__FILE__}. \n\nRequired gems: watchr rev"
   exit 1
 end
+
+# ----
+def growl(message)
+  growlnotify = `which growlnotify`.chomp
+  title = "Red/Green/Refactor"
+  options = "-t '#{title}' -m'#{message}'"
+  fork do 
+    system %(#{growlnotify} #{options})
+  end
+end
+
 
 # --------------------------------------------------
 # Convenience Methods
 # --------------------------------------------------
 def run(cmd)
   puts(cmd)
-  system(cmd)
+  output = `#{cmd}`
+  puts(output)
+  growl output
 end
 
 def run_all_specs

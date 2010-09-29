@@ -36,12 +36,6 @@ describe ConferencesController do
   end
 
   describe 'index' do
-    before do
-      # XXX weird isolation there :)
-      # what use is use_transactional_fixtures ??
-      Conference.delete_all unless Conference.all.empty?
-    end
-
     it 'should show available conferences' do
       conferences = (2030..2032).map {|edition| Factory(:conference, :name => 'deep', :edition => edition)}
       get :index

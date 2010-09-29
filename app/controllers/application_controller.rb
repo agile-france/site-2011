@@ -4,11 +4,16 @@ class ApplicationController < ActionController::Base
 
   prepend_before_filter :localize
   def localize
-    user_locale = params['locale'].to_sym if params['locale']
-    I18n.locale = user_locale if user_locale
-    logger.debug("using locale #{I18n.locale}")
+    I18n.locale = session[:locale] = params[:locale]
+    logger.debug("using provided locale #{I18n.locale}") if params[:locale]
   end
 
+  def default_url_options
+    options = {}
+    options[:locale] = session[:locale] if session[:locale]
+    options
+  end
+  
   rescue_from ActiveRecord::RecordNotFound do |error|
     flash[:error] = error.message
     redirect_to root_path

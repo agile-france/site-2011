@@ -8,5 +8,9 @@ Feature: internationalization
   Scenario: I can see message in the locale I provide
     When I go to "/?locale=en"
       Then I should see "Sign up"
-  
-  
+
+  Scenario: Provided locale is preserved on query string
+    Given I am on "/?locale=en"
+    When I follow "Sign up"
+    Then I should have the following query string:
+      |locale|en|

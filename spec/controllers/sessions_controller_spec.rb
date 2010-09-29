@@ -18,12 +18,15 @@ describe SessionsController do
       before do
         @courage = Factory.build(:session)
         stub(::Session).new { @courage }
+        get :new, {:conference_id => @xp.to_param}
       end
 
       it "should be successful" do
-        get :new, {:conference_id => @xp.to_param}
         assigns(:session).should == @courage
         response.should be_success
+      end
+      
+      it 'action should be POST to /conferences/1/sessions' do
         response.body.should have_tag('form[action="/conferences/1/sessions"]')
       end
     end
@@ -139,11 +142,21 @@ describe SessionsController do
         get :show, :conference_id => @xp.to_param, :id => @explained.to_param
       end
     
-      it 'should have an edit link' do
+      it 'should not have an edit link' do
         assigns(:session).should == @explained
         response.should be_success
         response.body.should_not have_tag('a[href="/sessions/4/edit"]')
       end
-    end    
+    end
+    
+    describe ', with given locale parameter' do
+      before do
+        get :show, :conference_id => @xp.to_param, :id => @explained.to_param, :locale => :en
+      end
+    
+      it 'should have a link back to conference with locale parameter' do
+        response.body.should have_tag('a[href="/conferences/2?locale=en"]')
+      end      
+    end
   end
 end
