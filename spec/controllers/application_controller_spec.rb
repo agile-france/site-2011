@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ApplicationController do
   before do
-    @xp = Factory(:conference, :id => 12, )
+    @xp = Fabricate(:conference, :id => 12)
   end
     
   describe 'default url options' do

@@ -150,12 +150,12 @@ describe SessionsController do
       end
     end
     
-    describe ', with given locale parameter' do
+    describe 'with "en" locale parameter' do
       before do
-        get :show, :conference_id => @xp.to_param, :id => @explained.to_param, :locale => :en
+        get :show, :conference_id => @xp.id, :id => @explained.id, :locale => :en
       end
     
-      it 'should have a link back to conference with locale parameter' do
+      it 'should have a link back to conference with "en" locale parameter' do
         response.body.should have_tag('a[href="/conferences/2?locale=en"]')
       end      
     end
