@@ -3,25 +3,26 @@ require 'spec_helper'
 
 describe SessionsController do
   before do
-    @xp = Factory(:conference)
+    @xp = Fabricate(:conference, :id => 1)
   end
 
-  describe ', with a signed in user' do
+  describe 'with a signed in user' do
     before do
-      @john = Factory.create(:user)
+      @john = Fabricate(:user)
       sign_in @john
     end
 
-    describe ", GET /conferences/1/sessions/new" do
+    describe "GET /conferences/1/sessions/new" do
       render_views
       
       before do
-        @courage = Factory.build(:session)
+        @courage = Fabricate.build(:session)
         stub(::Session).new { @courage }
         get :new, {:conference_id => @xp.to_param}
       end
 
       it "should be successful" do
+        get :new, {:conference_id => @xp.id}
         assigns(:session).should == @courage
         response.should be_success
       end
@@ -31,13 +32,13 @@ describe SessionsController do
       end
     end
 
-    describe ", POST /conferences/1/sessions" do
+    describe "POST /conferences/1/sessions" do
       before do
         @params = {:title => 'courage', :description => 'and respect'}
-        post :create, :conference_id => @xp.to_param, :session => @params
+        post :create, :conference_id => @xp.id, :session => @params
       end
 
-      it ', should wire session to user and conference' do
+      it 'should wire session to user and conference' do
         # XXX
         # at least, failed to spec it with mocks using rr+rspec+devise :)
         # devise current_user is not available in this spec ...
@@ -56,15 +57,15 @@ describe SessionsController do
       end
     end
 
-    describe ', PUT /sessions/123' do
+    describe 'PUT /sessions/123' do
       def new_title
         'do not forget the donuts'
       end
 
-      describe ', allows a user to update a session' do
+      describe 'allows a user to update a session' do
         before do
-          @simplicity = Factory(:session, :conference => @xp, :user => @john, :id => 123)
-          put :update, {:conference_id => @xp.to_param, :id => @simplicity.to_param, 
+          @simplicity = Fabricate(:session, :conference => @xp, :user => @john, :id => 123)
+          put :update, {:conference_id => @xp.id, :id => @simplicity.id, 
             :session => {:title => new_title}}
         end
 
@@ -77,12 +78,12 @@ describe SessionsController do
         end
       end
 
-      describe ', does not authorize a user to modify other sessions' do
+      describe 'does not authorize a user to modify other sessions' do
         before do
-          @aaron = Factory(:user, :email => 'aaron@paterson.com')
-          @nokogiri = Factory(:session, :user => @aaron, :id => 401, :title => 'nokogiri')
+          @aaron = Fabricate(:user, :email => 'aaron@paterson.com')
+          @nokogiri = Fabricate(:session, :user => @aaron, :id => 401, :title => 'nokogiri')
           request.env["HTTP_REFERER"] = session_path(@nokogiri)
-          put :update, {:conference_id => @xp.to_param, :id => @nokogiri.to_param,
+          put :update, {:conference_id => @xp.id, :id => @nokogiri.id,
              :session => {:title => new_title}}
         end
 
@@ -97,8 +98,8 @@ describe SessionsController do
     end
   end
 
-  describe ', with a signed off user' do
-    describe ", GET /conferences/1/sessions/new" do
+  describe 'with a signed off user' do
+    describe "GET /conferences/1/sessions/new" do
       before do
         get :new, {:conference_id => @xp.id}
       end
@@ -117,32 +118,32 @@ describe SessionsController do
     render_views
     
     before do
-      @kent = Factory(:user, :email => "kent@beck.org")
-      @ron = Factory(:user, :email => "ron@jeffries.org")
-      @xp = Factory(:conference, :name => 'xp', :id => 2)
-      @explained = Factory(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => 4)
+      @kent = Fabricate(:user, :email => "kent@beck.org")
+      @ron = Fabricate(:user, :email => "ron@jeffries.org")
+      @xp = Fabricate(:conference, :name => 'xp', :id => 2)
+      @explained = Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => 4)
     end
 
-    describe ', with author logged in' do
+    describe 'for author' do
       before do
         sign_in(@kent)
-        get :show, :conference_id => @xp.to_param, :id => @explained.to_param
+        get :show, :conference_id => @xp.id, :id => @explained.id
       end
 
-      it 'should have an edit link' do
+      it 'has a handy edit link' do
         assigns(:session).should == @explained
         response.should be_success
         response.body.should have_tag('a[href="/sessions/4/edit"]')
       end
     end
 
-    describe ', with reader logged in' do
+    describe 'for a reader' do
       before do
         sign_in(@ron)      
-        get :show, :conference_id => @xp.to_param, :id => @explained.to_param
+        get :show, :conference_id => @xp.id, :id => @explained.id
       end
     
-      it 'should not have an edit link' do
+      it 'has no edit link' do
         assigns(:session).should == @explained
         response.should be_success
         response.body.should_not have_tag('a[href="/sessions/4/edit"]')

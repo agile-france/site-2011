@@ -1,3 +1,7 @@
-class Conference < ActiveRecord::Base
-  has_many :sessions
+class Conference
+  include Mongoid::Document  
+  references_many :sessions
+  
+  field :name
+  field :edition
 end

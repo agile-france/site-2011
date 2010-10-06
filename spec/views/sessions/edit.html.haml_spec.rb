@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "sessions/edit.html.haml" do
   before do
-    @xp = Factory(:conference)
-    @session = Factory(:session, :id => 123, :title => 'courage', :conference => @conference)
+    @xp = Fabricate(:conference)
+    @session = Fabricate(:session, :id => 123, :title => 'courage', :conference => @conference)
 
     assign(:session, @session)
     render

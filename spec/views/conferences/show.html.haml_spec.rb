@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe "conferences/show.html.haml" do
   before do
-    @xp = Factory(:conference, :id => 3)
-    @kent = Factory(:user, :first_name => 'kent', :last_name => 'beck')
-    @explained = Factory(:session, :id => 6, :title => 'explained')
+    @xp = Fabricate(:conference, :id => 3)
+    @kent = Fabricate(:user, :first_name => 'kent', :last_name => 'beck')
+    @explained = Fabricate(:session, :id => 6, :title => 'explained')
     @kent.propose(@explained, @xp)
-    assign(:conference, @xp.reload)
+    assign(:conference, @xp)
     render
   end
 

@@ -3,7 +3,7 @@ require 'spec_helper'
 require 'i18n'
 
 describe "home/index.html.haml" do
-  describe ', with fr locale' do
+  describe 'with fr locale' do
     before do
       I18n.locale = :fr
       render
@@ -14,7 +14,7 @@ describe "home/index.html.haml" do
     end
   end
 
-  describe ', with en locale' do
+  describe 'with en locale' do
     before do
       I18n.locale = :en
       render

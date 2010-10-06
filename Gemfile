@@ -6,8 +6,6 @@ end
 gem 'rails', '>= 3.0.0'
 gem 'arel',  '>= 0.4.0'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
-
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -27,16 +25,20 @@ gem 'devise', '>= 1.1.2'
 # rdiscount
 gem 'rdiscount'
 
-group :development do
-  # rspec
-  gem "rspec-rails", ">= 2.0.0.beta.22"
+# mongo
+gem 'mongoid', '>= 2.0.0.beta.19'
+gem 'bson_ext', '1.1'
+
+group :development, :test do
+  gem "rspec-rails", ">= 2.0.0.rc"
 end
 
 group :test do
   gem "rspec_tag_matchers"
+  gem 'wrong', '>= 0.4.0'
 
   # factory
-  gem 'factory_girl_rails'
+  gem 'fabrication'
 
   # cucumber
   gem 'cucumber'
@@ -49,12 +51,6 @@ group :test do
   # capybara
   gem 'capybara'
   gem 'launchy'
-
-  # autotest
-  gem 'autotest'
-  gem 'autotest-rails-pure'
-  gem 'autotest-growl'
-  gem 'autotest-fsevent' if mac?
   
   # watchr is an alternate to autotest ...
   gem 'watchr'

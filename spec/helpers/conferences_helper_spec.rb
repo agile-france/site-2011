@@ -13,7 +13,7 @@ require 'spec_helper'
 describe ConferencesHelper do
   describe '#introduce' do
     it 'should slashify name and edition' do
-      deep = Factory(:conference, :name => 'deep', :edition => 2011)
+      deep = Conference.new(:name => 'deep', :edition => 2011)
       helper.introduce(deep).should == 'deep/2011'
     end
   end

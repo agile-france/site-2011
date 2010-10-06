@@ -2,27 +2,21 @@
 require 'spec_helper'
 
 describe ConferencesController do
-  describe ', self' do
-    it 'should know about conference_path' do
-      ConferencesController.new.should respond_to(:conference_path)
-    end
-  end
-
   describe "GET 'show'" do
-    describe ', with existing conference params' do
+    describe 'with existing conference params' do
       before do
-        @deep = Factory(:conference, {:name => 'deep', :edition => '2011'})
+        @deep = Fabricate(:conference, :name => 'deep', :edition => '2011')
       end
 
-      it "should be successful for an existing party" do
+      it "should be successful for an existing conference" do
         get :show, {:id => @deep.id}
         response.should be_success
       end
     end
 
-    describe ', with flunky party parameters' do
+    describe 'with flunky parameters' do
       before do
-        get :show, {:id => 42}
+        get :show, {:id => 2}
       end
 
       it 'should redirect to root_path' do
@@ -37,7 +31,7 @@ describe ConferencesController do
 
   describe 'index' do
     it 'should show available conferences' do
-      conferences = (2030..2032).map {|edition| Factory(:conference, :name => 'deep', :edition => edition)}
+      conferences = (2030..2032).map {|edition| Fabricate(:conference, :name => 'deep', :edition => edition)}
       get :index
       assigns(:conferences).should == conferences
       response.should be_success

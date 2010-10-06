@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
     options
   end
   
-  rescue_from ActiveRecord::RecordNotFound do |error|
+  rescue_from Mongoid::Errors::DocumentNotFound do |error|
     flash[:error] = error.message
     redirect_to root_path
   end

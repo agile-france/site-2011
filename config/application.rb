@@ -1,5 +1,7 @@
 require File.expand_path('../boot', __FILE__)
-require 'rails/all'
+require 'action_controller/railtie'
+require 'action_mailer/railtie'
+require 'active_resource/railtie'
 
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
@@ -32,8 +34,10 @@ module ConferenceOnRails
 
     # Configure generators values. Many other options are available, be sure to check the documentation.
     config.generators do |g|
-      g.orm :active_record
+      g.orm :mongoid
       g.template_engine :haml
+      g.test_framework :rspec, :fixture => true
+      g.fixture_replacement :fabrication, :dir => "spec/fabricators"      
     end
 
     # Configure the default encoding used in templates for Ruby 1.9.

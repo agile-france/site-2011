@@ -21,7 +21,8 @@ Spork.prefork do
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 
-  RSpec.configure do |config|
+
+  Rspec.configure do |config|
     # == Mock Framework
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -30,11 +31,17 @@ Spork.prefork do
     # config.mock_with :flexmock
     # config.mock_with :rr
     config.mock_with :rr
-
-    # If you're not using ActiveRecord, or you'd prefer not to run each of your
-    # examples within a transaction, comment the following line or assign false
-    # instead of true.
-    config.use_transactional_fixtures = true 
+    
+    ## see http://mongoid.org/docs/integration
+    ## and http://github.com/bmabey/database_cleaner
+    require 'database_cleaner'
+    config.before(:suite) do
+      DatabaseCleaner.orm = 'mongoid'
+      DatabaseCleaner.strategy = :truncation    
+    end
+    config.before(:each) do
+      DatabaseCleaner.clean
+    end
   end  
 end
 

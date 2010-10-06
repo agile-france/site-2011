@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe 'sessions/index.html.haml' do
   before do
-    @xp = Factory(:conference)
+    @xp = Fabricate(:conference)
     @sessions = ['courage', 'respect'].map { |title|
-      Factory(:session, :title => title, :conference => @conference)
+      Fabricate(:session, :title => title, :conference => @conference)
     }
   end
 

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "conferences/index.html.haml" do
   before do
-    @conferences = (2010..2012).map {|edition| Factory(:conference, :name => 'deep', :edition => edition)}
+    @conferences = (2010..2012).map {|edition| Fabricate(:conference, :name => 'deep', :edition => edition)}
     assign(:conferences, @conferences)
     render
   end
