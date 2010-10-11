@@ -16,7 +16,7 @@ describe ConferencesController do
 
     describe 'with flunky parameters' do
       before do
-        get :show, {:id => 2}
+        get :show, {:id => id(2)}
       end
 
       it 'should redirect to root_path' do

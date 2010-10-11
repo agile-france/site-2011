@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe SessionsController do
   before do
-    @xp = Fabricate(:conference, :id => 1)
+    @xp = Fabricate(:conference, :id => id(1234))
   end
 
   describe 'with a signed in user' do
@@ -12,7 +12,7 @@ describe SessionsController do
       sign_in @john
     end
 
-    describe "GET /conferences/1/sessions/new" do
+    describe "GET /conferences/:conference_id/sessions/new" do
       render_views
       
       before do
@@ -20,19 +20,23 @@ describe SessionsController do
         stub(::Session).new { @courage }
         get :new, {:conference_id => @xp.to_param}
       end
-
+      
+      it 'new_conference_session_path should be /conferences/:conference_id/sessions/new' do
+        assert {new_conference_session_path(@xp) == "/conferences/#{@xp.id}/sessions/new"}
+      end
+      
       it "should be successful" do
         get :new, {:conference_id => @xp.id}
         assigns(:session).should == @courage
         response.should be_success
       end
       
-      it 'action should be POST to /conferences/1/sessions' do
-        response.body.should have_tag('form[action="/conferences/1/sessions"]')
+      it 'action should be POST to /conferences/:conference_id/sessions' do
+        response.body.should have_tag("form[action=\"/conferences/#{@xp.id}/sessions\"]")
       end
     end
 
-    describe "POST /conferences/1/sessions" do
+    describe "POST /conferences/:id/sessions" do
       before do
         @params = {:title => 'courage', :description => 'and respect'}
         post :create, :conference_id => @xp.id, :session => @params
@@ -57,14 +61,14 @@ describe SessionsController do
       end
     end
 
-    describe 'PUT /sessions/123' do
+    describe 'PUT /sessions/:id' do
       def new_title
         'do not forget the donuts'
       end
 
       describe 'allows a user to update a session' do
         before do
-          @simplicity = Fabricate(:session, :conference => @xp, :user => @john, :id => 123)
+          @simplicity = Fabricate(:session, :conference => @xp, :user => @john)
           put :update, {:conference_id => @xp.id, :id => @simplicity.id, 
             :session => {:title => new_title}}
         end
@@ -74,21 +78,21 @@ describe SessionsController do
         end
 
         it 'should redirect to session' do
-          response.should redirect_to('/sessions/123')
+          response.should redirect_to(session_path(@simplicity))
         end
       end
 
       describe 'does not authorize a user to modify other sessions' do
         before do
           @aaron = Fabricate(:user, :email => 'aaron@paterson.com')
-          @nokogiri = Fabricate(:session, :user => @aaron, :id => 401, :title => 'nokogiri')
+          @nokogiri = Fabricate(:session, :user => @aaron, :title => 'nokogiri')
           request.env["HTTP_REFERER"] = session_path(@nokogiri)
           put :update, {:conference_id => @xp.id, :id => @nokogiri.id,
              :session => {:title => new_title}}
         end
 
         it 'should redirect to session' do
-          response.should redirect_to('/sessions/401')
+          response.should redirect_to(session_path(@nokogiri))
         end
 
         it 'should flash error' do
@@ -99,7 +103,7 @@ describe SessionsController do
   end
 
   describe 'with a signed off user' do
-    describe "GET /conferences/1/sessions/new" do
+    describe "GET /conferences/:conference_id/sessions/new" do
       before do
         get :new, {:conference_id => @xp.id}
       end
@@ -120,8 +124,8 @@ describe SessionsController do
     before do
       @kent = Fabricate(:user, :email => "kent@beck.org")
       @ron = Fabricate(:user, :email => "ron@jeffries.org")
-      @xp = Fabricate(:conference, :name => 'xp', :id => 2)
-      @explained = Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => 4)
+      @xp = Fabricate(:conference, :name => 'xp', :id => id(2))
+      @explained = Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => id(4))
     end
 
     describe 'for author' do
@@ -133,7 +137,7 @@ describe SessionsController do
       it 'has a handy edit link' do
         assigns(:session).should == @explained
         response.should be_success
-        response.body.should have_tag('a[href="/sessions/4/edit"]')
+        response.body.should have_tag("a[href=\"/sessions/#{id(4)}/edit\"]")
       end
     end
 
@@ -146,7 +150,7 @@ describe SessionsController do
       it 'has no edit link' do
         assigns(:session).should == @explained
         response.should be_success
-        response.body.should_not have_tag('a[href="/sessions/4/edit"]')
+        response.body.should_not have_tag(edit_session_path(@explained))
       end
     end
     
@@ -156,7 +160,7 @@ describe SessionsController do
       end
     
       it 'should have a link back to conference with "en" locale parameter' do
-        response.body.should have_tag('a[href="/conferences/2?locale=en"]')
+        response.body.should have_tag("a[href=\"/conferences/#{id(2)}?locale=en\"]")
       end      
     end
   end
