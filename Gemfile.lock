@@ -1,3 +1,12 @@
+PATH
+  remote: /Users/thenrio/src/ruby/mongoid
+  specs:
+    mongoid (2.0.0.beta.19)
+      activemodel (~> 3.0)
+      mongo (~> 1.1)
+      tzinfo (~> 0.3.22)
+      will_paginate (~> 3.0.pre)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -93,13 +102,8 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mongo (1.0.9)
+    mongo (1.1)
       bson (>= 1.0.5)
-    mongoid (2.0.0.beta.19)
-      activemodel (~> 3.0)
-      mongo (= 1.0.9)
-      tzinfo (~> 0.3.22)
-      will_paginate (~> 3.0.pre)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     predicated (0.2.2)
@@ -191,7 +195,7 @@ PLATFORMS
 
 DEPENDENCIES
   arel (>= 0.4.0)
-  bson_ext (= 1.1)
+  bson_ext (~> 1.1)
   capybara
   cucumber
   cucumber-rails
@@ -201,7 +205,8 @@ DEPENDENCIES
   haml
   haml-rails
   launchy
-  mongoid (>= 2.0.0.beta.19)
+  mongo (~> 1.1)
+  mongoid!
   rails (>= 3.0.0)
   rdiscount
   rr

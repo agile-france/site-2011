@@ -15,12 +15,19 @@ class ApplicationController < ActionController::Base
   end
   
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
-    flash[:error] = error.message
+    flash_and_log(:error, error.message)
     redirect_to root_path
   end
 
-  rescue_from Failures::AccessDenied do |failure|
-    flash[:error] = failure.message
+  rescue_from Failures::AccessDenied do |error|
+    flash_and_log(:error, error.message)
     redirect_to :back
+  end
+  
+  private
+  def flash_and_log(symbol, content)
+    message = content.respond_to?(:message) ? content.message : content
+    logger.send(symbol, message)
+    flash[symbol] = message
   end
 end

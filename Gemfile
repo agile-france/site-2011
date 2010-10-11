@@ -26,8 +26,9 @@ gem 'devise', '>= 1.1.2'
 gem 'rdiscount'
 
 # mongo
-gem 'mongoid', '>= 2.0.0.beta.19'
-gem 'bson_ext', '1.1'
+gem 'mongoid', :path => '/Users/thenrio/src/ruby/mongoid'
+gem 'bson_ext', '~> 1.1'
+gem 'mongo', '~> 1.1'
 
 group :development, :test do
   gem "rspec-rails", ">= 2.0.0.rc"
