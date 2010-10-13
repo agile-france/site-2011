@@ -1,5 +1,5 @@
 Feature: Authentication
-  User should authenticate so that they can propose valuable sessions that foster participation
+  User should authenticate so that participants trust in proposed sessions
 
   Scenario: I should complete registration with email and password confirmation challenge
     Given I am not authenticated

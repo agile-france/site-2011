@@ -15,8 +15,10 @@ describe 'i18n configuration' do
       I18n.translate(:choose).should == 'choose'
     end
     
-    it 'raises when no translation' do
-      lambda{I18n.translate(:goose)}.should raise_error I18n::MissingTranslationData
+    # I18n::MissingTranslationData on 1.9 and I18n::InvalidLocale with 1.8
+    it 'raises a I18n:: error when no translation' do
+      e = rescuing{I18n.translate(:goose)}
+      assert {e.is_a? StandardError and e.class.name =~ /^I18n::(.+)$/}
     end
   end
 end

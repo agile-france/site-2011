@@ -1,0 +1,7 @@
+%h1= t('user.profile')
+= form_for(@user, :url => account_path) do |f|
+  %p
+    = f.label t('user.profile.bio')
+    %br/
+    = f.text_area :bio, :size => '28x12'
+  %p= f.submit t('common.validate')

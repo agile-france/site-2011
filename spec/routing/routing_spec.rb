@@ -34,3 +34,11 @@ describe 'sessions' do
   end
 end
 
+describe 'account' do
+  it 'routes GET /account/edit' do
+    {:get => '/account/edit'}.should route_to :controller => 'account', :action => 'edit'
+  end
+  it 'routes PUT /account' do
+    {:put => '/account'}.should route_to :controller => 'account', :action => 'update'
+  end
+end

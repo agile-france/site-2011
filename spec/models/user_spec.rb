@@ -47,4 +47,17 @@ describe User do
       @cheesy.sessions.should include(@cheddar)
     end
   end
+  
+  describe 'bio' do
+    before do
+      @john = Fabricate(:user)
+    end    
+    it 'can have one bio' do
+      assert {@john.bio.nil?}
+      @john.update_attributes!(:bio => 'defunkt')
+      assert {@john.bio == 'defunkt'}
+      @john.update_attributes!('bio' => 'flunk')
+      assert {@john.bio == 'flunk'}
+    end
+  end
 end

@@ -8,10 +8,13 @@ class User
 
   field :first_name
   field :last_name
+  field :bio
+  
   references_many :sessions
   
-  # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
+  # white list of accessible attributes
+  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :first_name, :last_name, :bio
 
   # names are capitalized before validation
   before_validation do

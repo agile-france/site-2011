@@ -19,3 +19,9 @@ fr:
 
   resources:
     not_authorized: Pas autorisé
+    
+  user:
+    account: Mon compte
+    profile:
+      bio: Biographie
+  

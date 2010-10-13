@@ -12,9 +12,6 @@ gem 'arel',  '>= 0.4.0'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# debugger
-gem 'ruby-debug19'
-
 # views
 gem 'haml'
 gem 'haml-rails'
@@ -31,7 +28,11 @@ gem 'bson_ext', '~> 1.1'
 gem 'mongo', '~> 1.1'
 
 group :development, :test do
-  gem "rspec-rails", ">= 2.0.0.rc"
+  gem "rspec-rails", ">= 2.0.0"
+  
+  # debugger
+  gem 'ruby-debug19', :platforms => :mri_19
+  gem 'ruby-debug', :platforms => :mri_18
 end
 
 group :test do
@@ -60,5 +61,5 @@ group :test do
   gem 'rr'
 
   # coverage
-  gem 'simplecov', :require => false if RUBY_VERSION =~ /1\.9/
+  gem 'simplecov', :platforms => :mri_19, :require => false
 end

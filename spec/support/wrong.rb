@@ -1,2 +1,4 @@
 require 'wrong'
-RSpec::Rails::TestUnitAssertionAdapter::AssertionDelegate.send(:include, Wrong::Assert)
+require 'rspec/rails/adapters'
+RSpec::Rails::TestUnitAssertionAdapter::AssertionDelegate.send(:include, Wrong)
+require 'wrong/adapters/rspec'

@@ -13,6 +13,7 @@
         #user_navigation
           - if user_signed_in?
             %p= t('devise.common.greet', :user => current_user.greeter_name)
+            %p= link_to t('user.account'), edit_account_path
             #sign_out= link_to t('devise.common.sign_out'), destroy_user_session_path
           - else
             #sign_up= link_to t('devise.common.sign_up'), new_user_registration_path

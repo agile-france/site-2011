@@ -17,3 +17,8 @@ en:
 
   resources:
     not_authorized: Not authorized
+    
+  user:
+    account: My account
+    profile:
+      bio: Biography  
