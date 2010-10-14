@@ -30,9 +30,15 @@ gem 'mongo', '>= 1.0.9'
 group :development, :test do
   gem "rspec-rails", ">= 2.0.0"
   
-  # debugger
-  gem 'ruby-debug19', :platforms => :mri_19
-  gem 'ruby-debug', :platforms => :mri_18
+  # following statement : gem 'ruby-debug19', :platforms => :mri_19
+  # does not work with bundler-1.0.0
+  # heroku is using bundler-1.0.0, as of 14/10/2010  
+  # TODO replace this clumsy statements with dsl
+  if RUBY_VERSION =~ /^1\.9/
+    gem 'ruby-debug19'
+  else
+    gem 'ruby-debug'
+  end
 end
 
 group :test do
