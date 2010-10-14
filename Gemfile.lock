@@ -88,7 +88,6 @@ GEM
     launchy (0.3.7)
       configuration (>= 0.0.5)
       rake (>= 0.8.1)
-    linecache (0.43)
     linecache19 (0.5.11)
       ruby_core_source (>= 0.1.4)
     mail (2.2.7)
@@ -142,11 +141,6 @@ GEM
     rspec_tag_matchers (1.0.0)
       nokogiri (>= 1.4.0)
       rspec-rails (>= 1.2.6)
-    ruby-debug (0.10.3)
-      columnize (>= 0.1)
-      ruby-debug-base (~> 0.10.3.0)
-    ruby-debug-base (0.10.3)
-      linecache (>= 0.3)
     ruby-debug-base19 (0.11.24)
       columnize (>= 0.3.1)
       linecache19 (>= 0.5.11)
@@ -217,7 +211,6 @@ DEPENDENCIES
   rr
   rspec-rails (>= 2.0.0)
   rspec_tag_matchers
-  ruby-debug
   ruby-debug19
   simplecov
   spork (>= 0.9.0.rc2)
