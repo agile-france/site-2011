@@ -4,7 +4,7 @@ def mac?
 end
 
 def heroku?
-  ENV['USER'] ? !! ENV['USER'].match(/^repo\d+/) : ENV.any?{|key, _| key.match(/^HEROKU_/)}
+  ENV.any?{|k, _| k =~ /^HEROKU/} or (ENV['USER'] =~ /^repo\d+/ if ENV['USER']) 
 end
 
 gem 'rails', '>= 3.0.0'
@@ -31,19 +31,13 @@ gem 'mongoid', '>= 2.0.0.beta.19'
 gem 'bson_ext', '>= 1.0.9'
 gem 'mongo', '>= 1.0.9'
 
+# TODO use groups on heroku
 unless heroku?
   group :development, :test do
     gem "rspec-rails", ">= 2.0.0"
-  
-    # following statement : gem 'ruby-debug19', :platforms => :mri_19
-    # does not work with bundler-1.0.0
-    # heroku is using bundler-1.0.0, as of 14/10/2010  
-    # TODO replace this clumsy statements with dsl
-    if RUBY_VERSION =~ /^1\.9/
-      gem 'ruby-debug19'
-    else
-      gem 'ruby-debug'
-    end
+    
+    gem 'ruby-debug19', :platforms => :mri_19
+    gem 'ruby-debug', :platforms => :mri_18
   end
 
   group :test do
@@ -72,6 +66,6 @@ unless heroku?
     gem 'rr'
 
     # coverage
-    gem 'simplecov', :platforms                            => :mri_19, :require => false
+    gem 'simplecov', :platforms => :mri_19, :require => false
   end
 end
