@@ -6,4 +6,4 @@
 # like it tough it does cripple the source tree with duplication
 # there is something missing with deploying on heroku, build|generate as post push
 Sass::Plugin.options[:css_location] = 'tmp/stylesheets'
-Rails::Application.middleware.use Rack::Static, :root => 'tmp', :urls => ['/stylesheets']
+# Rails::Application.middleware.use Rack::Static, :root => 'tmp', :urls => ['/stylesheets']
