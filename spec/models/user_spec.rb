@@ -1,6 +1,6 @@
 require 'spec_helper'
 describe User do
-  describe 'greeter_name' do
+  describe '#greeter_name' do
     it 'should be first and last name' do
       Fabricate(:user, :first_name => 'John', :last_name =>'Doe').
               greeter_name.should == 'John Doe'
@@ -48,7 +48,7 @@ describe User do
     end
   end
   
-  describe 'bio' do
+  describe '#bio' do
     before do
       @john = Fabricate(:user)
     end    
@@ -59,5 +59,10 @@ describe User do
       @john.update_attributes!('bio' => 'flunk')
       assert {@john.bio == 'flunk'}
     end
+  end
+  
+  # avatar should allow following values
+  [:gravatar].each do |provider|
+    it {should validate_inclusion_of(:avatar).to_allow(provider.to_s)}
   end
 end

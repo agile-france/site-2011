@@ -8,7 +8,7 @@ module Mongo
   end
 end
 
-
 RSpec.configure do |configuration|
   configuration.include Mongo::IdHelper
+  configuration.include Mongoid::Matchers
 end

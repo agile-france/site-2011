@@ -1,7 +1,16 @@
-%h1= t('user.profile')
+%h1= t('user.account')
 = form_for(@user, :url => account_path) do |f|
   %p
-    = f.label t('user.profile.bio')
+    = f.label :email, t('user.profile.email')
+    %br/
+    = f.text_field :email
+  %p
+    = f.label :bio, t('user.profile.bio')
     %br/
     = f.text_area :bio, :size => '28x12'
+  .avatar
+    %p
+      :plain 
+        #{markup(t('user.profile.avatar'))}
+      = gravatar_for(@user)
   %p= f.submit t('common.validate')

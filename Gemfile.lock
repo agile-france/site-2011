@@ -103,6 +103,10 @@ GEM
       mongo (= 1.0.9)
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
+    mongoid-rspec (1.2.1)
+      bson_ext (>= 1.0.4)
+      mongoid (>= 2.0.0.beta.15)
+      rspec (>= 2.0.0.beta.19)
     nokogiri (1.4.3.1)
     polyglot (0.3.1)
     predicated (0.2.2)
@@ -212,6 +216,7 @@ DEPENDENCIES
   launchy
   mongo (>= 1.0.9)
   mongoid (>= 2.0.0.beta.19)
+  mongoid-rspec
   rails (>= 3.0.0)
   rdiscount
   rr

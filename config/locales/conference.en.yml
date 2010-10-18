@@ -21,4 +21,6 @@ en:
   user:
     account: My account
     profile:
-      bio: Biography  
+      avatar: Update your avatar on [gravatar.com](http://gravatar.com) !
+      bio: Biography
+      email: Email

@@ -9,6 +9,8 @@ class User
   field :first_name
   field :last_name
   field :bio
+  field :avatar
+  validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
   
   references_many :sessions
   

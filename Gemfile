@@ -10,12 +10,6 @@ end
 gem 'rails', '>= 3.0.0'
 gem 'arel',  '>= 0.4.0'
 
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
 # views
 gem 'haml'
 gem 'haml-rails'
@@ -42,6 +36,7 @@ unless heroku?
 
   group :test do
     gem "rspec_tag_matchers"
+    gem 'mongoid-rspec'
     gem 'wrong', '>= 0.4.0'
 
     # factory
