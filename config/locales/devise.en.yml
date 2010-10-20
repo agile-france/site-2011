@@ -18,6 +18,10 @@ en:
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
     passwords:
+      new:
+        title: Forgot your password ?
+      edit:
+        title: Changer votre mot de passe ?        
       send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
       updated: 'Your password was changed successfully. You are now signed in.'
     confirmations:

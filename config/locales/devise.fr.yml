@@ -26,6 +26,10 @@ fr:
       new:
         remember_me: 'Se souvenir de moi'      
     passwords:
+      new:
+        title: Mot de passe oublié ?
+      edit:
+        title: Changer votre mot de passe ?
       send_instructions: "Vous allez recevoir un email avec des instructions pour changer votre mot de passe."
       updated: "Votre mot de passe a été changé. Vous êtes maintenant connecté."
     confirmations:
@@ -86,12 +90,7 @@ fr:
         # For "Click the link below to unlock your account"
         unlock_account_instruction: "Cliquez sur le lien ci-dessous pour déverrouiller votre compte"
         unlock_my_account: "Déverrouiller mon compte"
-    passwords:
-      edit:
-        change_your_password: "Changez votre mot de passe"
-        change_my_password: "Changer mon mot de passe"
-      new:
-        send_me_reset_password_instructions: "Envoyez-moi un mail pour changer mon mot de passe"
+        
     registrations:
       <<: *registrations
       edit:
