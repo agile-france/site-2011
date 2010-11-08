@@ -2,6 +2,7 @@ fr:
   common:
     back: Retour
     cancel: Annuler
+    title: Titre
     update: Modifier
     validate: Valider
 

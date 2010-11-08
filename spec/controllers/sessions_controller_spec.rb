@@ -39,17 +39,18 @@ describe SessionsController do
     describe "POST /conferences/:id/sessions" do
       before do
         @params = {:title => 'courage', :description => 'and respect'}
-        post :create, :conference_id => @xp.id, :session => @params
+        post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage, respect')
       end
 
       it 'should wire session to user and conference' do
         # XXX
         # at least, failed to spec it with mocks using rr+rspec+devise :)
         # devise current_user is not available in this spec ...
-        ancient = ::Session.where(@params).first
-        ancient.should_not be_nil
-        ancient.conference.should == @xp
-        ancient.user.should == @john
+        session = ::Session.where(@params).first
+        session.should_not be_nil
+        session.conference.should == @xp
+        session.user.should == @john
+        assert {session.tags_array.include? 'courage'}
       end
 
       it "should redirect to session_path" do

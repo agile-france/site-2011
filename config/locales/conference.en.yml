@@ -2,6 +2,8 @@ en:
   common:
     back: Back
     cancel: Cancel
+    description: Description
+    tags: Tags
     title: Title
     update: Update
     validate: Validate

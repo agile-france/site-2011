@@ -22,6 +22,7 @@ gem 'rdiscount'
 
 # mongo
 gem 'mongoid', '>= 2.0.0.beta.19'
+gem 'mongoid_taggable', '~> 0.1'
 gem 'bson_ext', '>= 1.0.9'
 gem 'mongo', '>= 1.0.9'
 
