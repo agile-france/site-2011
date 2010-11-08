@@ -1,16 +1,14 @@
 %div{:id => "session_#{session.id}"}
   .header
+    .title
+      %h3= link_to session.title, session
+      .tags
+        = render :partial => 'sessions/tag', :collection => session.tags_array, :as => :tag
     .author
       %h3
-        %span{:class => 'label'} #{t('roles.author')} :
         %p
           = gravatar_for(session.user)
           = session.user.greeter_name
-    .title
-      %h3= link_to session.title, session
-    .tags
-      %h3
-        %p= session.tags
     .clear
 
   .description
