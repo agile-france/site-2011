@@ -8,8 +8,4 @@ class Session
   
   field :title
   field :description
-  
-  def tags_array=(tags_array)
-    super(tags_array.sort)
-  end
 end

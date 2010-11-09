@@ -39,7 +39,7 @@ describe SessionsController do
     describe "POST /conferences/:id/sessions" do
       before do
         @params = {:title => 'courage', :description => 'and respect'}
-        post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage, respect')
+        post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage respect')
       end
 
       it 'should wire session to user and conference' do
