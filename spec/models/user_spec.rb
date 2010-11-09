@@ -61,6 +61,9 @@ describe User do
     end
   end
   
+  # admin
+  it {should have_fields(:admin).of_type(Boolean).with_default_value_of(false)}
+  
   # avatar should allow following values
   [:gravatar].each do |provider|
     it {should validate_inclusion_of(:avatar).to_allow(provider.to_s)}

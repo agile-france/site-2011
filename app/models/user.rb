@@ -10,6 +10,7 @@ class User
   field :last_name
   field :bio
   field :avatar
+  field :admin, :type => Boolean, :default => false 
   validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
   
   references_many :sessions
