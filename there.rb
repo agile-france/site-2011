@@ -21,8 +21,8 @@ end
 # --------------------------------------------------
 def run(cmd)
   puts(cmd)
-  output = `#{cmd}`
-  puts(output)
+  system cmd
+  # puts(output)
   # growl output
 end
 
