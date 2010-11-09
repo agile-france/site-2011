@@ -1,29 +1,51 @@
 $wood: #DEB887
 $orange: #FFA500
+$sand: #DBE3E2
+$darkblue: #182f4c
 
 @mixin box($color)
   -moz-border-radius: 5px 5px 5px 5px
   border-radius: 5px 5px 5px 5px
   border: 5px solid darken($color, 10%)
+  padding: 0 10px
   background-color: $color
+@mixin content()
+  width: 960px
+  margin-left: auto
+  margin-right: auto
 
 body
   font-family: Lucida Grande,Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif
   font-size: 15px
-
-#header
-
-#container
   margin: 0 auto
   padding: 0
-  text-align: left
+  background-color: $sand
 
   #user_navigation
-    @include box($orange)
-    text-align: center
-    float: right
-    width: 180px
-    z-index: 1
+    @include content
+    text-align: right
+
+  #header
+    background-color: white
+    background-image: url('/images/header_opt.png')
+    background-repeat: repeat-x
+    height: 130px
+    color: $darkblue
+
+    #header_container
+      @include content
+    
+      #thumb
+        float: left
+        width: 100px
+        margin: 15px
+    
+      #head
+        float: left
+
+      .menuItem
+        float: left
+        margin-top: 75px
 
   .header
     @include box($wood)
@@ -37,5 +59,9 @@ body
       width: 67%
     .clear
       clear: both
+
+  #content
+    @include content
+    background-color: $sand
 
 #footer

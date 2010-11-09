@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.0 r9654"
+   sodipodi:docname="dessin.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="5.9816215"
+     inkscape:cy="622.22457"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="842"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="color:#000000;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3015"
+       width="257.15399"
+       height="110"
+       x="77"
+       y="262.36218"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/header_opt.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+    <path
+       style="color:#000000;fill:#dbe3e2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 77.010973,262.36259 c 85.714287,0 171.428567,-4.1e-4 257.142857,-4.1e-4 0,6.19048 0,4.38152 0,10.572 -11.82184,0 -24.63449,0.82219 -36.90201,-0.31542 -15.28979,1.47634 -30.61117,0.48478 -45.93854,0.47482 -13.94667,-1.78046 -27.93475,3.15245 -41.80185,-0.0676 -15.68337,-1.88526 -31.45273,1.09055 -47.13288,-0.21256 -10.32456,1.56469 -20.5152,-0.15816 -30.79406,-0.36999 -9.43649,0.66964 -18.97923,1.80097 -28.34191,0.0389 -8.01994,-1.21916 -21.015017,0.45185 -26.19762,0.45185 -0.106971,-5.13438 0.01743,-5.43685 -0.03399,-10.57159 z"
+       id="rect2985"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/border_top_opt.png"
+       inkscape:export-xdpi="87.496269"
+       inkscape:export-ydpi="87.496269" />
+    <path
+       inkscape:export-ydpi="87.496269"
+       inkscape:export-xdpi="87.496269"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/border_bottom_opt.png"
+       sodipodi:nodetypes="ccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path3013"
+       d="m 334.14302,372.36177 c -85.71429,0 -171.42857,4.1e-4 -257.142864,4.1e-4 0,-6.19048 0,-4.38152 0,-10.572 11.82184,0 24.634494,-0.82219 36.902014,0.31542 15.28979,-1.47634 30.61117,-0.48478 45.93854,-0.47482 13.94667,1.78046 27.93475,-3.15245 41.80185,0.0676 15.68337,1.88526 31.45273,-1.09055 47.13288,0.21256 10.32456,-1.56469 20.5152,0.15816 30.79406,0.36999 9.43649,-0.66964 18.97923,-1.80097 28.34191,-0.0389 8.01994,1.21916 21.01502,-0.45185 26.19762,-0.45185 0.10697,5.13438 -0.0174,5.43685 0.034,10.57159 z"
+       style="color:#000000;fill:#dbe3e2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+  </g>
+</svg>
