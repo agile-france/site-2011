@@ -13,8 +13,12 @@ Given /^I am a new, authenticated user$/ do
   password = 'secretpass'
 
   Given %{I have one user "#{email}" with password "#{password}"}
-    And %{I go to the user session page}
+    And %{I complete sign in form with email "#{email}" and password "#{password}"}
+end
+
+Given /^I complete sign in form with email "([^"]*)" and password "([^"]*)"$/ do |email, password|
+  Given %{I go to the user session page}
     And %{I fill in "user_email" with "#{email}"}
     And %{I fill in "user_password" with "#{password}"}
-    And %{I press "user_submit"}
+    And %{I press "user_submit"}  
 end
