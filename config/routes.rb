@@ -12,5 +12,5 @@ ConferenceOnRails::Application.routes.draw do
   # bug there as of 3.0.0, infered controller is 'accounts'
   resource :account, :only => [:edit, :update], :controller => 'account'
 
-  root :to => redirect('/welcome')
+  root :to => 'home#index'
 end
