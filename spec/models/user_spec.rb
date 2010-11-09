@@ -62,7 +62,13 @@ describe User do
   end
   
   # admin
-  it {should have_fields(:admin).of_type(Boolean).with_default_value_of(false)}
+  describe '#admin' do
+    it {should have_fields(:admin).of_type(Boolean).with_default_value_of(false)}
+    it 'should have an handy #admin?' do
+      john = Fabricate(:user)
+      deny {john.admin?}
+    end
+  end
   
   # avatar should allow following values
   [:gravatar].each do |provider|
