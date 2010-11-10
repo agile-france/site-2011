@@ -29,7 +29,7 @@ gem 'mongo', '>= 1.0.9'
 # TODO use groups on heroku
 unless heroku?
   group :development, :test do
-    gem "rspec-rails", ">= 2.0.0"
+    gem "rspec-rails", ">= 2.1.0"
     
     gem 'ruby-debug19', :platforms => :mri_19
     gem 'ruby-debug', :platforms => :mri_18
