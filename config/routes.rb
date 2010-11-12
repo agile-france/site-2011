@@ -8,6 +8,7 @@ ConferenceOnRails::Application.routes.draw do
   resources :conferences  do
     resources :sessions, :only => [:new, :create]
   end
+  resources :place
 
   # bug there as of 3.0.0, infered controller is 'accounts'
   resource :account, :only => [:edit, :update], :controller => 'account'

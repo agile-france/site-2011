@@ -2,10 +2,11 @@ $wood: #DEB887
 $orange: #FFA500
 $sand: #DBE3E2
 $darkblue: #182f4c
+$radius: 15px
 
 @mixin box($color)
-  -moz-border-radius: 5px 5px 5px 5px
-  border-radius: 5px 5px 5px 5px
+  -moz-border-radius: 5px
+  border-radius: 5px
   border: 5px solid darken($color, 10%)
   padding: 0 10px
   background-color: $color
@@ -14,6 +15,9 @@ $darkblue: #182f4c
   margin-left: auto
   margin-right: auto
 
+html, body, #content_container
+  height: 100%
+
 body
   font-family: Lucida Grande,Verdana,Lucida Sans Regular,Lucida Sans Unicode,Arial,sans-serif
   font-size: 15px
@@ -21,47 +25,85 @@ body
   padding: 0
   background-color: $sand
 
-  #user_navigation
-    @include content
-    text-align: right
+  #content_container
+    height: auto
+    min-height: 100%
 
-  #header
-    background-color: white
-    background-image: url('/images/header_opt.png')
-    background-repeat: repeat-x
-    height: 130px
-    color: $darkblue
-
-    #header_container
+    #user_navigation
       @include content
+      text-align: right
+      float: right
+
+    #header
+      color: $darkblue
+
+      #header_container
+        @include content
+        background-image: url('/images/header_opt.png')
+        background-repeat: no-repeat
     
-      #thumb
-        float: left
-        width: 100px
-        margin: 15px
-    
-      #head
-        float: left
+        #thumb
+          width: 100px
+          margin: 15px 15px 15px 50px
+          border: 0
 
-      .menuItem
+        #head
+          font-family: Serif
+          font-size: 32px
+
+        #splash
+          -moz-border-radius: $radius
+          border-radius: $radius
+          -moz-box-shadow: 0 0 10px #ccc
+          -webkit-box-shadow: 0 0 10px #ccc
+          background-color: white
+          padding: 1px 20px
+          margin-bottom: 20px
+
+        #mojo
+          float: right
+          position: relative
+          right: 50px
+          top: 75px
+
+        .menuItem
+          background-image: url('/images/post_it_opt.png')
+          background-repeat: no-repeat
+          float: right
+          height: 67px
+          margin-right: 20px
+          padding-top: 22px
+          text-align: center
+          width: 105px
+
+    .header
+      @include box($wood)
+      .author
         float: left
-        margin-top: 75px
+        width: 33%
+      .tags
+        float: left
+      .title
+        float: left
+        width: 67%
+      .clear
+        clear: both
 
-  .header
-    @include box($wood)
-    .author
-      float: left
-      width: 33%
-    .tags
-      float: left
-    .title
-      float: left
-      width: 67%
-    .clear
-      clear: both
-
-  #content
-    @include content
-    background-color: $sand
+    #content
+      @include content
+      background-color: $sand
 
 #footer
+  background-color: $darkblue
+  text-align: center
+  clear: both
+  position: relative
+  z-index: 10
+  height: 3em
+  margin-top: -3em
+  padding-top: 1em
+
+  #footer_container
+    @include content
+    font-size: 75%
+    color: white
