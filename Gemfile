@@ -38,7 +38,7 @@ unless heroku?
   group :test do
     gem "rspec_tag_matchers"
     gem 'mongoid-rspec'
-    gem 'wrong', '>= 0.4.0'
+    gem 'wrong', '~> 0.4'
 
     # factory
     gem 'fabrication'
