@@ -14,7 +14,7 @@
    id="svg3004"
    version="1.1"
    inkscape:version="0.48.0 r9654"
-   sodipodi:docname="Nouveau document 1">
+   sodipodi:docname="porte-jaune.svg">
   <defs
      id="defs3" />
   <sodipodi:namedview
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -81,22 +81,6 @@
        height="34.285713"
        x="287.14285"
        y="466.64789" />
-    <rect
-       style="color:#000000;fill:#ffffff;stroke:#000000;stroke-width:1.18355166999999994;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="rect3786"
-       width="21.997566"
-       height="131.9854"
-       x="514.43567"
-       y="-40.583797"
-       transform="matrix(0.70710678,0.70710678,-0.70710678,0.70710678,0,0)" />
-    <rect
-       transform="matrix(-0.70710678,0.70710678,0.70710678,0.70710678,0,0)"
-       y="526.81476"
-       x="-50.964287"
-       height="128.55927"
-       width="21.426542"
-       id="rect3788"
-       style="color:#000000;fill:#ffffff;stroke:#000000;stroke-width:1.15282857000000005;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="M 337.14286,652.36218 C 479.08007,585.74484 592.57451,558.771 732.85714,566.6479"
@@ -120,5 +104,11 @@
        id="path3817"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="czzc" />
+    <path
+       style="color:#000000;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1.68002999;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       d="m 397.14283,314.64913 115.49282,115.49282 -230.98564,0 z"
+       id="rect2995"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
   </g>
 </svg>

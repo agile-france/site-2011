@@ -8,25 +8,26 @@
     = csrf_meta_tag
 
   %body
-    #content_container
-      #user_navigation
-        - if user_signed_in?
-          %span= t('devise.common.greet', :user => current_user.greeter_name)
-          | 
-          %span= link_to t('user.account'), edit_account_path
-          |
-          %span#sign_out= link_to t('devise.common.sign_out'), destroy_user_session_path
-          - if current_user.admin?
-            |
-            %span= link_to t('admin'), '/admin'          
-        - else
-          %span#sign_up= link_to t('devise.common.sign_up'), new_user_registration_path
-          |
-          %span#sign_in= link_to t('devise.common.sign_in'), new_user_session_path
-        - flash.each_key do |key|
-          #flash{:class => key}= flash[key]
+    #content_wrapper
           
       #header
+        #user_navigation
+          - if user_signed_in?
+            %span= t('devise.common.greet', :user => current_user.greeter_name)
+            | 
+            %span= link_to t('user.account'), edit_account_path
+            |
+            %span#sign_out= link_to t('devise.common.sign_out'), destroy_user_session_path
+            - if current_user.admin?
+              |
+              %span= link_to t('admin'), '/admin'          
+          - else
+            %span#sign_up= link_to t('devise.common.sign_up'), new_user_registration_path
+            |
+            %span#sign_in= link_to t('devise.common.sign_in'), new_user_session_path
+          - flash.each_key do |key|
+            #flash{:class => key}= flash[key]
+
         #header_container
           %div#head
             %a{:href => "/"}
@@ -42,7 +43,10 @@
           %a{:class => "menuItem", :href => "/"}
             %div Accueil
                                 
-      #content= yield
+      #content
+        #content_container= yield
+
+      #push
 
     #footer
       #footer_container

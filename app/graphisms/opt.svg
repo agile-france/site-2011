@@ -46,7 +46,6 @@
          id="stop7930" />
     </linearGradient>
     <linearGradient
-       inkscape:collect="always"
        id="linearGradient7918"
        osb:paint="gradient">
       <stop
@@ -281,8 +280,8 @@
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3777);enable-background:accumulate"
        transform="matrix(1.2785713,0,0,1.2785713,-258.75929,-140.96177)"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="64.384766"
+       inkscape:export-ydpi="64.384766" />
     <path
        style="color:#000000;fill:url(#linearGradient7932);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 156.39468,341.38356 100.17453,4.66461 c -1.76414,19.5523 -1.75634,38.46839 -6.07592,57.90171 -32.13966,0.89369 -64.37514,-0.57162 -96.9545,-1.23499 z"
@@ -290,8 +289,8 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
-       inkscape:export-xdpi="90"
-       inkscape:export-ydpi="90" />
+       inkscape:export-xdpi="64.384766"
+       inkscape:export-ydpi="64.384766" />
     <text
        sodipodi:linespacing="125%"
        id="text3787"
