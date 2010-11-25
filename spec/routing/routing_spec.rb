@@ -19,6 +19,12 @@ describe 'conferences' do
   end
 end
 
+describe "admin section" do
+  it "should GET /admin" do
+    {:get => '/admin'}.should route_to :controller => 'admin', :action => 'show'
+  end
+end
+
 describe 'sessions' do
   it 'routes GET /sessions/1' do
     {:get => '/sessions/1'}.should route_to :controller => 'sessions',
