@@ -25,9 +25,13 @@ describe "admin section" do
   end
   describe 'nested user admin' do
     # XXX rails do not generate reversible nested resources path
-    it 'should recognize a nested session PUT' do
-      assert_recognizes({:controller => 'users', :action => 'update', :user_id => '1'},
-        {:path => '/admin/users/1/edit', :method => :put})
+    it 'should recognize a nested user PUT' do
+      assert_recognizes({:controller => 'admin/users', :action => 'update', :id => '1'},
+        {:path => '/admin/users/1', :method => :put})
+    end
+    it 'should recognize a nested user EDIT form' do
+      assert_recognizes({:controller => 'admin/users', :action => 'edit', :id => '1'},
+        {:path => '/admin/users/1/edit', :method => :get})
     end
   end  
 end
