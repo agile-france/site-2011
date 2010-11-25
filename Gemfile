@@ -55,8 +55,10 @@ unless heroku?
     gem 'capybara'
     gem 'launchy'
   
-    # watchr is an alternate to autotest ...
-    gem 'watchr'
+    # guard is a dsl, alternate to watchr, which is an alternate to autotest :)
+    # there is bonus growl feature
+    gem 'guard-rspec'
+    gem 'growl'
 
     # rr
     gem 'rr'
