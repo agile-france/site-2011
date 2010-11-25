@@ -23,6 +23,13 @@ describe "admin section" do
   it "should GET /admin" do
     {:get => '/admin'}.should route_to :controller => 'admin', :action => 'show'
   end
+  describe 'nested user admin' do
+    # XXX rails do not generate reversible nested resources path
+    it 'should recognize a nested session PUT' do
+      assert_recognizes({:controller => 'users', :action => 'update', :user_id => '1'},
+        {:path => '/admin/users/1/edit', :method => :put})
+    end
+  end  
 end
 
 describe 'sessions' do
