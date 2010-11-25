@@ -14,6 +14,16 @@ class ApplicationController < ActionController::Base
     options
   end
   
+  # uggh, what a smell to have this piece of code there
+  # would take profit from a cancan device, provided it integrates with mongoid
+  # see https://github.com/ryanb/cancan/pull/172
+  def can?(perform, something)
+    return true if current_user.admin?
+    return true if current_user.sessions.include?(something)
+    false
+  end
+  
+  private
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
     flash_and_log(:error, error.message)
     redirect_to root_path
@@ -24,7 +34,6 @@ class ApplicationController < ActionController::Base
     redirect_to :back
   end
   
-  private
   def flash_and_log(symbol, content)
     message = content.respond_to?(:message) ? content.message : content
     logger.send(symbol, message)

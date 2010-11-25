@@ -58,6 +58,6 @@ class SessionsController < ApplicationController
 
   # cancan is an option
   def authorize_user!
-    raise Failures::AccessDenied.new(t('resources.not_authorized')) if cannot? :edit, current_session
+    raise Failures::AccessDenied.new(t('resources.not_authorized')) unless can? :edit, current_session
   end
 end
