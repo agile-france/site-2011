@@ -68,6 +68,10 @@ describe User do
       john = Fabricate(:user)
       deny {john.admin?}
     end
+    it 'should make an admin' do
+      john = Fabricate(:user, :admin => true)
+      assert {john.admin?}
+    end
   end
   
   # avatar should allow following values

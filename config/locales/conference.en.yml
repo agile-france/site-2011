@@ -9,6 +9,8 @@ en:
     title: Title
     update: Update
     validate: Validate
+  update:
+    success!: %{user} updated
 
   party:
     session:

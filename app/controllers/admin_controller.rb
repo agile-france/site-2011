@@ -4,6 +4,6 @@ class AdminController < ApplicationController
   end
   
   def authorize_user!
-    raise Failures::AccessDenied.new(t('resources.not_authorized'))
+    raise Failures::AccessDenied.new(t('resources.not_authorized')) unless can? :edit, User
   end
 end

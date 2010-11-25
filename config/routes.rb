@@ -13,7 +13,7 @@ ConferenceOnRails::Application.routes.draw do
   # admin interface
   get '/admin' => 'admin#show'
   namespace :admin do
-    resources :users, :only => [:edit, :update]
+    resources :users, :only => [:index, :edit, :update]
   end
 
   # bug there as of 3.0.0, infered controller is 'accounts'
