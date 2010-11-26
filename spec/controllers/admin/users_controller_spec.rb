@@ -23,8 +23,9 @@ describe Admin::UsersController do
 
     describe "GET 'update'" do
       it "update admin flag" do
-        put :update, :id => user.id
+        put :update, :id => user.id, :user => {:admin => true}
         response.should redirect_to(admin_users_path)
+        assert {user.reload.admin?}
       end
     end
   end

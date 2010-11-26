@@ -12,7 +12,7 @@ module Admin
 
     def update
       user = User.find(params[:id])
-      if user.tap {|u| u.admin = params[:admin]}.save
+      if user.tap {|u| u.admin = params[:user][:admin]}.save
         flash[:notice] = t('update.success!', user)
       end
       respond_with user, :location => admin_users_path
