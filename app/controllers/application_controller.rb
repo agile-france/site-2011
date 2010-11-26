@@ -18,8 +18,10 @@ class ApplicationController < ActionController::Base
   # would take profit from a cancan device, provided it integrates with mongoid
   # see https://github.com/ryanb/cancan/pull/172
   def can?(perform, something)
-    return true if current_user.admin?
-    return true if current_user.sessions.include?(something)
+    if current_user
+      return true if current_user.admin?
+      return true if current_user.sessions.include?(something)
+    end
     false
   end
   
@@ -31,7 +33,7 @@ class ApplicationController < ActionController::Base
 
   rescue_from Failures::AccessDenied do |error|
     flash_and_log(:error, error.message)
-    redirect_to :back
+    redirect_to request.referer
   end
   
   def flash_and_log(symbol, content)

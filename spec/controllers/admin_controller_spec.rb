@@ -1,11 +1,8 @@
 require 'spec_helper'
 
 describe AdminController do
-
-  describe "GET 'show'" do
-    let :simple_user
-    it "should redirect to back" do
-      request.env["HTTP_REFERER"] = root_path
+  context 'when not logged' do
+    it 'redirects to home with a flash' do
       get :show
       response.should redirect_to(root_path)
     end

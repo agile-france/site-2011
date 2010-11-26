@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Admin::UsersController do
-  let(:user) {Fabricate(:user, :email => 'donotforget@thedonuts.com')}
+describe Admin::UsersController do 
   context 'admin is logged in' do
+    let(:user) {Fabricate(:user, :email => 'donotforget@thedonuts.com')}
     before do
       sign_in(Fabricate(:user, :admin => true))
     end
@@ -10,7 +10,7 @@ describe Admin::UsersController do
     describe "GET users" do
       it 'should propose list of users' do
         get :index
-        reponse.should be_success
+        response.should be_success
       end
     end
     
