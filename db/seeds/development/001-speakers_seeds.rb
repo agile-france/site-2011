@@ -1,0 +1,1 @@
+(1..50).each { |i|  User.new(:email => "speaker-#{i}@voice.com", :password => 'git rocks').save}

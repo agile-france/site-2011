@@ -13,6 +13,7 @@ gem 'arel',  '>= 0.4.0'
 # views
 gem 'haml'
 gem 'haml-rails'
+gem 'will_paginate', '~> 3'
 
 # devise
 gem 'devise', '>= 1.1.2'

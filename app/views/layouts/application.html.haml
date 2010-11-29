@@ -49,6 +49,6 @@
       #push
 
     #footer
+      = render :partial => 'debug/show' if Rails.env.development?
       #footer_container
-        -#= render :partial => 'debug/show' if Rails.env.development?
         2010 - Organisation Conférence Agile France

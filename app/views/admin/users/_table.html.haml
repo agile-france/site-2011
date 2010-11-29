@@ -1,0 +1,10 @@
+.content
+  %table
+    %tr
+      %th Email
+      %th Admin
+    %tr
+    = render @users
+
+.navigation
+  = will_paginate @users

@@ -1,0 +1,4 @@
+%p
+  = form_tag(url, options.merge(:remote => true)) do
+    = search_field_tag(:q, params[:q])
+    = submit_tag t('common.search')

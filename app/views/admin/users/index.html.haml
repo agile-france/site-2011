@@ -1,2 +1,6 @@
 %h1 Users
-= render @users
+= render :partial => 'shared/search', :locals => {:url => admin_users_path, :options => {:method => :get}}
+
+#users
+  = render :partial => 'table'
+    

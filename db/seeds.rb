@@ -4,6 +4,13 @@
 # ugly seeding, no environment, monolithic
 agile_france_2011 = {:name => 'agile-france', :edition => 2011}
 if Conference.where(agile_france_2011).empty?
-  c = Conference.create(agile_france_2011) 
+  c = Conference.create(agile_france_2011)
   puts "created #{c}"
 end
+
+# load additional files located in ./seeds/#{env}
+pattern = Rails.root.join("db/seeds/#{Rails.env}/**.rb")
+Dir.glob(pattern).each {|file|
+  puts "load #{file}"
+  load file
+}
