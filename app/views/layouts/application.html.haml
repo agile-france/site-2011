@@ -38,6 +38,7 @@
             %p Jeudi 26 et vendredi 27 mai 2011
             %p Châlet de la Porte Jaune - Paris
           %div{:class => "menuItem"}Vidéos
+          %div{:class => "menuItem"}Sponsors
           %a{:class => "menuItem", :href => "/place"}
             %div Lieu
           %a{:class => "menuItem", :href => "/"}
@@ -45,10 +46,31 @@
                                 
       #content
         #content_container= yield
+        = render :partial => 'debug/show' if Rails.env.development?
 
       #push
 
     #footer
-      = render :partial => 'debug/show' if Rails.env.development?
       #footer_container
         2010 - Organisation Conférence Agile France
+        %br
+        Nos sponsors 2010
+        %br
+        %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
+        %a#atos{:href => "http://fr.atosorigin.com", :title => "Atos Origin - Sponsor Platinium 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-atosOrigin.png", :alt => "Atos Origin - Sponsor Platinium 2010"}
+        %a{:href => "http://microsoft.com", :title => "Microsoft - Sponsor Gold 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-microsoft.png", :alt => "Microsoft - Sponsor Gold 2010"}
+        %a{:href => "http://orange-business.com", :title => "Orange Business Services - Sponsor Gold 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-orangeBusinessServices.png", :alt => "Orange Business Services - Sponsor Gold 2010"}
+        %a{:href => "http://soat.fr", :title => "So@t - Sponsor Gold 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-soat.png", :alt => "So@t - Sponsor Gold 2010"}
+        %br
+        %a{:href => "http://valtech.fr", :title => "Valtech - Sponsor Web 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-valtech.png", :alt => "Valtech - Sponsor Web 2010"}
+        %a{:href => "http://fastconnect.fr", :title => "Fast Connect - Sponsor Web 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-fastConnect.png", :alt => "Fast Connect - Sponsor Web 2010"}
+        %a{:href => "http://paristech.org", :title => "Paris Tech - Sponsor Web 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-parisTech.png", :alt => "Paris Tech - Sponsor Web 2010"}
+        %a{:href => "http://serena.com", :title => "Serena - Sponsor Web 2010"}
+          %img{:class => "logo-sponsor", :src => "/images/bw-serena.png", :alt => "Serena - Sponsor Web 2010"}

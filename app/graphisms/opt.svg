@@ -188,6 +188,16 @@
        r="48.790367"
        gradientTransform="matrix(1,0,0,0.9330127,0,39.451502)"
        gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7926"
+       id="linearGradient3045"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.4326152,0,0,1.4326152,-572.1111,-73.70817)"
+       x1="457.67487"
+       y1="327.93127"
+       x2="455.73032"
+       y2="299.647" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -196,9 +206,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="155.0113"
-     inkscape:cy="575.39748"
+     inkscape:zoom="2.8284272"
+     inkscape:cx="84.31464"
+     inkscape:cy="649.58322"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -416,5 +426,34 @@
          y="540.2489"
          x="355.039"
          sodipodi:role="line">public/images/header_opt.png</tspan></text>
+    <path
+       inkscape:export-ydpi="64.384766"
+       inkscape:export-xdpi="64.384766"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
+       transform="matrix(1.2785713,0,0,1.2785713,-383.21008,-140.96177)"
+       style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3777);enable-background:accumulate"
+       d="m 400.57289,384.36549 -3.8925,39.8699 -66.66697,-1.11937 z"
+       id="path3041"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc" />
+    <path
+       inkscape:export-ydpi="64.384766"
+       inkscape:export-xdpi="64.384766"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
+       sodipodi:nodetypes="ccccc"
+       inkscape:connector-curvature="0"
+       id="path3043"
+       d="m 31.94389,341.38356 100.17453,4.66461 c -1.76414,19.5523 -7.01527,51.59322 -8.90435,53.48229 -3.81623,2.2033 -61.54671,3.8478 -94.12607,3.18443 z"
+       style="color:#000000;fill:url(#linearGradient3045);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate" />
+    <rect
+       style="color:#000000;fill:none;stroke:none;stroke-width:1.00462472000000003;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="rect3047"
+       width="104.26837"
+       height="66.066376"
+       x="29.590313"
+       y="341.50891"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_up_opt.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64" />
   </g>
 </svg>

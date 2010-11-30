@@ -3,7 +3,7 @@ $orange: #FFA500
 $sand: #DBE3E2
 $darkblue: #182f4c
 $radius: 15px
-$footersize: 3em
+$footersize: 13em
 $margin: 20px
 
 @mixin box($color)
@@ -87,6 +87,10 @@ body
           padding-top: 12px
           text-align: center
           width: 75px
+          text-decoration: none
+
+        a:hover
+          background-image: url('/images/post_it_up_opt.png')
 
     .header
       @include box($wood)
@@ -118,9 +122,19 @@ body
   clear: both
   position: relative
   height: $footersize
-  padding-top: 1em
-  font-size: 75%
+  color: white
 
   #footer_container
     @include content
-    color: white
+    font-size: 75%
+    padding-top: 1em
+
+    #badge-sponsor
+      float: right
+
+    .logo-sponsor
+      margin: 0 15px 7px
+      border: 0
+
+    a:hover
+      text-decoration: underline
