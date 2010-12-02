@@ -32,17 +32,20 @@
           %div#head
             %a{:href => "/"}
               %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
-            %div#mojo Paris - 26 et 27 juin 2011
+            %div.mojo 26 et 27 juin 2011
+            %div.mojo#sub-mojo Chalet de la Porte Jaune - Paris
           %div#splash
-            %p Le rendez-vous incontournable de la communauté agile française depuis 2006
-            %p Jeudi 26 et vendredi 27 mai 2011
-            %p Châlet de la Porte Jaune - Paris
-          %div{:class => "menuItem"}Vidéos
-          %div{:class => "menuItem"}Sponsors
-          %a{:class => "menuItem", :href => "/place"}
-            %div Lieu
-          %a{:class => "menuItem", :href => "/"}
-            %div Accueil
+            %p
+              Le rendez-vous <strong>incontournable</strong>
+              %br
+              de la communauté agile française depuis 2006
+          %div#menu
+            %div{:class => "menuItem"}Vidéos
+            %div{:class => "menuItem"}Sponsors
+            %a{:class => "menuItem", :href => "/place"}
+              %div Lieu
+            %a{:class => "menuItem", :href => "/"}
+              %div Accueil
                                 
       #content
         #content_container= yield

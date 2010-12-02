@@ -20,6 +20,21 @@
   <defs
      id="defs4">
     <linearGradient
+       id="linearGradient3226">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3228" />
+      <stop
+         id="stop4010"
+         offset="0.52846122"
+         style="stop-color:#ffffff;stop-opacity:1;" />
+      <stop
+         style="stop-color:#939393;stop-opacity:1"
+         offset="1"
+         id="stop3230" />
+    </linearGradient>
+    <linearGradient
        id="linearGradient7958">
       <stop
          style="stop-color:#ffffff;stop-opacity:1;"
@@ -198,6 +213,29 @@
        y1="327.93127"
        x2="455.73032"
        y2="299.647" />
+    <filter
+       height="1.24"
+       y="-0.12"
+       width="1.24"
+       x="-0.12"
+       id="filter3786"
+       inkscape:collect="always">
+      <feGaussianBlur
+         id="feGaussianBlur3788"
+         stdDeviation="5.8585967"
+         inkscape:collect="always" />
+    </filter>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3226"
+       id="radialGradient4008"
+       cx="214.59114"
+       cy="769.0625"
+       fx="214.59114"
+       fy="769.0625"
+       r="20.224714"
+       gradientTransform="matrix(-1.3021854,0.89993905,-0.40684862,-0.588698,802.84702,1035.2735)"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -206,9 +244,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="2.8284272"
-     inkscape:cx="84.31464"
-     inkscape:cy="649.58322"
+     inkscape:zoom="1"
+     inkscape:cx="252.20103"
+     inkscape:cy="289.80271"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -455,5 +493,85 @@
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_up_opt.png"
        inkscape:export-xdpi="64"
        inkscape:export-ydpi="64" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#000000;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985-6"
+       sodipodi:cx="358.57144"
+       sodipodi:cy="379.50504"
+       sodipodi:rx="58.57143"
+       sodipodi:ry="58.57143"
+       d="m 399.9877,338.08878 a 58.57143,58.57143 0 1 1 -2e-5,-2e-5 l -41.41624,41.41628 z"
+       sodipodi:start="5.4977871"
+       sodipodi:end="11.780972"
+       transform="matrix(0,1,-1,0,568.84164,374.93788)"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64" />
+    <path
+       sodipodi:type="arc"
+       style="color:#000000;fill:#b41717;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+       id="path2985"
+       sodipodi:cx="358.57144"
+       sodipodi:cy="379.50504"
+       sodipodi:rx="58.57143"
+       sodipodi:ry="58.57143"
+       d="m 399.9877,338.08878 a 58.57143,58.57143 0 1 1 -2e-5,-2e-5 l -41.41624,41.41628 z"
+       sodipodi:start="5.4977871"
+       sodipodi:end="11.780972"
+       transform="matrix(0,1,-1,0,570.56611,376.4328)"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64" />
+    <path
+       style="fill:url(#radialGradient4008);fill-opacity:1"
+       d="m 192.0606,793.61468 c 11.7387,-5.29061 14.44184,-15.54434 21.83032,-19.21302 7.38848,-3.66868 13.90945,-1.42609 18.61911,2.24066 -13.13289,13.45117 -27.55959,16.46156 -40.44943,16.97236 z"
+       id="path2998"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="czcc"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64" />
+    <path
+       sodipodi:type="arc"
+       style="opacity:0.2;color:#000000;fill:#ffffff;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3786);enable-background:accumulate"
+       id="path2985-4"
+       sodipodi:cx="358.57144"
+       sodipodi:cy="379.50504"
+       sodipodi:rx="63.037655"
+       sodipodi:ry="60.826233"
+       d="m 403.14579,336.49439 a 63.037655,60.826233 0 1 1 -2e-5,-2e-5 l -44.57433,43.01067 z"
+       sodipodi:start="5.4977871"
+       sodipodi:end="11.780972"
+       transform="matrix(0.41378886,0.71670333,-0.71670333,0.41378886,315.73376,326.64148)"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64" />
+    <text
+       xml:space="preserve"
+       style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       x="374.30542"
+       y="642.96533"
+       id="text3816"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64"
+       transform="matrix(0.96592583,0.25881905,-0.25881905,0.96592583,0,0)"><tspan
+         sodipodi:role="line"
+         id="tspan3818"
+         x="374.30542"
+         y="642.96533"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Devenir</tspan><tspan
+         sodipodi:role="line"
+         x="374.30542"
+         y="667.96533"
+         id="tspan3820"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">sponsor</tspan><tspan
+         sodipodi:role="line"
+         x="374.30542"
+         y="692.96533"
+         id="tspan3822"
+         style="font-size:20px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">2011</tspan></text>
   </g>
 </svg>
