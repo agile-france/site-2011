@@ -1,25 +1,74 @@
-# install
+Install
+=======
 
-## rvm 1.9.2
+rvm 1.9.2
+---------
 
 * install rvm
-* follow pretty straight http://rvm.beginrescueend.com/rvm/install/
-* look at library requirements if using venerable libraries
 
-		rvm install 1.9.2
-		rvm default 1.9.2
+* follow pretty straight [rvm documentation] (http://rvm.beginrescueend.com/rvm/install/)
 
-## get source
+* read notes
+
+        rvm notes
+    
+  look at whether additional libraries are required
+
+* install 1.9.2
+
+        rvm install 1.9.2
+        rvm use 1.9.2 --default
+
+get source
+----------
+
 		gem install bundler
 		bundle install
 
-# tests?
-## unit style 
+
+Data
+====
+
+use mongo shell
+
+resources are on mongodb site
+
+* [shell?] (http://www.mongodb.org/display/DOCS/dbshell+Reference)
+* [query?] (http://www.mongodb.org/display/DOCS/Advanced+Queries)
+* [upsert?] (http://www.mongodb.org/display/DOCS/Updating)
+
+recipe : admin role 
+-------------------
+
+launch mongo shell, with correct database
+
+    ~/src/ruby/conference-on-rails (search)$ mongo
+    MongoDB shell version: 1.6.4
+    connecting to: test
+    > use conference_on_rails_development
+    switched to db conference_on_rails_development
+
+find users whose email begins with randy, returning [admin, email] fields
+
+    > db.users.find({email : /^randy/}, {email : 1, admin : 1});
+    { "_id" : ObjectId("4cb4e0cc1c94a27e7a000005"), "admin" : false, "email" : "randy@couture.com" }
+
+turn such users to admin
+
+    > db.users.update({email : /^randy/}, {$set : {"admin" : true}});
+
+Tests
+=====
+
+Unit 
+----
 see http://github.com/rspec/rspec
 
 ### flow them!
-		bundle exec autotest
+		guard
+		
 or for one shot,
+
 		rspec spec/
 		
 ### dunno why it fails :(
@@ -31,7 +80,8 @@ add a debugger statement, and type then
 
 this practice is not related to rails (though pretty described in http://guides.rubyonrails.org/debugging_rails_applications.html)
 
-## integration kungfu
+Integration kungfu
+------------------
 
 see
 
@@ -60,17 +110,24 @@ for jqueryless behavior, add a handy step before offending step
 
 then you go and see
 
-# metrics
-## coverage, using simplecov
+Metrics
+=======
+coverage, using simplecov
+-------------------------
+
 kill any spork drb server before, otherwise, coverage is not generated (at_exit spork)
 
     COVERAGE=true rspec spec
 
 no support for cucumber provided coverage, at this time
 
-# where the bloody site ?
-at least once
-    rake db:setup
+where the bloody site ?
+=======================
+
+seed database at least once
+
+    rake db:seed
     
 then
+
     rails s
