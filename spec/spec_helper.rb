@@ -36,10 +36,7 @@ Spork.prefork do
     ## see http://mongoid.org/docs/integration
     ## and http://github.com/bmabey/database_cleaner
     require 'database_cleaner'
-    config.before(:suite) do
-      DatabaseCleaner.orm = 'mongoid'
-      DatabaseCleaner.strategy = :truncation    
-    end
+    DatabaseCleaner.strategy = :truncation
     config.before(:each) do
       DatabaseCleaner.clean
     end

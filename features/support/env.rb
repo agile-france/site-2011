@@ -37,7 +37,6 @@ ActionController::Base.allow_rescue = true
 # How to clean your database when transactions are turned off. See
 # http://github.com/bmabey/database_cleaner for more info.
 begin
-  DatabaseCleaner.orm = 'mongoid'
   DatabaseCleaner.strategy = :truncation
 rescue LoadError => ignore_if_database_cleaner_not_present
 end
