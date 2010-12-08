@@ -3,17 +3,6 @@ require 'action_controller/railtie'
 require 'action_mailer/railtie'
 require 'active_resource/railtie'
 
-# FIXME this is ugly
-if ENV['MONGOHQ_URL']
-  require 'uri'
-  uri = URI.parse(ENV['MONGOHQ_URL'])
-  ENV['MONGOID_HOST'] = uri.host
-  ENV['MONGOID_PORT'] = uri.port.to_s
-  ENV['MONGOID_USERNAME'] = uri.user
-  ENV['MONGOID_PASSWORD'] = uri.password
-  ENV['MONGOID_DATABASE'] = uri.path[1..-1]
-end
-
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
