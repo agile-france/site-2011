@@ -1,9 +1,12 @@
 module Admin
   class UsersController < ApplicationController
+    include ::Controllers::Search::Support
     respond_to :html
     
     def index
-      @users = search(User).order_by(:email.asc).paginate(pager_options)
+      criteria = {}
+      criteria[:email] = params[:q] unless params[:q].blank?
+      @users = search(User, criteria).order_by(:email.asc).paginate(pager_options)
     end
     
     def edit
@@ -21,12 +24,6 @@ module Admin
     private
     def pager_options
       {:page => params[:page], :per_page => params[:per_page] || 10}
-    end
-    
-    def search(collection)
-      return collection.all if params[:q].blank?
-      pattern = ::Re.parse(params[:q]) || params[:q]
-      collection.where(:email => pattern)
     end
   end
 end

@@ -49,7 +49,8 @@
                                 
       #content
         #content_container= yield
-        = render :partial => 'debug/show' if Rails.env.development?
+        
+        / = render :partial => 'debug/show' if Rails.env.development?
 
       #push
 
