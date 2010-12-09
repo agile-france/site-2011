@@ -5,4 +5,4 @@
 # - commit generated css (git pre-commit hook, client pre-push does not exist yet I believe)
 # like it tough it does cripple the source tree with duplication
 # there is something missing with deploying on heroku, build|generate as post push
-Sass::Plugin.options[:css_location] = 'tmp/stylesheets'
+Sass::Plugin.options[:template_location] = {'app/stylesheets' => 'public/stylesheets'}
