@@ -3,6 +3,11 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html', :charset => 'utf-8'}
     %title Conference Agile France 2011
+    / see http://960.gs/demo.html
+    = stylesheet_link_tag 'reset'
+    = stylesheet_link_tag '960'
+    = stylesheet_link_tag 'text'
+    
     = stylesheet_link_tag 'base'
     = javascript_include_tag :jquery_1_4_2
     = csrf_meta_tag
@@ -27,24 +32,32 @@
             %span#sign_in= link_to t('devise.common.sign_in'), new_user_session_path
 
         #header_container
-          %div#head
-            %a{:href => "/"}
-              %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
-            %div.mojo 26 et 27 juin 2011
-            %div.mojo#sub-mojo Chalet de la Porte Jaune - Paris
-          %div#splash
-            %p
-              Le rendez-vous <strong>incontournable</strong>
-              %br
-              de la communauté agile française depuis 2006
-          %div#menu
-            %div{:class => "menuItem"}Vidéos
-            %div{:class => "menuItem"}Sponsors
-            %a{:class => "menuItem", :href => "/place"}
-              %div Lieu
-            %a{:class => "menuItem", :href => "/"}
-              %div Accueil
-                                
+          .container_12
+            .grid_2
+              %a{:href => "/"}
+                %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
+            .grid_10
+              .mojo 26 et 27 juin 2011
+              .mojo#sub-mojo Chalet de la Porte Jaune - Paris
+            .clear
+            #splash
+              %p
+                Le rendez-vous <strong>incontournable</strong>
+                %br
+                de la communauté agile française depuis 2006
+            #menu
+              %div{:class => "menuItem"}Vidéos
+              %div{:class => "menuItem"}Sponsors
+              %a{:class => "menuItem", :href => "/place"}
+                %div Lieu
+              %a{:class => "menuItem", :href => "/"}
+                %div Accueil
+            .clear
+      #flash.container_12
+        - flash.each_key do |key|
+          %div{:class => [key, 'grid_12']}= flash[key]
+        .clear
+          
       #content
         #content_container
           - flash.each_key do |key|

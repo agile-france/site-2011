@@ -1,0 +1,140 @@
+@charset "UTF-8";
+/*
+ * see http://www.fontsquirrel.com/fonts/ChunkFive#fontface
+ */
+@font-face {
+  font-family: "ChunkFiveRegular";
+  src: url("/fonts/ChunkFiveRegular/Chunkfive-webfont.eot");
+  src: local("☺"), url("/fonts/ChunkFiveRegular/Chunkfive-webfont.woff") format("woff"), url("/fonts/ChunkFiveRegular/Chunkfive-webfont.ttf") format("truetype"), url("/fonts/ChunkFiveRegular/Chunkfive-webfont.svg#webfontb5K2fJwj") format("svg"); }
+
+/*
+ * see http://www.fontsquirrel.com/fonts/DejaVu-Sans#fontface
+ */
+@font-face {
+  font-family: "DejaVuSansCondensed";
+  src: url("/fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.eot");
+  src: local("☺"), url("/fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.woff") format("woff"), url("/fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.ttf") format("truetype"), url("/fonts/DejaVu-Sans/DejaVuSansCondensed-webfont.svg#webfontxIcLJ5hx") format("svg"); }
+
+html, body {
+  height: 100%; }
+
+a img {
+  border-width: 0px; }
+
+body {
+  font-family: "DejaVuSansCondensed", Arial, sans-serif;
+  font-size: 15px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: #dbe3e2; }
+  body #content_wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin-bottom: -13em; }
+    body #content_wrapper #header {
+      color: #182f4c;
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto; }
+      body #content_wrapper #header #user_navigation {
+        float: right; }
+      body #content_wrapper #header #header_container {
+        background-image: url("/images/header_opt.png");
+        background-repeat: no-repeat; }
+        body #content_wrapper #header #header_container #thumb {
+          width: 100px;
+          margin: 15px 15px 15px 50px;
+          border: 0; }
+        body #content_wrapper #header #header_container #head {
+          font-family: sans-serif;
+          font-size: 48px; }
+        body #content_wrapper #header #header_container #splash {
+          -moz-border-radius: 15px;
+          -webkit-border-radius: 15px;
+          border-radius: 15px;
+          -moz-box-shadow: 0 0 10px #cccccc;
+          -webkit-box-shadow: 0 0 10px #cccccc;
+          box-shadow: 0 0 10px #cccccc;
+          padding: 1px 20px;
+          background-color: white;
+          font-size: 32px;
+          background-image: url("/images/portejaune.jpeg");
+          background-position: top right;
+          background-repeat: no-repeat;
+          margin-bottom: -12px; }
+        body #content_wrapper #header #header_container .mojo {
+          font-family: "ChunkFiveRegular";
+          clear: right;
+          float: right;
+          position: relative;
+          right: 175px;
+          top: 35px; }
+        body #content_wrapper #header #header_container #sub-mojo {
+          font-size: 22px;
+          right: 185px; }
+        body #content_wrapper #header #header_container #menu a:hover {
+          background-image: url("/images/post_it_up_opt.png"); }
+        body #content_wrapper #header #header_container #menu .menuItem {
+          background-image: url("/images/post_it_opt.png");
+          background-repeat: no-repeat;
+          float: right;
+          height: 37px;
+          margin-right: 20px;
+          padding-top: 12px;
+          text-align: center;
+          width: 75px;
+          text-decoration: none; }
+    body #content_wrapper .header {
+      -moz-border-radius: 5px;
+      border-radius: 5px;
+      border: 5px solid #d3a05f;
+      padding: 0 10px;
+      background-color: #deb887; }
+      body #content_wrapper .header .author {
+        float: left;
+        width: 33%; }
+      body #content_wrapper .header .tags {
+        float: left; }
+      body #content_wrapper .header .title {
+        float: left;
+        width: 67%; }
+      body #content_wrapper .header .clear {
+        clear: both; }
+    body #content_wrapper #content {
+      width: 960px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-top: 40px; }
+      body #content_wrapper #content #content_container {
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        -moz-box-shadow: 0 0 10px #cccccc;
+        -webkit-box-shadow: 0 0 10px #cccccc;
+        box-shadow: 0 0 10px #cccccc;
+        padding: 1px 20px;
+        background-color: white;
+        margin-bottom: 20px; }
+
+#push {
+  height: 13em; }
+
+#footer {
+  background-color: #182f4c;
+  text-align: center;
+  clear: both;
+  position: relative;
+  height: 13em;
+  color: white; }
+  #footer #footer_container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 75%;
+    padding-top: 1em; }
+    #footer #footer_container #badge-sponsor {
+      float: right; }
+    #footer #footer_container .logo-sponsor {
+      margin: 0 15px 7px;
+      border: 0; }
