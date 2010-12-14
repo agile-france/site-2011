@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "conferences/show.html.haml" do
   before do
-    @xp = Fabricate(:conference, :id => id(3))
+    @xp = Fabricate(:conference)
     @kent = Fabricate(:user, :first_name => 'kent', :last_name => 'beck')
     @explained = Fabricate(:session, :id => id(6), :title => 'explained')
     @kent.propose(@explained, @xp)
@@ -11,7 +11,7 @@ describe "conferences/show.html.haml" do
   end
 
   it 'should have a link to propose a new session' do
-    rendered.should have_tag("a[href=\"/conferences/#{id(3)}/sessions/new\"]",
+    rendered.should have_tag("a[href=\"/conferences/#{@xp.id}/sessions/new\"]",
                              t('party.session.new?'))
   end
 

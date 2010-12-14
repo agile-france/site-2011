@@ -1,10 +1,8 @@
 require 'spec_helper'
 
 describe ApplicationController do
-  before do
-    @xp = Fabricate(:conference, :id => id(12))
-  end
-    
+  let(:xp) {Fabricate(:conference, :id => id(12))}
+  
   describe 'default url options' do
     it 'are default empty' do
       controller.default_url_options.should == {}
@@ -19,7 +17,7 @@ describe ApplicationController do
   describe 'url helper for' do
     it 'appends locale parameter when present' do
       session[:locale] = :en
-      controller.url_for(@xp).should == "http://test.host/conferences/#{id(12)}?locale=en"
+      controller.url_for(xp).should == "http://test.host/conferences/#{xp.id}?locale=en"
     end    
   end
 end

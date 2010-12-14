@@ -125,7 +125,7 @@ describe SessionsController do
     before do
       @kent = Fabricate(:user, :email => "kent@beck.org")
       @ron = Fabricate(:user, :email => "ron@jeffries.org")
-      @xp = Fabricate(:conference, :name => 'xp', :id => id(2))
+      @xp = Fabricate(:conference, :name => 'xp')
       @explained = Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => id(4))
     end
 
@@ -161,7 +161,7 @@ describe SessionsController do
       end
     
       it 'should have a link back to conference with "en" locale parameter' do
-        response.body.should have_tag("a[href=\"/conferences/#{id(2)}?locale=en\"]")
+        response.body.should have_tag("a[href=\"/conferences/#{@xp.id}?locale=en\"]")
       end      
     end
   end

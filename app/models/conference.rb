@@ -4,4 +4,6 @@ class Conference
   
   field :name
   field :edition
+  attr_accessible :name, :edition
+  key :name, :edition
 end
