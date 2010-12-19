@@ -57,10 +57,7 @@
         .clear
           
       #content
-        #content_container
-          - flash.each_key do |key|
-            #flash{:class => key}= flash[key]
-          =yield
+        #content_container= yield
         
         = render :partial => 'debug/show' if Rails.env.development?
 
