@@ -246,7 +246,7 @@
      inkscape:pageshadow="2"
      inkscape:zoom="1"
      inkscape:cx="252.20103"
-     inkscape:cy="289.80271"
+     inkscape:cy="609.80271"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -328,8 +328,8 @@
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3777);enable-background:accumulate"
        transform="matrix(1.2785713,0,0,1.2785713,-258.75929,-140.96177)"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
-       inkscape:export-xdpi="64.384766"
-       inkscape:export-ydpi="64.384766" />
+       inkscape:export-xdpi="51.259998"
+       inkscape:export-ydpi="51.259998" />
     <path
        style="color:#000000;fill:url(#linearGradient7932);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        d="m 156.39468,341.38356 100.17453,4.66461 c -1.76414,19.5523 -1.75634,38.46839 -6.07592,57.90171 -32.13966,0.89369 -64.37514,-0.57162 -96.9545,-1.23499 z"
@@ -337,8 +337,8 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccc"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
-       inkscape:export-xdpi="64.384766"
-       inkscape:export-ydpi="64.384766" />
+       inkscape:export-xdpi="51.259998"
+       inkscape:export-ydpi="51.259998" />
     <text
        sodipodi:linespacing="125%"
        id="text3787"
@@ -465,9 +465,9 @@
          x="355.039"
          sodipodi:role="line">public/images/header_opt.png</tspan></text>
     <path
-       inkscape:export-ydpi="64.384766"
-       inkscape:export-xdpi="64.384766"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
+       inkscape:export-ydpi="51.240002"
+       inkscape:export-xdpi="51.240002"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_up_opt.png"
        transform="matrix(1.2785713,0,0,1.2785713,-383.21008,-140.96177)"
        style="color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-opacity:1;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3777);enable-background:accumulate"
        d="m 400.57289,384.36549 -3.8925,39.8699 -66.66697,-1.11937 z"
@@ -475,9 +475,9 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccc" />
     <path
-       inkscape:export-ydpi="64.384766"
-       inkscape:export-xdpi="64.384766"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_opt.png"
+       inkscape:export-ydpi="51.240002"
+       inkscape:export-xdpi="51.240002"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_up_opt.png"
        sodipodi:nodetypes="ccccc"
        inkscape:connector-curvature="0"
        id="path3043"
@@ -491,8 +491,8 @@
        x="29.590313"
        y="341.50891"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/post_it_up_opt.png"
-       inkscape:export-xdpi="64"
-       inkscape:export-ydpi="64" />
+       inkscape:export-xdpi="51.240002"
+       inkscape:export-ydpi="51.240002" />
     <path
        sodipodi:type="arc"
        style="color:#000000;fill:#000000;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"

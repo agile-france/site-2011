@@ -13,10 +13,14 @@
     = csrf_meta_tag
 
   %body
-    #content_wrapper
+    #content_wrapper.container_12
           
       #header
-        #user_navigation
+        .grid_3
+          %a{:href => "/"}
+            %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
+        
+        #user_navigation.prefix_3.grid_6
           - if user_signed_in?
             %span= t('devise.common.greet', :user => current_user.greeter_name)
             | 
@@ -31,28 +35,22 @@
             |
             %span#sign_in= link_to t('devise.common.sign_in'), new_user_session_path
 
-        #header_container
-          .container_12
-            .grid_2
-              %a{:href => "/"}
-                %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
-            .grid_10
-              .mojo 26 et 27 juin 2011
-              .mojo#sub-mojo Chalet de la Porte Jaune - Paris
-            .clear
-            #splash
-              %p
-                Le rendez-vous <strong>incontournable</strong>
-                %br
-                de la communauté agile française depuis 2006
-            #menu
-              %div{:class => "menuItem"}Vidéos
-              %div{:class => "menuItem"}Sponsors
-              %a{:class => "menuItem", :href => "/place"}
-                %div Lieu
-              %a{:class => "menuItem", :href => "/"}
-                %div Accueil
-            .clear
+        #mojo
+          .mojo.prefix_8 26 et 27 juin 2011
+          .mojo.prefix_7#sub-mojo Chalet de la Porte Jaune - Paris
+        .clear
+        #splash
+          %p
+            Le rendez-vous <strong>incontournable</strong>
+            %br
+            de la communauté agile française depuis 2006
+        #menu.prefix_8
+          %a.menuItem.grid_1{:href => "/"}
+            %div accueil
+          %a.menuItem.grid_1{:href => "/place"}
+            %div lieu
+          %div.menuItem.grid_1 sponsors
+          %div.menuItem.grid_1 vidéos
       #flash.container_12
         - flash.each_key do |key|
           %div{:class => [key, 'grid_12']}= flash[key]
@@ -69,10 +67,10 @@
       #push
 
     #footer
-      #footer_container
+      #footer_container.container_12
         2010 - Organisation Conférence Agile France
         %br
-        Nos sponsors 2010
+        Nos sponsors 2010 :
         %br
         %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
         %a#atos{:href => "http://fr.atosorigin.com", :title => "Atos Origin - Sponsor Platinium 2010"}

@@ -5,6 +5,7 @@ $darkblue: #182f4c
 $radius: 15px
 $footersize: 13em
 $margin: 20px
+$menuItemRotation: 5deg
 
 @mixin box($color)
   -moz-border-radius: 5px
@@ -65,59 +66,48 @@ body
 
     #header
       color: $darkblue
+      background-image: url('/images/header_opt.png')
+      background-repeat: no-repeat
       @include content
 
-      #user_navigation
-        float: right
+      #mojo
+        padding-top: 6em
 
-      #header_container
-        background-image: url('/images/header_opt.png')
+      #splash
+        @include rounded
+        padding: 20px 0 1px 20px
+        font-size: 32px
+        background-image: url('/images/portejaune.jpeg')
+        background-position: top right
         background-repeat: no-repeat
-        
-        #thumb
-          width: 100px
-          margin: 15px 15px 15px 50px
-          border: 0
+        margin-bottom: -12px
 
-        #head
-          font-family: sans-serif
-          font-size: 48px
+      .mojo
+        font-family: 'ChunkFiveRegular'
 
-        #splash
-          @include rounded
-          font-size: 32px
-          background-image: url('/images/portejaune.jpeg')
-          background-position: top right
+      #sub-mojo
+        font-size: 22px
+
+      #menu
+
+        a:hover
+          background-image: url('/images/post_it_up_opt.png')
+
+        .menuItem
+          background-image: url('/images/post_it_opt.png')
           background-repeat: no-repeat
-          margin-bottom: -12px
+          height: 38px
+          padding-top: 7px
+          text-align: center
+          text-decoration: none
+          font-size: 13px
+          
+          div
+            -moz-transform: rotate($menuItemRotation)
+            -webkit-transform: rotate($menuItemRotation)
+            -o-transform: rotate($menuItemRotation)
+            transform: rotate($menuItemRotation)
 
-        .mojo
-          font-family: 'ChunkFiveRegular'
-          clear: right
-          float: right
-          position: relative
-          right: 175px
-          top: 35px
-
-        #sub-mojo
-          font-size: 22px
-          right: 185px
-
-        #menu
-
-          a:hover
-            background-image: url('/images/post_it_up_opt.png')
-
-          .menuItem
-            background-image: url('/images/post_it_opt.png')
-            background-repeat: no-repeat
-            float: right
-            height: 37px
-            margin-right: $margin
-            padding-top: 12px
-            text-align: center
-            width: 75px
-            text-decoration: none
 
     .header
       @include box($wood)
@@ -129,16 +119,15 @@ body
       .title
         float: left
         width: 67%
-      .clear
-        clear: both
 
     #content
       @include content
-      padding-top: 40px
+      padding-top: 20px
 
       #content_container
         @include rounded
         margin-bottom: $margin
+        padding-top: $margin
 
 #push
   height: $footersize
@@ -152,7 +141,6 @@ body
   color: white
 
   #footer_container
-    @include content
     font-size: 75%
     padding-top: 1em
 
