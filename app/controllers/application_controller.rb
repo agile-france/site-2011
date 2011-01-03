@@ -14,16 +14,13 @@ class ApplicationController < ActionController::Base
     options
   end
   
-  # uggh, what a smell to have this piece of code there
-  # would take profit from a cancan device, provided it integrates with mongoid
+  # cancan does not integrate with mongoid
   # see https://github.com/ryanb/cancan/pull/172
-  def can?(perform, something)
-    if current_user
-      return true if current_user.admin?
-      return true if current_user.sessions.include?(something)
-    end
-    false
-  end
+  # so crafted an authorization library, named cant
+  include Cant::Embeddable
+  die {raise Cant::AccessDenied, I18n.translate('resources.not_authorized')}
+  helper_method :cant?
+  alias_method :authorize_user!, :die_if_cant!
   
   private
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
@@ -31,7 +28,7 @@ class ApplicationController < ActionController::Base
     redirect_to root_path
   end
 
-  rescue_from Failures::AccessDenied do |error|
+  rescue_from Cant::AccessDenied do |error|
     flash_and_log(:error, error.message)
     redirect_to request.referer
   end

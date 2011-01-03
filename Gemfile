@@ -23,6 +23,9 @@ gem 'mongoid_taggable', '~> 0.1'
 gem 'bson_ext', '>= 1.0.9'
 gem 'mongo', '>= 1.0.9'
 
+# cant
+gem 'cant'
+
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
   

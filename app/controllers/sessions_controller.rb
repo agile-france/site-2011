@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
   # 2. authorization, for Update
   before_filter :authenticate_user!, :except => [:index, :show]
   before_filter :authorize_user!, :only => [:edit, :update]
+  cant do
+    not current_session.user == current_user
+  end
 
   # supported formats
   respond_to :html, :json
@@ -40,12 +43,7 @@ class SessionsController < ApplicationController
     respond_with @sessions
   end
 
-  helper_method :can_edit?, :current_session  
-  private
-  def can_edit?(user, session)
-    user == session.user
-  end
-  
+  private  
   def current_session
     @session ||= Session.find(params[:id])
   end
@@ -54,10 +52,5 @@ class SessionsController < ApplicationController
   # is it a good one ?, dunno at this time ... and looks like symbol requested in params is a pain
   def current_conference
     @conference ||= Conference.find(params[:conference_id])
-  end
-
-  # cancan is an option
-  def authorize_user!
-    raise Failures::AccessDenied.new(t('resources.not_authorized')) unless can? :edit, current_session
   end
 end

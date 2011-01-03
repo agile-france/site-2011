@@ -6,7 +6,7 @@ GEM
       sexp_processor (>= 3.0.0)
     RubyInline (3.8.6)
       ZenTest (~> 4.3)
-    ZenTest (4.4.1)
+    ZenTest (4.4.2)
     abstract (1.0.0)
     actionmailer (3.0.3)
       actionpack (= 3.0.3)
@@ -40,6 +40,7 @@ GEM
     bson (1.1.4)
     bson_ext (1.1.4)
     builder (2.1.2)
+    cant (0.2.0)
     capybara (0.4.0)
       celerity (>= 0.7.9)
       culerity (>= 0.2.4)
@@ -146,10 +147,10 @@ GEM
       rspec-core (~> 2.2)
       rspec-expectations (~> 2.2)
       rspec-mocks (~> 2.2)
-    rspec-core (2.2.1)
-    rspec-expectations (2.2.0)
+    rspec-core (2.3.1)
+    rspec-expectations (2.3.0)
       diff-lcs (~> 1.1.2)
-    rspec-mocks (2.2.0)
+    rspec-mocks (2.3.0)
     rspec-rails (2.2.1)
       actionpack (~> 3.0)
       activesupport (~> 3.0)
@@ -201,7 +202,7 @@ GEM
     warden (1.0.2)
       rack (>= 1.0.0)
     will_paginate (3.0.pre2)
-    wrong (0.4.5)
+    wrong (0.5.0)
       ParseTree (~> 3.0)
       diff-lcs (~> 1.1.2)
       file-tail (~> 1.0)
@@ -219,6 +220,7 @@ PLATFORMS
 DEPENDENCIES
   arel (>= 0.4.0)
   bson_ext (>= 1.0.9)
+  cant
   capybara
   cucumber
   cucumber-rails

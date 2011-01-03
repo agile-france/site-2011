@@ -1,9 +1,9 @@
 class AdminController < ApplicationController
-  before_filter :authorize_user!
-  def show
+  before_filter :authenticate_user!, :authorize_user!
+  cant do
+    not current_user.admin?
   end
   
-  def authorize_user!
-    raise Failures::AccessDenied.new(t('resources.not_authorized')) unless can? :edit, User
+  def show
   end
 end

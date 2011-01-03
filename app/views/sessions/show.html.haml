@@ -1,5 +1,5 @@
 = render @session
 
 %p
-  = link_to t('common.update'), edit_session_path(@session) if can_edit?(current_user, @session)
+  = link_to t('common.update'), edit_session_path(@session) unless cant?
   = link_to t('common.back'), conference_path(@session.conference)
