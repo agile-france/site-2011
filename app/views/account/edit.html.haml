@@ -11,6 +11,6 @@
   .avatar
     %p
       :plain 
-        #{markup(t('user.profile.avatar'))}
+        #{markdown(t('user.profile.avatar'))}
       = gravatar_for(@user)
   %p= f.submit t('common.validate')

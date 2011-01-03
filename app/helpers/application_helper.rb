@@ -7,7 +7,7 @@ module ApplicationHelper
     object.class.validators_on(attribute).map(&:class).include? ActiveModel::Validations::PresenceValidator  
   end
 
-  def markup(string)
-    Markup.new(string).to_html if string
+  def markdown(string)
+    Markdown.new(string).to_html if string
   end
 end
