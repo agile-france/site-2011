@@ -3,7 +3,7 @@
     .title
       %h3= link_to session.title, session
       .tags
-        = render :partial => 'sessions/tag', :collection => session.tags_array, :as => :tag
+        = render :partial => 'sessions/tags', :collection => session.tags_array, :as => :tags
     .author
       %h3
         %p
