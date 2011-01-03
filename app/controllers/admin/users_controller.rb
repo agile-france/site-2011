@@ -1,5 +1,5 @@
 module Admin
-  class UsersController < ApplicationController
+  class UsersController < ::Admin::Base
     include ::Controllers::Search::Support
     respond_to :html
     

@@ -53,4 +53,15 @@ describe Admin::UsersController do
       end
     end
   end
+  
+  it 'redirects unsigned user to sign' do
+    get :index
+    response.should redirect_to new_user_session_path
+  end
+  it 'redirect regular user to root_path' do
+    joe = Fabricate(:user)
+    sign_in(joe)
+    get :index
+    response.should redirect_to root_path
+  end
 end

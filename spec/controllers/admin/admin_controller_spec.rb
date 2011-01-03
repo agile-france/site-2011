@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe AdminController do
+describe Admin::AdminController do
   context 'when not logged' do
     before do
       get :show

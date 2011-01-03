@@ -21,7 +21,7 @@ end
 
 describe "admin section" do
   it "should GET /admin" do
-    {:get => '/admin'}.should route_to :controller => 'admin', :action => 'show'
+    {:get => '/admin'}.should route_to :controller => 'admin/admin', :action => 'show'
   end
   describe 'nested user admin' do
     # XXX rails do not generate reversible nested resources path

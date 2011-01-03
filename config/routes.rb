@@ -11,8 +11,8 @@ ConferenceOnRails::Application.routes.draw do
   resources :place
 
   # admin interface
-  get '/admin' => 'admin#show'
   namespace :admin do
+    get '/' => 'admin#show'
     resources :users, :only => [:index, :edit, :update]
   end
 
