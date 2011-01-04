@@ -1,12 +1,22 @@
 %div{:id => "session_#{session.id}"}
-  .header
-    .title
+  .header.grid_11
+    .grid_6.alpha
       %h3= link_to session.title, session
-      .tags
-        = render :partial => 'sessions/tags', :collection => session.tags_array, :as => :tags
-    .author
+    .grid_5.omega
       %h3
         %p
           = gravatar_for(session.user)
           = session.user.greeter_name
-    .clear
+    .tags.grid_3.alpha
+      =render :partial => 'sessions/tags', :object => session.tags, :as => :tags
+    / .grid_8.omega
+    /   %p
+    /     =session.format
+    /     =session.level
+    /     =session.age
+    /     =session.capacity
+  .clear
+  / XXX or .grid_1 so that 11+1=12 
+  / ... do not understand why header cant be grid_12 without being too large for parent ...
+  
+  

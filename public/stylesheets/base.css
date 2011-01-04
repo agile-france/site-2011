@@ -81,14 +81,6 @@ body {
       border: 5px solid #d3a05f;
       padding: 0 10px;
       background-color: #deb887; }
-      body #content_wrapper .header .author {
-        float: left;
-        width: 33%; }
-      body #content_wrapper .header .tags {
-        float: left; }
-      body #content_wrapper .header .title {
-        float: left;
-        width: 67%; }
     body #content_wrapper #content {
       width: 960px;
       margin-left: auto;

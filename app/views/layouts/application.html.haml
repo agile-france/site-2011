@@ -51,7 +51,7 @@
             %div lieu
           %div.menuItem.grid_1 sponsors
           %div.menuItem.grid_1 vidéos
-      #flash.container_12
+      #flash
         - flash.each_key do |key|
           %div{:class => [key, 'grid_12']}= flash[key]
         .clear
@@ -59,12 +59,12 @@
       #content
         #content_container= yield
         
-        = render :partial => 'debug/show' if Rails.env.development?
+        / = render :partial => 'debug/show' if Rails.env.development?
 
       #push
 
     #footer
-      #footer_container.container_12
+      #footer_container
         2010 - Organisation Conférence Agile France
         %br
         Nos sponsors 2010 :
