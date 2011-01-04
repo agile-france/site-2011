@@ -18,7 +18,7 @@ class ApplicationController < ActionController::Base
   # see https://github.com/ryanb/cancan/pull/172
   # so crafted an authorization library, named cant
   include Cant::Embeddable
-  die {raise Cant::AccessDenied, I18n.translate('resources.not_authorized')}
+  die {raise Cant::AccessDenied, I18n.translate('authorization.access_denied')}
   helper_method :cant?
   alias_method :authorize_user!, :die_if_cant!
   

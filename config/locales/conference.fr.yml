@@ -6,9 +6,35 @@ fr:
     update: Modifier
     validate: Valider
 
+  constants:
+    sessions:
+      levels:
+        shu: Shu
+        ha: Ha
+        ri: Ri
+      ages:
+        exp: Session expérimentale (jamais présentée)
+        new: Session nouvelle mais rodée
+        first: Session jouée ailleurs mais 1ere fois à Agile France
+        old: Session déja jouée à Agile France
+        veryold: Session récurrente à Agile France
+      formats:
+        rex: Retour d'expérience (30 mn)
+        workshop: Atelier (90 mn)
+        long_workshop: Atelier long (180 mn)
+        talk: Présentation (60 mn)
+        keynote: Keynote
+        other: Autre
+        
   roles:
     author: Auteur
 
+  sessions:
+    level: Niveau
+    age: Age
+    format: Format
+    capacity: Capacité (nombre max de participants)
+       
   party:
     session:
       new?: Proposer une session ?
@@ -18,8 +44,8 @@ fr:
       update:
         success!: Session mise à jour!
 
-  resources:
-    not_authorized: Pas autorisé
+  authorization:
+    access_denied: Pas autorisé
     
   user:
     account: Mon compte

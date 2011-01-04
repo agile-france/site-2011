@@ -7,6 +7,7 @@ describe "conferences/show.html.haml" do
     @explained = Fabricate(:session, :id => id(6), :title => 'explained')
     @kent.propose(@explained, @xp)
     assign(:conference, @xp)
+    assign(:sessions, @xp.sessions.paginate)
     render
   end
 

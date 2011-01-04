@@ -4,6 +4,22 @@
     %br/
     = f.text_field :title, :size => '32'
   %p
+    = f.label :level, t('sessions.level')
+    %br/
+    = select(:session, :level, i18n_options(Constants::Sessions::Levels, :all))
+  %p
+    = f.label :level, t('sessions.age')
+    %br/
+    = select(:session, :level, i18n_options(Constants::Sessions::Ages, :all))
+  %p
+    = f.label :format, t('sessions.format')
+    %br/
+    = select(:session, :format, i18n_options(Constants::Sessions::Formats, :all))
+  %p
+    = f.label :capacity, t('sessions.capacity')
+    %br/
+    = f.text_field :capacity, :size => '32'
+  %p
     = f.label :description, t('common.description')
     %br/
     = f.text_area :description, :size => '28x12'

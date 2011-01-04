@@ -10,8 +10,35 @@ en:
     title: Title
     update: Update
     validate: Validate
+    
   update:
     success!: %{user} updated
+
+  constants:
+    sessions:
+      levels:
+        shu: Shu
+        ha: Ha
+        ri: Ri
+      ages:
+        exp: Never presented yet
+        new: Presented at least once
+        first: "Presented at a conference, but not Agile France"
+        old: Already happened once at Agile France
+        veryold: Venerable presentation
+      formats:
+        rex: Experience report (30 mn)
+        workshop: Workshop (90 mn)
+        long_workshop: Long workshop (180 mn)
+        talk: Presentation (60 mn)
+        keynote: Keynote
+        other: Other
+
+  sessions:
+    level: Level
+    age: Age
+    format: Format
+    capacity: Capacity (max number of attendees)        
 
   party:
     session:
@@ -22,8 +49,8 @@ en:
       update:
         success!: Session updated!
 
-  resources:
-    not_authorized: Not authorized
+  authorization:
+    access_denied: Access Denied
     
   user:
     account: My account
