@@ -1,16 +1,3 @@
 %div{:id => "session_#{session.id}"}
-  .header
-    .title
-      %h3= link_to session.title, session
-      .tags
-        = render :partial => 'sessions/tags', :collection => session.tags_array, :as => :tags
-    .author
-      %h3
-        %p
-          = gravatar_for(session.user)
-          = session.user.greeter_name
-    .clear
-
-  .description
-    :plain
-      #{markdown(session.description)}
+  = render :partial => 'header', :locals => {:session => session}
+  = render :partial => 'description', :locals => {:session => session}
