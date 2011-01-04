@@ -2,7 +2,10 @@
 
 = link_to t('party.session.new?'), new_conference_session_path(@conference)
 
-- @conference.sessions.each do |session|
+- @sessions.each do |session|
   = render :partial => 'sessions/header', :locals => {:session => session}
   = render :partial => 'sessions/summary', :locals => {:session => session}
+  
+.pagination
+  = will_paginate @sessions
   
