@@ -8,7 +8,7 @@
           = gravatar_for(session.user)
           = session.user.greeter_name
     .tags.grid_3.alpha
-      =render :partial => 'sessions/tags', :object => session.tags, :as => :tags
+      =render 'sessions/tags', :tags => session.tags
     .grid_8.omega
       %p
         =i18n_text_for session, :format

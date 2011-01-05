@@ -1,2 +1,2 @@
-= render :partial => 'header', :locals => {:session => session}
-= render :partial => 'description', :locals => {:session => session}
+= render 'sessions/header', :session => session
+= render 'sessions/description', :session => session
