@@ -1,5 +1,7 @@
 %h1= @user.greeter_name
 = form_for(@user, :url => admin_user_path) do |f|
+  =render "shared/error_messages", :resource => @user
+  
   %p
     = f.label :email, t('user.profile.email')
     %br/

@@ -25,4 +25,13 @@ describe Session do
     it {should have_fields(:capacity).of_type(Integer)}
     it {should validate_numericality_of :capacity}
   end
+  
+  describe "validation and i18n" do
+    it "should have a :fr translation" do
+      I18n.locale = :fr
+      i18n = Session.new(:capacity => 'a')
+      deny {i18n.valid?}
+      assert {i18n.errors[:capacity].first =~ /nombre/}
+    end
+  end
 end

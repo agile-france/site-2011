@@ -1,4 +1,6 @@
 = form_for(@session, :url => url) do |f|
+  =render "shared/error_messages", :resource => @session
+
   %p
     = f.label :title, t('common.title')
     %br/

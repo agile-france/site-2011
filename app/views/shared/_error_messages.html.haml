@@ -1,0 +1,9 @@
+- if resource.errors.any?
+  #error_explanation
+    %h2
+      =t('errors.template.header', :model => resource.class, :count => resource.errors.count)
+      %br/
+      =t('errors.template.body')
+    %ul
+      - resource.errors.full_messages.each do |msg|
+        %li= msg
