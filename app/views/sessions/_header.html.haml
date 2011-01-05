@@ -9,12 +9,12 @@
           = session.user.greeter_name
     .tags.grid_3.alpha
       =render :partial => 'sessions/tags', :object => session.tags, :as => :tags
-    / .grid_8.omega
-    /   %p
-    /     =session.format
-    /     =session.level
-    /     =session.age
-    /     =session.capacity
+    .grid_8.omega
+      %p
+        =i18n_text_for session, :format
+        =i18n_text_for session, :level
+        =i18n_text_for session, :age
+        =session.capacity
   .clear
   / XXX or .grid_1 so that 11+1=12 
   / ... do not understand why header cant be grid_12 without being too large for parent ...

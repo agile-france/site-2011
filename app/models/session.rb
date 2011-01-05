@@ -14,6 +14,7 @@ class Session
   field :age
   
   attr_accessible :title, :description, :format, :capacity, :level, :age
+  attr_accessible :tags
   
   validates :capacity, :numericality => true, :allow_nil => true
 end

@@ -6,15 +6,15 @@
   %p
     = f.label :level, t('sessions.level')
     %br/
-    = select(:session, :level, i18n_options(Constants::Sessions::Levels, :all))
+    = select(:session, :level, i18n_options_for(Constants::Sessions::Levels))
   %p
-    = f.label :level, t('sessions.age')
+    = f.label :age, t('sessions.age')
     %br/
-    = select(:session, :level, i18n_options(Constants::Sessions::Ages, :all))
+    = select(:session, :age, i18n_options_for(Constants::Sessions::Ages))
   %p
     = f.label :format, t('sessions.format')
     %br/
-    = select(:session, :format, i18n_options(Constants::Sessions::Formats, :all))
+    = select(:session, :format, i18n_options_for(Constants::Sessions::Formats))
   %p
     = f.label :capacity, t('sessions.capacity')
     %br/
