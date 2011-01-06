@@ -14,6 +14,7 @@ class User
   validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
   
   references_many :sessions
+  referenced_in :company
   
   # white list of accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me

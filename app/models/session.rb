@@ -3,7 +3,7 @@ class Session
   include Mongoid::Taggable
   include Mongoid::Timestamps
   
-  referenced_in :conference, :inverse_of => :sessions
+  referenced_in :conference
   referenced_in :user
   
   field :title

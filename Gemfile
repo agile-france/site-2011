@@ -28,6 +28,9 @@ gem 'cant'
 
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
+
+  # factory (required for scaffold)
+  gem 'fabrication'
   
   gem 'ruby-debug19', :platforms => :mri_19
   gem 'ruby-debug', :platforms => :mri_18
@@ -38,8 +41,6 @@ group :test do
   gem 'mongoid-rspec'
   gem 'wrong', '~> 0.4'
 
-  # factory
-  gem 'fabrication'
 
   # cucumber
   gem 'cucumber'
