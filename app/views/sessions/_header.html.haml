@@ -1,7 +1,7 @@
 %div{:id => "session_#{session.id}"}
   .header.grid_11
     .grid_6.alpha
-      %h3= link_to session.title, session
+      %h3= link_to session.title, awesome_session_path(session)
     .grid_5.omega
       %h3
         %p

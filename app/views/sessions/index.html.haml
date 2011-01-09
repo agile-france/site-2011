@@ -3,5 +3,5 @@
     %th= t('common.title')
   - @sessions.each do |session|
     %tr
-      %td= link_to "#{session.title}", session_path(session)
+      %td= link_to "#{session.title}", awesome_session_path(session)
     

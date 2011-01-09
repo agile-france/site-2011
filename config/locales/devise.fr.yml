@@ -42,28 +42,19 @@ fr:
     unlocks:
       send_instructions: "Vous allez recevoir un email avec des instructions pour déverrouiller votre compte."
       unlocked: "Votre compte est déverrouillé. Vous êtes maintenant connecté."
+    omniauth_callbacks:
+      success: 'Successfully authorized from %{kind} account.'
+      failure: 'Could not authorize you from %{kind} because "%{reason}".'
     mailer:
       confirmation_instructions: "Instructions de confirmation"
       reset_password_instructions: "Instructions pour changer le mot de passe"
       unlock_instructions: "Instructions pour déverrouiller le compte"
 
-    ##########################################################################################################
-    # For generated views: By "rails generate devise_views".
-    #                      Assuming to use I18n "Lazy" lookup, except for the ones under "common" namespace.
-    #                      e.g. Under views/devise/confirmations/new.html.erb,
-    #                           <h2>Resend confirmation instructions</h2>
-    #                           is changed to
-    #                           <h2><%= t(".resend_confirmation_instructions") %></h2>
-    #                           locally.
-    ##########################################################################################################
-    common:
-      forgot_your_password?: "Mot de passe oublié?"
-      greet: "Bonjour %{user}"
-      sign_in: "Se connecter"
-      sign_out: "Se déconnecter"
-      sign_up: "Ouvrir un compte"
-      email: 'Email'
-      password: 'Mot de passe'
+# ### bloody additions ###
+#     callbacks:
+#       user:
+#         success: 'Successfully authorized from %{kind} account.'
+#         failure: 'Could not authorize you from %{kind} because "%{reason}".'
     shared:
       links:
         didnt_receive_confirmation_instructions?: "Vous n'avez pas reçu de mail de confirmation?"

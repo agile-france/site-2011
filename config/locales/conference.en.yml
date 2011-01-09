@@ -1,6 +1,17 @@
 en:
   admin: Admin
-    
+  
+  auth:
+    forgot_your_password?: "Forgot your password ?"
+    greet: "Hello %{user}"
+    sign_in: "Sign in"
+    sign_out: "Sign out"
+    sign_up: "Sign up"
+    email: 'Email'
+    password: 'Password'
+    remember_me?: "Remember me?"
+  authorizations:
+    providers: "Or use one of supported providers"        
   common:
     back: Back
     cancel: Cancel

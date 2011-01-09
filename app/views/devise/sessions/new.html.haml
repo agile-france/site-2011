@@ -1,16 +1,19 @@
-%h2= t('devise.common.sign_in')
+%h2= t('auth.sign_in')
 = form_for(resource, :as => resource_name, :url => user_session_path) do |f|
   %p
-    = f.label t('devise.common.email')
+    = f.label t('auth.email')
     %br/
     = f.text_field :email
   %p
-    = f.label t('devise.common.password')
+    = f.label t('auth.password')
     %br/
     = f.password_field :password
   - if devise_mapping.rememberable?
     %p
       = f.check_box :remember_me
       = f.label t('.remember_me')
-  %p= f.submit "Sign in"
+  %p= f.submit "#{t('auth.sign_in')} !"
 = render :partial => "devise/shared/links"
+
+%h2= t('authorizations.providers')
+= link_to icon_for(:twitter), user_omniauth_authorize_path(:twitter)

@@ -35,7 +35,7 @@ class SessionsController < ApplicationController
     if current_session.update_attributes(params[:session])
       flash[:notice] = t('party.session.update.success!')
     end
-    respond_with current_session, :location => current_session
+    respond_with current_session, :location => awesome_session_path(current_session)
   end
 
   def index

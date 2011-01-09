@@ -11,8 +11,9 @@ gem 'haml'
 gem 'haml-rails'
 gem 'will_paginate', '~> 3'
 
-# devise
-gem 'devise', '>= 1.1.2'
+# authentication
+gem 'devise', '>= 1.2.rc'
+gem 'oa-oauth', :require => "omniauth/oauth"
 
 # rdiscount
 gem 'rdiscount'

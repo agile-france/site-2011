@@ -1,10 +1,13 @@
 ConferenceOnRails::Application.routes.draw do
   # 1- devise
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => 'auth/registrations',
+    :omniauth_callbacks => 'auth/callbacks'
+  }
   
   # 2- conferences and sessions 
-  # !!! watch out !!! session resources redefine session_path, defined first in Devise::Controllers::UrlHelpers)
-  resources :sessions, :except => [:new, :create]
+  # :as option for sessions is used to unclash name with devise url helper (session_path(resource_or_scope namely))
+  resources :sessions, :except => [:new, :create], :as => :awesome_sessions
   resources :conferences  do
     resources :sessions, :only => [:new, :create]
   end

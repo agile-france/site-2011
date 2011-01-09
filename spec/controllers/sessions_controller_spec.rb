@@ -79,7 +79,7 @@ describe SessionsController do
         end
 
         it 'should redirect to session' do
-          response.should redirect_to(session_path(@simplicity))
+          response.should redirect_to(awesome_session_path(@simplicity))
         end
       end
 
@@ -87,13 +87,13 @@ describe SessionsController do
         before do
           @aaron = Fabricate(:user, :email => 'aaron@paterson.com')
           @nokogiri = Fabricate(:session, :user => @aaron, :title => 'nokogiri')
-          request.env["HTTP_REFERER"] = session_path(@nokogiri)
+          request.env["HTTP_REFERER"] = awesome_session_path(@nokogiri)
           put :update, {:conference_id => @xp.id, :id => @nokogiri.id,
              :session => {:title => new_title}}
         end
 
         it 'should redirect to session' do
-          response.should redirect_to(session_path(@nokogiri))
+          response.should redirect_to(awesome_session_path(@nokogiri))
         end
 
         it 'should flash error' do
@@ -151,7 +151,7 @@ describe SessionsController do
       it 'has no edit link' do
         assigns(:session).should == @explained
         response.should be_success
-        response.body.should_not have_tag(edit_session_path(@explained))
+        response.body.should_not have_tag(edit_awesome_session_path(@explained))
       end
     end
     

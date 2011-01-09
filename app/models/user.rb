@@ -5,16 +5,21 @@ class User
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+  devise :omniauthable
 
   field :first_name
   field :last_name
   field :bio
   field :avatar
-  field :admin, :type => Boolean, :default => false 
-  validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
+  field :admin, :type => Boolean, :default => false
   
+  # associations
   references_many :sessions
   referenced_in :company
+  references_many :authentications
+  
+  # validations
+  validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
   
   # white list of accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me
@@ -34,11 +39,18 @@ class User
   end
 
   # propose a session to a conference
+  # note this code saves only the Session model, as current storage enables it
   def propose(session, conference)
     session.tap do |s|
       s.user = self
       s.conference = conference
     end.save!
     self
+  end
+  
+  # devise validatable hooks
+  # password is not required if authenticated by external service
+  def password_required?
+    authentications.empty?? super : false
   end
 end
