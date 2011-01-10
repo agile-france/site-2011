@@ -16,4 +16,6 @@
 = render :partial => "devise/shared/links"
 
 %h2= t('authorizations.providers')
-= link_to icon_for(:twitter), user_omniauth_authorize_path(:twitter)
+
+- [:twitter, :github].each do |provider|
+  = link_to icon_for(provider), user_omniauth_authorize_path(provider)

@@ -17,8 +17,8 @@ describe Auth::CallbacksController do
   describe "twitter" do
     before do
       # this is a piece of information sent from twitter
-      request.env['omniauth.auth'] = Twitter.data
-      assert {Twitter.data['extra'] =~ /CookieOverflow$/}
+      request.env['omniauth.auth'] = Authentications::Twitter.data
+      assert {Authentications::Twitter.data['extra'] =~ /CookieOverflow$/}
     end
     context "no user having provider and uid" do
       before do
@@ -28,12 +28,12 @@ describe Auth::CallbacksController do
         response.should redirect_to new_user_registration_path
       end
       it 'should have twitter authentication data available in session[:auth]' do
-        assert {session[:auth] == Twitter.data.except('credentials', 'extra')}
+        assert {session[:auth] == Authentications::Twitter.data.except('credentials', 'extra')}
       end
     end
     context "with a user already authorized" do
       before do
-        auth = Fabricate(:authentication, Twitter.data.except('credentials', 'extra', 'user_info'))
+        auth = Fabricate(:authentication, Authentications::Twitter.data.except('credentials', 'extra', 'user_info'))
         u = Fabricate(:user)
         u.authentications << auth
         assert {u.persisted?}
@@ -45,6 +45,41 @@ describe Auth::CallbacksController do
       it 'should sign in user' do
         get :twitter
         assert {controller.current_user}
+      end
+    end
+  end
+  
+  describe "github" do
+    before do
+      # this is a piece of information sent from github
+      request.env['omniauth.auth'] = Authentications::Github.data
+    end
+    context "no such authentication" do
+      context "no user having authentication provided email" do
+        before do
+          get :github
+        end
+        it 'redirects to root_path, and user is signed in' do
+          response.should redirect_to root_path
+          assert {controller.current_user}
+        end
+      end
+      context "user with authentication email exists" do
+        before do
+          @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
+          get :github
+        end
+        it 'redirects to root_path' do
+          response.should redirect_to root_path
+        end
+        it 'user is signed in, and authentication added to user' do
+          current_user = controller.current_user
+          assert {current_user == @user}
+          deny {current_user.authentications.empty?}
+        end
+        it 'do not carry auth information in session' do
+          deny {session[:auth]}
+        end
       end
     end
   end

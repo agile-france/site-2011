@@ -7,7 +7,12 @@ module Auth
     protected
     def build_resource(hash=nil)
       super
-      resource.authentications.build(session[:auth].except('user_info')) if session[:auth]
+      if session[:auth]
+        resource.attributes = session[:auth]['user_info']
+        resource.authentications.build(session[:auth].except('user_info'))
+        resource.valid?
+      end
+      resource
     end
   end
 end
