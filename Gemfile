@@ -4,7 +4,6 @@ def mac?
 end
 
 gem 'rails', '>= 3.0.0'
-gem 'arel',  '>= 0.4.0'
 
 # views
 gem 'haml'
@@ -13,7 +12,8 @@ gem 'will_paginate', '~> 3'
 
 # authentication
 gem 'devise', '>= 1.2.rc'
-gem 'oa-oauth', :require => "omniauth/oauth"
+gem 'oa-oauth', '>= 0.2.0.beta1', :require => "omniauth/oauth"
+gem 'oa-openid', '>= 0.2.0.beta1', :require => "omniauth/openid"
 
 # rdiscount
 gem 'rdiscount'

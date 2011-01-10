@@ -1,10 +1,9 @@
 module Auth
   class CallbacksController < Devise::OmniauthCallbacksController
-    def twitter
-      authorize
-    end
-    def github
-      authorize
+    Devise.omniauth_configs.each do |provider, _config|
+      module_eval <<-EOS
+        def #{provider}; authorize; end
+      EOS
     end
     
     private

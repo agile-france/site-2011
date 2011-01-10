@@ -17,5 +17,5 @@
 
 %h2= t('authorizations.providers')
 
-- [:twitter, :github].each do |provider|
+- Devise.omniauth_configs.each do |provider, _config|
   = link_to icon_for(provider), user_omniauth_authorize_path(provider)
