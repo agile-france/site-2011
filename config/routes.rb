@@ -1,6 +1,7 @@
 ConferenceOnRails::Application.routes.draw do
   # 1- devise
   devise_for :users, :controllers => {
+    :sessions => 'auth/sessions',
     :registrations => 'auth/registrations',
     :omniauth_callbacks => 'auth/callbacks'
   }

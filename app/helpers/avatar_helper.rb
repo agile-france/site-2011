@@ -1,8 +1,11 @@
 require 'digest/md5'
 
 module AvatarHelper
-  def gravatar_for(user, options={})
-    image_tag("http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(user.email)}", 
-      {:size => '40x40'}.merge(options))
+  def avatar_for(user, options={})
+    image_tag(user.avatar.last, {:size => '40x40'}.merge(options))
+  end
+  
+  def avatar_hint(user)
+    Markdown.new(t('user.profile.gravatar')).to_html if user.avatar.first === :gravatar
   end
 end

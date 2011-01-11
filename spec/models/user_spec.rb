@@ -74,8 +74,26 @@ describe User do
     end
   end
   
-  # avatar should allow following values
-  [:gravatar].each do |provider|
-    it {should validate_inclusion_of(:avatar).to_allow(provider.to_s)}
+  describe "#avatar" do
+    context "twitter authentication" do
+      before do
+        (@user = Fabricate(:user)).authentications.create!({:active => true}.merge(Authentications::Twitter.data))
+        # guard
+        authentication = @user.authentications.first
+        @avatar_uri = authentication.user_info['image']
+        assert {@avatar_uri =~ %r{^http://a2.twimg.com/profile_images}}
+      end
+      it "is image from twitter" do
+        assert {@user.avatar == [:twitter, @avatar_uri]}
+      end
+    end
+    context "github authentication" do
+      before do
+        (@user = Fabricate(:user)).authentications.create!({:active => true}.merge(Authentications::Github.data))
+      end
+      it "is image from gravatar" do
+        assert {@user.avatar == [:gravatar, 'http://www.gravatar.com/avatar/6a6c19fea4a3676970167ce51f39e6ee']}
+      end
+    end
   end
 end

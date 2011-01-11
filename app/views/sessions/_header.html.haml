@@ -5,7 +5,7 @@
     .grid_5.omega
       %h3
         %p
-          = gravatar_for(session.user)
+          = avatar_for(session.user)
           = session.user.greeter_name
     .tags.grid_3.alpha
       = render 'sessions/tags', :tags => session.tags

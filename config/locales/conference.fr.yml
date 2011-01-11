@@ -62,7 +62,7 @@ fr:
   user:
     account: Mon compte
     profile:
-      avatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
+      gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
       bio: Biographie
       email: Email
   

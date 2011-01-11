@@ -1,7 +1,7 @@
 %h1= t('user.account')
 = form_for(@user, :url => account_path) do |f|
   =render "shared/error_messages", :resource => @user
-  
+
   %p
     = f.label :email, t('user.profile.email')
     %br/
@@ -12,7 +12,16 @@
     = f.text_area :bio, :size => '28x12'
   .avatar
     %p
+      = avatar_for(@user)
       :plain 
-        #{markdown(t('user.profile.avatar'))}
-      = gravatar_for(@user)
+        #{avatar_hint(@user)}
   %p= f.submit t('common.validate')
+  
+%h1 Authentications
+-@user.authentications.each do |a|
+  %p
+    = icon_for(a.provider)
+  %ul
+    - a.user_info.each do |k,v|
+      -unless v.blank? 
+        %li= "#{k} : #{v}"

@@ -7,7 +7,7 @@ module AssetsHelper
   
   private
   def domainize(provider)
-    case provider
+    case provider.to_sym
     when :google_apps
       [:google, 'Gmail']
     else

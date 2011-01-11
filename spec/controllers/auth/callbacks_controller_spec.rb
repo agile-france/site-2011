@@ -14,7 +14,7 @@ describe Auth::CallbacksController do
     request.env['devise.mapping'] = Devise.mappings[:user]
   end
   
-  describe "twitter" do
+  describe "GET /users/auth/twitter/callback" do
     before do
       # this is a piece of information sent from twitter
       request.env['omniauth.auth'] = Authentications::Twitter.data
@@ -31,25 +31,27 @@ describe Auth::CallbacksController do
         assert {session[:auth] == Authentications::Twitter.data.except('credentials', 'extra')}
       end
     end
-    context "with a user already authorized" do
+    context "with an authorized user, old data" do
       before do
-        auth = Fabricate(:authentication, Authentications::Twitter.data.except('credentials', 'extra', 'user_info'))
         u = Fabricate(:user)
-        u.authentications << auth
-        assert {u.persisted?}
-      end
-      it 'should redirect to root_path' do
+        auth = u.authentications.create!(Authentications::Twitter.data.merge({'user_info' => {'image' => 'oops'}}))
         get :twitter
+      end
+      it 'redirects to root_path' do
         response.should redirect_to root_path
       end
-      it 'should sign in user' do
-        get :twitter
+      it 'sign in user' do
         assert {controller.current_user}
+      end
+      it 'should activate authentication with fresh data' do
+        auth = controller.current_user.authentications.first
+        assert {auth.activated?}
+        assert {auth.user_info['image'] == Authentications::Twitter.data['user_info']['image']}
       end
     end
   end
   
-  describe "github" do
+  describe "GET /users/auth/github/callback" do
     before do
       # this is a piece of information sent from github
       request.env['omniauth.auth'] = Authentications::Github.data
@@ -64,7 +66,7 @@ describe Auth::CallbacksController do
           assert {controller.current_user}
         end
       end
-      context "user with authentication email exists" do
+      context "user with same email as in authentication data exists" do
         before do
           @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
           get :github
@@ -79,6 +81,10 @@ describe Auth::CallbacksController do
         end
         it 'do not carry auth information in session' do
           deny {session[:auth]}
+        end
+        it 'user has an authentication, with public information at hand' do
+          authentication = controller.current_user.authentications.first
+          assert {authentication.user_info}
         end
       end
     end

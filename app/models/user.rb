@@ -10,16 +10,12 @@ class User
   field :first_name
   field :last_name
   field :bio
-  field :avatar
   field :admin, :type => Boolean, :default => false
   
   # associations
   references_many :sessions
   referenced_in :company
   references_many :authentications
-  
-  # validations
-  validates_inclusion_of :avatar, :in => ['gravatar'], :allow_nil => true
   
   # white list of accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me
@@ -52,5 +48,16 @@ class User
   # password is not required if authenticated by external service
   def password_required?
     authentications.empty?? super : false
+  end
+  
+  # avatar returns 
+  # - [:provider, url of image of the current authentication] if signed in using an authentication
+  # - [:gravatar, gravatar url either]
+  def avatar
+    if (o = authentications.first and o.user_info)
+      image = o.user_info['image']
+      return [o.provider.to_sym, image] if image
+    end
+    [:gravatar, "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}"]
   end
 end
