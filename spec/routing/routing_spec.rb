@@ -58,4 +58,7 @@ describe 'account' do
   it 'routes PUT /account' do
     {:put => '/account'}.should route_to :controller => 'account', :action => 'update'
   end
+  it 'routes DELETE /account' do
+    {:delete => '/account'}.should route_to :controller => 'account', :action => 'destroy'
+  end
 end

@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe AccountController do
   context 'with a sign in user' do
+    let(:user) {Fabricate(:user)}
     before do
-      @user = Fabricate(:user)
-      sign_in @user
+      sign_in user
     end
     
     describe "GET /account/edit" do
@@ -18,7 +18,21 @@ describe AccountController do
       it 'should update user sent attributes' do
         put :update, :user => {:bio => 'man'}
         assert {response.location =~ /#{edit_account_path}/}
-        assert {@user.reload.bio == 'man'}
+        assert {user.reload.bio == 'man'}
+      end
+    end
+    
+    describe "DELETE /account" do
+      describe "with user" do
+        before do
+          delete :destroy
+        end
+        it "redirects to home" do
+          assert {response.location = root_path}
+        end
+        it "kills user" do
+          deny {User.criteria.id(user.id).first}
+        end
       end
     end
   end

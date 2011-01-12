@@ -96,4 +96,17 @@ describe User do
       end
     end
   end
+  
+  describe "#destroy" do
+    let(:user) {Fabricate(:user)}
+    before do
+      @a = user.authentications.create
+      @s = user.sessions.create
+      user.destroy
+    end
+    it "destroys child authentications and sessions" do
+      deny {Authentication.criteria.id(@a.id).first}
+      deny {Session.criteria.id(@s.id).first}
+    end
+  end
 end

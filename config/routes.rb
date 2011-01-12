@@ -21,7 +21,7 @@ ConferenceOnRails::Application.routes.draw do
   end
 
   # bug there as of 3.0.0, infered controller is 'accounts'
-  resource :account, :only => [:edit, :update], :controller => 'account'
+  resource :account, :only => [:edit, :update, :destroy], :controller => 'account'
 
   root :to => 'home#index'
 end

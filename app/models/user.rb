@@ -13,9 +13,9 @@ class User
   field :admin, :type => Boolean, :default => false
   
   # associations
-  references_many :sessions
+  references_many :authentications, :dependent => :destroy
+  references_many :sessions, :dependent => :destroy
   referenced_in :company
-  references_many :authentications
   
   # white list of accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me
@@ -59,5 +59,12 @@ class User
       return [o.provider.to_sym, image] if image
     end
     [:gravatar, "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}"]
+  end
+  
+  # querying helpers
+  class << self
+    def with_email(email)
+      where(:email => email)
+    end
   end
 end

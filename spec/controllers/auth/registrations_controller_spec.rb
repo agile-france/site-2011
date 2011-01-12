@@ -30,35 +30,41 @@ describe Auth::RegistrationsController do
   end
 
   describe "POST /users with email" do
-    # integration test
-    render_views
     context "with twitter authentication data" do
       before do
         session[:auth] = Authentications::Twitter.data
-        post :create, :user => {:email => 'no@name.org'}
       end
-      it "should redirect to root_path" do
-        response.should redirect_to root_path
+      context "email is free" do
+        before do
+          post :create, :user => {:email => 'no@name.org'}
+        end
+        it "should redirect to root_path" do
+          response.should redirect_to root_path
+        end
+        it "creates a new user with provided email" do
+          user = User.where(:email => 'no@name.org').first
+          assert {user}
+        end
+        it "cleans :auth from session" do
+          deny {session[:auth]}
+        end
       end
-      it "creates a new user with provided email" do
-        user = User.where(:email => 'no@name.org').first
-        assert {user}
-      end
-      it "cleans :auth from session" do
-        deny {session[:auth]}
-      end
-    end
-  end
-  
-  describe "build_resource" do
-    # testing protected method defined in devise ... a bit scary ...
-    context "with github authentication data" do
-      before do
-        session[:auth] = Authentications::Github.data
-        @user = controller.send :build_resource
-      end
-      it 'should have an email' do
-        assert {@user.email == 'thierry.henrio@gmail.com'}
+      context "email is in use" do
+        let(:joe) {Fabricate :user}
+        before do
+          post :create, :user => {:email => joe.email, :first_name => ''}
+        end
+        it 'redirects to root_path' do
+          response.should redirect_to root_path
+        end
+        it 'logs joe in' do
+          current_user = controller.current_user
+          assert {current_user == joe}
+        end
+        it 'joe has a new authentication with provider user_info' do
+          a = Authentication.where(:user_id => joe.id).first
+          assert {a.user_info['nickname'] == 'thierryhenrio'}
+        end
       end
     end
   end

@@ -16,6 +16,8 @@
       :plain 
         #{avatar_hint(@user)}
   %p= f.submit t('common.validate')
+
+= link_to t('common.delete'), account_path, :method => :delete, :confirm => t('common.confirm?')
   
 %h1 Authentications
 -@user.authentications.each do |a|
