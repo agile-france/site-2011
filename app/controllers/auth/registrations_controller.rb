@@ -3,13 +3,14 @@ module Auth
     # XXX there is a security issue here
     # a twitter authentication can be used to log on once with any existing account (by entering its email)
     def create
-      if session[:auth] && (self.resource = User.with_email(params[:user][:email]).first)
-        with_new_authentication(resource) {|_r, auth| auth.save!}
-        sign_in_and_redirect(:user, resource)
+      # using authentication without email, and typed in email exists ...
+      if session[:auth] && User.identified_by_email(params[:user][:email])
+        session[:auth]['email'] = params[:user][:email]
+        redirect_to new_session_path(:user)
       else
         super
+        session[:auth]=nil
       end
-      session[:auth]=nil if resource.persisted?
     end
     
     protected
@@ -17,7 +18,10 @@ module Auth
       super
       if session[:auth]
         resource.attributes = session[:auth]['user_info']
-        with_new_authentication(resource) {|r, _auth| r.valid?}
+        with_new_authentication(resource) do |r, _auth|
+          r.ensure_password_not_blank!
+          r.valid?
+        end
       end
       resource
     end

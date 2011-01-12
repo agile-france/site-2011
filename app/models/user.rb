@@ -61,10 +61,16 @@ class User
     [:gravatar, "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}"]
   end
   
+  # generates a random password if blank
+  def ensure_password_not_blank!
+    self.password = Devise.friendly_token[0,20] if password.blank?
+    self
+  end
+  
   # querying helpers
   class << self
-    def with_email(email)
-      where(:email => email)
+    def identified_by_email(email)
+      where(:email => email).first
     end
   end
 end

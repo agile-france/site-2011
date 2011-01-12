@@ -38,15 +38,24 @@ describe Auth::RegistrationsController do
         before do
           post :create, :user => {:email => 'no@name.org'}
         end
+        def joe
+          User.identified_by_email('no@name.org')
+        end        
         it "should redirect to root_path" do
           response.should redirect_to root_path
         end
         it "creates a new user with provided email" do
-          user = User.where(:email => 'no@name.org').first
-          assert {user}
+          assert {joe.email = 'no@name.org'}
+        end
+        it "generates a password for user" do
+          deny {joe.encrypted_password.blank?}
         end
         it "cleans :auth from session" do
           deny {session[:auth]}
+        end
+        it "creates an associated authentication for user, with provider data" do
+          a = Authentication.where(:user_id => joe.id).first
+          assert {a.user_info['nickname'] == 'thierryhenrio'}
         end
       end
       context "email is in use" do
@@ -54,16 +63,11 @@ describe Auth::RegistrationsController do
         before do
           post :create, :user => {:email => joe.email, :first_name => ''}
         end
-        it 'redirects to root_path' do
-          response.should redirect_to root_path
+        it 'redirects to /users/sign_in' do
+          response.should redirect_to new_user_session_path
         end
-        it 'logs joe in' do
-          current_user = controller.current_user
-          assert {current_user == joe}
-        end
-        it 'joe has a new authentication with provider user_info' do
-          a = Authentication.where(:user_id => joe.id).first
-          assert {a.user_info['nickname'] == 'thierryhenrio'}
+        it 'save email in session' do
+          assert {session[:auth]['email'] == joe.email}
         end
       end
     end

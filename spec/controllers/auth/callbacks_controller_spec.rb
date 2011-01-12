@@ -13,7 +13,7 @@ describe Auth::CallbacksController do
     # or http://www.lostincode.net/blog/testing-devise-controllers
     request.env['devise.mapping'] = Devise.mappings[:user]
   end
-  
+
   describe "GET /users/auth/twitter/callback" do
     before do
       # this is a piece of information sent from twitter
@@ -50,42 +50,41 @@ describe Auth::CallbacksController do
       end
     end
   end
-  
+
   describe "GET /users/auth/github/callback" do
     before do
       # this is a piece of information sent from github
       request.env['omniauth.auth'] = Authentications::Github.data
     end
-    context "no such authentication" do
-      context "no user having authentication provided email" do
-        before do
-          get :github
-        end
-        it 'redirects to root_path, and user is signed in' do
-          response.should redirect_to root_path
-          assert {controller.current_user}
-        end
+    context "no user having email provided in authentication" do
+      before do
+        get :github
       end
-      context "user with same email as in authentication data exists" do
-        before do
-          @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
-          get :github
-        end
-        it 'redirects to root_path' do
-          response.should redirect_to root_path
-        end
-        it 'user is signed in, and authentication added to user' do
-          current_user = controller.current_user
-          assert {current_user == @user}
-          deny {current_user.authentications.empty?}
-        end
-        it 'do not carry auth information in session' do
-          deny {session[:auth]}
-        end
-        it 'user has an authentication, with public information at hand' do
-          authentication = controller.current_user.authentications.first
-          assert {authentication.user_info}
-        end
+      it 'redirects to root_path, creates user, with generated password and signs him in' do
+        response.should redirect_to root_path
+        current_user = controller.current_user
+        deny {current_user.encrypted_password.blank?}
+      end
+    end
+    context "user with same email as in authentication data exists" do
+      before do
+        @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
+        get :github
+      end
+      it 'redirects to root_path' do
+        response.should redirect_to root_path
+      end
+      it 'user is signed in, and authentication added to user' do
+        current_user = controller.current_user
+        assert {current_user == @user}
+        deny {current_user.authentications.empty?}
+      end
+      it 'do not carry auth information in session' do
+        deny {session[:auth]}
+      end
+      it 'user has an authentication, with public information at hand' do
+        authentication = controller.current_user.authentications.first
+        assert {authentication.user_info}
       end
     end
   end

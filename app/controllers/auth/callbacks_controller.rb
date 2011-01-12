@@ -12,12 +12,12 @@ module Auth
       key = {:provider => auth['provider'], :uid => auth['uid']}
       authentication = Authentication.where(key).first
       if authentication
-        authentication.update_attributes!(simplify(auth))
+        authentication.attributes = simplify(auth)
         authenticate_with! authentication
       else
-        user = User.where(:email => auth['user_info']['email']).first || User.new(auth['user_info'])
-        authentication = user.authentications.build(simplify(auth))
-        if user.save && authentication.save!
+        user = User.identified_by_email(auth['user_info']['email']) || fresh_user(auth)
+        if user.save
+          authentication = user.authentications.build(simplify(auth))
           authenticate_with! authentication
         else
           session[:auth] = simplify(auth)
@@ -27,8 +27,11 @@ module Auth
     end
     
     private
+    def fresh_user(auth)
+      User.new(auth['user_info']).ensure_password_not_blank!
+    end
     def authenticate_with!(authentication)
-      authentication.update_attributes! :activated => true
+      authentication.activate.save!
       sign_in_and_redirect(:user, authentication.user)
     end
     def simplify(hash)

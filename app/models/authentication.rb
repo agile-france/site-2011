@@ -11,8 +11,13 @@ class Authentication
     !activated?
   end
   
-  def deactivate!(a=true)
-    update_attributes!(:activated => !a)
+  def activate(a=true)
+    self.activated = a
+    self
+  end
+  
+  def deactivate(a=true)
+    activate(!a)
   end
   
   class << self
