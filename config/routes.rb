@@ -13,6 +13,8 @@ ConferenceOnRails::Application.routes.draw do
     resources :sessions, :only => [:new, :create]
   end
   resources :place
+  resources :sponsors
+  resources :soon
 
   # admin interface
   namespace :admin do
