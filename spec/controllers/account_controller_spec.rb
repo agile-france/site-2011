@@ -15,10 +15,15 @@ describe AccountController do
     end
     
     describe "POST /account" do
-      it 'should update user sent attributes' do
+      it 'update user sent attributes' do
         put :update, :user => {:bio => 'man'}
         assert {response.location =~ /#{edit_account_path}/}
         assert {user.reload.bio == 'man'}
+      end
+      it 'update user optins' do
+        deny {user.optin?(:sponsors)}
+        put :update, :optins => {'sponsors' => 'accept'}
+        assert {user.reload.optin?(:sponsors)}
       end
     end
     

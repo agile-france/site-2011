@@ -109,4 +109,28 @@ describe User do
       deny {Session.criteria.id(@s.id).first}
     end
   end
+
+  describe "optins feature" do
+    it {should have_field(:optins).of_type(Array)}
+    let(:joe) {User.new}
+    describe "opting in" do
+      it 'is true when opted in' do
+        assert {joe.optin!(:twitter).optin?(:twitter)}
+      end
+      it 'preserve optins storage' do
+        2.times {joe.optin! :facebook}
+        assert {joe.optins.size == 1}
+      end
+    end
+    describe "querying for option with optin?" do
+      it "returns true if user is in for feature" do
+        joe.optin! :twitter
+        assert {joe.optin?(:twitter)}
+        assert {joe.optin?('twitter')}
+      end
+      it "returns false if feature is not opted in" do
+        deny {joe.optin?(:sponsor)}
+      end
+    end
+  end
 end

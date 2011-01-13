@@ -6,7 +6,10 @@ class AccountController < ApplicationController
   end
   
   def update
-    current_user.update_attributes!(params[:user])
+    current_user.tap do |user|
+      user.attributes = params[:user]
+      user.optins = (params[:optins] ? params[:optins].keys : [])
+    end.save
     redirect_to edit_account_path
   end
   

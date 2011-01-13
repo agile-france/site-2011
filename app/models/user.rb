@@ -11,6 +11,7 @@ class User
   field :last_name
   field :bio
   field :admin, :type => Boolean, :default => false
+  field :optins, :type => Array
   
   # associations
   references_many :authentications, :dependent => :destroy
@@ -67,6 +68,35 @@ class User
     self
   end
   
+  # Public : respond true if user has opted in for given feature
+  #
+  # symbol_or_string - symbol or string representation for feature
+  #
+  # Examples :
+  #   optin!(:sponsors)
+  #
+  #   optin?(:sponsors) => true
+  #   optin?('sponsors') => true
+  #
+  def optin?(symbol_or_string)
+    return optins.any?{|optin| optin == symbol_or_string.to_s} if optins
+    false
+  end
+  # Public : opts in for features and return self
+  #
+  # *optins - feature to accept, as string or symbol
+  #
+  # Examples :
+  #   joe.optin!(:github, :disqus)
+  #
+  def optin!(*optins)
+    optins.each do |optin|
+      self.optins ||= []
+      self.optins << optin.to_s unless self.optins.include?(optin.to_s)
+    end
+    self
+  end
+
   # querying helpers
   class << self
     def identified_by_email(email)

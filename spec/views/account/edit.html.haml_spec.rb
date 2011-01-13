@@ -7,7 +7,10 @@ describe "account/edit.html.haml" do
     render
   end
   
-  it 'should have email form tag' do
-    assert {doc(rendered).xpath('//@name="user[email]"')}
+  it 'should have email input tag' do
+    assert {doc(rendered).xpath('//input[@name="user[email]"][@value="test@example.com"]')}
+  end
+  it 'should have a sponsor checkbox for optouts' do
+    rendered.should have_tag('//input[@name="optins[sponsors]"]')
   end
 end

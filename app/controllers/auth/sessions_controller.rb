@@ -4,6 +4,7 @@ module Auth
       super
       if session['auth']
         current_user.authentications.create!(session['auth'])
+        session['auth'] = nil
       end
     end
     
