@@ -20,7 +20,6 @@ describe Auth::RegistrationsController do
       it "GET /users/sign_up does not have password field" do
         response.body.should_not have_tag 'input[id="user_password"]'
       end
-
       it "show email validation error" do
         response.body.should have_tag '#error_explanation' do |exp|
           exp.should have_tag '*', /email (.*) rempli/i

@@ -1,0 +1,3 @@
+%p
+  = "#{t('user.profile.optins.sponsors')} : "
+  = check_box_tag 'optins[sponsors]', 'accept', resource.optin?(:sponsors)
