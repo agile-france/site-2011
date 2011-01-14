@@ -15,9 +15,8 @@ module Auth
         authentication.attributes = simplify(auth)
         authenticate_with! authentication
       else
-        user = User.identified_by_email(auth['user_info']['email']) || fresh_user(auth)
-        if user.save
-          authentication = user.authentications.build(simplify(auth))
+        if (existing_user = User.identified_by_email(auth['user_info']['email']))
+          authentication = existing_user.authentications.build(simplify(auth))
           authenticate_with! authentication
         else
           session[:auth] = simplify(auth)
@@ -27,9 +26,6 @@ module Auth
     end
     
     private
-    def fresh_user(auth)
-      User.new(auth['user_info']).ensure_password_not_blank!
-    end
     def authenticate_with!(authentication)
       authentication.activate.save!
       sign_in_and_redirect(:user, authentication.user)

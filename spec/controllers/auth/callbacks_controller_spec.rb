@@ -60,10 +60,8 @@ describe Auth::CallbacksController do
       before do
         get :github
       end
-      it 'redirects to root_path, creates user, with generated password and signs him in' do
-        response.should redirect_to root_path
-        current_user = controller.current_user
-        deny {current_user.encrypted_password.blank?}
+      it 'redirects to sign up, so that he can choose optins' do
+        response.should redirect_to new_user_registration_path
       end
     end
     context "user with same email as in authentication data exists" do

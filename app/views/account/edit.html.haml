@@ -1,9 +1,11 @@
-%h1= t('user.account')
+%h1
+  = t('user.account')
+  |
+  = link_to t('common.delete'), account_path, :method => :delete, :confirm => t('common.confirm?')
+  
 #account
   = render 'form'
 
-= link_to t('common.delete'), account_path, :method => :delete, :confirm => t('common.confirm?')
-  
 %h1 Authentications
 -@user.authentications.each do |a|
   %p
