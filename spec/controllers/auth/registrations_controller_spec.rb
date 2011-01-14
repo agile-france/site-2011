@@ -28,7 +28,18 @@ describe Auth::RegistrationsController do
     end
   end
 
-  describe "POST /users with email" do
+  describe "POST /users" do
+    def joe
+      User.identified_by_email('no@name.org')
+    end
+    
+    describe "with optins" do
+      it "saves optins" do
+        post :create, :user => {:email => 'no@name.org', :password => 'secret', :password_confirmation => 'secret'}, :optins => {:sponsors => 'accept'}
+        assert {joe.optin?(:sponsors)}
+      end
+    end
+    
     context "with twitter authentication data" do
       before do
         session[:auth] = Authentications::Twitter.data
@@ -37,9 +48,6 @@ describe Auth::RegistrationsController do
         before do
           post :create, :user => {:email => 'no@name.org'}
         end
-        def joe
-          User.identified_by_email('no@name.org')
-        end        
         it "should redirect to root_path" do
           response.should redirect_to root_path
         end
@@ -57,16 +65,17 @@ describe Auth::RegistrationsController do
           assert {a.user_info['nickname'] == 'thierryhenrio'}
         end
       end
+      
       context "email is in use" do
-        let(:joe) {Fabricate :user}
+        let(:doe) {Fabricate :user}
         before do
-          post :create, :user => {:email => joe.email, :first_name => ''}
+          post :create, :user => {:email => doe.email, :first_name => ''}
         end
         it 'redirects to /users/sign_in' do
           response.should redirect_to new_user_session_path
         end
         it 'save email in session' do
-          assert {session[:auth]['email'] == joe.email}
+          assert {session[:auth]['email'] == doe.email}
         end
       end
     end

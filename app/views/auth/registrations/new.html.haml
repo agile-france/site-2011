@@ -17,5 +17,7 @@
         %br/
         = f.password_field symbol
 
+  =render 'account/optins'
+
   %p= f.submit "#{t('auth.sign_up')} !"
 = render :partial => "devise/shared/links"

@@ -15,20 +15,21 @@ module Auth
     
     protected
     def build_resource(hash=nil)
-      super
+      build_optins(build_authentication(super))
+    end
+    
+    private
+    def build_authentication(resource)
       if session[:auth]
         resource.attributes = session[:auth]['user_info']
-        with_new_authentication(resource) do |r, _auth|
-          r.ensure_password_not_blank!
-          r.valid?
-        end
+        resource.authentications.build(session[:auth])
+        resource.ensure_password_not_blank!
+        resource.valid?
       end
       resource
     end
-    def with_new_authentication(resource, &block)
-      authentication = resource.authentications.build(session[:auth])
-      return yield resource, authentication unless block.nil?
-      [resource, authentication]
+    def build_optins(resource)
+      resource.optins = (params[:optins] ? params[:optins].keys : [])
     end
   end
 end
