@@ -11,7 +11,7 @@
   - if devise_mapping.rememberable?
     %p
       = f.check_box :remember_me
-      = f.label t('.remember_me')
+      = f.label t('auth.remember_me?')
   %p= f.submit "#{t('auth.sign_in')} !"
 = render :partial => "devise/shared/links"
 
