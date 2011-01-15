@@ -1,7 +1,5 @@
 module Auth
   class RegistrationsController < Devise::RegistrationsController
-    # XXX there is a security issue here
-    # a twitter authentication can be used to log on once with any existing account (by entering its email)
     def create
       # using authentication without email, and typed in email exists ...
       if session[:auth] && User.identified_by_email(params[:user][:email])
@@ -9,6 +7,10 @@ module Auth
         redirect_to new_session_path(:user)
       else
         super
+        highlight(:notice) do |notice|
+          notice = "* #{notice}\n"
+          notice << "* " << t('user.accounts.introduce', :url => edit_account_path)
+        end
         session[:auth]=nil
       end
     end

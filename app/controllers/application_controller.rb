@@ -22,6 +22,17 @@ class ApplicationController < ActionController::Base
   helper_method :cant?
   alias_method :authorize_user!, :die_if_cant!
   
+  protected
+  def highlight(key, value_or_default_value='', &block)
+    flash[key] = (block.nil?? value_or_default_value : yield(flash[key] ||= value_or_default_value))
+  end
+  
+  def flash_and_log(symbol, content)
+    message = content.respond_to?(:message) ? content.message : content
+    logger.send(symbol, message)
+    highlight(symbol, message)
+  end  
+
   private
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
     flash_and_log(:error, error.message)
@@ -31,11 +42,5 @@ class ApplicationController < ActionController::Base
   rescue_from Cant::AccessDenied do |error|
     flash_and_log(:error, error.message)
     redirect_to request.referer
-  end
-  
-  def flash_and_log(symbol, content)
-    message = content.respond_to?(:message) ? content.message : content
-    logger.send(symbol, message)
-    flash[symbol] = message
   end
 end

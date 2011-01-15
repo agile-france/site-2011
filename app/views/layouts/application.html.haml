@@ -57,7 +57,9 @@
             %div histoire
       #flash
         - flash.each_key do |key|
-          %div{:class => [key, 'grid_12']}= flash[key]
+          %div{:class => [key, 'grid_12']}
+            :markdown
+              #{flash[key]}
         .clear
           
       #content

@@ -12,10 +12,6 @@ ConferenceOnRails::Application.routes.draw do
   resources :conferences  do
     resources :sessions, :only => [:new, :create]
   end
-  resources :place
-  resources :sponsors
-  resources :soon
-  resources :history
 
   # admin interface
   namespace :admin do
@@ -26,5 +22,12 @@ ConferenceOnRails::Application.routes.draw do
   # bug there as of 3.0.0, infered controller is 'accounts'
   resource :account, :only => [:edit, :update, :destroy], :controller => 'account'
 
-  root :to => 'home#index'
+  # static pages rendered in application layout
+  # XXX have them in one controller
+  get 'place' => 'place#index'
+  get 'sponsors' => 'sponsors#index'
+  get 'soon' => 'soon#index'
+  get 'history' => 'history#index'
+
+  root :to => 'conferences#index'
 end

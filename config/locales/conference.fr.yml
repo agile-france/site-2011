@@ -63,6 +63,8 @@ fr:
     
   user:
     account: Mon compte
+    accounts:
+      introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
     profile:
       gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
       bio: Biographie
