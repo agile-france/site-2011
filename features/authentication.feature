@@ -9,6 +9,7 @@ Feature: Authentication
       And I fill in "user_password_confirmation" with "devise_rocks"
       And I press "user_submit"
     Then I should see "Bonjour thierry.henrio@gmail.com"
+      And I should be on "/account/edit"
 
   Scenario: I should sign in using email and password
     Given I have one user "gitster@git.org" with password "git rocks"

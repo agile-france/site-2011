@@ -37,8 +37,8 @@ describe Auth::CallbacksController do
         auth = u.authentications.create!(Authentications::Twitter.data.merge({'user_info' => {'image' => 'oops'}}))
         get :twitter
       end
-      it 'redirects to root_path' do
-        response.should redirect_to root_path
+      it 'redirects to default user path' do
+        response.should redirect_to edit_account_path
       end
       it 'sign in user' do
         assert {controller.current_user}
@@ -69,8 +69,8 @@ describe Auth::CallbacksController do
         @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
         get :github
       end
-      it 'redirects to root_path' do
-        response.should redirect_to root_path
+      it 'redirects to default user path' do
+        response.should redirect_to edit_account_path
       end
       it 'user is signed in, and authentication added to user' do
         current_user = controller.current_user

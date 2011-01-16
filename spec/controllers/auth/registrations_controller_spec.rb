@@ -48,8 +48,8 @@ describe Auth::RegistrationsController do
         before do
           post :create, :user => {:email => 'no@name.org'}
         end
-        it "should redirect to root_path" do
-          response.should redirect_to root_path
+        it "should redirect to user root path" do
+          response.should redirect_to edit_account_path
         end
         it "creates a new user with provided email" do
           assert {joe.email = 'no@name.org'}

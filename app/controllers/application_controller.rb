@@ -26,14 +26,17 @@ class ApplicationController < ActionController::Base
   def highlight(key, value_or_default_value='', &block)
     flash[key] = (block.nil?? value_or_default_value : yield(flash[key] ||= value_or_default_value))
   end
-  
+
   def flash_and_log(symbol, content)
     message = content.respond_to?(:message) ? content.message : content
     logger.send(symbol, message)
     highlight(symbol, message)
   end  
 
-  private
+  def after_sign_in_path_for(resource_or_scope)
+    edit_account_path
+  end
+
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
     flash_and_log(:error, error.message)
     redirect_to root_path
