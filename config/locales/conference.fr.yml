@@ -16,6 +16,7 @@ fr:
     cancel: Annuler
     confirm?: Etes vous sur de supprimer votre compte ?
     delete: Supprimer
+    tags: Tags (séparés par une virgule)
     title: Titre
     update: Modifier
     validate: Valider

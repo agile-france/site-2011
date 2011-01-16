@@ -17,7 +17,7 @@ en:
     cancel: Cancel
     description: Description
     search: Search
-    tags: Tags
+    tags: Tags (comma separated)
     title: Title
     update: Update
     validate: Validate
