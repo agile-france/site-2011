@@ -1,0 +1,7 @@
+= render 'shared/search', :url => companies_path, :options => {:method => :get}
+
+#companies
+  = render @companies
+
+.pagination
+  = will_paginate @companies

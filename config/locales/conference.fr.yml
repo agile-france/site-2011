@@ -10,6 +10,11 @@ fr:
     remember_me?: "Se souvenir de moi?"
   authorizations:
     providers: "Ou utiliser un des services suivants"
+  
+  company:
+    name: Nom
+    update:
+      success: 'Votre société a été mise à jour'
       
   common:
     back: Retour

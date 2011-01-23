@@ -62,3 +62,9 @@ describe 'account' do
     {:delete => '/account'}.should route_to :controller => 'account', :action => 'destroy'
   end
 end
+
+describe "company" do
+  it "routes GET /company" do
+    {:get => '/companies'}.should route_to :controller => 'companies', :action => 'index'
+  end
+end

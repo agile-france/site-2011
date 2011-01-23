@@ -79,8 +79,7 @@ class User
   #   optin?('sponsors') => true
   #
   def optin?(symbol_or_string)
-    return optins.any?{|optin| optin == symbol_or_string.to_s} if optins
-    false
+    optins ? optins.any?{|optin| optin == symbol_or_string.to_s} : false
   end
   # Public : opts in for features and return self
   #
