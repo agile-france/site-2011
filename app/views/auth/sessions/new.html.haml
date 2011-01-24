@@ -1,21 +1,30 @@
-%h2= t('auth.sign_in')
-= form_for(resource, :as => resource_name, :url => user_session_path) do |f|
-  %p
-    = f.label t('auth.email')
-    %br/
-    = f.text_field :email
-  %p
-    = f.label t('auth.password')
-    %br/
-    = f.password_field :password
-  - if devise_mapping.rememberable?
-    %p
-      = f.check_box :remember_me
-      = f.label t('auth.remember_me?')
-  %p= f.submit "#{t('auth.sign_in')} !"
-= render :partial => "devise/shared/links"
+%div.container_11
 
-%h2= t('authorizations.providers')
+  %div.grid_5
+    %h2= t('auth.sign_in')
+    = form_for(resource, :as => resource_name, :url => user_session_path) do |f|
+      %p.grid_5
+        = f.label t('auth.email')
+        %br
+        = f.text_field :email
+      %p.grid_5
+        = f.label t('auth.password')
+        %br
+        = f.password_field :password
+      %div= f.submit "#{t('auth.sign_in')} !", :class => 'grid_2'
+      - if devise_mapping.rememberable?
+        %div.grid_3.omega.alpha
+          = f.check_box :remember_me
+          = f.label :remember_me, t('auth.remember_me?')
+      %div.clear
+    %br
+    %div.grid_5
+      = render :partial => "devise/shared/links"
 
-- Devise.omniauth_configs.each do |provider, _config|
-  = link_to icon_for(provider), user_omniauth_authorize_path(provider)
+  %div.grid_6
+    %h2= t('authorizations.providers')
+
+    - Devise.omniauth_configs.each do |provider, _config|
+      = link_to icon_for(provider), user_omniauth_authorize_path(provider)
+
+  %div.clear
