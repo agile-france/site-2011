@@ -48,12 +48,13 @@
           %a.menuItem.grid_1{:href => "/"}
             %div accueil
           %a.menuItem.grid_1{:href => "/soon"}
-            %div bientot
+            %div calendrier
           %a.menuItem.grid_1{:href => "/place"}
             %div lieu
           %a.menuItem.grid_1{:href => "/sponsors"}
             %div sponsors
-          %div.menuItem.grid_1 vidéos
+          %a.menuItem.grid_1{:href => "/history"}
+            %div histoire
       #flash
         - flash.each_key do |key|
           %div{:class => [key, 'grid_12']}= flash[key]

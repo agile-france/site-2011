@@ -15,6 +15,7 @@ ConferenceOnRails::Application.routes.draw do
   resources :place
   resources :sponsors
   resources :soon
+  resources :history
 
   # admin interface
   namespace :admin do
