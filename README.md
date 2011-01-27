@@ -99,6 +99,16 @@ add a debugger statement, and type then
 
 this practice is not related to rails (though pretty described in http://guides.rubyonrails.org/debugging_rails_applications.html)
 
+Javascripts
+-----------
+
+    rake jasmine
+    
+then goto http://localhost:8888 ... a graphical interface for test is quite annoying ...
+
+And at this time, jasmine-1.0.1.1 webrick server resists to STOP, HUP... but not KILL :)
+
+
 Integration kungfu
 ------------------
 
@@ -108,11 +118,9 @@ see
 * http://github.com/jnicklas/capybara
 
 ### run them!
-for unit test and cukes, do
+There is no automated runner
 
-		AUTOFEATURE=true bundle exec autotest
-
-or for one shot
+for one shot
 
     cucumber feature/this-one-is-red.feature
 or

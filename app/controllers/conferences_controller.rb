@@ -2,9 +2,7 @@ class ConferencesController < ApplicationController
   respond_to :html, :json
 
   def recent
-    @conference = Conference.all.desc(:updated_at).first
-    if @conference
-      @sessions = @conference.sessions.paginate(pager_options)
+    if sort_and_paginate Conference.all.desc(:updated_at).first
       render :show
     else
       @conferences = Conference.all
@@ -18,12 +16,14 @@ class ConferencesController < ApplicationController
   end
 
   def show
-    @conference = Conference.find(params[:id])
-    @sessions = @conference.sessions.paginate(pager_options)
-    respond_with @conference
+    respond_with sort_and_paginate(Conference.find(params[:id]))
   end
   
   private
+  def sort_and_paginate(conference)
+    conference.tap {|c| @conference = c; @sessions = c.sessions.desc(:updated_at).paginate(pager_options) if c}
+  end
+  
   def pager_options
     {:page => params[:page], :per_page => params[:per_page] || 5}
   end  
