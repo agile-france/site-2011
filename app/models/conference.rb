@@ -1,5 +1,6 @@
 class Conference
-  include Mongoid::Document  
+  include Mongoid::Document
+  include Mongoid::Timestamps
   references_many :sessions
   
   field :name

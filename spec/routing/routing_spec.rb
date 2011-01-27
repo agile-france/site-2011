@@ -1,6 +1,6 @@
 describe 'home' do
   it 'routes / to conferences/index' do
-    {:get => '/'}.should route_to :controller => 'conferences', :action => 'index'
+    {:get => '/'}.should route_to :controller => 'conferences', :action => 'recent'
   end
 end
 

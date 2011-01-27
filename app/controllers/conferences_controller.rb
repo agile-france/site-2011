@@ -1,6 +1,17 @@
 class ConferencesController < ApplicationController
   respond_to :html, :json
 
+  def recent
+    @conference = Conference.all.desc(:updated_at).first
+    if @conference
+      @sessions = @conference.sessions.paginate(pager_options)
+      render :show
+    else
+      @conferences = Conference.all
+      render :index
+    end
+  end
+
   def index
     @conferences = Conference.all
     respond_with @conferences.paginate(pager_options)
