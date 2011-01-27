@@ -25,6 +25,11 @@ describe AccountController do
         put :update, :optins => {'sponsors' => 'accept'}
         assert {user.reload.optin?(:sponsors)}
       end
+      it 'updates user company' do
+        awe = Fabricate(:company, :name => 'awe')
+        put :update, :company => {:name => 'awe'}
+        assert {user.reload.company == awe}
+      end
     end
     
     describe "DELETE /account" do

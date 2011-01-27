@@ -2,7 +2,7 @@ class CompaniesController < ApplicationController
   include ::Controllers::Search::Support
   before_filter :authenticate_user!, :only => [:destroy, :update]
   before_filter :authorize_user!, :only => [:destroy, :update]
-  respond_to :html
+  respond_to :html, :js, :json
 
   # XXX KISS
   cant do
@@ -15,9 +15,12 @@ class CompaniesController < ApplicationController
   end
   
   def index
-    criteria = {}
-    criteria[:name] = params[:q] unless params[:q].blank?
-    @companies = search(Company, criteria).paginate(pager_options)
+    criteria = {}.tap {|hash| hash[:name] = params[:q] unless params[:q].blank?}
+    @companies = search(Company, criteria)
+    respond_to do |format|
+      format.html {render @companies.paginate(pager_options)}
+      format.json {render :json => @companies.to_a.to_json}
+    end
   end
   
   def new
@@ -62,5 +65,5 @@ class CompaniesController < ApplicationController
   end
   def pager_options
     {:page => params[:page], :per_page => params[:per_page] || 5}
-  end  
+  end
 end

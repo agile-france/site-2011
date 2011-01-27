@@ -27,6 +27,9 @@ gem 'mongo', '>= 1.0.9'
 # cant
 gem 'cant'
 
+# json
+gem 'yajl-ruby', :require => 'yajl'
+
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
 
@@ -41,6 +44,7 @@ group :test do
   gem "rspec_tag_matchers"
   gem 'mongoid-rspec'
   gem 'wrong', '~> 0.4'
+  gem 'jasmine'
 
 
   # cucumber

@@ -1,20 +1,23 @@
 fr:
   auth:
-    forgot_your_password?: "Mot de passe oublié?"
-    greet: "Bonjour %{user}"
-    sign_in: "Se connecter"
-    sign_out: "Se déconnecter"
-    sign_up: "Ouvrir un compte"
-    email: 'Email'
-    password: 'Mot de passe'
-    remember_me?: "Se souvenir de moi?"
+    forgot_your_password?: Mot de passe oublié?
+    greet: Bonjour %{user}
+    sign_in: Se connecter
+    sign_out: Se déconnecter
+    sign_up: Ouvrir un compte
+    email: Email
+    password: Mot de passe
+    remember_me?: Se souvenir de moi ?
+    accept_authentication?: Rentrez votre mot de passe pour accepter cette authentification
+      
   authorizations:
-    providers: "Ou utiliser un des services suivants"
+    providers: Ou utiliser un des services suivants
   
   company:
     name: Nom
+    title: Société
     update:
-      success: 'Votre société a été mise à jour'
+      success: Votre société a été mise à jour
       
   common:
     back: Retour

@@ -4,7 +4,7 @@ module Auth
       # using authentication without email, and typed in email exists ...
       if session[:auth] && User.identified_by_email(params[:user][:email])
         session[:auth]['email'] = params[:user][:email]
-        redirect_to new_session_path(:user)
+        redirect_to new_session_path(:user), :notice => t('auth.accept_authentication?')
       else
         super
         highlight(:notice) do |notice|

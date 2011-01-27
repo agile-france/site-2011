@@ -5,7 +5,9 @@ ConferenceOnRails::Application.routes.draw do
     :registrations => 'auth/registrations',
     :omniauth_callbacks => 'auth/callbacks'
   }
-  resources :companies
+  resources :companies do
+    get :autocomplete, :on => :collection
+  end
   # 2- conferences and sessions 
   # :as option for sessions is used to unclash name with devise url helper (session_path(resource_or_scope namely))
   resources :sessions, :except => [:new, :create], :as => :awesome_sessions

@@ -73,4 +73,17 @@ describe CompaniesController do
       response.should be_success
     end
   end
+  
+  describe "list company as json" do
+    before do
+      @awesome = Fabricate(:company, :name => 'awesome')
+      @haskell = Fabricate(:company, :name => 'haskell')
+      get :index, :format => 'json'
+    end
+    it "return list of company" do
+      response.should be_success
+      cies = Yajl::Parser.parse(response.body)
+      assert {cies.map {|cie| cie['name']} == ['awesome', 'haskell']}
+    end
+  end
 end
