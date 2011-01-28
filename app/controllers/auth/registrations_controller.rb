@@ -9,7 +9,7 @@ module Auth
         super
         highlight(:notice) do |notice|
           notice = "* #{notice}\n"
-          notice << "* " << t('user.accounts.introduce', :url => edit_account_path)
+          notice << "* " << t('account.introduce', :url => edit_account_path)
         end
         session[:auth]=nil
       end

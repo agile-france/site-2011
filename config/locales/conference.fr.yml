@@ -1,4 +1,18 @@
 fr:
+  account:
+    authentications: Mes authentifications
+    bio: Biographie
+    email: Email
+    introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
+    title: Mon compte
+    company:
+      hint: Société (Recherchez la ci-dessous ou %{link})
+      link: Créez en une nouvelle
+    title: Mon Compte
+    gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
+    optins:
+      sponsors: J'autorise les sponsors de la conférence à me contacter
+    seppuku?: Supprimer mon compte et mes informations ?    
   auth:
     forgot_your_password?: Mot de passe oublié?
     greet: Bonjour %{user}
@@ -16,13 +30,14 @@ fr:
   company:
     name: Nom
     title: Société
+    created: %{user}, vous faites maintenant parti de %{company}
     update:
       success: Votre société a été mise à jour
       
   common:
     back: Retour
     cancel: Annuler
-    confirm?: Etes vous sur de supprimer votre compte ?
+    create: Créer
     delete: Supprimer
     tags: Tags (séparés par une virgule)
     title: Titre
@@ -69,15 +84,3 @@ fr:
 
   authorization:
     access_denied: Pas autorisé
-    
-  user:
-    account: Mon compte
-    accounts:
-      introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
-    profile:
-      gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
-      bio: Biographie
-      email: Email
-      optins:
-        sponsors: J'autorise les sponsors de la conférence à me contacter
-  

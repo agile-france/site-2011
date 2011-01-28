@@ -4,9 +4,9 @@ require 'spec_helper'
 describe CompaniesController do
   context "mere user" do
     let(:awesome) {Fabricate(:company)}
-    let(:user) {Fabricate(:user, :company => awesome)}
+    let(:john) {Fabricate(:user, :company => awesome)}
     before do
-      sign_in(user)
+      sign_in(john)
     end
     describe "requires to be admin to delete" do
       it 'should redirect on delete' do
@@ -24,7 +24,20 @@ describe CompaniesController do
       put :update, :id => zoo.id, :company => {:name => 'ZOO'}
       assert {flash[:error] =~ /pas autorisé/i}
       deny {Company.find(awesome.id).name == 'ZOO'}
-    end    
+    end
+    
+    describe "create" do
+      before do
+        post :create, :company => {:name => 'ZOO'}
+        john.reload
+      end
+      it 'actually creates a company for self' do
+        assert {john.company.name == 'ZOO'}
+      end
+      it 'inform user of its roles in company' do
+        assert {flash[:notice] =~ /(john.*), vous faites maintenant parti de ZOO/i}
+      end
+    end
   end
   
   context "admin logged in" do
@@ -40,20 +53,6 @@ describe CompaniesController do
       end
       it 'kills it' do
         deny {Company.criteria.id(awesome.id).first}
-      end
-    end
-  end
-  
-  describe "create a new company" do
-    it "has a form to create new company" do
-      get :new
-      response.should be_success
-    end
-    describe "post" do
-      it 'creates a new company' do
-        post :create, :company => {:name => 'zoo'}
-        response.should redirect_to(companies_path)
-        assert {Company.where(:name => 'zoo').first}
       end
     end
   end

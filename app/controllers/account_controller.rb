@@ -10,7 +10,7 @@ class AccountController < ApplicationController
     current_user.tap do |user|
       user.attributes = params[:user]
       user.optins = (params[:optins] ? params[:optins].keys : [])
-      user.company = Company.where(:name => params[:company][:name]).first if params[:company]
+      user.company = Company.identified_by_name(params[:company][:name]) if params[:company]
     end.save
     redirect_to edit_account_path
   end

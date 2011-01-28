@@ -1,9 +1,8 @@
 = form_for(@company) do |f|
   =render "shared/error_messages", :resource => @company
   %p
-    = f.label :name, t('common.name')
+    = f.label :name, t('company.name')
     %br/
     = f.text_field :name
     
   %p= f.submit t('common.validate')
-  

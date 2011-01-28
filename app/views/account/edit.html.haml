@@ -1,16 +1,17 @@
 %h1
-  = t('user.account')
+  = t('account.title')
   |
-  = link_to t('common.delete'), account_path, :method => :delete, :confirm => t('common.confirm?')
+  = link_to t('common.delete'), account_path, :method => :delete, :confirm => t('account.seppuku?')
   
 #account
   = render 'form'
 
-%h1 Authentications
--@user.authentications.each do |a|
-  %p
-    = icon_for(a.provider)
-  %ul
-    - a.user_info.each do |k,v|
-      -unless v.blank? 
-        %li= "#{k} : #{v}"
+-unless @user.authentications.empty?
+  %h1= t('account.authentications')
+  -@user.authentications.each do |a|
+    %p
+      = icon_for(a.provider)
+    %ul
+      - a.user_info.each do |k,v|
+        -unless v.blank? 
+          %li= "#{k} : #{v}"

@@ -6,6 +6,6 @@ module AvatarHelper
   end
   
   def avatar_hint(user)
-    Markdown.new(t('user.profile.gravatar')).to_html if user.avatar.first === :gravatar
+    Markdown.new(t('account.gravatar')).to_html if user.avatar.first === :gravatar
   end
 end

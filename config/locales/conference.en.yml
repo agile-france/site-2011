@@ -1,6 +1,17 @@
 en:
   admin: Admin
-  
+  account:
+    authentications: My Authentications
+    bio: Biography
+    email: Email    
+    company:
+      hint: Company (Search below or %{link})
+      link: Create a new one
+    title: My Account
+    gravatar: Update your avatar on [gravatar.com](http://gravatar.com) !
+    optins:
+      sponsors: I authorize sponsors to contact me
+    seppuku?: Destroy my account and informations ?  
   auth:
     forgot_your_password?: "Forgot your password ?"
     greet: "Hello %{user}"
@@ -62,10 +73,3 @@ en:
 
   authorization:
     access_denied: Access Denied
-    
-  user:
-    account: My account
-    profile:
-      avatar: Update your avatar on [gravatar.com](http://gravatar.com) !
-      bio: Biography
-      email: Email

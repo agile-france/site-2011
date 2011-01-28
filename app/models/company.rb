@@ -5,4 +5,10 @@ class Company
   field :naf
   
   attr_accessible :name, :naf
+  
+  class << self
+    def identified_by_name(name)
+      where(:name => name).first
+    end
+  end
 end

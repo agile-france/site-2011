@@ -12,6 +12,7 @@ class User
   field :bio
   field :admin, :type => Boolean, :default => false
   field :optins, :type => Array
+  field :roles_in_company, :type => Array
   
   # associations
   references_many :authentications, :dependent => :destroy

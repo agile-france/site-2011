@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   include ::Controllers::Search::Support
-  before_filter :authenticate_user!, :only => [:destroy, :update]
+  before_filter :authenticate_user!, :only => [:destroy, :update, :new, :create]
   before_filter :authorize_user!, :only => [:destroy, :update]
   respond_to :html, :js, :json
 
@@ -15,11 +15,13 @@ class CompaniesController < ApplicationController
   end
   
   def index
-    criteria = {}.tap {|hash| hash[:name] = params[:q] unless params[:q].blank?}
-    @companies = search(Company, criteria)
-    respond_to do |format|
-      format.html {render @companies.paginate(pager_options)}
-      format.json {render :json => @companies.to_a.to_json}
+    criteria = {}.tap{|hash| hash[:name] = params[:q] unless params[:q].blank?}
+    companies = search(Company, criteria).asc(:name)
+    if params[:pageless]
+      respond_with(companies.to_a)
+    else
+      @companies = companies.paginate(pager_options)
+      respond_with(@companies)
     end
   end
   
@@ -31,7 +33,9 @@ class CompaniesController < ApplicationController
   def create
     @company = Company.new(params[:company])
     if @company.save
-      redirect_to companies_path
+      current_user.tap{|u| u.company = @company}.save
+      redirect_to(companies_path, :notice => t('company.created', 
+        :user => current_user.greeter_name, :company => @company.name))
     else
       render :new
     end
@@ -51,12 +55,8 @@ class CompaniesController < ApplicationController
   end
   
   def update
-    if current_company.update_attributes!(params[:company])
-      flash[:notice] = t('company.update.success')
-      redirect_to companies_path
-    else
-      render :edit
-    end
+    current_company.update_attributes(params[:company]) ?
+      redirect_to(companies_path, :notice => t('company.update.success')) : render(:edit)
   end
   
   private
@@ -64,6 +64,6 @@ class CompaniesController < ApplicationController
     @company ||= Company.find(params[:id])
   end
   def pager_options
-    {:page => params[:page], :per_page => params[:per_page] || 5}
+    {:page => params[:page], :per_page => params[:per_page] || 25}
   end
 end
