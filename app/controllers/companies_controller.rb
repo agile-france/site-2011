@@ -34,7 +34,7 @@ class CompaniesController < ApplicationController
     @company = Company.new(params[:company])
     if @company.save
       current_user.tap{|u| u.company = @company}.save
-      redirect_to(companies_path, :notice => t('company.created', 
+      redirect_to(edit_account_path, :notice => t('company.created', 
         :user => current_user.greeter_name, :company => @company.name))
     else
       render :new
