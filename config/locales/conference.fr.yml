@@ -23,17 +23,14 @@ fr:
     password: Mot de passe
     remember_me?: Se souvenir de moi ?
     accept_authentication?: Rentrez votre mot de passe pour accepter cette authentification
-      
   authorizations:
     providers: Ou utiliser un des services suivants
-  
   company:
     name: Nom
     title: Société
     created: %{user}, vous faites maintenant parti de %{company}
     update:
       success: Votre société a été mise à jour
-      
   common:
     back: Retour
     cancel: Annuler
@@ -43,7 +40,6 @@ fr:
     title: Titre
     update: Modifier
     validate: Valider
-
   constants:
     sessions:
       levels:
@@ -63,16 +59,13 @@ fr:
         talk: Présentation (60 mn)
         keynote: Keynote
         other: Autre
-        
   roles:
     author: Auteur
-
   sessions:
     level: Niveau
     age: Age
     format: Format
     capacity: Capacité (nombre max de participants)
-       
   party:
     session:
       new?: Proposer une session ?
@@ -81,6 +74,7 @@ fr:
       update?: Modifier une session ?
       update:
         success!: Session mise à jour!
-
   authorization:
     access_denied: Pas autorisé
+  search:
+    introduce: Rechercher

@@ -1,5 +1,4 @@
 module Re
-  
   # builds a regexp out of a string, as interpreted in irb
   # parse("/hello/i") is /hello/i
   def parse(string)

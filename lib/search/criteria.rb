@@ -1,14 +1,14 @@
 module Controllers
   module Search
     module Criteria
-      def search(collection, criteria)
-        return collection.all if criteria.empty?
-        collection.where(paternize!(criteria))
+      def search(collection, hash_criteria)
+        return collection.all if hash_criteria.empty?
+        collection.where(regexpify(hash_criteria))
       end
       
       private
-      def paternize!(criteria)
-        criteria.each {|key, value| criteria[key] = (::Re.parse(value) || value)}
+      def regexpify(hash_criteria)
+        hash_criteria.reduce({}){|acc, (key, value)| acc[key] = (::Re.parse(value) || %r{#{value}}i); acc}
       end
     end
   end

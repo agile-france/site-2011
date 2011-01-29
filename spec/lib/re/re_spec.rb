@@ -6,13 +6,13 @@ describe Re do
     it "parses /hello/i" do
       re = Re.parse("/hello/i")
       assert {re.source == 'hello'}
-      assert {re.options & Regexp::IGNORECASE == Regexp::IGNORECASE}
+      assert {re.options & Regexp::IGNORECASE}
     end
     it "parses options //imx" do
       re = Re.parse("//imx")
-      assert {re.options & Regexp::IGNORECASE == Regexp::IGNORECASE}
-      assert {re.options & Regexp::MULTILINE == Regexp::MULTILINE}
-      assert {re.options & Regexp::EXTENDED == Regexp::EXTENDED}
+      assert {re.options & Regexp::IGNORECASE}
+      assert {re.options & Regexp::MULTILINE}
+      assert {re.options & Regexp::EXTENDED}
     end
     it "parses /cat/" do
       re = Re.parse("/cat/")
