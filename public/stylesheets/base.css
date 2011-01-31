@@ -97,6 +97,10 @@ body {
         background-color: white;
         margin-bottom: 20px;
         padding-top: 20px; }
+        body #content_wrapper #content #content_container #download {
+          text-decoration: none; }
+        body #content_wrapper #content #content_container #download > img {
+          vertical-align: middle; }
 
 #push {
   height: 10em; }
