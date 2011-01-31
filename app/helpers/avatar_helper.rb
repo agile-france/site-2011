@@ -2,7 +2,7 @@ require 'digest/md5'
 
 module AvatarHelper
   def avatar_for(user, options={})
-    image_tag(user.avatar.last, {:size => '120x120'}.merge(options))
+    image_tag(user.avatar.last, {:size => '69x69'}.merge(options))
   end
   
   def avatar_hint(user)

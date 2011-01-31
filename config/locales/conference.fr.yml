@@ -12,6 +12,7 @@ fr:
     gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
     optins:
       sponsors: J'autorise les sponsors de la conférence à me contacter
+    updated!: Votre compte a été mis à jour !
     seppuku?: Supprimer mon compte et mes informations ?    
   auth:
     forgot_your_password?: Mot de passe oublié?
@@ -21,6 +22,8 @@ fr:
     sign_up: Ouvrir un compte
     email: Email
     password: Mot de passe
+    passwords:
+      hint: Le mot de passe doit faire entre 6 et 20 caractères
     remember_me?: Se souvenir de moi ?
     accept_authentication?: Rentrez votre mot de passe pour accepter cette authentification
   authorizations:
@@ -43,9 +46,10 @@ fr:
   constants:
     sessions:
       levels:
-        shu: Shu
-        ha: Ha
-        ri: Ri
+        all: Tous niveaux
+        shu: Shu (Répéter une technique)
+        ha: Ha (Expérimenter une technique)
+        ri: Ri (Quelle technique ?)
       ages:
         exp: Session expérimentale (jamais présentée)
         new: Session nouvelle mais rodée
@@ -66,14 +70,12 @@ fr:
     age: Age
     format: Format
     capacity: Capacité (nombre max de participants)
-  party:
-    session:
-      new?: Proposer une session ?
-      new:
-        success!: Session créée!
-      update?: Modifier une session ?
-      update:
-        success!: Session mise à jour!
+    new?: Proposer une session ?
+    new:
+      success!: Session créée!
+    update?: Modifier une session ?
+    update:
+      success!: Session mise à jour!
   authorization:
     access_denied: Pas autorisé
   search:

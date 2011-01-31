@@ -6,16 +6,22 @@
     %p
       = f.label symbol
       = mark if required? resource, symbol
-      %br/
+      %br
       = f.text_field symbol
 
   - if resource.password_required?
-    - [:password, :password_confirmation].each do |symbol|
-      %p
-        = f.label symbol
-        = mark if required? resource, symbol
-        %br/
-        = f.password_field symbol
+    %p
+      = f.label :password
+      = mark if required? resource, :password
+      %br
+      %span{:class => 'hint'}= t('auth.passwords.hint')
+      %br
+      = f.password_field :password
+      %br    
+      = f.label :password_confirmation
+      
+      %br
+      = f.password_field :password_confirmation
 
   =render 'account/optins'
 

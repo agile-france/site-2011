@@ -57,17 +57,13 @@
             %div sponsors
           %a.menuItem.grid_1{:href => "/history"}
             %div histoire
-      #flash
-        - flash.each_key do |key|
-          %div{:class => [key, 'grid_12']}
-            :markdown
-              #{flash[key]}
-        .clear
+      
+      = render 'shared/flash', :flash => flash
           
       #content
         #content_container= yield
         
-        = render :partial => 'debug/show' if Rails.env.development?
+        = render 'debug/show' if Rails.env.development?
 
       #push
 

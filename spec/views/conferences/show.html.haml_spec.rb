@@ -12,8 +12,7 @@ describe "conferences/show.html.haml" do
   end
 
   it 'should have a link to propose a new session' do
-    rendered.should have_tag("a[href=\"/conferences/#{@xp.id}/sessions/new\"]",
-                             t('party.session.new?'))
+    rendered.should have_tag("a[href=\"/conferences/#{@xp.id}/sessions/new\"]", t('sessions.new?'))
   end
 
   it 'should have a nice title' do

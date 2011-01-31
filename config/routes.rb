@@ -30,5 +30,6 @@ ConferenceOnRails::Application.routes.draw do
   get 'soon' => 'soon#index'
   get 'history' => 'history#index'
 
+  get '/version' => 'home#version' 
   root :to => 'conferences#recent'
 end

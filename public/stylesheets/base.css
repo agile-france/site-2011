@@ -27,6 +27,9 @@ body {
   margin: 0 auto;
   padding: 0;
   background-color: #dbe3e2; }
+  body .hint {
+    font-size: 10px;
+    font-style: italic; }
   body #content_wrapper {
     min-height: 100%;
     height: auto !important;

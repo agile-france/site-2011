@@ -17,4 +17,5 @@ class Session
   attr_accessible :tags
   
   validates :capacity, :numericality => true, :allow_nil => true
+  validates :title, :presence => true
 end

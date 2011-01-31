@@ -39,6 +39,7 @@ en:
   constants:
     sessions:
       levels:
+        all: All
         shu: Shu
         ha: Ha
         ri: Ri
@@ -61,15 +62,12 @@ en:
     age: Age
     format: Format
     capacity: Capacity (max number of attendees)        
-
-  party:
-    session:
-      new?: Propose a session ?
-      new:
-        success!: Session created!
-      update?: Update session ?
-      update:
-        success!: Session updated!
+    new?: Propose a session ?
+    new:
+      success!: Session created!
+    update?: Update session ?
+    update:
+      success!: Session updated!
 
   authorization:
     access_denied: Access Denied

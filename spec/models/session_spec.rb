@@ -27,6 +27,7 @@ describe Session do
   end
   
   describe "validation and i18n" do
+    it {should validate_presence_of(:title)}
     it "should have a :fr translation" do
       I18n.locale = :fr
       i18n = Session.new(:capacity => 'a')

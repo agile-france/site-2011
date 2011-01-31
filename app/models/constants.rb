@@ -1,7 +1,7 @@
 module Constants  
   module Sessions
     module Levels
-      def self.all; ["shu", "ha", "ri"]; end
+      def self.all; ["all", "shu", "ha", "ri"]; end
     end
 
     module Ages
