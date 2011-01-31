@@ -9,9 +9,11 @@
     
     = stylesheet_link_tag 'base'
     = stylesheet_link_tag 'errors'
-    = javascript_include_tag :jquery_1_4_2
+    = stylesheet_link_tag 'jgrowl-1.2.5'
+    = javascript_include_tag :jquery_1_4_2    
+    = yield :jquery_extra
     = javascript_include_tag 'application'
-    = yield :javascript
+    = yield :javascripts
     = csrf_meta_tag
 
   %body
@@ -58,7 +60,7 @@
           %a.menuItem.grid_1{:href => "/history"}
             %div histoire
       
-      = render 'shared/flash', :flash => flash
+      #flash= render 'shared/flash', :flash => flash
           
       #content
         #content_container= yield

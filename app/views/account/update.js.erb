@@ -1,2 +1,6 @@
-$("#flash").html("<%= escape_javascript(render 'shared/flash', :flash => flash.discard) %>");
+// $("#flash").html("<%= escape_javascript(render 'shared/flash', :flash => flash.discard) %>");
+// growl("#flash");
+<% flash.discard.each do |_key, value|%>
+  $.jGrowl("<%= escape_javascript(value) %>");
+<% end %>
 $("#account").html("<%= escape_javascript(render 'form') %>");

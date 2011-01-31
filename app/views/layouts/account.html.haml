@@ -1,6 +1,10 @@
-=content_for :javascript do
+=content_for :jquery_extra do
   =javascript_include_tag :jquery_ui_1_8_5
+  =javascript_include_tag 'jquery/jgrowl-1.2.5.min'
+=content_for :javascripts do
   =javascript_include_tag 'company'
   =javascript_include_tag 'account'
+  =javascript_include_tag 'flash'
+  
 
 =render :template => 'layouts/application'
