@@ -43,7 +43,8 @@ body {
       margin-left: auto;
       margin-right: auto; }
       body #content_wrapper #header #mojo {
-        padding-top: 6em; }
+        padding-top: 3em;
+        font-size: 28px; }
       body #content_wrapper #header #splash {
         -moz-border-radius: 15px;
         -webkit-border-radius: 15px;
@@ -62,7 +63,7 @@ body {
       body #content_wrapper #header .mojo {
         font-family: "ChunkFiveRegular"; }
       body #content_wrapper #header #sub-mojo {
-        font-size: 22px; }
+        font-size: 20px; }
       body #content_wrapper #header #menu a:hover {
         background-image: url("/images/post_it_up_opt.png"); }
       body #content_wrapper #header #menu .menuItem {
