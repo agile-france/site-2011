@@ -2,8 +2,8 @@ fr:
   helpers:
     label:
       user:
-        email: email
-        first_name: prénom
-        last_name: nom
-        password: mot de passe
-        password_confirmation: confirmation du mot de passe
+        email: Email
+        first_name: Prénom
+        last_name: Nom
+        password: Mot de passe
+        password_confirmation: Confirmation du mot de passe

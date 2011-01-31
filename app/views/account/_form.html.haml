@@ -8,13 +8,13 @@
   %p
     != "#{t('account.company.hint', :link => link_to(t('account.company.link'), new_company_path))}"
     %br/
-    = text_field_tag 'company', @user.company ? @user.company.name : nil, :name => 'company[name]'
+    = text_field_tag 'company', @user.company ? @user.company.name : nil, :name => 'company[name]', :size => 30
   %p
     
   %p
     = f.label :bio, t('account.bio')
     %br/
-    = f.text_area :bio, :size => '28x12'
+    = f.text_area :bio, :size => '60x12'
   
   =render "account/optins", :resource => @user
   

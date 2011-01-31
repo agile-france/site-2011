@@ -31,7 +31,7 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin-bottom: -13em; }
+    margin-bottom: -10em; }
     body #content_wrapper #header {
       color: #182f4c;
       background-image: url("/images/header_opt.png");
@@ -99,20 +99,18 @@ body {
         padding-top: 20px; }
 
 #push {
-  height: 13em; }
+  height: 10em; }
 
 #footer {
   background-color: #182f4c;
   text-align: center;
   clear: both;
   position: relative;
-  height: 13em;
+  height: 10em;
   color: white; }
   #footer #footer_container {
-    font-size: 75%;
+    font-size: 80%;
     padding-top: 1em; }
-    #footer #footer_container #badge-sponsor {
-      float: right; }
     #footer #footer_container .logo-sponsor {
       margin: 0 15px 7px;
       border: 0; }
