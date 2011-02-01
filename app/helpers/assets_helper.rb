@@ -5,6 +5,12 @@ module AssetsHelper
       :alt => hint, :title => hint)
   end
   
+  def image_for(asset)
+    term = File.basename(asset, File.extname(asset))
+    hint = t("icons.#{term}")
+    image_tag(asset, :alt => hint, :title => hint)
+  end
+  
   private
   def domainize(provider)
     case provider.to_sym

@@ -1,7 +1,6 @@
-%table
-  %tr
-    %th= t('common.title')
-  - @sessions.each do |session|
-    %tr
-      %td= link_to "#{session.title}", awesome_session_path(session)
-    
+%h1= t('sessions.title')
+
+-@sessions.each do |session|
+  %div{:id => "session_#{session.id}"}
+    =link_to "#{session.title}", awesome_session_path(session)
+    =link_to image_for('trash.png'), awesome_session_path(session), :remote => true, :method => :delete

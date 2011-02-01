@@ -29,12 +29,6 @@ fr:
     accept_authentication?: Rentrez votre mot de passe pour accepter cette authentification
   authorizations:
     providers: Ou utiliser un des services suivants
-  company:
-    name: Nom
-    title: Société
-    created: %{user}, vous faites maintenant parti de %{company}
-    update:
-      success: Votre société a été mise à jour
   common:
     back: Retour
     cancel: Annuler
@@ -43,7 +37,13 @@ fr:
     tags: Tags (séparés par une virgule)
     title: Titre
     update: Modifier
-    validate: Valider
+    validate: Valider    
+  company:
+    name: Nom
+    title: Société
+    created: %{user}, vous faites maintenant parti de %{company}
+    update:
+      success: Votre société a été mise à jour
   constants:
     sessions:
       levels:
@@ -64,8 +64,10 @@ fr:
         talk: Présentation (60 mn)
         keynote: Keynote
         other: Autre
+  icons:
+    trash: Supprimer
   roles:
-    author: Auteur
+    animator: Animateur
   sessions:
     age: Age
     capacity: Capacité (nombre max de participants)
@@ -79,6 +81,7 @@ fr:
     seppuku?: Voulez vous vraiment supprimer cette session ?
     seppuku:
       success!: Session %{title} supprimée!
+    title: Toutes les Sessions
     update?: Modifier une session ?
     update:
       success!: Session mise à jour!

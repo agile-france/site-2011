@@ -20,8 +20,10 @@ class ApplicationController < ActionController::Base
   include Cant::Embeddable
   die {raise Cant::AccessDenied, I18n.translate('authorization.access_denied')}
   helper_method :cant?
-  alias_method :authorize_user!, :die_if_cant!
-  
+  def authorize_user!
+    die_if_cant!(params[:action])
+  end
+
   # seems to have a bug within [will_paginate, mongoid]
   # - not providing :per_page option cause unfunctional pager in view (Previous is unreachable)
   # - per_page is not looked in underlying model

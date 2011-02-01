@@ -2,10 +2,15 @@ class SessionsController < ApplicationController
   # filters
   # 1. authentication, for Create, Update
   # 2. authorization, for Update
-  before_filter :authenticate_user!, :except => [:index, :show]
-  before_filter :authorize_user!, :only => [:edit, :update, :destroy]
-  cant do
-    not current_session.user == current_user
+  before_filter :authenticate_user!, :except => [:show]
+  before_filter :authorize_user!, :only => [:edit, :update, :destroy, :index]
+  cant do |action|
+    return false if action == :show
+    if action == :index
+      not current_user.admin?
+    else
+      current_user.nil? or not (current_user.admin? or current_session.user == current_user)
+    end
   end
 
   # supported formats
@@ -40,13 +45,13 @@ class SessionsController < ApplicationController
   end
 
   def index
-    @sessions = current_conference.sessions
-    respond_with @sessions
+    @sessions = Session.all.desc(:created_at).paginate(pager_options)
   end
 
   def destroy
-    current_session.destroy
-    redirect_to sessions_account_path
+    @session = current_session
+    @session.destroy
+    redirect_to sessions_account_path unless request.xhr?
   end
 
   private  
