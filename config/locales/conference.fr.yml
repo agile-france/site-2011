@@ -41,9 +41,8 @@ fr:
   company:
     name: Nom
     title: Société
-    created: %{user}, vous faites maintenant parti de %{company}
-    update:
-      success: Votre société a été mise à jour
+    created!: "%{user}, vous faites maintenant parti de %{company}"
+    updated!: "Votre société a été mise à jour"
   constants:
     sessions:
       levels:
@@ -71,20 +70,17 @@ fr:
   sessions:
     age: Age
     capacity: Capacité (nombre max de participants)
+    created!: "Session créée!"
     errors:
       capacity: doit être vide, ou comprise dans l'intervalle [%{range}]
+    deleted!: Session %{title} supprimée!
     format: Format
     level: Niveau
     new?: Proposer une session ?
-    new:
-      success!: Session créée!
     seppuku?: Voulez vous vraiment supprimer cette session ?
-    seppuku:
-      success!: Session %{title} supprimée!
     title: Toutes les Sessions
     update?: Modifier une session ?
-    update:
-      success!: Session mise à jour!
+    updated!: "Session mise à jour!"
   authorization:
     access_denied: Pas autorisé
   search:

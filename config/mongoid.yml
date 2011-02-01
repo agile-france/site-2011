@@ -6,12 +6,16 @@ defaults: &defaults
   #   - host: slave2.local
   #     port: 27019
 
+# 1.9.2-p136 and https://github.com/tenderlove/psych/issues#issue/8
+# ha, I killed my development database !!!
 development:
-  <<: *defaults
+  # <<: *defaults
+  host: localhost
   database: conference_on_rails_development
 
 test:
-  <<: *defaults
+  # <<: *defaults
+  host: localhost
   database: conference_on_rails_test
 
 # set these environment variables on your prod server

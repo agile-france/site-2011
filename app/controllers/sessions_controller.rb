@@ -23,7 +23,7 @@ class SessionsController < ApplicationController
   def create
     @session = Session.new(params[:session])
     if current_user.propose(@session, current_conference)
-      redirect_to conference_path(current_conference), :notice => t('sessions.new.success!') 
+      redirect_to conference_path(current_conference), :notice => t('sessions.created!') 
     else
       render :new
     end
@@ -39,7 +39,7 @@ class SessionsController < ApplicationController
 
   def update
     if current_session.update_attributes(params[:session])
-      flash[:notice] = t('sessions.update.success!')
+      flash[:notice] = t('sessions.updated!')
     end
     respond_with current_session, :location => awesome_session_path(current_session)
   end

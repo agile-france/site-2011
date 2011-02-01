@@ -127,7 +127,7 @@ GEM
       tzinfo (~> 0.3.22)
       will_paginate (~> 3.0.pre)
     mongoid-rspec (1.3.2)
-      mongoid (~> 2.0.0)
+      mongoid (~> 2.0.0.beta.20)
       rspec (~> 2)
     mongoid_taggable (0.1.1)
     multi_json (0.0.5)
@@ -289,6 +289,6 @@ DEPENDENCIES
   ruby-debug19
   simplecov
   spork (>= 0.9.0.rc2)
-  will_paginate (~> 3)
+  will_paginate (>= 3.0.pre2)
   wrong (~> 0.4)
   yajl-ruby

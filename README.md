@@ -65,7 +65,7 @@ it is there, for sure!
 
 resource
 
-* [mongoid documentation] (http://mongoid.org/docs/querying/)
+* [mongoid documentation](http://mongoid.org/docs/querying/)
 
 Revoke admin role to randy
 

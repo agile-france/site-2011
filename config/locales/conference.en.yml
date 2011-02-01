@@ -34,7 +34,7 @@ en:
     validate: Validate
     
   update:
-    success!: %{user} updated
+    success: "%{user} updated"
 
   constants:
     sessions:
@@ -64,10 +64,10 @@ en:
     capacity: Capacity (max number of attendees)        
     new?: Propose a session ?
     new:
-      success!: Session created!
+      success: Session created!
     update?: Update session ?
     update:
-      success!: Session updated!
+      success: Session updated!
 
   authorization:
     access_denied: Access Denied

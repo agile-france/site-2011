@@ -8,7 +8,7 @@ gem 'rails', '>= 3.0.0'
 # views
 gem 'haml'
 gem 'haml-rails'
-gem 'will_paginate', '~> 3'
+gem 'will_paginate', '>= 3.0.pre2'
 
 # authentication
 gem 'devise', '>= 1.2.rc'
