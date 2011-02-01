@@ -25,13 +25,10 @@ ConferenceOnRails::Application.routes.draw do
     get '/sessions' => 'account#sessions'
   end
 
-  # static pages rendered in application layout
-  # XXX have them in one controller
-  get 'place' => 'place#index'
-  get 'sponsors' => 'sponsors#index'
-  get 'soon' => 'soon#index'
-  get 'history' => 'history#index'
-
-  get '/version' => 'home#version' 
+  # static pages rendered through home controller
+  [:history, :place, :soon, :sponsors, :version].each do |s|
+    get "#{s}" => "home\##{s}"
+  end
+   
   root :to => 'conferences#recent'
 end
