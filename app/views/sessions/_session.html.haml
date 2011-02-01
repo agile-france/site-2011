@@ -1,2 +1,4 @@
-= render 'sessions/header', :session => session
-= render 'sessions/description', :session => session
+%div.session{:id => "session_#{session.id}"}
+  = render 'sessions/header', :session => session
+  = render 'sessions/description', :session => session
+

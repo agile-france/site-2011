@@ -105,6 +105,40 @@ body {
           text-decoration: none; }
         body #content_wrapper #content #content_container #download > img {
           vertical-align: middle; }
+        body #content_wrapper #content #content_container .session {
+          float: left;
+          width: 400px; }
+          body #content_wrapper #content #content_container .session .avatar {
+            float: left;
+            text-align: right;
+            width: 140px; }
+          body #content_wrapper #content #content_container .session .greeter_name {
+            float: left;
+            text-align: right;
+            width: 140px; }
+          body #content_wrapper #content #content_container .session .session_title {
+            float: left;
+            max-height: 69px;
+            padding-top: 3em;
+            padding-left: 15px;
+            max-width: 260px; }
+            body #content_wrapper #content #content_container .session .session_title h3 {
+              margin-bottom: 0; }
+          body #content_wrapper #content #content_container .session .session_tags {
+            padding-left: 20px; }
+          body #content_wrapper #content #content_container .session .session_content {
+            float: left;
+            width: 260px; }
+          body #content_wrapper #content #content_container .session .session_description {
+            float: left;
+            font-size: 80%; }
+          body #content_wrapper #content #content_container .session .session_attrs {
+            padding-left: 50px; }
+          body #content_wrapper #content #content_container .session .att {
+            margin-left: 15px;
+            border-bottom: 1px solid lightgray; }
+        body #content_wrapper #content #content_container .even {
+          clear: left; }
 
 #push {
   height: 10em; }
