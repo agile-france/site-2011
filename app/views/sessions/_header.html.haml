@@ -1,16 +1,21 @@
-%div
-  %div.avatar
-    = avatar_for(session.user)
-  %div.session_title
-    %h3= link_to session.title, awesome_session_path(session)
-.clear
-%div
-  %div.greeter_name
-    %strong
-      = session.user.greeter_name
-  %div.session_content
-    = render 'sessions/tags', :tags => session.tags
-  %div.session_attrs
-    - ([:format, :level, :age].map{|f| i18n_text_for(session, f)} << session.capacity).reject(&:blank?).each do |trait|
-      %span.att= trait
-
+%div{:id => "session_#{session.id}"}
+  .container_11
+    .grid_2
+      = avatar_for(session.user)
+    .grid_9
+      %h3= link_to session.title, awesome_session_path(session)
+    .grid_9
+      %strong
+        = session.user.greeter_name
+    .container_9
+      .tags.grid_5
+        = render 'sessions/tags', :tags => session.tags
+      .grid_4
+        %ul
+          - ([:format, :level, :age].map{|f| i18n_text_for(session, f)} << session.capacity).reject(&:blank?).each do |trait|
+            %li= trait
+  .clear
+  -# XXX or .grid_1 so that 11+1=12 
+  -# ... do not understand why header cant be grid_12 without being too large for parent ...
+  
+  

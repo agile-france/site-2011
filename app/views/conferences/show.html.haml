@@ -3,11 +3,8 @@
 .buttons= link_to t('sessions.new?'), new_conference_session_path(@conference)
 
 - @sessions.each do |session|
-  %div.session{:id => "session_#{session.id}", :class => cycle('even', 'odd')}
-    = render 'sessions/header', :session => session
-    = render 'sessions/summary', :session => session
-
-.clear
+  = render 'sessions/header', :session => session
+  = render 'sessions/summary', :session => session
   
 .pagination
   = will_paginate @sessions
