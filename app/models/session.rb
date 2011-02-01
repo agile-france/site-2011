@@ -1,4 +1,6 @@
 class Session
+  def self.capacity; (10..50); end
+  
   include Mongoid::Document
   include Mongoid::Taggable
   include Mongoid::Timestamps
@@ -16,6 +18,10 @@ class Session
   attr_accessible :title, :description, :format, :capacity, :level, :age
   attr_accessible :tags
   
-  validates :capacity, :numericality => true, :allow_nil => true
-  validates :title, :presence => true
+  validates_each :capacity do |model,attr,value|
+    unless value.nil? or Session.capacity.include?(value)
+      model.errors.add(attr, I18n.translate('sessions.errors.capacity', :range => Session.capacity))
+    end
+  end
+  validates :title, :presence => true, :length => { :maximum => 150 }
 end

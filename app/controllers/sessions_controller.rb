@@ -13,14 +13,15 @@ class SessionsController < ApplicationController
   
   def new
     @session = Session.new
-    respond_with @session
   end
 
   def create
     @session = Session.new(params[:session])
-    current_user.propose(@session, current_conference)
-    flash[:notice] = t('sessions.new.success!') if @session.save
-    respond_with @session, :location => current_conference
+    if current_user.propose(@session, current_conference)
+      redirect_to conference_path(current_conference), :notice => t('sessions.new.success!') 
+    else
+      render :new
+    end
   end
 
   def show

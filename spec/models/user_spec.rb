@@ -34,8 +34,7 @@ describe User do
       @john = Fabricate(:user)
       @cheesy = Fabricate(:conference, :name => 'cheesy')
       @cheddar = Fabricate(:session, :title => 'cheddar')
-
-      @john.propose(@cheddar, @cheesy).should == @john
+      @john.propose(@cheddar, @cheesy)
     end
 
     it 'then session and user are wired' do

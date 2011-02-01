@@ -76,6 +76,8 @@ fr:
     update?: Modifier une session ?
     update:
       success!: Session mise à jour!
+    errors:
+      capacity: doit être vide, ou comprise dans l'intervalle [%{range}]
   authorization:
     access_denied: Pas autorisé
   search:

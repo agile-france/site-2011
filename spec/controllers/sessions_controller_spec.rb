@@ -37,28 +37,42 @@ describe SessionsController do
     end
 
     describe "POST /conferences/:id/sessions" do
-      before do
-        @params = {:title => 'courage', :description => 'and respect'}
-        post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage, respect')
-      end
+      context "successful" do
+        before do
+          @params = {:title => 'courage', :description => 'and respect'}
+          post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage, respect')
+        end
 
-      it 'should wire session to user and conference' do
-        # XXX
-        # at least, failed to spec it with mocks using rr+rspec+devise :)
-        # devise current_user is not available in this spec ...
-        session = ::Session.where(@params).first
-        session.should_not be_nil
-        session.conference.should == @xp
-        session.user.should == @john
-        assert {session.tags_array.include? 'courage'}
-      end
+        it 'should wire session to user and conference' do
+          # XXX
+          # at least, failed to spec it with mocks using rr+rspec+devise :)
+          # devise current_user is not available in this spec ...
+          session = ::Session.where(@params).first
+          session.should_not be_nil
+          session.conference.should == @xp
+          session.user.should == @john
+          assert {session.tags_array.include? 'courage'}
+        end
 
-      it "should redirect to session_path" do
-        response.should redirect_to(@xp)
-      end
+        it "should redirect to session_path" do
+          response.should redirect_to(@xp)
+        end
 
-      it "should flash success" do
-        flash[:notice].should =~ /créée!/
+        it "should flash success" do
+          flash[:notice].should =~ /créée!/
+        end        
+      end
+      
+      context "validation fails" do
+        before do
+          @params = {:title => 'courage', :description => 'and respect', :capacity => '123'}
+          post :create, :conference_id => @xp.id, :session => @params
+          s = @controller.send(:current_session)
+          deny {s.valid?}          
+        end
+        it 'show errors on current page' do
+          response.should be_success
+        end
       end
     end
 

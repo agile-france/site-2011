@@ -36,14 +36,16 @@ class User
     "#{first_name} #{last_name}".strip
   end
 
-  # propose a session to a conference
+  # Public : user propose a session to a conference
+  #
+  # returns true if session is saved, false otherwise, and then session contains validation errors
+  #
   # note this code saves only the Session model, as current storage enables it
   def propose(session, conference)
     session.tap do |s|
       s.user = self
       s.conference = conference
-    end.save!
-    self
+    end.save
   end
   
   # devise validatable hooks

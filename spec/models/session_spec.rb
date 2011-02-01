@@ -23,16 +23,29 @@ describe Session do
   
   describe "capacity" do
     it {should have_fields(:capacity).of_type(Integer)}
-    it {should validate_numericality_of :capacity}
+    it 'validates capacity in range' do
+      deny {Session.new(:title => 'zoo', :capacity => 9).valid?}
+      deny {Session.new(:title => 'zoo', :capacity => 51).valid?}
+    end
+  end
+  
+  describe "title" do
+    it 'should have a limit to 150 chars (tech)' do
+      v = Session.validators_on(:title).select{|v| v.class.to_s =~ /Length/}.first
+      assert {v.options[:maximum] <= 150}
+    end
+    it 'should have a limit to 150 chars (functional)' do
+      s = Session.new(:title => ('a'*151))
+      deny {s.valid?}
+    end
   end
   
   describe "validation and i18n" do
-    it {should validate_presence_of(:title)}
     it "should have a :fr translation" do
       I18n.locale = :fr
       i18n = Session.new(:capacity => 'a')
       deny {i18n.valid?}
-      assert {i18n.errors[:capacity].first =~ /nombre/}
+      assert {i18n.errors[:capacity].first =~ /dans l'intervalle/}
     end
   end
 end
