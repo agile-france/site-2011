@@ -22,6 +22,14 @@ class ApplicationController < ActionController::Base
   helper_method :cant?
   alias_method :authorize_user!, :die_if_cant!
   
+  # seems to have a bug within [will_paginate, mongoid]
+  # - not providing :per_page option cause unfunctional pager in view (Previous is unreachable)
+  # - per_page is not looked in underlying model
+  def pager_options(model=nil)
+    per_page = (model && model.respond_to?(:per_page)) ? model.send(:per_page) : 25
+    {:page => params[:page], :per_page => params[:per_page] || per_page}
+  end  
+  
   protected
   def highlight(key, value_or_default_value='', &block)
     flash[key] = (block.nil?? value_or_default_value : yield(flash[key] ||= value_or_default_value))
@@ -37,6 +45,8 @@ class ApplicationController < ActionController::Base
     edit_account_path
   end
 
+  # rescues
+  # 
   rescue_from Mongoid::Errors::DocumentNotFound do |error|
     flash_and_log(:error, error.message)
     redirect_to root_path

@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
   # 1. authentication, for Create, Update
   # 2. authorization, for Update
   before_filter :authenticate_user!, :except => [:index, :show]
-  before_filter :authorize_user!, :only => [:edit, :update]
+  before_filter :authorize_user!, :only => [:edit, :update, :destroy]
   cant do
     not current_session.user == current_user
   end
@@ -42,6 +42,11 @@ class SessionsController < ApplicationController
   def index
     @sessions = current_conference.sessions
     respond_with @sessions
+  end
+
+  def destroy
+    current_session.destroy
+    redirect_to sessions_account_path
   end
 
   private  

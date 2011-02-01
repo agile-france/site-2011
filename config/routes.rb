@@ -21,7 +21,9 @@ ConferenceOnRails::Application.routes.draw do
   end
 
   # bug there as of 3.0.0, infered controller is 'accounts'
-  resource :account, :only => [:edit, :update, :destroy], :controller => 'account'
+  resource :account, :only => [:edit, :update, :destroy], :controller => 'account' do
+    get '/sessions' => 'account#sessions'
+  end
 
   # static pages rendered in application layout
   # XXX have them in one controller

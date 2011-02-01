@@ -2,4 +2,5 @@
 
 %p
   = link_to t('common.update'), edit_awesome_session_path(@session) unless cant?
-  = link_to t('common.back'), conference_path(@session.conference)
+  = link_to t('common.back'), @session.conference
+  = link_to t('common.delete'), awesome_session_path(@session), :method => :delete, :confirm => t('sessions.seppuku?') unless cant?

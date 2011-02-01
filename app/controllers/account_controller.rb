@@ -4,6 +4,10 @@ class AccountController < ApplicationController
   def edit
   end
   
+  def sessions
+    @sessions = current_user.sessions.desc(:created_at).paginate(pager_options)
+  end
+  
   def update
     flash[:notice] = t('account.updated!') if change_attributes(@user).save
     redirect_to edit_account_path unless request.xhr?

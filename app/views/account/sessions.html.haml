@@ -1,0 +1,9 @@
+=render 'toolbar'
+
+#sessions
+  -@sessions.each do |session|
+    %div.session{:id => "session_#{session.id}"}
+      = render 'sessions/header', :session => session
+      = render 'sessions/summary', :session => session
+.pagination
+  = will_paginate @sessions

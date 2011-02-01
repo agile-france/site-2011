@@ -2,18 +2,19 @@ fr:
   account:
     authentications: Mes authentifications
     bio: Biographie
-    email: Email
-    introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
-    title: Mon compte
     company:
       hint: Société (Recherchez la ci-dessous ou %{link})
       link: Créez en une nouvelle
-    title: Mon Compte
+    email: Email
     gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
+    introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
+    title: Mon Compte
     optins:
       sponsors: J'autorise les sponsors de la conférence à me contacter
+    seppuku?: Supprimer mon compte et mes informations ?
+    sessions:
+      title: Mes Sessions   
     updated!: Votre compte a été mis à jour !
-    seppuku?: Supprimer mon compte et mes informations ?    
   auth:
     forgot_your_password?: Mot de passe oublié?
     greet: Bonjour %{user}
@@ -66,18 +67,21 @@ fr:
   roles:
     author: Auteur
   sessions:
-    level: Niveau
     age: Age
-    format: Format
     capacity: Capacité (nombre max de participants)
+    errors:
+      capacity: doit être vide, ou comprise dans l'intervalle [%{range}]
+    format: Format
+    level: Niveau
     new?: Proposer une session ?
     new:
       success!: Session créée!
+    seppuku?: Voulez vous vraiment supprimer cette session ?
+    seppuku:
+      success!: Session %{title} supprimée!
     update?: Modifier une session ?
     update:
       success!: Session mise à jour!
-    errors:
-      capacity: doit être vide, ou comprise dans l'intervalle [%{range}]
   authorization:
     access_denied: Pas autorisé
   search:

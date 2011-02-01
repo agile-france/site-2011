@@ -63,7 +63,4 @@ class CompaniesController < ApplicationController
   def current_company
     @company ||= Company.find(params[:id])
   end
-  def pager_options
-    {:page => params[:page], :per_page => params[:per_page] || 25}
-  end
 end

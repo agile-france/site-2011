@@ -1,0 +1,6 @@
+%h1
+  = link_to t('account.title'), edit_account_path
+  |
+  = link_to t('account.sessions.title'), sessions_account_path
+  |
+  = link_to t('common.delete'), account_path, :method => :delete, :confirm => t('account.seppuku?')

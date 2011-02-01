@@ -114,6 +114,19 @@ describe SessionsController do
           flash[:error].should =~ /Pas autorisé/
         end
       end
+      
+      describe 'DELETE' do
+        before do
+          @simplicity = Fabricate(:session, :conference => @xp, :user => @john)
+          delete :destroy, :id => @simplicity.id
+        end
+        it 'redirects to account sessions' do
+          response.should redirect_to(sessions_account_path)
+        end
+        it 'destroy aforementioned session' do
+          assert {::Session.criteria.id(@simplicity.id).empty?}
+        end
+      end
     end
   end
 

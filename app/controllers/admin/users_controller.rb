@@ -20,10 +20,5 @@ module Admin
       end
       respond_with user, :location => admin_users_path
     end
-    
-    private
-    def pager_options
-      {:page => params[:page], :per_page => params[:per_page] || 10}
-    end
   end
 end

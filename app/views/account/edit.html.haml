@@ -1,10 +1,7 @@
-%h1
-  = t('account.title')
-  |
-  = link_to t('common.delete'), account_path, :method => :delete, :confirm => t('account.seppuku?')
+=render 'toolbar'
   
 #account
-  = render 'form'
+  =render 'form'
 
 -unless @user.authentications.empty?
   %h1= t('account.authentications')

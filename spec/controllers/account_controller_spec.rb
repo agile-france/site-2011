@@ -33,16 +33,27 @@ describe AccountController do
     end
     
     describe "DELETE /account" do
-      describe "with user" do
-        before do
-          delete :destroy
-        end
-        it "redirects to home" do
-          assert {response.location = root_path}
-        end
-        it "kills user" do
-          deny {User.criteria.id(user.id).first}
-        end
+      before do
+        delete :destroy
+      end
+      it "redirects to home" do
+        assert {response.location = root_path}
+      end
+      it "kills user" do
+        deny {User.criteria.id(user.id).first}
+      end
+    end
+    
+    describe "GET /account/sessions" do
+      let(:xp) {Fabricate(:conference)}
+      let(:awesome) {Fabricate(:session, :title => 'awesome')}
+      before do
+        user.propose(awesome, xp)
+        get :sessions
+      end
+      it "enable user to see sessions he has submitted" do
+        sessions = assigns(:sessions)
+        assert {sessions.include? awesome}
       end
     end
   end
