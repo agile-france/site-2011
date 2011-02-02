@@ -3,8 +3,8 @@
 
 db/*.sqlite3
 log/*.log
-tmp/**/*
+tmp/
 
-coverage
+coverage/
 
 config/environments/heroku
