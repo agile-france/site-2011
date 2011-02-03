@@ -6,5 +6,6 @@ log/*.log
 tmp/
 
 coverage/
+backup/
 
 config/environments/heroku

@@ -1,0 +1,19 @@
+#!/bin/sh
+# feel bad with it : script is not a the good place (app), it should be a mongodb script
+# there is something like this in chef ... https://github.com/papercavalier/mongodb-cookbook
+app_root=`dirname $0`/..
+##
+backup_path=${app_root}/backup
+database=$1
+
+## create backup path if required
+if [ ! -d ${backup_path} ]; then mkdir ${backup_path}; fi
+
+# actually dump database and create dated archive
+(
+mongodump --host localhost --db ${database} --out ${backup_path}
+archive=${backup_path}/${database}-`date +%Y%m%d`.tar.bz2
+tar cjf ${archive} -C ${backup_path} ${database}
+echo "created archive ${archive}..."
+rm -rf ${backup_path}/${database}
+)
