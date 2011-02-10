@@ -30,10 +30,6 @@ gem 'cant'
 # json
 gem 'yajl-ruby', :require => 'yajl'
 
-# js
-gem 'barista', '~> 1.0'
-gem 'therubyracer', :require => false
-
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
 
@@ -42,6 +38,10 @@ group :development, :test do
   
   gem 'ruby-debug19', :platforms => :mri_19
   gem 'ruby-debug', :platforms => :mri_18
+  
+  # js
+  gem 'barista', '~> 1.0'
+  gem 'therubyracer', :require => false  
 end
 
 group :test do
