@@ -37,7 +37,7 @@ fr:
     tags: Tags (séparés par une virgule)
     title: Titre
     update: Modifier
-    validate: Valider    
+    validate: Valider
   company:
     name: Nom
     title: Société
@@ -65,6 +65,11 @@ fr:
         other: Autre
   icons:
     trash: Supprimer
+  markdown:
+    edit: Editer
+    hint: Ce texte est rendu par %{link}
+    preview: Visualiser    
+    syntax: Markdown
   roles:
     animator: Animateur
   sessions:

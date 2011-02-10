@@ -30,6 +30,10 @@ gem 'cant'
 # json
 gem 'yajl-ruby', :require => 'yajl'
 
+# js
+gem 'barista', '~> 1.0'
+gem 'therubyracer', :require => false
+
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
 
@@ -62,6 +66,7 @@ group :test do
   # guard is a dsl, alternate to watchr, which is an alternate to autotest :)
   # there is bonus growl feature
   gem 'guard-rspec'
+  gem 'guard-coffeescript'
   gem 'growl'
 
   # rr

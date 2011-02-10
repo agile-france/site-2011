@@ -11,7 +11,9 @@
 #   - dist/**/*.js
 #
 src_files:
-  - public/javascripts/**/*.js
+  - public/javascripts/jquery/*.js
+  - public/javascripts/showdown/*.js
+  - public/javascripts/*.js
 
 # stylesheets
 #
@@ -51,7 +53,7 @@ helpers:
 #   - **/*[sS]pec.js
 #
 spec_files:
-  - **/*[sS]pec.js
+  - "**/*[sS]pec.js"
 
 # src_dir
 #

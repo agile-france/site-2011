@@ -13,7 +13,7 @@ describe('Company', function() {
     
     it('transform values', function() {
       company = new Company();
-      expect(fold(list, [], company.reduce)).toEqual([{value:"123", name:"Aha"},{value:"456", name:"Onoes"}]);  
+      expect(fold(list, [], company.reduce)).toEqual([{label:"Aha"},{label:"Onoes"}]);  
     })
   })
 })
