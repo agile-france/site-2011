@@ -92,7 +92,7 @@ fr:
       count: 
         one: "1 vote"
         other: "%{count} votes"
-      denied: Vous devez être connecté pour voter
+      denied: Vous ne pouvez pas voter pour vos sessions
       greetings: "Merci d'avoir voté %{stars} pour : %{session}"
       new: Vous n'avez pas voté pour cette session
       mean: "Moyenne : %{stars}"
