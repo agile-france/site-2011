@@ -1,3 +1,5 @@
-.stars
+%p.stars
+  %span{:class => 'hint'}= t('sessions.ratings.yours')
+  %br
   -(1..5).each do |star|
     = rating_link_for(rating, :stars => star)

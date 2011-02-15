@@ -96,6 +96,7 @@ fr:
       greetings: "Merci d'avoir voté %{stars} pour : %{session}"
       new: Vous n'avez pas voté pour cette session
       mean: "Moyenne : %{stars}"
+      yours: Votre vote
     seppuku?: "Voulez vous vraiment supprimer cette session ?"
     title: Toutes les Sessions
     update?: "Modifier une session ?"
