@@ -117,8 +117,22 @@ see
 * http://github.com/aslakhellesoy/cucumber
 * http://github.com/jnicklas/capybara
 
+### optional spork
+There is no automation for command line
+
+Have spork ran for cucumber on its own port
+
+    ~/src/ruby/conference-on-rails (vote)$ spork cucumber --port 12345
+    
+Then, can use following options to have cuke connect to it
+
+    cucumber --drb --port 12345 features/session_rate.feature
+
+**Gotcha**
+    
+    **@javascript tests using default js driver (selenium) are failing when spork is up**
+
 ### run them!
-There is no automated runner
 
 for one shot
 
@@ -131,11 +145,13 @@ see [cucumber and tags](http://github.com/aslakhellesoy/cucumber/wiki/tags), and
 
 		
 ### dunno why it fails :(
-for jqueryless behavior, add a handy step before offending step
+Add a handy step before offending step
 
     Then show me the page
 
 then you go and see
+
+### Gotchas
 
 Metrics
 =======

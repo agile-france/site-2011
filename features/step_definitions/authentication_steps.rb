@@ -1,4 +1,4 @@
-Given /^I am not authenticated$/ do
+Given /^I (?:am not authenticated|sign(?:ed|) out)$/ do
   visit('/users/sign_out') # ensure that at least
 end
 
@@ -10,10 +10,7 @@ end
 
 Given /^I am a new, authenticated user$/ do
   email = 'testing@man.net'
-  password = 'secretpass'
-
-  Given %{I have one user "#{email}" with password "#{password}"}
-    And %{I complete sign in form with email "#{email}" and password "#{password}"}
+  Given %{I sign in as "#{email}"}
 end
 
 Given /^I complete sign in form with email "([^"]*)" and password "([^"]*)"$/ do |email, password|
@@ -21,4 +18,10 @@ Given /^I complete sign in form with email "([^"]*)" and password "([^"]*)"$/ do
     And %{I fill in "user_email" with "#{email}"}
     And %{I fill in "user_password" with "#{password}"}
     And %{I press "user_submit"}  
+end
+
+Given /^I (?:signed|sign) in as "([^"]*)"$/ do |email|
+  password = 'secretpass'
+  Given %{I have one user "#{email}" with password "#{password}"} unless User.identified_by_email(email)
+  Given %{I complete sign in form with email "#{email}" and password "#{password}"}
 end

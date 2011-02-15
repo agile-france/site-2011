@@ -31,10 +31,10 @@ unless Rails.env.production?
   
     # or, hook into the compilation:
   
-    c.before_compilation   { |path|         puts "Barista: Compiling #{path}" }
-    c.on_compilation       { |path|         puts "Barista: Successfully compiled #{path}" }
-    c.on_compilation_error { |path, output| puts "Barista: Compilation of #{path} failed with:\n#{output}" }
-    c.on_compilation_with_warning { |path, output| puts "Barista: Compilation of #{path} had a warning:\n#{output}" }
+    # c.before_compilation   { |path|         puts "Barista: Compiling #{path}" }
+    # c.on_compilation       { |path|         puts "Barista: Successfully compiled #{path}" }
+    # c.on_compilation_error { |path, output| puts "Barista: Compilation of #{path} failed with:\n#{output}" }
+    # c.on_compilation_with_warning { |path, output| puts "Barista: Compilation of #{path} had a warning:\n#{output}" }
   
     # Turn off preambles and exceptions on failure
   

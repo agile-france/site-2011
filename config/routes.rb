@@ -9,7 +9,9 @@ ConferenceOnRails::Application.routes.draw do
   
   # 2- conferences and sessions 
   # :as option for sessions is used to unclash name with devise url helper (session_path(resource_or_scope namely))
-  resources :sessions, :except => [:new, :create], :as => :awesome_sessions
+  resources :sessions, :except => [:new, :create], :as => :awesome_sessions do
+    resources :ratings, :only => [:create, :update]
+  end
   resources :conferences  do
     resources :sessions, :only => [:new, :create]
   end

@@ -41,7 +41,7 @@ group :development, :test do
   
   # js
   gem 'barista', '~> 1.0'
-  gem 'therubyracer', :require => false  
+  gem 'therubyracer', :require => false
 end
 
 group :test do

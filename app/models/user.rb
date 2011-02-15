@@ -99,6 +99,17 @@ class User
     self
   end
 
+  # Public : rate session
+  # updates user rating (there is one) or create new one
+  def rate(session, rating_as_hash={})
+    rating = session.ratings.where(:user_id => self.id).first
+    rating ? rating.tap{|r| r.attributes=rating_as_hash} :
+      Rating.new(rating_as_hash).tap do |rating|
+        session.ratings << rating
+        rating.user = self
+      end
+  end
+
   # querying helpers
   class << self
     def identified_by_email(email)

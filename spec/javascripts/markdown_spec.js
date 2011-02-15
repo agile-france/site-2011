@@ -1,18 +1,18 @@
 describe('Markdown preview', function() {
- var editArea;
- var edit;
- var previewArea;
- var preview;
- 
- beforeEach(function() {
+  var editArea;
+  var edit;
+  var previewArea;
+  var preview;
+
+  beforeEach(function() {
    loadFixtures('markdown.html');
    editArea = $('#edit-description');
    edit = $('a.[action="edit"]');
    previewArea = $('#preview-description');
    preview = $('a.[action="preview"]');
- });
- 
- describe('clicking preview', function() {
+  });
+
+  describe('clicking preview', function() {
    beforeEach(function() {
      editArea.text('#markdowned#');
      preview.click();
@@ -30,9 +30,9 @@ describe('Markdown preview', function() {
    it('preview area has transformed content', function() {
      expect(previewArea.text()).toBe('<h1>markdowned</h1>');
    });
- });
- 
- describe('clicking twice on preview is the same as clicking once', function() {
+  });
+
+  describe('clicking twice on preview is the same as clicking once', function() {
    beforeEach(function() {
      preview.click();
      preview.click();
@@ -40,9 +40,9 @@ describe('Markdown preview', function() {
    it('is the same ...', function() {
      expect(previewArea).toBeVisible();
    });
- }); 
- 
- describe('back to edit mode', function() {
+  }); 
+
+  describe('back to edit mode', function() {
    beforeEach(function() {
      preview.click();
      edit.click();
@@ -53,5 +53,5 @@ describe('Markdown preview', function() {
    it('makes preview area not visible', function() {
      expect(previewArea).not.toBeVisible();
    });
- });
+  });
 });

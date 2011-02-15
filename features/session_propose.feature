@@ -1,4 +1,4 @@
-Feature: Session
+Feature: Propose a new session
   User should propose sessions that make a good program, so that people attend
 
   Scenario: I should post a new session when logged

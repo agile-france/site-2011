@@ -3,21 +3,21 @@ fr:
     authentications: Mes authentifications
     bio: Biographie
     company:
-      hint: Société (Recherchez la ci-dessous ou %{link})
+      hint: "Société (Recherchez la ci-dessous ou %{link})"
       link: Créez en une nouvelle
     email: Email
-    gravatar: Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !
-    introduce: Allez sur [Mon compte](%{url}) pour mettre à jour votre profil 
+    gravatar: "Mettez à jour votre avatar sur [gravatar.com](http://gravatar.com) !"
+    introduce: "Allez sur [Mon compte](%{url}) pour mettre à jour votre profil"
     title: Mon Compte
     optins:
       sponsors: J'autorise les sponsors de la conférence à me contacter
-    seppuku?: Supprimer mon compte et mes informations ?
+    seppuku?: "Supprimer mon compte et mes informations ?"
     sessions:
       title: Mes Sessions   
-    updated!: Votre compte a été mis à jour !
+    updated!: "Votre compte a été mis à jour !"
   auth:
-    forgot_your_password?: Mot de passe oublié?
-    greet: Bonjour %{user}
+    forgot_your_password?: "Mot de passe oublié ?"
+    greet: "Bonjour %{user}"
     sign_in: Se connecter
     sign_out: Se déconnecter
     sign_up: Ouvrir un compte
@@ -25,8 +25,8 @@ fr:
     password: Mot de passe
     passwords:
       hint: Le mot de passe doit faire entre 6 et 20 caractères
-    remember_me?: Se souvenir de moi ?
-    accept_authentication?: Rentrez votre mot de passe pour accepter cette authentification
+    remember_me?: "Se souvenir de moi ?"
+    accept_authentication?: "Rentrez votre mot de passe pour accepter cette authentification"
   authorizations:
     providers: Ou utiliser un des services suivants
   common:
@@ -63,11 +63,17 @@ fr:
         talk: Présentation (60 mn)
         keynote: Keynote
         other: Autre
+    stars:
+      "1": "Je déteste"
+      "2": "Je n'aime pas"
+      "3": "Je suis ok"
+      "4": "J'aime"
+      "5": "J'adore"
   icons:
     trash: Supprimer
   markdown:
     edit: Editer
-    hint: Ce texte est rendu par %{link}
+    hint: "Ce texte est rendu par %{link}"
     preview: Visualiser    
     syntax: Markdown
   roles:
@@ -77,15 +83,24 @@ fr:
     capacity: Capacité (nombre max de participants)
     created!: "Session créée!"
     errors:
-      capacity: doit être vide, ou comprise dans l'intervalle [%{range}]
-    deleted!: Session %{title} supprimée!
+      capacity: "doit être vide, ou comprise dans l'intervalle [%{range}]"
+    deleted!: "Session %{title} supprimée!"
     format: Format
     level: Niveau
-    new?: Proposer une session ?
-    seppuku?: Voulez vous vraiment supprimer cette session ?
+    new?: "Proposer une session ?"
+    ratings:
+      count: 
+        one: "1 vote"
+        other: "%{count} votes"
+      denied: Vous devez être connecté pour voter
+      greetings: "Merci d'avoir voté %{stars} pour : %{session}"
+      new: Vous n'avez pas voté pour cette session
+      mean: "Moyenne : %{stars}"
+    seppuku?: "Voulez vous vraiment supprimer cette session ?"
     title: Toutes les Sessions
-    update?: Modifier une session ?
+    update?: "Modifier une session ?"
     updated!: "Session mise à jour!"
+    
   authorization:
     access_denied: Pas autorisé
   search:

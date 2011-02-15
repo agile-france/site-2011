@@ -49,6 +49,14 @@ describe 'sessions' do
     {:put => '/sessions/1'}.should route_to :controller => 'sessions',
     :action => 'update', :id => "1"      
   end
+  
+  describe 'nests rating creation' do
+    # XXX rails do not generate reversible nested resources path
+    it 'should recognize a nested rating POST' do
+      assert_recognizes({:controller => 'ratings', :action => 'create', :awesome_session_id => '1'},
+        {:path => '/sessions/1/ratings', :method => :post})
+    end
+  end  
 end
 
 describe 'account' do

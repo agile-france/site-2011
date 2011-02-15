@@ -48,4 +48,23 @@ describe Session do
       assert {i18n.errors[:capacity].first =~ /dans l'intervalle/}
     end
   end
+  
+  describe "rating" do
+    context "no review" do
+      it "has a default stars score of 0" do
+        assert {session.stars == 0}
+      end
+      it {deny {session.rated?}}
+    end
+    
+    context "with review" do
+      before do
+        session.ratings << Rating.new(:stars => 2)
+      end
+      it {assert {session.rated?}}
+      it "has a stars of 2" do
+        assert {session.stars == 2}
+      end
+    end
+  end
 end

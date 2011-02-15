@@ -84,8 +84,7 @@ describe SessionsController do
       describe 'allows a user to update a session' do
         before do
           @simplicity = Fabricate(:session, :conference => @xp, :user => @john)
-          put :update, {:conference_id => @xp.id, :id => @simplicity.id, 
-            :session => {:title => new_title}}
+          put :update, {:id => @simplicity.id, :session => {:title => new_title}}
         end
 
         it 'should update session' do
@@ -102,8 +101,7 @@ describe SessionsController do
           @aaron = Fabricate(:user, :email => 'aaron@paterson.com')
           @nokogiri = Fabricate(:session, :user => @aaron, :title => 'nokogiri')
           request.env["HTTP_REFERER"] = awesome_session_path(@nokogiri)
-          put :update, {:conference_id => @xp.id, :id => @nokogiri.id,
-             :session => {:title => new_title}}
+          put :update, {:id => @nokogiri.id, :session => {:title => new_title}}
         end
 
         it 'should redirect to session' do
@@ -159,7 +157,7 @@ describe SessionsController do
     describe 'for author' do
       before do
         sign_in(@kent)
-        get :show, :conference_id => @xp.id, :id => @explained.id
+        get :show, :id => @explained.id
       end
 
       it 'has a handy edit link' do
@@ -172,7 +170,7 @@ describe SessionsController do
     describe 'for a reader' do
       before do
         sign_in(@ron)      
-        get :show, :conference_id => @xp.id, :id => @explained.id
+        get :show, :id => @explained.id
       end
     
       it 'has no edit link' do
@@ -184,7 +182,7 @@ describe SessionsController do
     
     describe 'with "en" locale parameter' do
       before do
-        get :show, :conference_id => @xp.id, :id => @explained.id, :locale => :en
+        get :show, :id => @explained.id, :locale => :en
       end
     
       it 'should have a link back to conference with "en" locale parameter' do

@@ -132,4 +132,13 @@ describe User do
       end
     end
   end
+  
+  describe "reviewing feature" do
+    let(:john) {Fabricate(:user)}
+    let(:explained) {Fabricate(:session)}
+    it "john can rate session with 5 stars" do
+      john.rate(explained, :stars => 5)
+      assert {explained.ratings.first.user == john}
+    end
+  end  
 end

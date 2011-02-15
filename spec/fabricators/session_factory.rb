@@ -1,4 +1,4 @@
 Fabricator(:session) do
-  title 'the cat ate your source code'
-  description  '...oh noes !!!'
+  title 'explained'
+  description  'explain and install'
 end

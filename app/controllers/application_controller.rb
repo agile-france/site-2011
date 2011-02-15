@@ -47,15 +47,20 @@ class ApplicationController < ActionController::Base
     edit_account_path
   end
 
-  # rescues
-  # 
-  rescue_from Mongoid::Errors::DocumentNotFound do |error|
-    flash_and_log(:error, error.message)
-    redirect_to root_path
+  # rescues are strange ... https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror
+  # from a testing point a view, dedicated middleware is appealing
+  #
+  [Mongoid::Errors::DocumentNotFound, Cant::AccessDenied].each do |problem|
+    rescue_from(problem) do |error|
+      rescue_with_appropriate_format_for(error)
+    end
   end
-
-  rescue_from Cant::AccessDenied do |error|
+  
+  def rescue_with_appropriate_format_for(error)
     flash_and_log(:error, error.message)
-    redirect_to request.referer
+    respond_to do |format|
+      format.html {redirect_to request.referer}
+      format.js {render 'shared/flash'}
+    end    
   end
 end

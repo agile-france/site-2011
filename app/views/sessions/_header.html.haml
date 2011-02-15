@@ -1,7 +1,8 @@
-%div{:id => "session_#{session.id}"}
+%div{:id => id_for_resource(session)}
   .container_11
     .grid_2
       = avatar_for(session.user)
+      = render 'sessions/rating', :session => session
     .grid_9
       %h3= link_to session.title, awesome_session_path(session)
     .grid_9

@@ -5,7 +5,6 @@ class SessionsController < ApplicationController
   before_filter :authenticate_user!, :except => [:show]
   before_filter :authorize_user!, :only => [:edit, :update, :destroy, :index]
   cant do |action|
-    return false if action == :show
     if action == :index
       not current_user.admin?
     else

@@ -7,6 +7,7 @@ class Session
   
   referenced_in :conference
   referenced_in :user
+  embeds_many :ratings
   
   field :title
   field :description
@@ -24,4 +25,13 @@ class Session
     end
   end
   validates :title, :presence => true, :length => { :maximum => 150 }
+  
+  # Public: fold of stars for all reviews
+  def stars
+    rated?? (self.ratings.reduce(0.0){|stars, r| stars = stars + r.stars}) / self.ratings.size : 0
+  end
+  # Public : has this session been rated ?
+  def rated?
+    not self.ratings.empty?
+  end
 end

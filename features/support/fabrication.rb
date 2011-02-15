@@ -3,8 +3,14 @@ module FabricationHelper
     hash.symbolize_keys
   end
 end
-
 World(FabricationHelper)
+
+module ConferenceHelper
+  def current_conference
+    @current_conference ||= (Conference.first || Fabricate(:conference))
+  end
+end
+World(ConferenceHelper)
 
 Fabrication::Support.find_definitions
 Fabrication::Fabricator.schematics.each_key do |symbol|

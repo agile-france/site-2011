@@ -42,4 +42,19 @@ describe ApplicationController do
       assert {controller.pager_options(Company)[:per_page] == 12}
     end    
   end
+
+  # XXX malfunctionning test : fixture is incomplete and raising (ivars are missing)
+  # it is not straightforward to unit test error handling (a mere function)
+  # 
+  # describe "when authorization fence happens" do
+  #   context "html request" do
+  #     before do
+  #       setup_controller_request_and_response
+  #       controller.send(:rescue_with_appropriate_format_for, Cant::AccessDenied.new('hey'))
+  #     end
+  #     it 'redirect to root_path' do        
+  #       response.should redirect_to(root_path)
+  #     end
+  #   end
+  # end
 end

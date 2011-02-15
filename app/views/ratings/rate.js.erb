@@ -1,0 +1,2 @@
+$("#flash").html("<%= escape_javascript(render 'shared/flash', :flash => flash.discard) %>");
+$("#<%= rating_id_for(@rating.session) %>").replaceWith("<%= escape_javascript(render 'sessions/rating', :session => @rating.session) %>");
