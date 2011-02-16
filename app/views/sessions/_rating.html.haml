@@ -1,8 +1,7 @@
 %div{:id => "#{rating_id_for(session)}"}
   %p.hint
-    -if session.rated?
-      = t('sessions.ratings.count', :count => session.ratings.count)
-      %br
-      = t('sessions.ratings.mean', :stars => session.stars)
-      %br
-      = render 'ratings/stars', :rating => (user_signed_in?? current_user.rate(session) : session.ratings.build)
+    = t('sessions.ratings.count', :count => session.ratings.count)
+    %br
+    = t('sessions.ratings.mean', :stars => session.stars)
+    %br
+    = render 'ratings/stars', :rating => (user_signed_in?? current_user.rate(session) : session.ratings.build)
