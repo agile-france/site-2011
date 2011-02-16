@@ -5,13 +5,13 @@ en:
     bio: Biography
     email: Email    
     company:
-      hint: Company (Search below or %{link})
+      hint: "Company (Search below or %{link})"
       link: Create a new one
     title: My Account
-    gravatar: Update your avatar on [gravatar.com](http://gravatar.com) !
+    gravatar: "Update your avatar on [gravatar.com](http://gravatar.com) !"
     optins:
       sponsors: I authorize sponsors to contact me
-    seppuku?: Destroy my account and informations ?  
+    seppuku?: "Destroy my account and informations ?"
   auth:
     forgot_your_password?: "Forgot your password ?"
     greet: "Hello %{user}"
@@ -20,7 +20,11 @@ en:
     sign_up: "Sign up"
     email: 'Email'
     password: 'Password'
-    remember_me?: "Remember me?"
+    old_school_sign_up: |
+      Else...
+      --------
+      You can %{link} on this app   
+    remember_me?: "Remember me ?"
   authorizations:
     providers: "Or use one of supported providers"        
   common:
@@ -30,12 +34,11 @@ en:
     search: Search
     tags: Tags (comma separated)
     title: Title
+    or: Or
     update: Update
     validate: Validate
-    
   update:
     success: "%{user} updated"
-
   constants:
     sessions:
       levels:
@@ -56,7 +59,6 @@ en:
         talk: Presentation (60 mn)
         keynote: Keynote
         other: Other
-
   sessions:
     level: Level
     age: Age
@@ -68,6 +70,5 @@ en:
     update?: Update session ?
     update:
       success: Session updated!
-
   authorization:
     access_denied: Access Denied

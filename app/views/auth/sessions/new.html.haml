@@ -2,7 +2,7 @@
 
   %div.grid_5
     %h2= t('auth.sign_in')
-    = form_for(resource, :as => resource_name, :url => user_session_path) do |f|
+    = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
       %p.grid_5
         = f.label t('auth.email')
         %br
@@ -23,8 +23,9 @@
 
   %div.grid_6
     %h2= t('authorizations.providers')
-
     - Devise.omniauth_configs.each do |provider, _config|
       = link_to icon_for(provider), user_omniauth_authorize_path(provider)
+    :markdown
+      #{t('auth.old_school_sign_up', :link => link_to(t('auth.sign_up'), new_registration_path(resource_name)))}
 
   %div.clear

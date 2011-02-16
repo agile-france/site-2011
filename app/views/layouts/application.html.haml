@@ -34,8 +34,6 @@
               |
               %span= link_to t('admin'), '/admin'
           - else
-            %span#sign_up= link_to t('auth.sign_up'), new_user_registration_path
-            |
             %span#sign_in= link_to t('auth.sign_in'), new_user_session_path
 
         #mojo
@@ -65,8 +63,6 @@
         #content_container= yield
         
         = render 'debug/show' if Rails.env.development?
-
-      #push
 
     #footer
       #footer_container

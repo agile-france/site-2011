@@ -16,17 +16,21 @@ fr:
       title: Mes Sessions   
     updated!: "Votre compte a été mis à jour !"
   auth:
+    accept_authentication?: "Rentrez votre mot de passe pour accepter cette authentification"
+    email: Email
     forgot_your_password?: "Mot de passe oublié ?"
     greet: "Bonjour %{user}"
+    old_school_sign_up: |
+      Sinon...
+      --------
+      Vous pouvez simplement %{link} sur cette app
+    passwords:
+      hint: Le mot de passe doit faire entre 6 et 20 caractères
     sign_in: Se connecter
     sign_out: Se déconnecter
     sign_up: Ouvrir un compte
-    email: Email
     password: Mot de passe
-    passwords:
-      hint: Le mot de passe doit faire entre 6 et 20 caractères
     remember_me?: "Se souvenir de moi ?"
-    accept_authentication?: "Rentrez votre mot de passe pour accepter cette authentification"
   authorizations:
     providers: Ou utiliser un des services suivants
   common:
@@ -36,6 +40,7 @@ fr:
     delete: Supprimer
     tags: Tags (séparés par une virgule)
     title: Titre
+    or: Ou
     update: Modifier
     validate: Valider
   company:
