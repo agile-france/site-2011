@@ -131,6 +131,38 @@ body
         #download>img
           vertical-align: middle
 
+        .buttons
+          height: 34px
+          margin-bottom: 15px
+
+          a
+            display: block
+            width: 210px
+            padding: 7px
+            text-align: center
+            background: #E1E1E1 repeat scroll 0 0 transparent // for non-css3 browsers
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E1E1E1') // for IE
+            background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E1E1E1)) repeat scroll 0 0 transparent // for webkit browsers
+            background: -moz-linear-gradient(top,  #FFFFFF,  #E1E1E1) repeat scroll 0 0 transparent // for firefox 3.6+
+            -webkit-border-radius: 5px
+            -moz-border-radius: 5px
+            border-radius: 5px
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
+            cursor: pointer
+            text-decoration: none
+            font-weight: bold
+            text-shadow: 1px 1px 0 #FFFFFF
+
+          a:hover
+            text-shadow: -1px -1px 0 #000000
+            color: #FFFFFF
+            background: #A4B5CB repeat scroll 0 0 transparent // for non-css3 browsers
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96') // for IE
+            background: -webkit-gradient(linear, left top, left bottom, from(#A4B5CB), to(#2F5C96)) repeat scroll 0 0 transparent // for webkit browsers
+            background: -moz-linear-gradient(top,  #A4B5CB,  #2F5C96) repeat scroll 0 0 transparent // for firefox 3.6+
+
 #push
   height: $footersize
 

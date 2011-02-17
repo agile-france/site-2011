@@ -55,6 +55,7 @@ body {
         padding: 1px 20px;
         background-color: white;
         padding: 20px 0 1px 20px;
+        font-family: "DejaVuSansCondensed", Arial, sans-serif;
         font-size: 32px;
         background-image: url("/images/portejaune.jpeg");
         background-position: top right;
@@ -105,6 +106,35 @@ body {
           text-decoration: none; }
         body #content_wrapper #content #content_container #download > img {
           vertical-align: middle; }
+        body #content_wrapper #content #content_container .buttons {
+          height: 34px;
+          margin-bottom: 15px; }
+          body #content_wrapper #content #content_container .buttons a {
+            display: block;
+            width: 210px;
+            padding: 7px;
+            text-align: center;
+            background: #e1e1e1 repeat scroll 0 0 transparent;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E1E1E1');
+            background: -webkit-gradient(linear, left top, left bottom, from(white), to(#e1e1e1)) repeat scroll 0 0 transparent;
+            background: -moz-linear-gradient(top, white, #e1e1e1) repeat scroll 0 0 transparent;
+            -webkit-border-radius: 5px;
+            -moz-border-radius: 5px;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: bold;
+            text-shadow: 1px 1px 0 white; }
+          body #content_wrapper #content #content_container .buttons a:hover {
+            text-shadow: -1px -1px 0 black;
+            color: white;
+            background: #a4b5cb repeat scroll 0 0 transparent;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96');
+            background: -webkit-gradient(linear, left top, left bottom, from(#a4b5cb), to(#2f5c96)) repeat scroll 0 0 transparent;
+            background: -moz-linear-gradient(top, #a4b5cb, #2f5c96) repeat scroll 0 0 transparent; }
 
 #push {
   height: 10em; }
