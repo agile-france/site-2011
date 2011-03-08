@@ -1,0 +1,20 @@
+%h1= t('.title')
+-if @orders.empty?
+  %p= t('.closed')
+-else
+  =form_tag(conference_registrations_path(@conference)) do
+    -@orders.each do |order|
+      =render "shared/error_messages", :resource => order
+      %h3= i18n_text_for(order.product, :ref)
+      %p  
+        = hidden_field_tag "orders[][product_id]", order.product.id
+        = hidden_field_tag "orders[][price]", order.price
+        = hidden_field_tag "orders[][quantity]", 1
+        = hidden_field_tag "orders[][ref]", order.ref
+        = check_box_tag "orders[][checked]", true
+        = label_tag :offer, i18n_text_for(order, :ref)
+        \:
+        = number_to_currency(order.price, :locale => :fr)
+        %br
+        %span{:class => 'hint'}= t('registrations.remaining', :count => order.remaining_quantity)
+    =submit_tag t('common.validate')

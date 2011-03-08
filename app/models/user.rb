@@ -17,6 +17,7 @@ class User
   # associations
   references_many :authentications, :dependent => :destroy
   references_many :sessions, :dependent => :destroy
+  references_many :orders, :dependant => :destroy
   referenced_in :company
   
   # white list of accessible attributes
@@ -108,6 +109,19 @@ class User
         session.ratings << rating
         rating.user = self
       end
+  end
+  
+  def buy(quantity, product, price, ref=nil)
+    call(quantity, product, price, ref, Order::Side::BID)
+  end
+  
+  def sell(quantity, product, price, ref=nil)
+    call(quantity, product, price, ref, Order::Side::ASK)    
+  end
+  
+  private
+  def call(quantity, product, price, ref, side)
+    Order.new(:user => self, :product => product, :price => price, :quantity => quantity, :ref => ref, :side => side)
   end
 
   # querying helpers

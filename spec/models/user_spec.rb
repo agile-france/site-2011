@@ -140,5 +140,28 @@ describe User do
       john.rate(explained, :stars => 5)
       assert {explained.ratings.first.user == john}
     end
-  end  
+  end
+  
+  describe "buy/sell" do
+    let(:product) {Fabricate.build(:product)}
+    let(:john) {Fabricate.build(:user)}
+    it "buy builds a BID order with self as user" do
+      buy = john.buy(10, product, 220)
+      assert {buy.side == Order::Side::BID}
+      assert {buy.product == product}
+      assert {buy.quantity == 10}
+      assert {buy.price == 220}
+      assert {buy.user == john}
+      assert {buy.new_record?}
+    end
+    it "sell builds a ASK order with self as user" do
+      sell = john.sell(10, product, 0)
+      assert {sell.side == Order::Side::ASK}
+      assert {sell.product == product}
+      assert {sell.quantity == 10}
+      assert {sell.price == 0}
+      assert {sell.user == john}
+      assert {sell.new_record?}
+    end
+  end
 end

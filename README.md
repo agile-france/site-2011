@@ -34,9 +34,9 @@ mongo shell
 
 resources are on mongodb site
 
-* [shell?] (http://www.mongodb.org/display/DOCS/dbshell+Reference)
-* [query?] (http://www.mongodb.org/display/DOCS/Advanced+Queries)
-* [upsert?] (http://www.mongodb.org/display/DOCS/Updating)
+* [shell?](http://www.mongodb.org/display/DOCS/dbshell+Reference)
+* [query?](http://www.mongodb.org/display/DOCS/Advanced+Queries)
+* [upsert?](http://www.mongodb.org/display/DOCS/Updating)
 
 recipe : admin role 
 -------------------

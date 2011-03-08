@@ -34,12 +34,19 @@ en:
     search: Search
     tags: Tags (comma separated)
     title: Title
-    or: Or
     update: Update
     validate: Validate
   update:
     success: "%{user} updated"
   constants:
+    offers:
+      refs:
+        early: "Early Bird Fee"
+        regular: "Regular Fee"
+    products:
+      refs:
+        diner: "Place for dinner, 26 mai"
+        place: "Place for Conference"    
     sessions:
       levels:
         all: All
@@ -59,6 +66,16 @@ en:
         talk: Presentation (60 mn)
         keynote: Keynote
         other: Other
+  registrations:
+    errors:
+      highlander: "You are already registered to conference"    
+    new?: "Register now"
+    new!: "Registration completed"  
+    new:
+      remaining:
+        one: "There is one place left"
+        other: "There are %{count} places left"      
+      title: "Personal Registration"      
   sessions:
     level: Level
     age: Age

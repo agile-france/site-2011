@@ -36,7 +36,7 @@ fr:
       send_instructions: "Vous allez recevoir un email avec des instructions pour confimer votre compte."
       confirmed: "Votre compte a été confirmé. Vous êtes maintenant connecté."
     registrations: &registrations
-      signed_up: "Votre inscription est enregistrée."
+      signed_up: "Bienvenue! Votre compte est enregistré."
       updated: "Votre mise à jour est prise en compte."
       destroyed: "Bye! Votre compte est annulé. Nous souhaitons vous revoir bientôt."
     unlocks:

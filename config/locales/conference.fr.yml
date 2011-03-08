@@ -40,7 +40,6 @@ fr:
     delete: Supprimer
     tags: Tags (séparés par une virgule)
     title: Titre
-    or: Ou
     update: Modifier
     validate: Valider
   company:
@@ -49,6 +48,15 @@ fr:
     created!: "%{user}, vous faites maintenant parti de %{company}"
     updated!: "Votre société a été mise à jour"
   constants:
+    orders:
+      refs:
+        AGF11E: "Tarif Early"
+        AGF11S: "Tarif Normal"
+        AGF11D: "Tarif Normal"
+    products:
+      refs:
+        place: "Place Pour la Conférence"
+        diner: "Place Pour le Diner du 26 mai"
     sessions:
       levels:
         all: Tous niveaux
@@ -83,6 +91,25 @@ fr:
     syntax: Markdown
   roles:
     animator: Animateur
+  registrations:
+    errors:
+      highlander: "Vous êtes déjà inscrit à la conférence"
+    new?: "S'inscrire maintenant"
+    new!: "Votre inscription est enregistrée"
+    new:
+      closed: Les inscriptions sont fermées
+      remaining:
+        one: Il reste une place à ce tarif
+        other: "Il reste %{count} places à ce tarif"
+      title: Inscription Personnelle 
+    remaining:
+      one: Il reste une place à ce tarif
+      other: "Il reste %{count} places à ce tarif"        
+    rates:
+      available: "Places Disponibles"
+      price: "Prix"
+      rate: "Tarif"
+      title: "Tarifs et places disponibles"
   sessions:
     age: Age
     capacity: Capacité (nombre max de participants)
@@ -106,7 +133,6 @@ fr:
     title: Toutes les Sessions
     update?: "Modifier une session ?"
     updated!: "Session mise à jour!"
-    
   authorization:
     access_denied: Pas autorisé
   search:

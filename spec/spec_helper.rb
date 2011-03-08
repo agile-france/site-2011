@@ -46,9 +46,8 @@ end
 Spork.each_run do
   ### issues are
   # http://github.com/rspec/rspec-core/issues/62
-  # http://github.com/thoughtbot/factory_girl/issues/55
   # 
-  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }   
+  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
 end
 
 # --- Instructions ---

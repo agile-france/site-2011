@@ -17,6 +17,14 @@ describe 'conferences' do
         {:path => '/conferences/1/sessions', :method => :post})
     end
   end
+  
+  describe 'nests registration creation' do
+    # XXX rails do not generate reversible nested resources path
+    it 'should recognize a nested registration POST' do
+      assert_recognizes({:controller => 'registrations', :action => 'create', :conference_id => '1'},
+        {:path => '/conferences/1/registrations', :method => :post})
+    end
+  end
 end
 
 describe "admin section" do
