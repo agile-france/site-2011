@@ -3,13 +3,15 @@ class RegistrationsController < ApplicationController
   before_filter :authenticate_user!
   
   def new
-    matcher = Matcher.new
-    @orders = current_conference.best_offers.map{|o| matcher.opposite(o)}
+    @orders = current_conference.best_offers.map{|o| Order.opposite(o)}
   end
   
   def create
     orders = params[:orders].select{|o| o[:checked]}.map do |o|
-      Order.create(o.delete_if{|k,_v| k.to_sym == :checked}.merge(:user => current_user))
+      Order.new(o.delete_if{|k,_v| k.to_sym == :checked}.merge(:user => current_user))
+    end
+    orders.each do |o|
+      Book[o.product].accept(o).each(&:save)
     end
     redirect_to current_conference, :notice => t('registrations.new!')
   end

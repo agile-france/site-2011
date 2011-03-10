@@ -10,5 +10,11 @@ Feature: Register to conference
         |early  |100      |220    |
     When I go to "/conferences/xp-2033/registrations/new"
     Then I should see /reste 100 places/
+    When I check "orders_place_checked"
+      And I press "Valider"
+    Then I should be on "/conferences/xp-2033"
+      And I should see /inscription(.+)enregistrée/
+    When I go to "/conferences/xp-2033/registrations/new"
+    Then I should see /reste 99 places/
     
     

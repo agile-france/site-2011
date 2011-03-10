@@ -3,6 +3,7 @@ require 'spec_helper'
 describe Order do
   it {should be_referenced_in(:user)}
   it {should be_referenced_in(:product)}
+  it {should reference_many(:executions)}
   
   it {should have_field(:side).with_default_value_of('B')}
   it {should validate_inclusion_of(:side).to_allow('B', 'A')}
@@ -16,12 +17,63 @@ describe Order do
   it {should have_field(:ref)}
   # XXX validates length of ref in 0..20
   
-  describe "remaining quantity" do
+  it {should have_field(:status)}
+  it {should validate_inclusion_of(:status).to_allow('A', 'P', 'F', 'C')}
+  
+  describe "executed|remaining quantities" do
+    let(:o) {Order.new(:quantity => 100)}
     context "no execution" do
       it "is the quantity" do
-        o = Order.new(:quantity => 100)
-        assert {o.remaining_quantity == 100}
+        assert {o.remaining == 100}
+        assert {o.executed == 0}
       end      
+    end
+    context "with executions" do
+      before do
+        2.times {o.executions.build(:quantity => 1)}
+      end
+      it "is the quantity minus sum of executed quantity" do
+        assert {o.executed == 2}
+        assert {o.remaining == 98}
+      end
+    end
+  end
+  
+  describe ".opposite" do
+    it "returns a BID order for an ASK order" do
+      opposite = Order.opposite(Order.new(:side => Order::Side::BID))
+      assert {opposite.side == Order::Side::ASK}
+    end
+  end
+  
+  describe "matches?" do
+    let!(:bid) {Fabricate.build(:bid, :price => 10)}
+    let!(:match) {Fabricate.build(:ask, :price => 10)}
+    let!(:nomatch) {Fabricate.build(:ask, :price => 100)}
+    it {deny {bid.matches?(bid)}}
+    it {deny {bid.matches?(nomatch)}}
+    it {deny {nomatch.matches?(bid)}}
+    it {assert {match.matches?(bid)}}
+    it {assert {bid.matches?(match)}}
+  end
+  
+  describe "fill" do
+    let(:bid) {Fabricate.build(:bid, :price => 300, :quantity => 10)}
+    before do
+      bid.fill!(3, 200)
+    end      
+    it "builds an execution for this order, at given price and quantity" do
+      assert {bid.executions.size == 1}
+      e = bid.executions.first
+      assert {e.quantity == 3}
+      assert {e.price == 200}
+    end
+    it "flags order as partially_executed" do
+      assert {bid.partially_filled?}
+    end
+    it "can be further filled completely" do
+      bid.fill!(bid.quantity, 200)
+      assert {bid.filled?}
     end
   end
 end

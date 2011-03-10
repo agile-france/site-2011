@@ -31,6 +31,9 @@ gem 'cant'
 # json
 gem 'yajl-ruby', :require => 'yajl'
 
+# rbtree
+gem 'rbtree'
+
 group :development, :test do
   gem "rspec-rails", ">= 2.1.0"
 

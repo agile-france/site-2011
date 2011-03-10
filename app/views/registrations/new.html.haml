@@ -11,10 +11,10 @@
         = hidden_field_tag "orders[][price]", order.price
         = hidden_field_tag "orders[][quantity]", 1
         = hidden_field_tag "orders[][ref]", order.ref
-        = check_box_tag "orders[][checked]", true
+        = check_box_tag "orders[][checked]", true, false, :id => "orders_#{order.product.ref}_checked"
         = label_tag :offer, i18n_text_for(order, :ref)
         \:
         = number_to_currency(order.price, :locale => :fr)
         %br
-        %span{:class => 'hint'}= t('registrations.remaining', :count => order.remaining_quantity)
+        %span{:class => 'hint'}= t('registrations.remaining', :count => order.remaining)
     =submit_tag t('common.validate')
