@@ -24,6 +24,7 @@ Spork.prefork do
 
 
   RSpec.configure do |config|
+    config.extend ScopedDatabaseAccess
     # == Mock Framework
     #
     # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -37,7 +38,7 @@ Spork.prefork do
     ## and http://github.com/bmabey/database_cleaner
     require 'database_cleaner'
     DatabaseCleaner.strategy = :truncation
-    config.before(:each) do
+    config.before(:suite) do
       DatabaseCleaner.clean
     end
   end  

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Session do  
-  let(:session) {Fabricate(:session, :tags_array => %w(courage respect))}
+  touch_db_with(:session) {Fabricate(:session, :tags_array => %w(courage respect))}
 
   it 'can hold an array of tag' do
     assert {session.tags_array.include?('courage')}
@@ -16,9 +16,9 @@ describe Session do
   end
   
   it {should have_fields(:created_at, :updated_at).of_type(Time)}
+  it {should have_fields(:level, :age, :format)}
   
   describe "choices" do
-    it {should have_fields(:level, :age, :format)}
   end
   
   describe "capacity" do

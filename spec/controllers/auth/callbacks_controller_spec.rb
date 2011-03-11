@@ -32,9 +32,9 @@ describe Auth::CallbacksController do
       end
     end
     context "with an authorized user, old data" do
+      touch_db_with(:user) {Fabricate(:user)}
       before do
-        u = Fabricate(:user)
-        auth = u.authentications.create!(Authentications::Twitter.data.merge({'user_info' => {'image' => 'oops'}}))
+        auth = user.authentications.create!(Authentications::Twitter.data.merge({'user_info' => {'image' => 'oops'}}))
         get :twitter
       end
       it 'redirects to default user path' do
@@ -65,8 +65,8 @@ describe Auth::CallbacksController do
       end
     end
     context "user with same email as in authentication data exists" do
+      touch_db_with(:user) {User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))}
       before do
-        @user = User.create!({:password => 'sha-1024'}.merge(Authentications::Github.data['user_info']))
         get :github
       end
       it 'redirects to default user path' do

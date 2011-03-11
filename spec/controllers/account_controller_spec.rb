@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe AccountController do
   context 'with a sign in user' do
-    let(:user) {Fabricate(:user)}
+    touch_db_with(:user) {Fabricate(:user)}
     before do
       sign_in user
     end
@@ -44,18 +44,17 @@ describe AccountController do
       end
     end
     
-    describe "GET /account/sessions" do
-      let(:xp) {Fabricate(:conference)}
-      let(:awesome) {Fabricate(:session, :title => 'awesome')}
-      before do
-        user.propose(awesome, xp)
-        get :sessions
-      end
-      it "enable user to see sessions he has submitted" do
-        sessions = assigns(:sessions)
-        assert {sessions.include? awesome}
-      end
-    end
+    # describe "GET /account/sessions" do
+    #   touch_db_with(:xp) {Fabricate(:conference)}
+    #   touch_db_with(:awesome) {Fabricate(:session, :title => 'awesome')}
+    #   before do
+    #     user.propose(awesome, xp)
+    #   end
+    #   it "enable user to see sessions he has submitted" do
+    #     get :sessions
+    #     assert {assigns(:sessions).include? awesome}
+    #   end
+    # end
   end
   
   context 'with no user signed in' do

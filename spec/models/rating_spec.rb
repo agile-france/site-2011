@@ -10,8 +10,8 @@ describe Rating do
   end
   
   describe "build" do
-    let(:john) {Fabricate(:user)}
-    let(:explained) {Fabricate(:session)}
+    let(:john) {Fabricate.build(:user)}
+    let(:explained) {Fabricate.build(:session)}
     it "built with a user has no effect (XXX)" do
       rating = Rating.new(:stars => 5, :user => john)
       deny {rating.user == john}

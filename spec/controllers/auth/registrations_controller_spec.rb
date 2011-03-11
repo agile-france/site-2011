@@ -29,14 +29,15 @@ describe Auth::RegistrationsController do
   end
 
   describe "POST /users" do
-    def joe
-      User.identified_by_email('no@name.org')
-    end
-    
     describe "with optins" do
+      before {post :create, :user => {:email => 'no@name.org', :password => 'secret', :password_confirmation => 'secret'}, :optins => {:sponsors => 'accept'}}
+      def joe; User.identified_by_email 'no@name.org'; end
+      after {joe.destroy}      
+      
       it "saves optins" do
         post :create, :user => {:email => 'no@name.org', :password => 'secret', :password_confirmation => 'secret'}, :optins => {:sponsors => 'accept'}
-        assert {joe.optin?(:sponsors)}
+        nameless = User.identified_by_email('no@name.org')
+        assert {nameless.optin?(:sponsors)}
       end
     end
     
@@ -45,9 +46,10 @@ describe Auth::RegistrationsController do
         session[:auth] = Authentications::Twitter.data
       end
       context "email is free" do
-        before do
-          post :create, :user => {:email => 'no@name.org'}
-        end
+        before {post :create, :user => {:email => 'no@name.org'}}
+        def joe; User.identified_by_email 'no@name.org'; end
+        after {joe.destroy}
+        
         it "should redirect to user root path" do
           response.should redirect_to edit_account_path
         end
@@ -67,7 +69,7 @@ describe Auth::RegistrationsController do
       end
       
       context "email is in use" do
-        let(:doe) {Fabricate :user}
+        touch_db_with(:doe) {Fabricate :user}
         before do
           post :create, :user => {:email => doe.email, :first_name => ''}
         end

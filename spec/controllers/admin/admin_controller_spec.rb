@@ -11,12 +11,12 @@ describe Admin::AdminController do
   end
   
   context "when signed in as a user" do
+    touch_db_with(:user) {Fabricate(:user)}
     before do
-      user = Fabricate(:user)
       sign_in(user)
+      get :show
     end
     it 'redirects to conferences_path' do
-      get :show
       response.should redirect_to(root_path)
     end
   end

@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe RatingsController do
   context "john signed in" do
-    let(:john) {Fabricate(:user)}
-    let(:mark) {Fabricate(:user, :email => 'mark@mail.com')}
-    let(:explained) {Fabricate(:session, :user => mark)}
+    touch_db_with(:john) {Fabricate(:user)}
+    touch_db_with(:mark) {Fabricate(:user, :email => 'mark@mail.com')}
+    touch_db_with(:explained) {Fabricate(:session, :user => mark)}
     before do
       sign_in(john)
     end
@@ -39,8 +39,8 @@ describe RatingsController do
   end
   
   describe "authorization" do
-    let(:john) {Fabricate(:user)} 
-    let(:own) {Fabricate(:session, :title => 'own session', :user => john)}
+    touch_db_with(:john) {Fabricate(:user)} 
+    touch_db_with(:own) {Fabricate(:session, :title => 'own session', :user => john)}
     before do
       sign_in(john)
     end 

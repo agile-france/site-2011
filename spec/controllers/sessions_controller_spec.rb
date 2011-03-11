@@ -2,32 +2,28 @@
 require 'spec_helper'
 
 describe SessionsController do
-  before do
-    @xp = Fabricate(:conference, :id => id(1234))
-  end
-
+  touch_db_with(:xp) {Fabricate(:conference)}
+  touch_db_with(:john) {Fabricate(:user)}
+  
   describe 'with a signed in user' do
     before do
-      @john = Fabricate(:user)
-      sign_in @john
+      sign_in john
     end
 
     describe "GET /conferences/:conference_id/sessions/new" do
       render_views
+      touch_db_with(:courage) {Fabricate(:session)}
       
       before do
-        @courage = Fabricate.build(:session)
-        stub(::Session).new { @courage }
-        get :new, {:conference_id => @xp.to_param}
+        get :new, {:conference_id => xp.to_param}
       end
       
       it 'new_conference_session_path should be /conferences/:conference_id/sessions/new' do
-        assert {new_conference_session_path(@xp) == "/conferences/#{@xp.id}/sessions/new"}
+        assert {new_conference_session_path(xp) == "/conferences/#{@xp.id}/sessions/new"}
       end
       
       it "should be successful" do
-        get :new, {:conference_id => @xp.id}
-        assigns(:session).should == @courage
+        get :new, {:conference_id => xp.id}
         response.should be_success
       end
       
@@ -38,27 +34,24 @@ describe SessionsController do
 
     describe "POST /conferences/:id/sessions" do
       context "successful" do
+        # XXX integration POST testing of multiple behaviors
         before do
           @params = {:title => 'courage', :description => 'and respect'}
           post :create, :conference_id => @xp.id, :session => @params.merge(:tags => 'courage, respect')
         end
 
-        it 'should wire session to user and conference' do
+        it 'should redirect to session_path, wire session to user and conference, flash' do
           # XXX
           # at least, failed to spec it with mocks using rr+rspec+devise :)
           # devise current_user is not available in this spec ...
           session = ::Session.where(@params).first
           session.should_not be_nil
-          session.conference.should == @xp
-          session.user.should == @john
+          session.conference.should == xp
+          session.user.should == john
           assert {session.tags_array.include? 'courage'}
-        end
 
-        it "should redirect to session_path" do
-          response.should redirect_to(@xp)
-        end
+          response.should redirect_to(xp)
 
-        it "should flash success" do
           flash[:notice].should =~ /créée!/
         end        
       end
@@ -66,7 +59,7 @@ describe SessionsController do
       context "validation fails" do
         before do
           @params = {:title => 'courage', :description => 'and respect', :capacity => '123'}
-          post :create, :conference_id => @xp.id, :session => @params
+          post :create, :conference_id => xp.id, :session => @params
           s = @controller.send(:current_session)
           deny {s.valid?}          
         end
@@ -82,46 +75,40 @@ describe SessionsController do
       end
 
       describe 'allows a user to update a session' do
+        touch_db_with(:simplicity) {Fabricate(:session, :conference => xp, :user => john)}
         before do
-          @simplicity = Fabricate(:session, :conference => @xp, :user => @john)
-          put :update, {:id => @simplicity.id, :session => {:title => new_title}}
+          put :update, {:id => simplicity.id, :session => {:title => new_title}}
         end
 
-        it 'should update session' do
-          @simplicity.reload.title.should == new_title
-        end
-
-        it 'should redirect to session' do
+        it 'redirect to session, should update session' do
+          simplicity.reload.title.should == new_title
           response.should redirect_to(awesome_session_path(@simplicity))
         end
       end
 
       describe 'does not authorize a user to modify other sessions' do
+        touch_db_with(:aaron) {Fabricate(:user, :email => 'aaron@paterson.com')}
+        touch_db_with(:nokogiri) {Fabricate(:session, :user => @aaron, :title => 'nokogiri')}
+                
         before do
-          @aaron = Fabricate(:user, :email => 'aaron@paterson.com')
-          @nokogiri = Fabricate(:session, :user => @aaron, :title => 'nokogiri')
-          request.env["HTTP_REFERER"] = awesome_session_path(@nokogiri)
-          put :update, {:id => @nokogiri.id, :session => {:title => new_title}}
+          request.env["HTTP_REFERER"] = awesome_session_path(nokogiri)
+          put :update, {:id => nokogiri.id, :session => {:title => new_title}}
         end
 
-        it 'should redirect to session' do
-          response.should redirect_to(awesome_session_path(@nokogiri))
-        end
-
-        it 'should flash error' do
+        it 'should redirect to session with flash' do
+          response.should redirect_to(awesome_session_path(nokogiri))
           flash[:error].should =~ /Pas autorisé/
         end
       end
       
       describe 'DELETE' do
+        touch_db_with(:simplicity) {Fabricate(:session, :conference => xp, :user => john)}
+        
         before do
-          @simplicity = Fabricate(:session, :conference => @xp, :user => @john)
-          delete :destroy, :id => @simplicity.id
+          delete :destroy, :id => simplicity.id
         end
-        it 'redirects to account sessions' do
+        it 'redirects to account sessions, and destroys aforementioned session' do
           response.should redirect_to(sessions_account_path)
-        end
-        it 'destroy aforementioned session' do
           assert {::Session.criteria.id(@simplicity.id).empty?}
         end
       end
@@ -131,7 +118,7 @@ describe SessionsController do
   describe 'with a signed off user' do
     describe "GET /conferences/:conference_id/sessions/new" do
       before do
-        get :new, {:conference_id => @xp.id}
+        get :new, {:conference_id => xp.id}
       end
       it "should redirect user to sign_in url" do
         response.should redirect_to new_user_session_path
@@ -147,12 +134,9 @@ describe SessionsController do
   describe 'GET /sessions/4' do
     render_views
     
-    before do
-      @kent = Fabricate(:user, :email => "kent@beck.org")
-      @ron = Fabricate(:user, :email => "ron@jeffries.org")
-      @xp = Fabricate(:conference, :name => 'xp')
-      @explained = Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => id(4))
-    end
+    touch_db_with(:kent) {Fabricate(:user, :email => "kent@beck.org")}
+    touch_db_with(:ron) {Fabricate(:user, :email => "ron@jeffries.org")}
+    touch_db_with(:explained) {Fabricate(:session, :title => 'explained', :conference => @xp, :user => @kent, :id => id(4))}
 
     describe 'for author' do
       before do

@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ApplicationController do
-  let(:xp) {Fabricate(:conference, :id => id(12))}
+  touch_db_with(:xp) {Fabricate(:conference)}
   
   describe 'default url options' do
     it 'are default empty' do

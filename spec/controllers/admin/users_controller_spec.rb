@@ -2,18 +2,15 @@ require 'spec_helper'
 
 describe Admin::UsersController do
 
-  before(:all) do
-    (0..9).each { |i| 
-      Fabricate(:user, :email => "email-#{i}@noreply.com", :password => 'awesome cooking')
-    }
+  (0..9).each do |i|
+    touch_db_with("user_#{i}".to_sym) {Fabricate(:user, :email => "email-#{i}@noreply.com", :password => 'awesome cooking')}
   end
 
   context 'admin is logged in' do
-    let(:user) {Fabricate(:user, :email => 'donotforget@thedonuts.com')}
+    touch_db_with(:admin) {Fabricate(:user, :admin => true)}
     before do
-      sign_in(Fabricate(:user, :admin => true))
+      sign_in(admin)
     end
-
     describe "GET users" do
       it 'should propose list of users' do
         get :index
@@ -40,16 +37,16 @@ describe Admin::UsersController do
 
     describe "GET 'edit'" do
       it "should be successful" do
-        get :edit, :id => user.id
+        get :edit, :id => admin.id
         response.should be_success
       end
     end
 
     describe "GET 'update'" do
       it "update admin flag" do
-        put :update, :id => user.id, :user => {:admin => true}
+        put :update, :id => admin.id, :user => {:admin => false}
         response.should redirect_to(admin_users_path)
-        assert {user.reload.admin?}
+        deny {admin.reload.admin?}
       end
     end
   end
@@ -58,10 +55,14 @@ describe Admin::UsersController do
     get :index
     response.should redirect_to new_user_session_path
   end
-  it 'redirect regular user to root_path' do
-    joe = Fabricate(:user)
-    sign_in(joe)
-    get :index
-    response.should redirect_to root_path
+  context "user is signed in" do
+    touch_db_with(:joe) {Fabricate(:user)}
+    before do
+      sign_in(joe)
+    end
+    it 'redirect regular user to root_path' do
+      get :index
+      response.should redirect_to root_path
+    end
   end
 end

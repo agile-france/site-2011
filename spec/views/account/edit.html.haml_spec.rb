@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe "account/edit.html.haml" do
+  let!(:user) {Fabricate.build(:user, :email => 'test@example.com')}
   before do
-    @user = Fabricate(:user, :email => 'test@example.com')
-    assign(:user, @user)
+    assign(:user, user)
     render
   end
   

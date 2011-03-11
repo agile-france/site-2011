@@ -9,7 +9,7 @@ describe Auth::SessionsController do
     
   describe "#destroy" do
     context "user has an activated authentication" do
-      let(:user) {Fabricate :user}
+      touch_db_with(:user) {Fabricate :user}
       before do
         user.authentications.create(:activated => true)
         sign_in(user)
@@ -40,7 +40,7 @@ describe Auth::SessionsController do
   
   describe "#create" do
     context "session carry twitter authentication data and email" do
-      let(:joe) {Fabricate :user}
+      touch_db_with(:joe) {Fabricate :user}
       before do
         session['auth'] = Authentications::Twitter.data.merge('email' => 'p@ni.ni')
         post :create, :user => {:email => joe.email, :password => joe.password}

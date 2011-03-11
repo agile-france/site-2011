@@ -4,10 +4,7 @@ require 'spec_helper'
 describe ConferencesController do
   describe "GET 'show'" do
     describe 'with existing conference params' do
-      before do
-        @deep = Fabricate(:conference, :name => 'deep', :edition => '2011')
-      end
-
+      touch_db_with(:deep) {Fabricate(:conference, :name => 'deep', :edition => '2011')}
       it "should be successful for an existing conference" do
         get :show, {:id => @deep.id}
         response.should be_success
@@ -33,7 +30,7 @@ describe ConferencesController do
     it 'should show available conferences' do
       conferences = (2030..2032).map {|edition| Fabricate(:conference, :name => 'deep', :edition => edition)}
       get :index
-      assigns(:conferences).should == conferences
+      assert {assigns(:conferences) == conferences}
       response.should be_success
     end
   end
