@@ -1,7 +1,7 @@
 =render 'toolbar'
 
 #orders
-  -@executions_by_conference.each do |conference, executions|
+  -@executions_grouped_by_conference.each do |conference, executions|
     %h3
       = introduce(conference)
     %ul

@@ -5,11 +5,7 @@ class AccountController < ApplicationController
   end
   
   def registrations
-    executions = current_user.executions.desc(:created_at)
-    @executions_by_conference = executions.reduce({}) do |acc, e|
-      (acc[e.product.conference] ||= []) << e
-      acc
-    end
+    @executions_grouped_by_conference = current_user.executions.desc(:created_at).group_by {|e| e.product.conference}
   end
   
   def sessions
