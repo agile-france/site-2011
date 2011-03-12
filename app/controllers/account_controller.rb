@@ -4,6 +4,14 @@ class AccountController < ApplicationController
   def edit
   end
   
+  def registrations
+    orders = current_user.orders.desc(:created_at)
+    @orders_by_conference = orders.reduce({}) do |acc, o|
+      (acc[o.product.conference] ||= []) << o
+      acc
+    end
+  end
+  
   def sessions
     @sessions = current_user.sessions.desc(:created_at).paginate(pager_options)
   end

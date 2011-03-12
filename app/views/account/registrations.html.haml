@@ -1,0 +1,10 @@
+=render 'toolbar'
+
+#orders
+  -@orders_by_conference.each do |conference, orders|
+    %h3
+      = introduce(conference)
+    %ul
+      - orders.each do |order|
+        %li.order{:id => "order_#{order.id}"}
+          = render 'orders/order', :order => order

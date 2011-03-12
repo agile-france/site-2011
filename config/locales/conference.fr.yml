@@ -12,6 +12,8 @@ fr:
     optins:
       sponsors: J'autorise les sponsors de la conférence à me contacter
     seppuku?: "Supprimer mon compte et mes informations ?"
+    registrations:
+      title: Mes Inscriptions
     sessions:
       title: Mes Sessions   
     updated!: "Votre compte a été mis à jour !"

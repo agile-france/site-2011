@@ -11,7 +11,11 @@ en:
     gravatar: "Update your avatar on [gravatar.com](http://gravatar.com) !"
     optins:
       sponsors: I authorize sponsors to contact me
+    registrations:
+      title: Mes Inscriptions    
     seppuku?: "Destroy my account and informations ?"
+    sessions:
+      title: My Sessions    
   auth:
     forgot_your_password?: "Forgot your password ?"
     greet: "Hello %{user}"
