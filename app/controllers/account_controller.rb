@@ -5,9 +5,9 @@ class AccountController < ApplicationController
   end
   
   def registrations
-    orders = current_user.orders.desc(:created_at)
-    @orders_by_conference = orders.reduce({}) do |acc, o|
-      (acc[o.product.conference] ||= []) << o
+    executions = current_user.executions.desc(:created_at)
+    @executions_by_conference = executions.reduce({}) do |acc, e|
+      (acc[e.product.conference] ||= []) << e
       acc
     end
   end

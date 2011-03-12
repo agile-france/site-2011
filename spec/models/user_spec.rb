@@ -153,4 +153,18 @@ describe User do
       assert {sell.new_record?}
     end
   end
+  
+  describe "#has?" do
+    let(:product) {Fabricate.build(:product)}
+    let(:john) {Fabricate.build(:user)}
+    
+    it "is true if user has an execution on product" do
+      e = Execution.new(:product => product, :user => john)
+      stub(john).executions {[e]}
+      assert {john.has?(product)}
+    end
+    it "is false either" do
+      deny {john.has?(product)}
+    end
+  end
 end

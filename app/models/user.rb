@@ -18,6 +18,7 @@ class User
   references_many :authentications, :dependent => :destroy
   references_many :sessions, :dependent => :destroy
   references_many :orders, :dependant => :destroy
+  references_many :executions
   referenced_in :company
   
   # white list of accessible attributes
@@ -111,12 +112,19 @@ class User
       end
   end
   
+  # Public : buy quantity of product at given price
   def buy(quantity, product, price, ref=nil)
     call(quantity, product, price, ref, Order::Side::BID)
   end
   
+  # Public : sell quantity of product at given price
   def sell(quantity, product, price, ref=nil)
     call(quantity, product, price, ref, Order::Side::ASK)    
+  end
+  
+  # Public : has an execution on this product ?
+  def has?(product)
+    executions.any? {|e| e.product == product}
   end
   
   private

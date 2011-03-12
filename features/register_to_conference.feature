@@ -8,13 +8,12 @@ Feature: Register to conference
       And the latest conference has the following offers for product "place":
         |ref    |quantity |price  |
         |early  |100      |220    |
-    When I go to "/conferences/xp-2033/registrations/new"
+    When I go to "/conferences/xp-2033/registrations/new?locale=fr"
     Then I should see /reste 100 places/
     When I check "orders_place_checked"
       And I press "Valider"
-    Then I should be on "/conferences/xp-2033"
-      And I should see /inscription(.+)enregistrée/
+    Then I should see /inscription(.+)enregistrée/
     When I go to "/conferences/xp-2033/registrations/new"
-    Then I should see /reste 99 places/
+    Then I should see /déja inscrit/
     
     

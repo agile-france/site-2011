@@ -71,11 +71,11 @@ en:
         keynote: Keynote
         other: Other
   registrations:
-    errors:
-      highlander: "You are already registered to conference"    
     new?: "Register now"
     new!: "Registration completed"  
     new:
+      already_registered: You are already registered
+      closed: Registrations are closed
       remaining:
         one: "There is one place left"
         other: "There are %{count} places left"      

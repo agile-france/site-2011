@@ -13,7 +13,7 @@ class RegistrationsController < ApplicationController
     orders.each do |o|
       Book[o.product].accept(o).each(&:save)
     end
-    redirect_to current_conference, :notice => t('registrations.new!')
+    redirect_to registrations_account_path, :notice => t('registrations.new!')
   end
   
   def current_conference

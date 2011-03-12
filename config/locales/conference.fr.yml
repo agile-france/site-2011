@@ -50,6 +50,11 @@ fr:
     created!: "%{user}, vous faites maintenant parti de %{company}"
     updated!: "Votre société a été mise à jour"
   constants:
+    executions:
+      refs:
+        AGF11E: "Early"
+        AGF11S: "Normal"
+        AGF11D: "Normal"
     orders:
       refs:
         AGF11E: "Tarif Early"
@@ -94,11 +99,10 @@ fr:
   roles:
     animator: Animateur
   registrations:
-    errors:
-      highlander: "Vous êtes déjà inscrit à la conférence"
     new?: "S'inscrire maintenant"
     new!: "Votre inscription est enregistrée"
     new:
+      already_registered: Vous êtes déja inscrit
       closed: Les inscriptions sont fermées
       remaining:
         one: Il reste une place à ce tarif

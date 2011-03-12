@@ -22,7 +22,7 @@ describe RegistrationsController do
     end
     # XXX integration POST testing of multiple behaviors
     it "redirects to conference page, notice successful registration, saves john order for conference place" do
-      response.should redirect_to(conference_path(xp))
+      response.should redirect_to(registrations_account_path)
       assert {flash[:notice] =~ /enregistrée/}
       assert {john.orders.where(:product_id => place.id).count == 1}
     end

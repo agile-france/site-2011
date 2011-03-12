@@ -2,11 +2,12 @@
  
 = i18n_text_for(order.product, :ref)
 ,
-= label_tag :offer, i18n_text_for(order, :ref)
+= i18n_text_for(order, :ref)
 (
 = number_to_currency(order.price, :locale => :fr)
 ),
 = l(order.created_at)
+= order.conference
   
   
 
