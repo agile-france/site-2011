@@ -97,7 +97,7 @@ GEM
     guard-coffeescript (0.1.7)
       coffee-script (~> 2.1.1)
       guard (~> 0.3.0)
-    guard-rspec (0.1.9)
+    guard-rspec (0.2.0)
       guard (>= 0.2.2)
     haml (3.0.24)
     haml-rails (0.3.4)
