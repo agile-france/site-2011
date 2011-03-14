@@ -24,73 +24,66 @@ a img {
 body {
   font-family: "DejaVuSansCondensed", Arial, sans-serif;
   font-size: 15px;
-  margin: 0 auto;
-  padding: 0;
   background-color: #dbe3e2; }
   body .hint {
     font-size: 10px;
     font-style: italic; }
+  body .pad_2 {
+    padding: 0 20px; }
+  body .pad_1 {
+    padding: 0 10px; }
+  body .toolbar {
+    text-align: right; }
   body #content_wrapper {
     min-height: 100%;
     height: auto !important;
-    height: 100%;
-    margin-bottom: -10em; }
+    height: 100%; }
     body #content_wrapper #header {
       color: #182f4c;
       background-image: url("/images/header_opt.png");
       background-repeat: no-repeat;
-      width: 960px;
       margin-left: auto;
       margin-right: auto; }
       body #content_wrapper #header #mojo {
         padding-top: 3em;
-        font-size: 28px; }
-      body #content_wrapper #header #splash {
-        -moz-border-radius: 15px;
-        -webkit-border-radius: 15px;
-        border-radius: 15px;
-        -moz-box-shadow: 0 0 10px #cccccc;
-        -webkit-box-shadow: 0 0 10px #cccccc;
-        box-shadow: 0 0 10px #cccccc;
-        padding: 1px 20px;
-        background-color: white;
-        padding: 20px 0 1px 20px;
-        font-family: "DejaVuSansCondensed", Arial, sans-serif;
-        font-size: 32px;
-        background-image: url("/images/portejaune.jpeg");
-        background-position: top right;
-        background-repeat: no-repeat;
-        margin-bottom: -12px; }
+        font-size: 28px;
+        text-align: right; }
       body #content_wrapper #header .mojo {
         font-family: "ChunkFiveRegular"; }
       body #content_wrapper #header #sub-mojo {
         font-size: 20px; }
-      body #content_wrapper #header #menu a:hover {
-        background-image: url("/images/post_it_up_opt.png"); }
-      body #content_wrapper #header #menu .menuItem {
-        background-image: url("/images/post_it_opt.png");
-        background-repeat: no-repeat;
-        height: 38px;
-        padding-top: 7px;
-        text-align: center;
-        text-decoration: none;
-        font-size: 13px; }
-        body #content_wrapper #header #menu .menuItem div {
-          -moz-transform: rotate(5deg);
-          -webkit-transform: rotate(5deg);
-          -o-transform: rotate(5deg);
-          transform: rotate(5deg); }
-    body #content_wrapper .header {
-      -moz-border-radius: 5px;
-      border-radius: 5px;
-      border: 5px solid #d3a05f;
-      padding: 0 10px;
-      background-color: #deb887; }
+    body #content_wrapper #splash {
+      -moz-border-radius: 15px;
+      -webkit-border-radius: 15px;
+      border-radius: 15px;
+      -moz-box-shadow: 0 0 10px #cccccc;
+      -webkit-box-shadow: 0 0 10px #cccccc;
+      box-shadow: 0 0 10px #cccccc;
+      background-color: white;
+      padding: 20px 0;
+      font-size: 32px;
+      background-image: url("/images/portejaune.jpeg");
+      background-position: top right;
+      background-repeat: no-repeat;
+      margin-bottom: -12px; }
+    body #content_wrapper #menu a:hover {
+      background-image: url("/images/post_it_up_opt.png"); }
+    body #content_wrapper #menu .menuItem {
+      background-image: url("/images/post_it_opt.png");
+      background-repeat: no-repeat;
+      height: 38px;
+      padding-top: 7px;
+      text-align: center;
+      text-decoration: none;
+      font-size: 13px; }
+      body #content_wrapper #menu .menuItem div {
+        -moz-transform: rotate(5deg);
+        -webkit-transform: rotate(5deg);
+        -o-transform: rotate(5deg);
+        transform: rotate(5deg); }
     body #content_wrapper #content {
-      width: 960px;
       margin-left: auto;
-      margin-right: auto;
-      padding-top: 20px; }
+      margin-right: auto; }
       body #content_wrapper #content #content_container {
         -moz-border-radius: 15px;
         -webkit-border-radius: 15px;
@@ -98,10 +91,9 @@ body {
         -moz-box-shadow: 0 0 10px #cccccc;
         -webkit-box-shadow: 0 0 10px #cccccc;
         box-shadow: 0 0 10px #cccccc;
-        padding: 1px 20px;
         background-color: white;
-        margin-bottom: 20px;
-        padding-top: 20px; }
+        margin-bottom: 10px;
+        padding: 20px 0; }
         body #content_wrapper #content #content_container #download {
           text-decoration: none; }
         body #content_wrapper #content #content_container #download > img {
@@ -135,9 +127,6 @@ body {
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96');
             background: -webkit-gradient(linear, left top, left bottom, from(#a4b5cb), to(#2f5c96)) repeat scroll 0 0 transparent;
             background: -moz-linear-gradient(top, #a4b5cb, #2f5c96) repeat scroll 0 0 transparent; }
-
-#push {
-  height: 10em; }
 
 #footer {
   background-color: #182f4c;

@@ -1,29 +1,30 @@
-%h2= t('auth.sign_up')
-= form_for(resource, :as => resource_name, :url => user_registration_path) do |f|
-  = devise_error_messages!
+.pad_2
+  %h2= t('auth.sign_up')
+  = form_for(resource, :as => resource_name, :url => user_registration_path) do |f|
+    = devise_error_messages!
 
-  - [:email, :first_name, :last_name].each do |symbol|
-    %p
-      = f.label symbol
-      = mark if required? resource, symbol
-      %br
-      = f.text_field symbol
+    - [:email, :first_name, :last_name].each do |symbol|
+      %p
+        = f.label symbol
+        = mark if required? resource, symbol
+        %br
+        = f.text_field symbol
 
-  - if resource.password_required?
-    %p
-      = f.label :password
-      = mark if required? resource, :password
-      %br
-      %span{:class => 'hint'}= t('auth.passwords.hint')
-      %br
-      = f.password_field :password
-      %br    
-      = f.label :password_confirmation
+    - if resource.password_required?
+      %p
+        = f.label :password
+        = mark if required? resource, :password
+        %br
+        %span{:class => 'hint'}= t('auth.passwords.hint')
+        %br
+        = f.password_field :password
+        %br    
+        = f.label :password_confirmation
       
-      %br
-      = f.password_field :password_confirmation
+        %br
+        = f.password_field :password_confirmation
 
-  =render 'account/optins'
+    =render 'account/optins'
 
-  %p= f.submit "#{t('auth.sign_up')} !"
-= render :partial => "devise/shared/links"
+    %p= f.submit "#{t('auth.sign_up')} !"
+  = render :partial => "devise/shared/links"

@@ -1,9 +1,8 @@
-%h1= render @conference
+%h1.pad_2
+  = render @conference
 
-.clear
-.buttons.grid_3.prefix_2= link_to t('sessions.new?'), new_conference_session_path(@conference)
-.buttons.grid_3= link_to t('registrations.new?'), new_conference_registration_path(@conference)
-.clear
+.buttons.grid_3.prefix_3= link_to t('sessions.new?'), new_conference_session_path(@conference)
+.buttons.grid_3.suffix_3= link_to t('registrations.new?'), new_conference_registration_path(@conference)
 
 - @sessions.each do |session|
   = render 'sessions/header', :session => session

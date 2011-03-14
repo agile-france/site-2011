@@ -1,6 +1,6 @@
 =render @session
 
-%p
+%p.pad_2
   =link_to t('common.update'), edit_awesome_session_path(@session) unless cant? :edit
   =link_to t('common.back'), @session.conference
   =link_to t('common.delete'), awesome_session_path(@session), :method => :delete, :confirm => t('sessions.seppuku?') unless cant? :destroy

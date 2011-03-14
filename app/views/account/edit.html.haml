@@ -1,14 +1,4 @@
 =render 'toolbar'
-  
-#account
-  =render 'form'
 
--unless @user.authentications.empty?
-  %h1= t('account.authentications')
-  -@user.authentications.each do |a|
-    %p
-      = icon_for(a.provider)
-    %ul
-      - a.user_info.each do |k,v|
-        -unless v.blank? 
-          %li= "#{k} : #{v}"
+#account.pad_2
+  =render 'form'

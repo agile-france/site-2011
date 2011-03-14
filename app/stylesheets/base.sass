@@ -1,33 +1,26 @@
-$wood: #DEB887
-$orange: #FFA500
 $sand: #DBE3E2
 $darkblue: #182f4c
 $radius: 15px
 $footersize: 10em
-$margin: 20px
+$margin: 10px
+$gutter: 2*$margin
 $menuItemRotation: 5deg
 
-@mixin box($color)
-  -moz-border-radius: 5px
-  border-radius: 5px
-  border: 5px solid darken($color, 10%)
-  padding: 0 10px
-  background-color: $color
-
 @mixin content()
-  width: 960px
   margin-left: auto
   margin-right: auto
 
-@mixin rounded()
+@mixin rounded($color)
   -moz-border-radius: $radius
   -webkit-border-radius: $radius
   border-radius: $radius
   -moz-box-shadow: 0 0 10px #ccc
   -webkit-box-shadow: 0 0 10px #ccc
   box-shadow: 0 0 10px #ccc
-  padding: 1px 20px
-  background-color: white
+  background-color: $color
+
+@mixin pad($unit)
+  padding: 0 $unit
 
 /**
  * see http://www.fontsquirrel.com/fonts/ChunkFive#fontface
@@ -54,19 +47,24 @@ a img
 body
   font-family: "DejaVuSansCondensed", Arial, sans-serif
   font-size: 15px
-  margin: 0 auto
-  padding: 0
   background-color: $sand
   
   .hint
     font-size: 10px
     font-style: italic
 
+  .pad_2
+    @include pad(2*$margin)  
+  .pad_1
+    @include pad($margin)
+    
+  .toolbar
+    text-align: right
+
   #content_wrapper
     min-height: 100%
     height: auto !important
     height: 100%
-    margin-bottom: -$footersize
 
     #header
       color: $darkblue
@@ -77,53 +75,47 @@ body
       #mojo
         padding-top: 3em
         font-size: 28px
-
-      #splash
-        @include rounded
-        padding: 20px 0 1px 20px
-        font-size: 32px
-        background-image: url('/images/portejaune.jpeg')
-        background-position: top right
-        background-repeat: no-repeat
-        margin-bottom: -12px
-
+        text-align: right
       .mojo
         font-family: 'ChunkFiveRegular'
-
       #sub-mojo
         font-size: 20px
 
-      #menu
+    #splash
+      @include rounded(white)
+      padding: $gutter 0
+      font-size: 32px
+      background-image: url('/images/portejaune.jpeg')
+      background-position: top right
+      background-repeat: no-repeat
+      margin-bottom: -12px
 
-        a:hover
-          background-image: url('/images/post_it_up_opt.png')
+    #menu
+      a:hover
+        background-image: url('/images/post_it_up_opt.png')
 
-        .menuItem
-          background-image: url('/images/post_it_opt.png')
-          background-repeat: no-repeat
-          height: 38px
-          padding-top: 7px
-          text-align: center
-          text-decoration: none
-          font-size: 13px
-          
-          div
-            -moz-transform: rotate($menuItemRotation)
-            -webkit-transform: rotate($menuItemRotation)
-            -o-transform: rotate($menuItemRotation)
-            transform: rotate($menuItemRotation)
-
-    .header
-      @include box($wood)
+      .menuItem
+        background-image: url('/images/post_it_opt.png')
+        background-repeat: no-repeat
+        height: 38px
+        padding-top: 7px
+        text-align: center
+        text-decoration: none
+        font-size: 13px
+        
+        div
+          -moz-transform: rotate($menuItemRotation)
+          -webkit-transform: rotate($menuItemRotation)
+          -o-transform: rotate($menuItemRotation)
+          transform: rotate($menuItemRotation)
 
     #content
       @include content
-      padding-top: 20px
 
       #content_container
-        @include rounded
+        @include rounded(white)
         margin-bottom: $margin
-        padding-top: $margin
+        padding: $gutter 0
 
         #download
           text-decoration: none
@@ -162,9 +154,6 @@ body
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96') // for IE
             background: -webkit-gradient(linear, left top, left bottom, from(#A4B5CB), to(#2F5C96)) repeat scroll 0 0 transparent // for webkit browsers
             background: -moz-linear-gradient(top,  #A4B5CB,  #2F5C96) repeat scroll 0 0 transparent // for firefox 3.6+
-
-#push
-  height: $footersize
 
 #footer
   background-color: $darkblue

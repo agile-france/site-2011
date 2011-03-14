@@ -1,30 +1,31 @@
-%h1
-  = t('.title')
+.pad_2
+  %h1
+    = t('.title')
 
-= form_tag(conference_registrations_path(@conference)) do
-  - @conference.products.each do |product|
-    %h3
-      = i18n_text_for(product, :ref)
+  = form_tag(conference_registrations_path(@conference)) do
+    - @conference.products.each do |product|
+      %h3
+        = i18n_text_for(product, :ref)
 
-    - if current_user.has?(product)
-      %p 
-        = t('.already_registered')
-    - else
-      - order = product.best_offer
-      - if order.blank?
-        %p
-          = t('.closed')
+      - if current_user.has?(product)
+        %p 
+          = t('.already_registered')
       - else
-        = render "shared/error_messages", :resource => order
-        %p  
-          = hidden_field_tag "orders[][product_id]", order.product.id
-          = hidden_field_tag "orders[][price]", order.price
-          = hidden_field_tag "orders[][quantity]", 1
-          = hidden_field_tag "orders[][ref]", order.ref
-          = check_box_tag "orders[][checked]", true, false, :id => "orders_#{order.product.ref}_checked"
-          = label_tag :offer, i18n_text_for(order, :ref)
-          \:
-          = number_to_currency(order.price, :locale => :fr)
-          %br
-          %span{:class => 'hint'}= t('registrations.remaining', :count => order.remaining)
-  = submit_tag t('common.validate')
+        - order = product.best_offer
+        - if order.blank?
+          %p
+            = t('.closed')
+        - else
+          = render "shared/error_messages", :resource => order
+          %p  
+            = hidden_field_tag "orders[][product_id]", order.product.id
+            = hidden_field_tag "orders[][price]", order.price
+            = hidden_field_tag "orders[][quantity]", 1
+            = hidden_field_tag "orders[][ref]", order.ref
+            = check_box_tag "orders[][checked]", true, false, :id => "orders_#{order.product.ref}_checked"
+            = label_tag :offer, i18n_text_for(order, :ref)
+            \:
+            = number_to_currency(order.price, :locale => :fr)
+            %br
+            %span{:class => 'hint'}= t('registrations.remaining', :count => order.remaining)
+    = submit_tag t('common.validate')
