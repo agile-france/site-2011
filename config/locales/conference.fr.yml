@@ -117,14 +117,20 @@ fr:
       rate: "Tarif"
       title: "Tarifs et places disponibles"
   sessions:
-    age: Age
-    capacity: Capacité (nombre max de participants)
+    capacity:
+      one: Limité à 1 personne
+      other: "Limité à %{count} personnes"
     created!: "Session créée!"
     errors:
       capacity: "doit être vide, ou comprise dans l'intervalle [%{range}]"
     deleted!: "Session %{title} supprimée!"
-    format: Format
-    level: Niveau
+    form:
+      age: Age
+      capacity: Capacité (nombre max de participants)
+      format: Format
+      level: Niveau
+    index:
+      title: Toutes les Sessions
     new?: "Proposer une session ?"
     ratings:
       count: 
@@ -136,7 +142,6 @@ fr:
       mean: "Moyenne : %{stars}"
       yours: Votre vote
     seppuku?: "Voulez vous vraiment supprimer cette session ?"
-    title: Toutes les Sessions
     update?: "Modifier une session ?"
     updated!: "Session mise à jour!"
   authorization:

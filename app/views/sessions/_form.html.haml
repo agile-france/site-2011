@@ -18,7 +18,7 @@
     %br/
     = select(:session, :format, i18n_options_for(Constants::Sessions::Formats))
   %p
-    = f.label :capacity, t('sessions.capacity')
+    = f.label :capacity, t('.capacity')
     %br/
     = f.text_field :capacity, :size => '32'
   %p

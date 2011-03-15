@@ -14,6 +14,8 @@
       = render 'sessions/tags', :tags => session.tags
     .grid_5.omega
       %ul
-        - ([:format, :level, :age].map{|f| i18n_text_for(session, f)} << session.capacity).reject(&:blank?).each do |trait|
+        - [:format, :level, :age].map{|f| i18n_text_for(session, f)}.each do |trait|
           %li= trait
+        - unless session.capacity.blank?
+          %li= t('sessions.capacity', :count => session.capacity)
   .clear
