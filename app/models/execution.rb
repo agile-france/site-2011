@@ -2,7 +2,8 @@ class Execution
   include Mongoid::Document
   include Mongoid::Timestamps
   
-  referenced_in :user
+  referenced_in :payer, :class_name => "User", :foreign_key => :payer_id, :inverse_of => :billings
+  referenced_in :owner, :class_name => "User", :foreign_key => :owner_id, :inverse_of => :ownings
   referenced_in :product
   referenced_in :order
   

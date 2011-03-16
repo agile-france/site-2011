@@ -7,7 +7,7 @@
       %h3
         = i18n_text_for(product, :ref)
 
-      - if current_user.has?(product)
+      - if current_user.owns?(product)
         %p 
           = t('.already_registered')
       - else

@@ -65,8 +65,9 @@ class Order
     status == 'F'
   end
 
-  def fill!(q, p)
-    e = executions.build(:user => user, :product => product, :side => side, :quantity => q, :price => p, :ref => ref)
+  def fill!(q = self.quantity, p = self.price)
+    e = executions.build(:payer => user, :owner => user,
+      :product => product, :side => side, :quantity => q, :price => p, :ref => ref)
     self.status = (executed < quantity ? 'P' : 'F')
     e
   end

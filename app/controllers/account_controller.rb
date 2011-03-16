@@ -5,7 +5,7 @@ class AccountController < ApplicationController
   end
   
   def registrations
-    @executions_grouped_by_conference = current_user.executions.desc(:created_at).group_by {|e| e.product.conference}
+    @ownings_grouped_by_conference = current_user.ownings.desc(:created_at).group_by {|e| e.product.conference}
   end
   
   def sessions

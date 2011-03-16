@@ -57,21 +57,20 @@ describe Order do
     it {assert {bid.matches?(match)}}
   end
   
-  describe "fill" do
-    let(:bid) {Fabricate.build(:bid, :price => 300, :quantity => 10)}
-    before do
-      bid.fill!(3, 200)
-    end      
+  describe "fill!" do
+    let(:bid) {Fabricate.build(:bid, :price => 300, :quantity => 10)}    
     it "builds an execution for this order, at given price and quantity" do
-      assert {bid.executions.size == 1}
+      bid.fill!(3, 200)
       e = bid.executions.first
       assert {e.quantity == 3}
       assert {e.price == 200}
     end
     it "flags order as partially_executed" do
+      bid.fill!
       assert {bid.partially_filled?}
     end
-    it "can be further filled completely" do
+    it "can be called many times up to completely filled" do
+      bid.fill!(3, 200)
       bid.fill!(bid.quantity, 200)
       assert {bid.filled?}
     end

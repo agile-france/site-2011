@@ -18,7 +18,8 @@ class User
   references_many :authentications, :dependent => :destroy
   references_many :sessions, :dependent => :destroy
   references_many :orders, :dependant => :destroy
-  references_many :executions
+  references_many :billings, :class_name => "Execution", :inverse_of => :payer
+  references_many :ownings, :class_name => "Execution", :inverse_of => :owner
   referenced_in :company
   
   # white list of accessible attributes
@@ -122,9 +123,14 @@ class User
     call(quantity, product, price, ref, Order::Side::ASK)    
   end
   
-  # Public : has an execution on this product ?
-  def has?(product)
-    executions.any? {|e| e.product == product}
+  # Public : is owning this product ?
+  def owns?(product)
+    ownings.any? {|e| e.product == product}
+  end
+  
+  # Public : relinquish ownership of an execution to another people
+  def relinquish(execution, people)
+    execution.owner = people
   end
   
   private

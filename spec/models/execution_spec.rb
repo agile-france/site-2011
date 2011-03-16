@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe Execution do
-  it {should be_referenced_in(:user)}
+  it {should be_referenced_in(:owner)}
+  it {should be_referenced_in(:payer)}
   it {should be_referenced_in(:product)}
   it {should be_referenced_in(:order)}
   
@@ -15,5 +16,5 @@ describe Execution do
   it {should validate_numericality_of(:quantity)}
   
   it {should have_field(:ref)}
-  # XXX validates length of ref in 0..20 
+  # XXX validates length of ref in 0..20
 end
