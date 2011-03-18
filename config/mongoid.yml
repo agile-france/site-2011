@@ -13,6 +13,11 @@ development:
   host: localhost
   database: conference_on_rails_development
 
+cucumber:
+  # <<: *defaults
+  host: localhost
+  database: conference_on_rails_test
+
 test:
   # <<: *defaults
   host: localhost
@@ -20,4 +25,6 @@ test:
 
 # set these environment variables on your prod server
 production:
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  # uri: <%= ENV['MONGOHQ_URL'] %>
+  host: localhost
+  database: conference-on-rails-production

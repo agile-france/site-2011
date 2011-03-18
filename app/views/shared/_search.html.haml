@@ -1,5 +1,5 @@
 %p
-  = form_tag(url, options.merge(:remote => true)) do
+  = form_tag(url, {:remote => true, :method => :get}.merge(options)) do
     = "#{t('search.introduce')}"
     %br
     = search_field_tag(:q, params[:q])

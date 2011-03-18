@@ -13,10 +13,33 @@ fr:
       sponsors: J'autorise les sponsors de la conférence à me contacter
     seppuku?: "Supprimer mon compte et mes informations ?"
     registrations:
+      booked:
+        assigned: Déja attribuée
+        title: Répartition des inscriptions commandées
+        unassigned: 
+          one: 1 inscription libre
+          other: "%{count} inscriptions à distribuer"
+      edit: Attribuer
+      none: "Pas d'inscriptions"
+      other: Et pour les autres
+      own: Vos inscriptions
+      invoices:        
+        hint:
+          "Les paiements ne sont pas encore ouverts
+
+
+          Vous serez notifiés par email de leur ouverture
+
+
+          D'ici là, toutes vos commandes s'accumuleront sur une facture"
+        title: Vos factures
       title: Mes Inscriptions
     sessions:
       title: Mes Sessions   
     updated!: "Votre compte a été mis à jour !"
+  app:
+    errors:
+      access_denied: Pas autorisé    
   auth:
     accept_authentication?: "Rentrez votre mot de passe pour accepter cette authentification"
     email: Email
@@ -91,6 +114,8 @@ fr:
       "5": "J'adore"
   icons:
     trash: Supprimer
+  features:
+    next: Cette fonctionnalité sera prochainement disponible...
   markdown:
     edit: Editer
     hint: "Ce texte est rendu par %{link}"
@@ -99,15 +124,33 @@ fr:
   roles:
     animator: Animateur
   registrations:
+    assigns:
+      to: Attribuer cette place à      
+    edit:
+      invite: Ou inviter une personne
+      hint:
+        "Une inscription est nominative.
+        Vous pouvez changer la personne invitée"
+      other: "Pour quelqu'un d'autre..."
+      self: Pour soi...
+      title: "Attribuer une Inscription : %{product}"
+      yet: Vous êtes déjà inscrit...
+    errors:
+      empty: Votre commande est vide
     new?: "S'inscrire maintenant"
     new!: "Votre inscription est enregistrée"
     new:
-      already_registered: Vous êtes déja inscrit
+      already_registered:
+        "Vous êtes déja inscrit"
       closed: Les inscriptions sont fermées
+      instructions:
+        "#### Conditions d'utilisation
+        
+        Par la validation de votre inscription, vous vous engagez à payer à l'association agile-france.org le montant de cette inscription."
       remaining:
         one: Il reste une place à ce tarif
         other: "Il reste %{count} places à ce tarif"
-      title: Inscription Personnelle 
+      title: Inscription 
     remaining:
       one: Il reste une place à ce tarif
       other: "Il reste %{count} places à ce tarif"        
@@ -144,7 +187,5 @@ fr:
     seppuku?: "Voulez vous vraiment supprimer cette session ?"
     update?: "Modifier une session ?"
     updated!: "Session mise à jour!"
-  authorization:
-    access_denied: Pas autorisé
   search:
     introduce: Rechercher

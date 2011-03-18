@@ -1,10 +1,52 @@
 =render 'toolbar'
 
--@ownings_grouped_by_conference.each do |conference, executions|
-  .pad_2
-    %h3
+-@invoices_and_registrations_by_conference.each do |conference, (invoices, registrations, assigned_registrations, unassigned_registrations)|
+  .grid_12
+    %h3.pad_1
       = introduce(conference)
-    %ul
-      - executions.each do |execution|
-        %li.execution{:id => "execution_#{execution.id}"}
-          = render 'executions/execution', :execution => execution
+
+  .grid_6
+    .grid_6.alpha.omega
+      .pad_1
+        - unless registrations.empty?
+          %h3
+            = t('.own')
+          %ul
+            - registrations.each do |registration|
+              %li.registration{:id => "registration_#{registration.id}"}
+                = i18n_text_for(registration.product, :ref)
+        - else
+          = t('.none')
+
+    .grid_6.alpha.omega
+      .pad_1
+        - unless assigned_registrations.empty? and unassigned_registrations.empty?
+          %h3
+            = t('.other')
+          - unless assigned_registrations.empty?
+            - assigned_registrations.group_by{|r| r.product}.each do |product, list|
+              = i18n_text_for(product, :ref)
+              %ul
+                - list.each do |registration|
+                  %li.registration{:id => "registration_#{registration.id}"}
+                    = render 'users/user', :user => registration.user
+          - unless unassigned_registrations.empty?
+            = t('.booked.unassigned', :count => unassigned_registrations.count)
+            %ul
+              - unassigned_registrations.group_by{|r| r.product}.each  do |product, list|
+                %li
+                  = list.size
+                  = i18n_text_for(product, :ref)
+                  = link_to(t('.edit'), edit_registration_path(list.first))
+  .grid_6
+    .pad_1
+      - unless invoices.empty?
+        %h3
+          = t('.invoices.title')
+        - invoices.each do |invoice|
+          .invoice{:id => "invoice_#{invoice.id}"}
+            = render 'invoices/invoice', :invoice => invoice
+        .hint
+          :markdown
+            #{t('.invoices.hint')}          
+  .clear

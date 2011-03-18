@@ -34,7 +34,7 @@ gem 'yajl-ruby', :require => 'yajl'
 # rbtree
 gem 'rbtree'
 
-group :development, :test do
+group :development, :test, :cucumber do
   gem "rspec-rails", ">= 2.1.0"
 
   # factory (required for scaffold)
@@ -48,7 +48,7 @@ group :development, :test do
   gem 'therubyracer', :require => false
 end
 
-group :test do
+group :test, :cucumber do
   gem "rspec_tag_matchers"
   gem 'mongoid-rspec'
   gem 'wrong', '~> 0.4'
@@ -73,8 +73,8 @@ group :test do
   gem 'guard-coffeescript'
   gem 'growl'
 
-  # rr
-  gem 'rr'
+  # double
+  gem 'mocha'
 
   # coverage
   gem 'simplecov', :platforms => :mri_19, :require => false

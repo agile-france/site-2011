@@ -152,31 +152,5 @@ describe User do
       assert {sell.user == john}
       assert {sell.new_record?}
     end
-  end
-  
-  describe "#owns?" do
-    let(:product) {Fabricate.build(:product)}
-    let(:john) {Fabricate.build(:user)}
-    
-    it "is true if user has an execution on product" do
-      e = Execution.new(:product => product, :owner => john)
-      stub(john).ownings {[e]}
-      assert {john.owns?(product)}
-    end
-    it "is false either" do
-      deny {john.owns?(product)}
-    end
-  end
-  
-  describe "#relinquish" do
-    let(:book) {Fabricate.build(:product)}
-    let(:john) {Fabricate.build(:user)}
-    let(:mark) {Fabricate.build(:user, :email => 'mark@mail.no')}
-    let(:execution) {john.buy(10, book, 1).fill!}
-    it "yields an execution to someone else" do
-      assert {execution.owner == john}
-      john.relinquish(execution, mark)
-      assert {execution.owner == mark}
-    end
-  end
+  end  
 end

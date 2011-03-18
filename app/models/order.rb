@@ -33,10 +33,6 @@ class Order
   field :ref
   validates_length_of :ref, :maximum => 20
   
-  # Public : status of order
-  field :status, :default => 'A'
-  validates_inclusion_of :status, :in => ['A', 'P', 'F', 'C']
-  
   def ask?; side == Side::ASK; end
   def bid?; side == Side::BID; end
   
@@ -56,20 +52,17 @@ class Order
   end  
 
   def active?
-    status == 'A'
+    not filled?
   end
   def partially_filled?
-    status = 'P'
+    executed > 0 and executed < quantity
   end
   def filled?
-    status == 'F'
+    executed >= quantity    
   end
 
   def fill!(q = self.quantity, p = self.price)
-    e = executions.build(:payer => user, :owner => user,
-      :product => product, :side => side, :quantity => q, :price => p, :ref => ref)
-    self.status = (executed < quantity ? 'P' : 'F')
-    e
+    executions.build(:user => user, :product => product, :side => side, :quantity => q, :price => p, :ref => ref)
   end
 
   class << self

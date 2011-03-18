@@ -24,8 +24,8 @@ describe Conference do
   describe "best_offers" do
     let!(:xp) {Fabricate.build(:conference)}
     before do
-      products = ['place', 'diner'].map {|p| Product.new(:name => p).tap {|p| stub(p).best_offer {p.name}}}
-      stub(xp).products {products}
+      products = ['place', 'diner'].map {|p| Product.new(:name => p).tap {|p| p.stubs(:best_offer).returns(p.name)}}
+      xp.stubs(:products).returns(products)
     end    
     it "returns the map of products with best_offer" do
       assert {xp.best_offers == ['place', 'diner']}
@@ -56,6 +56,19 @@ describe Conference do
           error.should be_a RuntimeError
         }
       end
+    end
+  end
+
+  describe "#new_invoice_for" do
+    let!(:xp) {Ducks.conference}
+    let!(:place) {xp.products.first}
+    let!(:john) {Fabricate.build(:user)}
+    let!(:execution) {Fabricate.build(:execution, :user => john, :product => place, :quantity => 1)}
+    it "builds an invoice for all executions of user, not yet invoiced" do
+      invoice = xp.new_invoice_for(john)
+      deny {invoice.persisted?}
+      assert {invoice.ref == 'PENDING'}
+      assert {invoice.executions == [execution]}
     end
   end
 end

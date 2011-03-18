@@ -1,0 +1,2 @@
+Fabricator(:registration) do
+end

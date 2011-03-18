@@ -5,7 +5,15 @@ class AccountController < ApplicationController
   end
   
   def registrations
-    @ownings_grouped_by_conference = current_user.ownings.desc(:created_at).group_by {|e| e.product.conference}
+    @invoices_and_registrations_by_conference = Conference.all.desc(:created_at).reduce({}) do |acc, c|
+      acc[c] = [
+        [c.new_invoice_for(current_user).compute], 
+        Registration.booked_for(c).assigned_to(current_user),
+        Registration.booked_for(c).booked_by(current_user).assigned,
+        Registration.booked_for(c).booked_by(current_user).unassigned
+      ]
+      acc
+    end
   end
   
   def sessions

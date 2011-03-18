@@ -1,6 +1,7 @@
 require 'spec_helper'
 
-describe Session do  
+describe Session do
+  before(:all) {Session.destroy_all} 
   touch_db_with(:session) {Fabricate(:session, :tags_array => %w(courage respect))}
 
   it 'can hold an array of tag' do

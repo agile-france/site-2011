@@ -17,9 +17,6 @@ describe Order do
   it {should have_field(:ref)}
   # XXX validates length of ref in 0..20
   
-  it {should have_field(:status)}
-  it {should validate_inclusion_of(:status).to_allow('A', 'P', 'F', 'C')}
-  
   describe "executed|remaining quantities" do
     let(:o) {Order.new(:quantity => 100)}
     context "no execution" do
@@ -65,8 +62,9 @@ describe Order do
       assert {e.quantity == 3}
       assert {e.price == 200}
     end
-    it "flags order as partially_executed" do
-      bid.fill!
+    it "flags order as partially filled" do
+      deny {bid.partially_filled?}
+      bid.fill!(3, 200)
       assert {bid.partially_filled?}
     end
     it "can be called many times up to completely filled" do

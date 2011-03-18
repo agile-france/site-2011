@@ -38,7 +38,7 @@ describe ApplicationController do
       assert {controller.pager_options[:per_page] == 25}
     end
     it 'params[:per_page] have default value of klass.per_page, when method exists' do
-      stub(Company).per_page {12}
+      Company.stubs(:per_page).returns(12)
       assert {controller.pager_options(Company)[:per_page] == 12}
     end    
   end

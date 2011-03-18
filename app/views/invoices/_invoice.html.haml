@@ -1,0 +1,8 @@
+%p
+  = "montant : #{invoice.amount}"
+  - invoice.lines.each do |product, lines|
+    %li
+      = i18n_text_for(product, :ref)
+      - lines.each do |(price, quantity)|
+        %br
+        = "#{quantity} x #{price}" 

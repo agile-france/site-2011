@@ -16,7 +16,7 @@ describe Auth::SessionsController do
       end
       it 'desactivates authentication' do
         get :destroy
-        o = user.authentications.first
+        o = user.reload.authentications.first
         assert {o.deactivated?}
       end
     end

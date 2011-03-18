@@ -10,7 +10,7 @@ describe Product do
     before do
       # XXX introduce factory|fabricator|blueprint ?
       @orders = [5, 2, 3].map{|p| Order.new(:product => foo, :price => p, :side => Order::Side::ASK)}
-      stub(foo).orders {@orders}
+      foo.stubs(:orders).returns(@orders)
     end
     
     it "returns the offer having lowest ASK price" do

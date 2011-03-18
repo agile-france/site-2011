@@ -4,21 +4,23 @@ class ApplicationController < ActionController::Base
 
   prepend_before_filter :localize
   def localize
-    I18n.locale = session[:locale] = params[:locale]
-    logger.debug("using provided locale #{I18n.locale}") if params[:locale]
+    if params[:locale]
+      I18n.locale = session[:locale] = params[:locale]
+    else
+      session.delete(:locale)
+      I18n.locale = I18n.default_locale
+    end
   end
 
   def default_url_options
-    options = {}
-    options[:locale] = session[:locale] if session[:locale]
-    options
+    session[:locale] ? {:locale => session[:locale]} : {}
   end
   
   # cancan does not integrate with mongoid
   # see https://github.com/ryanb/cancan/pull/172
   # so crafted an authorization library, named cant
   include Cant::Embeddable
-  die {raise Cant::AccessDenied, I18n.translate('authorization.access_denied')}
+  die {raise Cant::AccessDenied, I18n.translate('app.errors.access_denied')}
   helper_method :cant?
   def authorize_user!
     die_if_cant!(params[:action])

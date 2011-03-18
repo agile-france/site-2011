@@ -30,7 +30,12 @@ describe ConferencesController do
     it 'should show available conferences' do
       conferences = (2030..2032).map {|edition| Fabricate(:conference, :name => 'deep', :edition => edition)}
       get :index
-      assert {assigns(:conferences).to_a == conferences}
+      # assigned conferences is all conferences, unordered
+      assigned_conferences = assigns(:conferences).to_a
+      assert {assigned_conferences.size == conferences.size}
+      assigned_conferences.each do |c|
+        assert {conferences.include? c}
+      end
       response.should be_success
     end
   end

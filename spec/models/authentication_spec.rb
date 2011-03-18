@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Authentication do
+  before(:all) {Authentication.destroy_all}
   it {should have_field(:user_info).of_type(Hash)}
   it {should have_field(:activated).of_type(Boolean).with_default_value_of(false)} 
   

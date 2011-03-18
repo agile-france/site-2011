@@ -43,6 +43,9 @@ describe Book do
           assert {high.filled?}
           assert {high.executions.size == 1}
         end
+        it "match executions" do
+          assert {high.executions.first.matchee == @old_best_ask.executions.first}
+        end
         it "does not park a matching bid order" do
           assert {book.bids[high.price].nil?}
         end
@@ -86,7 +89,7 @@ describe Book do
     let(:product) {Fabricate.build(:product)}
     before do
       orders = [*bids, *asks].shuffle
-      stub(product).orders {orders}
+      product.stubs(:orders).returns(orders)
     end
     it "returns same book instance for same product (id)" do
       Book[product].should be_a Book

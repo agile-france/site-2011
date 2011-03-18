@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Admin::UsersController do
-
+  before(:all) {User.destroy_all}
   (0..9).each do |i|
     touch_db_with("user_#{i}".to_sym) {Fabricate(:user, :email => "email-#{i}@noreply.com", :password => 'awesome cooking')}
   end
@@ -30,7 +30,8 @@ describe Admin::UsersController do
         end
         it "should return all when query is blank" do
           get :index, :q => ""
-          assigns(:users).should == User.all
+          users = assigns(:users)
+          assert {users.count == User.count}
         end        
       end      
     end

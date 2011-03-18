@@ -12,8 +12,12 @@ ConferenceOnRails::Application.routes.draw do
   resources :sessions, :except => [:new, :create], :as => :awesome_sessions do
     resources :ratings, :only => [:create, :update]
   end
+  
   resources :registrations, :except => [:new, :create] do
+    get :search, :on => :member
   end
+  put 'registrations/:registration_id/users/:user_id' => 'registrations#assign', :as => :assign_user_registration
+  
   resources :conferences do
     resources :sessions, :only => [:new, :create]
     resources :registrations, :only => [:new, :create]

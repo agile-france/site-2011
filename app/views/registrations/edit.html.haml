@@ -1,0 +1,33 @@
+.grid_12
+  %h3.pad_1
+    = t('.title', :product => i18n_text_for(@registration.product, :ref))
+  .hint.pad_1
+    :markdown
+      #{t('.hint')}
+.grid_6
+  .pad_1
+    %h3
+      = t('.self')
+    - unless current_user.registered_to?(@registration.product)
+      %p
+        = render 'registrations/assign', :registration => @registration, :user => current_user
+    - else
+      = t('.yet')
+.grid_6
+  .grid6.alpha
+    .pad_1
+      %h3
+        = t('.other')
+  .grid_6.alpha
+    .pad_1
+      = render 'shared/search', :url => search_registration_path(@registration), :options => {:remote => true}
+      #users
+        - if @users
+          = render 'registrations/assigns', :registration => @registration, :users => @users
+  .grid_6.alpha
+    .pad_1
+      %h3
+        = t('.invite')
+      %p.hint
+        = t('features.next')
+.clear

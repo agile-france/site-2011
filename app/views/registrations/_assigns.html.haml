@@ -1,0 +1,5 @@
+= t('.to')
+%ul
+  - users.each do |user|
+    %li
+      = render 'registrations/assign', :registration => registration, :user => user

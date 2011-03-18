@@ -12,14 +12,20 @@ Spork.prefork do
 
   # This file is copied to spec/ when you run 'rails generate rspec:install'
   ENV["RAILS_ENV"] ||= 'test'
+  
+  # https://github.com/timcharper/spork/wiki/Spork.trap_method-Jujutsu
+  require "rails/mongoid"
+  Spork.trap_class_method(Rails::Mongoid, :load_models)
+  require "rails/application"
+  Spork.trap_method(Rails::Application, :reload_routes!)
+  
+  # rest is rather normal
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
-  require 'rr'
 
   # Requires supporting ruby files with custom matchers and macros, etc,
   # in spec/support/ and its subdirectories.
   Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
-
 
   RSpec.configure do |config|
     config.extend ScopedDatabaseAccess
@@ -30,7 +36,7 @@ Spork.prefork do
     # config.mock_with :mocha
     # config.mock_with :flexmock
     # config.mock_with :rr
-    config.mock_with :rr
+    config.mock_with :mocha
     
     ## see http://mongoid.org/docs/integration
     ## and http://github.com/bmabey/database_cleaner

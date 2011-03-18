@@ -20,10 +20,10 @@ class Book
     while(best = best(opposite_page(o)) and o.matches?(best))
       ### XXX should be wrapped in a transaction ...
       quantity = [o.remaining, best.remaining].min
-      executions = [o, best].map{|order| order.fill!(quantity, best.price)}
+      e, matchee = [o, best].map{|order| order.fill!(quantity, best.price)}
+      e.match_with(matchee)
+      ((list << best) << e) << matchee
       unpark(best) if best.filled?
-      list << best 
-      list.concat(executions)
     end
     park(o) unless o.filled?
     list

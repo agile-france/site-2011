@@ -10,8 +10,8 @@ describe ApplicationHelper do
   describe "id_for_resource" do
     context "new resource" do
       it 'is a folded string with class name, _, id' do
-        session = Session.new()
-        stub(session).id {1}
+        session = Session.new
+        session.stubs(:id).returns(1)
         assert {id_for_resource(session) == "session_1"}
       end
     end

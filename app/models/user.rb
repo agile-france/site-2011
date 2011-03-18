@@ -15,11 +15,11 @@ class User
   field :roles_in_company, :type => Array
   
   # associations
-  references_many :authentications, :dependent => :destroy
+  references_many :authentications, :dependent => :destroy, :autosave => true
   references_many :sessions, :dependent => :destroy
   references_many :orders, :dependant => :destroy
-  references_many :billings, :class_name => "Execution", :inverse_of => :payer
-  references_many :ownings, :class_name => "Execution", :inverse_of => :owner
+  references_many :executions
+  references_many :registrations
   referenced_in :company
   
   # white list of accessible attributes
@@ -122,17 +122,17 @@ class User
   def sell(quantity, product, price, ref=nil)
     call(quantity, product, price, ref, Order::Side::ASK)    
   end
-  
-  # Public : is owning this product ?
-  def owns?(product)
-    ownings.any? {|e| e.product == product}
+
+  # Public : is registered to product ?
+  def registered_to?(product)
+    self.registrations.any?{|r| r.product == product}
   end
-  
-  # Public : relinquish ownership of an execution to another people
-  def relinquish(execution, people)
-    execution.owner = people
+
+  # Public : registrations associated to executions
+  def registrations_booked_for(conference)
+    executions.booked_for(conference).map{|e| e.registrations}.flatten
   end
-  
+
   private
   def call(quantity, product, price, ref, side)
     Order.new(:user => self, :product => product, :price => price, :quantity => quantity, :ref => ref, :side => side)
