@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
   
   # static pages, rendered through views
-  [:history, :place, :soon, :sponsors].each do |s|
+  [:history, :place, :promote, :soon, :sponsors].each do |s|
     module_eval <<-EOS
     def #{s}; end
     EOS

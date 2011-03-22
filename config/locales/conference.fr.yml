@@ -25,7 +25,7 @@ fr:
     old_school_sign_up: |
       Sinon...
       --------
-      Vous pouvez simplement %{link} sur cette app
+      Vous pouvez simplement %{link} spécifique sur le site
     passwords:
       hint: Le mot de passe doit faire entre 6 et 20 caractères
     sign_in: Se connecter

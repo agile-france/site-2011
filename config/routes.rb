@@ -32,7 +32,7 @@ ConferenceOnRails::Application.routes.draw do
   end
 
   # static pages rendered through home controller
-  [:history, :place, :soon, :sponsors, :version].each do |s|
+  [:history, :place, :soon, :sponsors, :promote, :version].each do |s|
     get "#{s}" => "home\##{s}"
   end
    
