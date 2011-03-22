@@ -44,6 +44,10 @@ html, body
 a img
   border-width: 0px
 
+a
+  text-decoration: none
+  color: #182f4c
+
 body
   font-family: "DejaVuSansCondensed", Arial, sans-serif
   font-size: 15px
@@ -154,6 +158,15 @@ body
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96') // for IE
             background: -webkit-gradient(linear, left top, left bottom, from(#A4B5CB), to(#2F5C96)) repeat scroll 0 0 transparent // for webkit browsers
             background: -moz-linear-gradient(top,  #A4B5CB,  #2F5C96) repeat scroll 0 0 transparent // for firefox 3.6+
+
+        .avatar
+          border: solid 1px grey
+          padding: 1px
+          -webkit-box-shadow: 1pt 1pt 5px #ccc
+          -moz-box-shadow: 1pt 1pt 5px #ccc
+
+        h3
+          font-family: serif
 
 #footer
   background-color: $darkblue

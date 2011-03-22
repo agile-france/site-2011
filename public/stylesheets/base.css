@@ -21,6 +21,10 @@ html, body {
 a img {
   border-width: 0px; }
 
+a {
+  text-decoration: none;
+  color: #182f4c; }
+
 body {
   font-family: "DejaVuSansCondensed", Arial, sans-serif;
   font-size: 15px;
@@ -127,6 +131,13 @@ body {
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A4B5CB', endColorstr='#2F5C96');
             background: -webkit-gradient(linear, left top, left bottom, from(#a4b5cb), to(#2f5c96)) repeat scroll 0 0 transparent;
             background: -moz-linear-gradient(top, #a4b5cb, #2f5c96) repeat scroll 0 0 transparent; }
+        body #content_wrapper #content #content_container .avatar {
+          border: solid 1px grey;
+          padding: 1px;
+          -webkit-box-shadow: 1pt 1pt 5px #cccccc;
+          -moz-box-shadow: 1pt 1pt 5px #cccccc; }
+        body #content_wrapper #content #content_container h3 {
+          font-family: serif; }
 
 #footer {
   background-color: #182f4c;
