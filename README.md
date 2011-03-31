@@ -117,6 +117,8 @@ see
 * http://github.com/aslakhellesoy/cucumber
 * http://github.com/jnicklas/capybara
 
+**cucumber has dedicated environment**
+
 ### optional spork
 There is no automation for command line
 
@@ -126,7 +128,7 @@ Have spork ran for cucumber on its own port
     
 Then, can use following options to have cuke connect to it
 
-    cucumber --drb --port 12345 features/session_rate.feature
+    ./script/cucumber --drb --port 12345 features/session_rate.feature
 
 **Gotcha**
     
@@ -136,10 +138,10 @@ Then, can use following options to have cuke connect to it
 
 for one shot
 
-    cucumber feature/this-one-is-red.feature
+    ./script/cucumber feature/this-one-is-red.feature
 or
 
-    cucumber --tags @this_one_is_red
+    ./script/cucumber --tags @this_one_is_red
 
 see [cucumber and tags](http://github.com/aslakhellesoy/cucumber/wiki/tags), and [capybara tags](http://github.com/jnicklas/capybara)
 

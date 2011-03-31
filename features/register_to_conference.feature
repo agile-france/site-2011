@@ -10,10 +10,8 @@ Feature: Register to conference
         |early  |100      |220    |
     When I go to "/conferences/xp-2033/registrations/new?locale=fr"
     Then I should see /reste 100 places/
-    When I check "orders_place_checked"
+    When I fill in "orders[][quantity]" with "1"
       And I press "Valider"
     Then I should see /inscription(.+)enregistrée/
-    When I go to "/conferences/xp-2033/registrations/new"
-    Then I should see /déja inscrit/
     
     
