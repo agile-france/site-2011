@@ -11,10 +11,6 @@ class Conference
   attr_accessible :name, :edition
   key :name, :edition
   
-  def best_offers
-    products.to_a.map{|p| p.best_offer}
-  end
-  
   def emit!(ref, quantity, product, price)
     raise RuntimeError, "#{self.inspect} requires an owner to emit #{product.inspect}" if owner.blank?
     owner.sell(quantity, product, price, ref).tap(&:save)

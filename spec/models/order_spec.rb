@@ -44,14 +44,31 @@ describe Order do
   end
   
   describe "matches?" do
-    let!(:bid) {Fabricate.build(:bid, :price => 10)}
-    let!(:match) {Fabricate.build(:ask, :price => 10)}
-    let!(:nomatch) {Fabricate.build(:ask, :price => 100)}
+    let(:bid) {Fabricate.build(:bid, :price => 10)}
+    let(:priceless_bid) {Fabricate.build(:bid, :price => 0)}
+    let(:match) {Fabricate.build(:ask, :price => 10)}
+    let(:nomatch) {Fabricate.build(:ask, :price => 100)}
+    let(:nomatch) {Fabricate.build(:ask, :price => 100)}
+
+    def should_match(a, b)
+      assert {a.matches? b}
+      assert {b.matches? a}
+    end
+    def should_not_match(a, b)
+      deny {a.matches? b}
+      deny {b.matches? a}
+    end
+
     it {deny {bid.matches?(bid)}}
-    it {deny {bid.matches?(nomatch)}}
-    it {deny {nomatch.matches?(bid)}}
-    it {assert {match.matches?(bid)}}
-    it {assert {bid.matches?(match)}}
+    specify {should_match(bid, match)}
+    specify {should_not_match(bid, nomatch)}
+    specify {should_match(priceless_bid, match)}
+  end
+  
+  describe "#priceless?" do
+    specify {assert {Order.new.priceless?}}
+    specify {assert {Order.new(:price => 0.0).priceless?}}
+    specify {deny {Order.new(:price => 0.1).priceless?}}
   end
   
   describe "fill!" do

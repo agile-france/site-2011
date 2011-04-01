@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe Book do
-  let!(:bids) {[2, 1, 3].map{|p| Fabricate.build(:bid, :price => p)}}
-  let!(:asks) {[20, 10, 30].map{|p| Fabricate.build(:ask, :price => p)}}
+  let(:bids) {[2, 1, 3].map{|p| Fabricate.build(:bid, :price => p)}}
+  let(:asks) {[20, 10, 30].map{|p| Fabricate.build(:ask, :price => p)}}
     
   describe "book" do    
     it "sorts asks on price ASC" do
@@ -22,14 +22,26 @@ describe Book do
     end
   end
   
-  describe "accept" do
+  describe ".lines" do
+    let(:bids) {[2, 2, 3].map{|p| Fabricate.build(:bid, :price => p)}}
+    let(:asks) {[20, 10, 10].map{|p| Fabricate.build(:ask, :price => p)}}
+    let(:book) {Book.new([*bids, *asks])}
+    it "for bids, is the list of [quantity, price], price DESC" do
+      Book.lines(book.bids).should == [[10, 3.0], [20, 2.0]]
+    end
+    it "for asks, is the hash [quantity, price], price ASC" do
+      Book.lines(book.asks).should == [[20, 10.0], [10, 20.0]]
+    end
+  end
+
+  describe "#accept" do
     context "with an asks book" do
-      let!(:book) {Book.new(asks)}
+      let(:book) {Book.new(asks)}
       context "low bid" do
         let(:low) {Fabricate.build(:bid, :price => 9)}
+        specify {assert {book.accept(low) == []}}
         it "parks a low bid order" do
-          list = book.accept(low)
-          assert {list == [low]}
+          book.accept(low)
           assert {book.bids[low.price] == [low]}
         end        
       end
@@ -63,12 +75,9 @@ describe Book do
           @asks = book.asks.values.flatten
           @list = book.accept(aggressive)
         end
-        it "return list of updated or new transactions (order and execution)" do
-          [aggressive, @asks[0], @asks[1]].each do |t|
-              assert {@list.include? t}
-          end
-          [aggressive.executions.to_a, @asks[0].executions.first, @asks[1].executions.first].flatten.each do |t|
-              assert {@list.include? t}
+        describe "return value of #accept" do
+          it "includes all executions" do
+            @list.should =~ [aggressive, @asks[0], @asks[1]].map{|e| e.executions.to_a}.flatten
           end
         end
         it "is filled with 2 executions" do

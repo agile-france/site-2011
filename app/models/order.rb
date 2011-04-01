@@ -36,33 +36,44 @@ class Order
   def ask?; side == Side::ASK; end
   def bid?; side == Side::BID; end
   
+  # Public : executed quantity
   def executed
     executions.reduce(0){|acc, e| acc += e.quantity}
   end
   
+  # Public : remaining quantity of order is quantity mminus executed quantity
   def remaining
     quantity - executed
   end
   
+  # Public : returns whether self can match against other
   def matches?(other)
     return false unless other
     return false if side == other.side
     return false if filled?
+    return true if [self, other].any?{|o| o.priceless?}
     bid?? price >= other.price : price <= other.price
   end  
-
+  
+  # Public : active order is not filled
   def active?
     not filled?
   end
+  # Public : has execution but not filled
   def partially_filled?
     executed > 0 and executed < quantity
   end
+  # Public : is filled ?
   def filled?
     executed >= quantity    
   end
-
+  # Public : add execution for self at given quantity and price
   def fill!(q = self.quantity, p = self.price)
     executions.build(:user => user, :product => product, :side => side, :quantity => q, :price => p, :ref => ref)
+  end
+  # Public : has price
+  def priceless?
+    price == 0
   end
 
   class << self

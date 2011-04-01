@@ -24,14 +24,13 @@ describe RegistrationsController do
     end
     describe "POST a quantiy of 10" do
       # XXX testing of multiple behaviors     
-      it "redirects to conference page, notice successful registration, saves john order" do
+      it "redirects to conference page, notice successful registration, saves john execution" do
         post :create, :conference_id => xp.id,
           :orders => [{:product_id => place.id, :quantity => 10, :price => 220}]
 
         response.should redirect_to(registrations_account_path)
         assert {flash[:notice] =~ /enregistrée/}
         john.reload
-        assert {john.orders.count == 1}
         assert {john.executions.count == 1}
         assert {john.registrations_booked_for(xp).count == 10}
       end

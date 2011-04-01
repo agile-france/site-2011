@@ -21,4 +21,8 @@ class Invoice
     end
     self
   end
+  
+  def empty?
+    amount ? amount == 0 : true
+  end
 end

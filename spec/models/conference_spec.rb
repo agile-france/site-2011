@@ -17,21 +17,6 @@ describe Conference do
     end
   end
   
-  # XXX with embeds -> embeds is a true PAIN IN THE ASS !!
-  # using new_records and << just produce crap !
-  # collection.build produce correct fixture
-  # arrrghh.
-  describe "best_offers" do
-    let!(:xp) {Fabricate.build(:conference)}
-    before do
-      products = ['place', 'diner'].map {|p| Product.new(:name => p).tap {|p| p.stubs(:best_offer).returns(p.name)}}
-      xp.stubs(:products).returns(products)
-    end    
-    it "returns the map of products with best_offer" do
-      assert {xp.best_offers == ['place', 'diner']}
-    end      
-  end
-  
   describe "emit!" do
     let(:product) {Fabricate.build(:product)}
     let(:john) {Fabricate.build(:user)}    

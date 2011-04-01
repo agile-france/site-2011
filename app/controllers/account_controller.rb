@@ -7,7 +7,7 @@ class AccountController < ApplicationController
   def registrations
     @invoices_and_registrations_by_conference = Conference.all.desc(:created_at).reduce({}) do |acc, c|
       acc[c] = [
-        [c.new_invoice_for(current_user).compute], 
+        invoices_for(current_user, c), 
         Registration.booked_for(c).assigned_to(current_user),
         Registration.booked_for(c).booked_by(current_user).assigned,
         Registration.booked_for(c).booked_by(current_user).unassigned
@@ -40,5 +40,9 @@ class AccountController < ApplicationController
   end
   def load_user
     @user = current_user
+  end
+  # XXX this is a stub
+  def invoices_for(user, c)
+    (invoice = c.new_invoice_for(current_user).compute).empty?? [] : [invoice]
   end
 end

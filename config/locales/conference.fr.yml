@@ -148,12 +148,9 @@ fr:
         
         Par la validation de votre inscription, vous vous engagez à payer à l'association agile-france.org le montant de cette inscription."
       remaining:
-        one: Il reste une place à ce tarif
-        other: "Il reste %{count} places à ce tarif"
-      title: Inscription 
-    remaining:
-      one: Il reste une place à ce tarif
-      other: "Il reste %{count} places à ce tarif"        
+        one: Il reste une place à
+        other: "Il reste %{count} places à"
+      title: Inscription       
     rates:
       available: "Places Disponibles"
       price: "Prix"
