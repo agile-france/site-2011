@@ -6,7 +6,7 @@ rvm 1.9.2
 
 * install rvm
 
-* follow pretty straight [rvm documentation] (http://rvm.beginrescueend.com/rvm/install/)
+* follow pretty straight [rvm documentation](http://rvm.beginrescueend.com/rvm/install/)
 
 * read notes
 

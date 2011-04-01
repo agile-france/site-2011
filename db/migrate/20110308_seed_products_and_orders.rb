@@ -27,19 +27,20 @@ class SeedProductsAndOrders < Mongoid::Migration
       email = 'orga@conf.agile-france.org'
       owner = User.identified_by_email(email) ||
         User.new(:email => email).tap{|o| o.ensure_password_not_blank!; o.save!}
-      conference.tap{|c| c.owner = owner; c.save!}
+      conference.tap{|c| c.owner = owner; c.save(:validate => false)}
     end
   
     def seed_products(conference, data)
-      puts "seeding products for #{conference.inspect} with #{data}"    
+      puts "seeding products for #{conference.inspect} with #{data}"
       data.map do |ref, *tail|
         [Product.create(:ref => ref, :conference => conference), *tail]
       end      
     end
     
     def seed_orders(conference, data)
-      puts "seeding products for #{conference.inspect} with #{data}"    
+      puts "seeding products for #{conference.inspect} with #{data}"
       data.map do |product, orders|
+        product.orders.destroy_all
         orders.map do |ref, q, p|
           conference.emit!(ref, q, product, p)
         end
