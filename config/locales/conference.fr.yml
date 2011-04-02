@@ -13,16 +13,7 @@ fr:
       sponsors: J'autorise les sponsors de la conférence à me contacter
     seppuku?: "Supprimer mon compte et mes informations ?"
     registrations:
-      booked:
-        assigned: Déja attribuée
-        title: Répartition des inscriptions commandées
-        unassigned: 
-          one: 1 inscription libre
-          other: "%{count} inscriptions à distribuer"
       edit: Attribuer
-      none: "Pas d'inscriptions"
-      other: Et pour les autres
-      own: Vos inscriptions
       invoices:        
         hint:
           "Les paiements ne sont pas encore ouverts
@@ -34,6 +25,9 @@ fr:
           D'ici là, toutes vos commandes s'accumuleront sur une facture"
         title: Vos factures
       title: Mes Inscriptions
+      unassigned: 
+        one: 1 inscription à
+        other: "%{count} inscriptions à"      
     sessions:
       title: Mes Sessions   
     updated!: "Votre compte a été mis à jour !"

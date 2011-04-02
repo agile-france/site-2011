@@ -25,5 +25,9 @@ class Registration
     def assigned
       where(:user_id.exists => true)
     end
+    # Public : any execution assigned to or booked by user
+    def about(user)
+      any_of([{:execution_id.in => user.executions.map{|e| e.id}}, {:user_id => user.id}])
+    end
   end
 end
