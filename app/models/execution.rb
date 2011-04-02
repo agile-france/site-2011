@@ -8,7 +8,7 @@ class Execution
   # execution linking
   referenced_in :matchee, :class_name => "Execution", :foreign_key => :matchee_id, :inverse_of => :matchee
   # named registrations for ordered product
-  references_many :registrations, :autosave => true
+  references_many :registrations, :autosave => true, :dependent => :destroy
   # invoice
   referenced_in :invoice
   
