@@ -13,7 +13,7 @@ module RatingsHelper
     end
     image = (rating.stars < stars ? 'star_transparent.png' : 'star_colored.png')
     hint = hint_for(stars)
-    options.merge!('data-stars' => stars)
+    options.merge!('data-stars' => stars)    
     options.merge!(:remote => true) if user_signed_in?
     link_to image_tag(image, :alt => hint, :title => hint, :size => '12x12'), path, options
   end

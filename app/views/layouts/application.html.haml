@@ -10,10 +10,9 @@
     
     = stylesheet_link_tag 'base'
     = stylesheet_link_tag 'errors'
-    = javascript_include_tag :jquery_1_4_2
-    = javascript_include_tag 'application'
-    = yield :javascript
     = csrf_meta_tag
+    = javascript_include_tag :defaults
+    = yield :javascript
 
   %body
     #content_wrapper.container_12

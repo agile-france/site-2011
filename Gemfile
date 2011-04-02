@@ -4,6 +4,7 @@ def mac?
 end
 
 gem 'rails', '>= 3.0.0'
+gem 'jquery-rails'
 
 # views
 gem 'haml'
@@ -35,6 +36,7 @@ gem 'yajl-ruby', :require => 'yajl'
 gem 'rbtree'
 
 group :development, :test, :cucumber do
+  gem 'thin'
   gem "rspec-rails", ">= 2.1.0"
 
   # factory (required for scaffold)
