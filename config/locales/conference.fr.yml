@@ -108,6 +108,9 @@ fr:
       "5": "J'adore"
   icons:
     trash: Supprimer
+  invoices:
+    invoice:
+      amount: Montant  
   features:
     next: Cette fonctionnalité sera prochainement disponible...
   markdown:
