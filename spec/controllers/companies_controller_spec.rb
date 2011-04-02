@@ -52,7 +52,7 @@ describe CompaniesController do
         response.should redirect_to companies_path
       end
       it 'kills it' do
-        deny {Company.criteria.id(awesome.id).first}
+        assert {Company.criteria.for_ids(awesome.id).empty?}
       end
     end
   end

@@ -93,8 +93,8 @@ describe User do
       user.destroy
     end
     it "destroys child authentications and sessions" do
-      deny {Authentication.criteria.id(@a.id).first}
-      deny {Session.criteria.id(@s.id).first}
+      assert {Authentication.criteria.for_ids(@a.id).empty?}
+      assert {Session.criteria.for_ids(@s.id).empty?}
     end
   end
 

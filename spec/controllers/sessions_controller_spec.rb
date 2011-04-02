@@ -109,7 +109,7 @@ describe SessionsController do
         end
         it 'redirects to account sessions, and destroys aforementioned session' do
           response.should redirect_to(sessions_account_path)
-          assert {::Session.criteria.id(@simplicity.id).empty?}
+          assert {::Session.criteria.for_ids(@simplicity.id).empty?}
         end
       end
     end

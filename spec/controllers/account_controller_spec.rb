@@ -40,7 +40,7 @@ describe AccountController do
         assert {response.location = root_path}
       end
       it "kills user" do
-        deny {User.criteria.id(user.id).first}
+        assert {User.criteria.for_ids(user.id).empty?}
       end
     end
     
