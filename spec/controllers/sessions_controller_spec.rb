@@ -153,7 +153,8 @@ describe SessionsController do
 
     describe 'for a reader' do
       before do
-        sign_in(@ron)      
+        sign_in(@ron)
+        [2,2,3].each {|stars| explained.ratings.create(:stars => stars)}
         get :show, :id => @explained.id
       end
     
@@ -161,6 +162,9 @@ describe SessionsController do
         assigns(:session).should == @explained
         response.should be_success
         response.body.should_not have_tag(edit_awesome_session_path(@explained))
+      end
+      it 'mean vote is truncated to 2 digits' do
+        response.body.should =~ /^Moyenne : 2.33$/
       end
     end
     

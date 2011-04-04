@@ -2,6 +2,6 @@
   %p.hint
     = t('sessions.ratings.count', :count => session.ratings.count)
     %br
-    = t('sessions.ratings.mean', :stars => session.stars)
+    = t('sessions.ratings.mean', :stars => number_with_precision(session.stars, :precision => 2, :strip_insignificant_zeros => true))
     %br
     = render 'ratings/stars', :rating => (user_signed_in?? current_user.rate(session) : session.ratings.build)

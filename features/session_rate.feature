@@ -12,4 +12,4 @@ Feature: Rate a session
       And I go to "/sessions/123456789012345678901234"
     When I follow "J'adore"
     Then I should see "1 vote"
-      And I should see "Moyenne : 5.0"
+      And I should see "Moyenne : 5"
