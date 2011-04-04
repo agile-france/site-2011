@@ -25,6 +25,9 @@ a {
   text-decoration: none;
   color: #182f4c; }
 
+a:hover {
+  text-decoration: underline; }
+
 body {
   font-family: "DejaVuSansCondensed", Arial, sans-serif;
   font-size: 15px;

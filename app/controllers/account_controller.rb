@@ -6,10 +6,12 @@ class AccountController < ApplicationController
   
   def registrations
     @invoices_and_registrations_by_conference = Conference.all.desc(:created_at).reduce({}) do |acc, c|
-      assigned, unassigned = Registration.booked_for(c).about(current_user).reduce([[], []]) do |regs, r|
-        r.user ? regs.first << r : regs.second << r; regs
+      registrations_by_product = Registration.booked_for(c).about(current_user).group_by{|r| r.product}
+      registrations_by_product.each do |product, list|
+        assigned, unassigned = list.reduce([[], []]) {|regs, r| r.user ? regs.first << r : regs.second << r; regs}
+        registrations_by_product[product] = [assigned.sort{|a,b| a.user.greeter_name <=> b.user.greeter_name}, unassigned]
       end
-      acc[c] = [invoices_for(current_user, c), assigned, unassigned]; acc
+      acc[c] = [invoices_for(current_user, c), registrations_by_product]; acc
     end
   end
   

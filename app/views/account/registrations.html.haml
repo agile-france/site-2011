@@ -1,6 +1,6 @@
 =render 'toolbar'
 
--@invoices_and_registrations_by_conference.each do |conference, (invoices, assigned_registrations, unassigned_registrations)|
+-@invoices_and_registrations_by_conference.each do |conference, (invoices, registrations)|
   .grid_12
     %h3.pad_1
       = introduce(conference)
@@ -9,18 +9,17 @@
     .pad_1
       %h3
         = t('.title')
-      - assigned_registrations.group_by{|r| r.product}.each do |product, list|
+      - registrations.each do |product, (assigned, unassigned)|
         = i18n_text_for(product, :ref)
         %ul
-          - list.select{|r| r.user}.each do |registration|
+          - assigned.each do |registration|
             %li.registration{:id => "registration_#{registration.id}"}
-              = render 'users/user', :user => registration.user 
+              = render 'users/user', :user => registration.user
               = link_to(t('.edit'), edit_registration_path(registration))
-      - unassigned_registrations.group_by{|r| r.product}.each do |product, list|
-        = i18n_text_for(product, :ref)
-        %p
-          = t('.unassigned', :count => list.count)
-          = link_to(t('.edit'), edit_registration_path(list.first))
+          - unless unassigned.empty?
+            %li
+              = t('.unassigned', :count => unassigned.count)
+              = link_to(t('.edit'), edit_registration_path(unassigned.first))
           
   .grid_6
     .pad_1
