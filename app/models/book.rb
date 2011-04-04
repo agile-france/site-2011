@@ -59,11 +59,11 @@ class Book
       books[product.id] ||= Book.new(product.orders)
     end
 
-    # Public folds a book page in a list of pairs [fold of quantity, price]
+    # Public folds a book page in a list of pairs [fold of remaining, price]
     # list is sorted on price, using page order function
     # usage : Book.lines(book.bids) or Book.lines(book.asks)
     def lines(page)
-      page.reduce([]) {|acc, (price, v)| acc << [v.reduce(0){|sum, o| sum += o.quantity}, price]}
+      page.reduce([]) {|acc, (price, v)| acc << [v.reduce(0){|sum, o| sum += o.remaining}, price]}
     end
   end
 end

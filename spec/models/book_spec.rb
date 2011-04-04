@@ -26,11 +26,13 @@ describe Book do
     let(:bids) {[2, 2, 3].map{|p| Fabricate.build(:bid, :price => p)}}
     let(:asks) {[20, 10, 10].map{|p| Fabricate.build(:ask, :price => p)}}
     let(:book) {Book.new([*bids, *asks])}
-    it "for bids, is the list of [quantity, price], price DESC" do
-      Book.lines(book.bids).should == [[10, 3.0], [20, 2.0]]
+    it "for bids, is the list of [remaining, price], price DESC" do
+      bids[2].fill!(4)
+      Book.lines(book.bids).should == [[6, 3.0], [20, 2.0]]
     end
-    it "for asks, is the hash [quantity, price], price ASC" do
-      Book.lines(book.asks).should == [[20, 10.0], [10, 20.0]]
+    it "for asks, is the hash [remaining, price], price ASC" do
+      asks[0].fill!(8)
+      Book.lines(book.asks).should == [[20, 10.0], [2, 20.0]]
     end
   end
 

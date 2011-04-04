@@ -18,8 +18,8 @@
       .clear
       .grid_4
         %p.pad_1
-          - product.offers.each do |quantity, price|
-            = t('.remaining', :count => quantity)
+          - product.offers.each do |remaining, price|
+            = t('.remaining', :count => remaining)
             = number_to_currency(price, :locale => :fr)
             %br
       .clear
