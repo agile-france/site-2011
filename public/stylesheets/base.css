@@ -32,6 +32,10 @@ body {
   font-family: "DejaVuSansCondensed", Arial, sans-serif;
   font-size: 15px;
   background-color: #dbe3e2; }
+  body .sponsor {
+    max-width: 80px;
+    max-height: 80px;
+    background-color: white; }
   body .hint {
     font-size: 10px;
     font-style: italic; }
@@ -104,6 +108,15 @@ body {
         background-color: white;
         margin-bottom: 10px;
         padding: 20px 0; }
+        body #content_wrapper #content #content_container div.sponsorship {
+          height: 150px;
+          width: 150px;
+          -webkit-box-shadow: 1pt 1pt 5px #cccccc;
+          -moz-box-shadow: 1pt 1pt 5px #cccccc;
+          vertical-align: middle; }
+        body #content_wrapper #content #content_container img.logoSponsor {
+          max-width: 145px;
+          max-height: 145px; }
         body #content_wrapper #content #content_container #download {
           text-decoration: none; }
         body #content_wrapper #content #content_container #download > img {
@@ -156,5 +169,7 @@ body {
     font-size: 80%;
     padding-top: 1em; }
     #footer #footer_container .logo-sponsor {
+      width: 80px;
+      height: 80px;
       margin: 0 15px 7px;
       border: 0; }

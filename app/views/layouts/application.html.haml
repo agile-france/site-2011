@@ -53,12 +53,18 @@
             %div lieu
           %a.menuItem.grid_1{:href => "/sponsors"}
             %div sponsors
-          %a.menuItem.grid_1.omega{:href => "/history"}
+          %a.menuItem.grid_1{:href => "/history"}
             %div histoire
           %a.menuItem.grid_1.omega{:href => "/promote"}
             %div promotion
-      
+
         = render 'shared/flash', :flash => flash
+
+      #logos
+        %a.logo-sponsor{:href => "http://www.soat.fr/" }
+          %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+
+      %br
 
       #content
         #content_container
@@ -72,5 +78,7 @@
         2011 - Organisation Conférence Agile France
         %br
         %br
+        %a.logo-sponsor{:href => "http://www.soat.fr/" }
+          %img#soat.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
         %a{:href => "/sponsors"}
           %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
