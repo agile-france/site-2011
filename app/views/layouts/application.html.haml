@@ -31,11 +31,12 @@
               - if current_user.admin?
                 |
                 %span= link_to t('admin'), '/admin'
-              %span.suffix_2
             - else
-              %span#sign_in.suffix_4= link_to t('auth.sign_in'), new_user_session_path
+              %span#sign_in= link_to t('auth.sign_in'), new_user_session_path
+            .clear
+            = link_to t('user-voice'), 'https://github.com/agile-france/conference-app/issues'
 
-            #mojo.suffix_2
+            #mojo
               .mojo 26 et 27 mai 2011
               .mojo#sub-mojo Chalet de la Porte Jaune - Paris
         .clear
