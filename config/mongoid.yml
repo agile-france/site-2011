@@ -1,5 +1,6 @@
 defaults: &defaults
   host: localhost
+  # default port : 27017
   # slaves:
   #   - host: slave1.local
   #     port: 27018
@@ -9,22 +10,22 @@ defaults: &defaults
 # 1.9.2-p136 and https://github.com/tenderlove/psych/issues#issue/8
 # ha, I killed my development database !!!
 development:
-  # <<: *defaults
   host: localhost
   database: conference_on_rails_development
 
 cucumber:
-  # <<: *defaults
   host: localhost
   database: conference_on_rails_test
 
 test:
-  # <<: *defaults
   host: localhost
   database: conference_on_rails_test
 
 # set these environment variables on your prod server
 production:
+  <% if ENV['MONGOHQ_URL'] %>
   uri: <%= ENV['MONGOHQ_URL'] %>
-  # host: localhost
-  # database: conference-on-rails-production
+  <% else %>
+  host: localhost
+  database: conference-on-rails-production
+  <% end %>
