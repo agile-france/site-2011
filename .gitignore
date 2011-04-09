@@ -9,3 +9,5 @@ coverage/
 backup/
 
 config/environments/heroku
+
+.rvmrc

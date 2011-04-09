@@ -30,4 +30,14 @@ describe Invoice do
     specify { assert{invoice.empty?} }
     specify { assert{invoice.compute.empty?} }
   end
+  
+  describe "#paid?" do
+    let(:invoice) {Invoice.new}
+    before do
+      invoice.executions.build(:product => place, :price => 200, :quantity => 5)
+    end
+    it 
+    
+  end
+  
 end
