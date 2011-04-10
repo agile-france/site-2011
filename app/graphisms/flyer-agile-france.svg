@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.24748737"
-     inkscape:cx="887.95154"
-     inkscape:cy="379.67128"
+     inkscape:zoom="0.69999999"
+     inkscape:cx="360.34986"
+     inkscape:cy="428.77905"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -41,6 +41,32 @@
      inkscape:guide-bbox="true" />
   <defs
      id="defs3036">
+    <marker
+       inkscape:stockid="Arrow1Sstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Sstart"
+       style="overflow:visible">
+      <path
+         id="path4394"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.2) translate(6,0)" />
+    </marker>
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible">
+      <path
+         id="path4382"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
     <linearGradient
        id="linearGradient4270">
       <stop
@@ -819,31 +845,6 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
-    <filter
-       height="1.24"
-       y="-0.12"
-       width="1.24"
-       x="-0.12"
-       id="filter3786"
-       inkscape:collect="always">
-      <feGaussianBlur
-         id="feGaussianBlur3788"
-         stdDeviation="5.8585967"
-         inkscape:collect="always" />
-    </filter>
-    <filter
-       color-interpolation-filters="sRGB"
-       inkscape:collect="always"
-       id="filter3786-1"
-       x="-0.12"
-       width="1.24"
-       y="-0.12"
-       height="1.24">
-      <feGaussianBlur
-         inkscape:collect="always"
-         stdDeviation="5.8585967"
-         id="feGaussianBlur3788-3" />
-    </filter>
   </defs>
   <metadata
      id="metadata3039">
@@ -853,7 +854,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -876,12 +877,12 @@
        id="rect3107"
        width="748.94397"
        height="119.43146"
-       x="-2.4247437"
+       x="1.0560303"
        y="217.97618" />
     <rect
        y="327.07269"
-       x="-2.8472595"
-       height="612.13635"
+       x="0.21099854"
+       height="577.85065"
        width="749.789"
        id="rect3109"
        style="fill:#6699cc;stroke:none" />
@@ -1710,65 +1711,11 @@
        xlink:href="file:///home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
        height="214.32487"
        width="214.32487" />
-    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#000000;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="path2985-6"
-       sodipodi:cx="358.57144"
-       sodipodi:cy="379.50504"
-       sodipodi:rx="58.57143"
-       sodipodi:ry="58.57143"
-       d="m 399.9877,338.08878 a 58.57143,58.57143 0 1 1 -2e-5,-2e-5 l -41.41624,41.41628 z"
-       sodipodi:start="5.4977871"
-       sodipodi:end="11.780972"
-       transform="matrix(-0.25881905,0.96592583,-0.96592583,-0.25881905,615.20506,707.42649)"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
-       inkscape:export-xdpi="64"
-       inkscape:export-ydpi="64" />
-    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#b41717;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       id="path2985"
-       sodipodi:cx="358.57144"
-       sodipodi:cy="379.50504"
-       sodipodi:rx="58.57143"
-       sodipodi:ry="58.57143"
-       d="m 399.9877,338.08878 a 58.57143,58.57143 0 1 1 -2e-5,-2e-5 l -41.41624,41.41628 z"
-       sodipodi:start="5.4977871"
-       sodipodi:end="11.780972"
-       transform="matrix(-0.25881905,0.96592583,-0.96592583,-0.25881905,616.48386,709.3168)"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
-       inkscape:export-xdpi="64"
-       inkscape:export-ydpi="64" />
-    <path
-       style="fill:#ffffff"
-       d="m 142.901,1014.3191 c 12.70802,-2.0721 17.97291,-11.2768 26.05916,-12.9082 8.08625,-1.63144 13.8046,2.2225 17.40476,6.9833 -16.16682,9.5937 -30.88109,8.7676 -43.46392,5.9249 z"
-       id="path2998"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="czcc"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
-       inkscape:export-xdpi="64"
-       inkscape:export-ydpi="64" />
-    <path
-       sodipodi:type="arc"
-       style="opacity:0.2;color:#000000;fill:#ffffff;fill-opacity:0.99777425;fill-rule:nonzero;marker:none;visibility:visible;display:inline;overflow:visible;filter:url(#filter3786-1);enable-background:accumulate"
-       id="path2985-4"
-       sodipodi:cx="358.57144"
-       sodipodi:cy="379.50504"
-       sodipodi:rx="58.57143"
-       sodipodi:ry="58.57143"
-       d="m 399.9877,338.08878 a 58.57143,58.57143 0 1 1 -2e-5,-2e-5 l -41.41624,41.41628 z"
-       sodipodi:start="5.4977871"
-       sodipodi:end="11.780972"
-       transform="matrix(0.21419288,0.79937869,-0.79937869,0.21419288,383.92876,596.49134)"
-       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
-       inkscape:export-xdpi="64"
-       inkscape:export-ydpi="64" />
     <text
        xml:space="preserve"
-       style="font-size:74.2985611px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#feffc3;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       x="400.53406"
-       y="866.73798"
+       style="font-size:74.2985611px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#888a85;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="466.37375"
+       y="869.83423"
        id="text3816"
        sodipodi:linespacing="125%"
        inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
@@ -1776,19 +1723,71 @@
        inkscape:export-ydpi="64"
        transform="matrix(0.96592583,0.25881905,-0.25881905,0.96592583,0,0)"><tspan
          sodipodi:role="line"
-         id="tspan3818"
-         x="400.53406"
-         y="866.73798"
-         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Devenir</tspan><tspan
-         sodipodi:role="line"
-         x="400.53406"
-         y="889.9563"
-         id="tspan3820"
-         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">sponsor</tspan><tspan
-         sodipodi:role="line"
-         x="400.53406"
-         y="913.17456"
+         x="466.37375"
+         y="869.83423"
          id="tspan3822"
-         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">2011</tspan></text>
+         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#888a85;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold">Votre</tspan><tspan
+         sodipodi:role="line"
+         x="466.37375"
+         y="893.05255"
+         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#888a85;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold"
+         id="tspan4195">société</tspan><tspan
+         sodipodi:role="line"
+         x="466.37375"
+         y="916.27081"
+         style="font-size:18.57464027px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#888a85;fill-opacity:1;font-family:DejaVu Serif;-inkscape-font-specification:DejaVu Serif Bold"
+         id="tspan4197">ici</tspan></text>
+    <image
+       y="926.07648"
+       x="10.428581"
+       id="image3347"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/logoSoat.png"
+       height="95"
+       width="129.54546" />
+    <text
+       xml:space="preserve"
+       style="font-size:22.74584579px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold"
+       x="66.640266"
+       y="897.1261"
+       id="text3816-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64"><tspan
+         sodipodi:role="line"
+         x="66.640266"
+         y="897.1261"
+         id="tspan3822-9"
+         style="font-size:22.74584579px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans Bold">Sponsors</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#feffc3;fill-opacity:1;stroke:none;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans"
+       x="-824.90881"
+       y="743.70514"
+       id="text3816-9-2"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/home/valtech/agile-france/conference-on-rails/public/images/sponsor-2011.png"
+       inkscape:export-xdpi="64"
+       inkscape:export-ydpi="64"
+       transform="matrix(0,-1,1,0,0,0)"><tspan
+         sodipodi:role="line"
+         x="-824.90881"
+         y="743.70514"
+         id="tspan3822-9-1"
+         style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;writing-mode:lr;text-anchor:middle;fill:#feffc3;fill-opacity:1;font-family:DejaVu Sans;-inkscape-font-specification:DejaVu Sans">2011-04-10</tspan></text>
+    <rect
+       style="fill:none;stroke:#babdb6;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:21, 7;stroke-dashoffset:0"
+       id="rect3420"
+       width="95"
+       height="95"
+       x="173.70564"
+       y="927.28094" />
+    <rect
+       y="927.28094"
+       x="306.56277"
+       height="95"
+       width="95"
+       id="rect5193"
+       style="fill:none;stroke:#eeeeec;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:21, 7;stroke-dashoffset:0" />
   </g>
 </svg>
