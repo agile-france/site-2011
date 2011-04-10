@@ -1,17 +1,60 @@
+:javascript
+  now = new Date().getTime();
+  $(document).ready(function () {
+    $(".event").each(function () {
+      var node = $(this);
+      node.attr('src', function (i, val) {
+        var src = "http://cdn1.iconfinder.com/data/icons/de-munich-icon-pack/16x16/";
+        if (new Date(node.attr('startdate')).getTime() >= now) {
+          src += 'busy';
+        } else {
+          src += 'check';
+        }
+        return src + '.png';
+      });
+    });
+  });
+
 .pad_2
-  %h2= "Bientôt"
+  %h2= "Calendrier"
   %p
-    %img{ :src => "/images/tabella_architetto_franc_01.png", :alt => "Calendar" }
-    Voici les prochaines étapes pour la conférence.
+    %img.icon{ :src => "http://cdn1.iconfinder.com/data/icons/de-munich-icon-pack/32x32/date.png", :alt => "Calendar" }
+    Voici les principales étapes pour la conférence.
 
   %dl.prefix_1
     %dt= "Janvier 2011"
-    %dd.prefix_2= "Ouverture des inscriptions au site"
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-01-01", :src => "", :alt => "Status" }
+      Ouverture des
+      %a{ :href => "/users/sign_in"}= "inscriptions au site"
     %dt= "Février 2011"
-    %dd.prefix_2= "Ouverture des propositions de sessions"
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-02-01", :src => "", :alt => "Status" }
+      Ouverture des
+      %a{ :href => "/agile-france-2011/sessions/new" }= "propositions de sessions"
+      %br
+      %img.event{ :startdate => "2011-04-15", :src => "", :alt => "Status" }
+      Prolongations jusqu'au 15 avril !
     %dt= "Mars 2011"
-    %dd.prefix_2= "Ouverture des inscriptions à la conférence au tarif 'early'."
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-03-20", :src => "", :alt => "Status" }
+      Ouverture des
+      %a{ :href => "/conferences/agile-france-2011/registrations/new" }= "inscriptions"
+      à la conférence
     %dt= "Avril 2011"
-    %dd.prefix_2= "Comité de séléction des sessions"
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-04-15", :src => "", :alt => "Status" }
+      Ouverture du paiement des droits d'entrée
+      %ul
+        %li= "220€ au tarif 'early' (100 premières places)"
+        %li= "270€ au tarif normal"
+      %img.event{ :startdate => "2011-05-05", :src => "", :alt => "Status" }
+      Comité de séléction des sessions les mercredis 20, 27 avril et 4 mai
+    %dt= "Mai 2011"
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-05-15", :src => "", :alt => "Status" }
+      Publication du programme
     %dt= "26 et 27 mai 2011"
-    %dd.prefix_2= "Conférence !"
+    %dd.prefix_2
+      %img.event{ :startdate => "2011-05-27", :src => "", :alt => "Status" }
+      Conférence !
