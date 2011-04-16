@@ -108,6 +108,8 @@ body {
         background-color: white;
         margin-bottom: 10px;
         padding: 20px 0; }
+        body #content_wrapper #content #content_container #promote-ressources img {
+          max-width: 220px; }
         body #content_wrapper #content #content_container .icon {
           vertical-align: middle; }
         body #content_wrapper #content #content_container div.sponsorship {
