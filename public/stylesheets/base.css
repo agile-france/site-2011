@@ -110,6 +110,10 @@ body {
         padding: 20px 0; }
         body #content_wrapper #content #content_container #promote-ressources img {
           max-width: 220px; }
+        body #content_wrapper #content #content_container .bordered {
+          -webkit-box-shadow: 1pt 1pt 5px #cccccc;
+          -moz-box-shadow: 1pt 1pt 5px #cccccc;
+          margin-bottom: 50px; }
         body #content_wrapper #content #content_container .icon {
           vertical-align: middle; }
         body #content_wrapper #content #content_container div.sponsorship {

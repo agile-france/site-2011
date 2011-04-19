@@ -22,6 +22,10 @@ $menuItemRotation: 5deg
 @mixin pad($unit)
   padding: 0 $unit
 
+@mixin nice-border()
+  -webkit-box-shadow: 1pt 1pt 5px #ccc
+  -moz-box-shadow: 1pt 1pt 5px #ccc
+
 /**
  * see http://www.fontsquirrel.com/fonts/ChunkFive#fontface
  */
@@ -137,14 +141,17 @@ body
           img
             max-width: 220px
 
+        .bordered
+          @include nice-border()
+          margin-bottom: 50px
+
         .icon
           vertical-align: middle
 
         div.sponsorship
           height: 150px
           width: 150px
-          -webkit-box-shadow: 1pt 1pt 5px #ccc
-          -moz-box-shadow: 1pt 1pt 5px #ccc
+          @include nice-border()
           vertical-align: middle
 
         img.logoSponsor
