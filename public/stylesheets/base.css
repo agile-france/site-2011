@@ -32,6 +32,12 @@ body {
   font-family: "DejaVuSansCondensed", Arial, sans-serif;
   font-size: 15px;
   background-color: #dbe3e2; }
+  body .sponsor-container {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    margin-right: 15px;
+    float: left; }
   body .sponsor {
     max-width: 80px;
     max-height: 80px;
@@ -48,6 +54,9 @@ body {
   body .instructions {
     font-size: 12px;
     font-style: italic; }
+  body .bordered {
+    -webkit-box-shadow: 1pt 1pt 5px #cccccc;
+    -moz-box-shadow: 1pt 1pt 5px #cccccc; }
   body #content_wrapper {
     min-height: 100%;
     height: auto !important;
@@ -111,8 +120,6 @@ body {
         body #content_wrapper #content #content_container #promote-ressources img {
           max-width: 220px; }
         body #content_wrapper #content #content_container .bordered {
-          -webkit-box-shadow: 1pt 1pt 5px #cccccc;
-          -moz-box-shadow: 1pt 1pt 5px #cccccc;
           margin-bottom: 50px; }
         body #content_wrapper #content #content_container .icon {
           vertical-align: middle; }
@@ -179,5 +186,5 @@ body {
     #footer #footer_container .logo-sponsor {
       width: 80px;
       height: 80px;
-      margin: 0 15px 7px;
-      border: 0; }
+      background-color: white;
+      margin-right: 15px; }

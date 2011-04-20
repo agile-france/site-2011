@@ -61,8 +61,13 @@
         = render 'shared/flash', :flash => flash
 
       #logos
-        %a.logo-sponsor{:href => "http://www.soat.fr/" }
-          %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+        %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
+          %div.sponsor-container.bordered
+            %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+        %a.logo-sponsor{:href => "http://jduchess-fr.org/", :title => "Duchess France, partenaire média" }
+          %div.sponsor-container.bordered
+            %img.sponsor{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
+        %div.clear
 
       %br
 
@@ -78,7 +83,9 @@
         2011 - Organisation Conférence Agile France
         %br
         %br
-        %a.logo-sponsor{:href => "http://www.soat.fr/" }
-          %img#soat.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+        %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
+          %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+        %a.logo-sponsor{:href => "http://jduchess-fr.org/", :title => "Duchess France, partenaire média" }
+          %img.sponsor{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
         %a{:href => "/sponsors"}
           %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}

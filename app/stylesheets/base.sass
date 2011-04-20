@@ -26,6 +26,12 @@ $menuItemRotation: 5deg
   -webkit-box-shadow: 1pt 1pt 5px #ccc
   -moz-box-shadow: 1pt 1pt 5px #ccc
 
+@mixin logo-sponsor()
+  width: 80px
+  height: 80px
+  background-color: white
+  margin-right: 15px
+
 /**
  * see http://www.fontsquirrel.com/fonts/ChunkFive#fontface
  */
@@ -60,6 +66,10 @@ body
   font-size: 15px
   background-color: $sand
 
+  .sponsor-container
+    @include logo-sponsor()
+    float: left
+
   .sponsor
     max-width: 80px
     max-height: 80px
@@ -80,6 +90,9 @@ body
   .instructions
     font-size: 12px
     font-style: italic
+
+  .bordered
+    @include nice-border()
 
   #content_wrapper
     min-height: 100%
@@ -142,7 +155,6 @@ body
             max-width: 220px
 
         .bordered
-          @include nice-border()
           margin-bottom: 50px
 
         .icon
@@ -218,9 +230,6 @@ body
     padding-top: 1em
 
     .logo-sponsor
-      width: 80px
-      height: 80px
-      margin: 0 15px 7px
-      border: 0
+      @include logo-sponsor()
 
     a:hover
