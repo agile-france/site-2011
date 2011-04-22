@@ -1,20 +1,31 @@
 .pad_2
   %h2= "Sponsors"
-  %h3= "Gold"
-  %div.sponsorship
-    %a#soat{ :href => "http://www.soat.fr/", :title => "Soat, sponsor Gold 2011" }
-      %img.logoSponsor{ :src => "/images/logoSoat.png", :alt => "Soat, sponsor Gold 2011" }
 
+  .grid_4
+    %h3= "Gold"
+    %div.sponsorship
+      %a#Soat{ :href => "http://www.soat.fr/", :title => "Soat, sponsor Gold 2011" }
+        %img.logoSponsor{ :src => "/images/logoSoat.png", :alt => "Soat, sponsor Gold 2011" }
+    %p
+
+  .grid_4
+    %h3= "Web & Mail"
+    %div.sponsorship
+      %a#Valtech{ :href => "http://www.valtech.fr/", :title => "Valtech, sponsor Web & Mail 2011" }
+        %img.logoSponsor{ :src => "/images/logoValtech.jpg", :alt => "Valtech, sponsor Web & Mail 2011" }
+    %p
+
+  %p.clear
   %p
-    &nbsp;
 
-  %h3= "Partenaire média"
-  %div.sponsorship
-    %a#soat{ :href => "http://jduchess-fr.org/", :title => "Duchess France, partenaire média" }
-      %img.logoSponsor{ :src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "JDuchess, partenaire média" }
+  .grid_4
+    %h3= "Partenaire média"
+    %div.sponsorship
+      %a#Duchess{ :href => "http://jduchess-fr.org/", :title => "Duchess France, partenaire média" }
+        %img.logoSponsor{ :src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "JDuchess, partenaire média" }
+    %p
 
-  %p
-    &nbsp;
+  %p.clear
   %hr
 
   %h3= "Devenir sponsor"
