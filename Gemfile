@@ -35,16 +35,19 @@ gem 'yajl-ruby', :require => 'yajl'
 # rbtree
 gem 'rbtree'
 
+# xero
+gem 'xero-min'
+
 group :development, :test, :cucumber do
   gem 'thin'
   gem "rspec-rails", ">= 2.1.0"
 
   # factory (required for scaffold)
   gem 'fabrication'
-  
+
   gem 'ruby-debug19', :platforms => :mri_19
   gem 'ruby-debug', :platforms => :mri_18
-  
+
   # js
   gem 'barista', '~> 1.0'
   gem 'therubyracer', :require => false
