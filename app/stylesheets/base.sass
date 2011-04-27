@@ -9,6 +9,7 @@ $platinium: #888888
 $gold: #fdca01
 $webmail: #005d00
 $media: #0169c9
+$transition-logo: max-width 0.2s ease-out, max-height 0.2s ease-out
 
 @mixin content()
   margin-left: auto
@@ -157,6 +158,17 @@ body
           -webkit-transform: rotate($menuItemRotation)
           -o-transform: rotate($menuItemRotation)
           transform: rotate($menuItemRotation)
+
+    #logos
+      .sponsor
+        -webkit-transition: $transition-logo
+        -moz-transition: $transition-logo
+        transition: $transition-logo
+
+      .sponsor:hover, .sponsor:focus
+        max-width: 120%
+        max-height: 120%
+        z-index: 100
 
     #content
       @include content
