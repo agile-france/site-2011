@@ -38,6 +38,10 @@ gem 'rbtree'
 # xero
 gem 'xero-min'
 
+# jobs
+gem 'resque'
+
+
 group :development, :test, :cucumber do
   gem 'thin'
   gem "rspec-rails", ">= 2.1.0"
@@ -46,7 +50,6 @@ group :development, :test, :cucumber do
   gem 'fabrication'
 
   gem 'ruby-debug19', :platforms => :mri_19
-  gem 'ruby-debug', :platforms => :mri_18
 
   # js
   gem 'barista', '~> 1.0'

@@ -5,14 +5,14 @@ describe Invoice do
   let(:place) {xp.products.to_a.first}
   let(:diner) {xp.products.to_a.second}
   let(:invoice) {Invoice.new}
-  
+
   context "with executions" do
     describe "#compute" do
       before do
-        invoice.executions.build(:product => place, :price => 200, :quantity => 5)
-        invoice.executions.build(:product => place, :price => 200, :quantity => 5)
-        invoice.executions.build(:product => place, :price => 300, :quantity => 5)
-        invoice.executions.build(:product => diner, :price => 50, :quantity => 10)
+        place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
+        place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
+        place.executions.build(invoice: invoice, :price => 300, :quantity => 5)
+        diner.executions.build(invoice: invoice, :price => 50, :quantity => 10)
         invoice.compute
       end
       it "folds amount" do
@@ -24,20 +24,18 @@ describe Invoice do
         assert {lines[diner] == {50.0 => 10}}
       end
       it { deny{invoice.empty?} }
-    end    
+    end
   end
+
   context "without execution" do
     specify { assert{invoice.empty?} }
     specify { assert{invoice.compute.empty?} }
   end
-  
+
   describe "#paid?" do
     let(:invoice) {Invoice.new}
     before do
       invoice.executions.build(:product => place, :price => 200, :quantity => 5)
     end
-    it 
-    
   end
-  
 end

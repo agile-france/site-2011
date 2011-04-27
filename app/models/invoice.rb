@@ -1,11 +1,11 @@
 class Invoice
   include Mongoid::Document
-  field :ref, :default => 'PENDING'
-  validates_length_of :ref, :maximum => 20
-  
-  referenced_in :user
-  references_many :executions
-  
+  field :ref
+  validates_length_of :ref, maximum: 20
+
+  belongs_to :user
+  has_many :executions, autosave: true
+
   attr_reader :amount, :lines
   def compute
     @amount, @lines = 0, {}
@@ -17,11 +17,11 @@ class Invoice
       else
         @lines[e.product] = {e.price => e.quantity}
       end
-      acc  
+      acc
     end
     self
   end
-  
+
   def empty?
     amount ? amount == 0 : true
   end

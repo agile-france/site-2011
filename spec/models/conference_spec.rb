@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe Conference do
   it {should reference_many(:products)}
-    
+
   it 'has a conpound id : #{name}-#{edition}' do
     assert {Conference.new(:name => 'xp', :edition => '2030').id == "xp-2030"}
   end
-  
+
   describe "#owner" do
     let(:xp) {Fabricate.build(:conference)}
     let(:xp_dot_org) {Fabricate.build(:user, :email => 'conf@xp.org')}
@@ -16,10 +16,10 @@ describe Conference do
       assert {xp.owner == xp_dot_org}
     end
   end
-  
+
   describe "emit!" do
     let(:product) {Fabricate.build(:product)}
-    let(:john) {Fabricate.build(:user)}    
+    let(:john) {Fabricate.build(:user)}
     let(:xp) {Fabricate.build(:conference)}
     context "conference has an owner" do
       before do
@@ -52,7 +52,6 @@ describe Conference do
     it "builds an invoice for all executions of user, not yet invoiced" do
       invoice = xp.new_invoice_for(john)
       deny {invoice.persisted?}
-      assert {invoice.ref == 'PENDING'}
       assert {invoice.executions == [execution]}
     end
   end

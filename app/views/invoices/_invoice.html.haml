@@ -1,10 +1,13 @@
 %p
   = t('.amount')
-  = number_to_currency(invoice.amount)
+  = number_to_currency(10)
+%p
+  = t('.ref')
+  = invoice.ref
   - invoice.lines.each do |product, lines|
     %li
       = i18n_text_for(product, :ref)
       - lines.each do |(price, quantity)|
         %br
         = "#{quantity} x #{price}"
-  = link_to(t('.pay'), payments_path(invoice))
+  = link_to(t('.pay'), new_payment_path(invoice.id))
