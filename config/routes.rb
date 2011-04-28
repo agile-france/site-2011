@@ -36,9 +36,12 @@ ConferenceOnRails::Application.routes.draw do
   end
 
   # static pages rendered through home controller
-  [:history, :place, :soon, :sponsors, :promote, :version].each do |s|
+  [:history, :place, :program, :sponsors, :promote, :version].each do |s|
     get "#{s}" => "home\##{s}"
   end
+
+  # old pages redirected
+  match "/soon" => redirect("/program")
    
   root :to => 'conferences#recent'
 end

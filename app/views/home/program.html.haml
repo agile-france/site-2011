@@ -1,3 +1,15 @@
+.pad_2
+  %h2= "Programme"
+
+  %p= "Voici l'ébauche du programme de la conférence Agile France 2011:"
+  %p
+    %a#download.prefix_3{ :href => "/programme/2011/draft/last.pdf", :target => "_blank" }
+      %img{ :src => "/images/pdf_ico.png", :alt => "PDF Icon" }
+      Programme 2011 - ébauche.pdf
+  %p= "Le programme sera finalisé dès que tous les orateurs auront confirmé leur session."
+
+%hr
+
 :javascript
   now = new Date().getTime();
   $(document).ready(function () {
@@ -48,11 +60,11 @@
       %ul
         %li= "220€ au tarif 'early' (100 premières places)"
         %li= "270€ au tarif normal"
-      %img.event{ :startdate => "2011-05-05", :src => "", :alt => "Status" }
-      Comité de séléction des sessions les mercredis 20, 27 avril et 4 mai
-    %dt= "Mai 2011"
+      %img.event{ :startdate => "2011-04-27", :src => "", :alt => "Status" }
+      Comité de séléction des sessions les mercredis 20 et 27 avril
+    %dt= "Fin avril 2011"
     %dd.prefix_2
-      %img.event{ :startdate => "2011-05-15", :src => "", :alt => "Status" }
+      %img.event{ :startdate => "2011-04-30", :src => "", :alt => "Status" }
       Publication du programme
     %dt= "26 et 27 mai 2011"
     %dd.prefix_2
