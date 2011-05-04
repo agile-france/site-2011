@@ -61,14 +61,17 @@
         = render 'shared/flash', :flash => flash
 
       #logos
-        %a.logo-sponsor{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
-          %div.sponsor-container.bordered
+        %div.sponsor-container= "Platinium"
+        %a{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
+          %div.sponsor-container.bordered.platinium
             %img.sponsor{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
-        %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
-          %div.sponsor-container.bordered
+        %div.sponsor-container= "Gold"
+        %a{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
+          %div.sponsor-container.bordered.gold
             %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
-        %a.logo-sponsor{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
-          %div.sponsor-container.bordered
+        %div.sponsor-container= "Media"
+        %a{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
+          %div.sponsor-container.bordered.media
             %img.sponsor{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
         %div.clear
 
@@ -87,9 +90,9 @@
         %br
         %br
         %a.logo-sponsor{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
-          %img.sponsor{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
+          %img.sponsor.platinium{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
         %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
-          %img.sponsor{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+          %img.sponsor.gold{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
         %a.logo-sponsor{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
           %img.sponsor{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
         %a{:href => "/sponsors"}

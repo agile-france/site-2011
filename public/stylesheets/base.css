@@ -35,9 +35,12 @@ body {
   body .sponsor-container {
     width: 80px;
     height: 80px;
-    background-color: white;
     margin-right: 15px;
-    float: left; }
+    float: left;
+    text-align: right;
+    font-style: italic;
+    font-size: small;
+    font-family: cursive; }
   body .sponsor {
     max-width: 80px;
     max-height: 80px;
@@ -57,6 +60,15 @@ body {
   body .bordered {
     -webkit-box-shadow: 1pt 1pt 5px #cccccc;
     -moz-box-shadow: 1pt 1pt 5px #cccccc; }
+  body .platinium {
+    -webkit-box-shadow: 1pt 1pt 5px #888888;
+    -moz-box-shadow: 1pt 1pt 5px #888888; }
+  body .gold {
+    -webkit-box-shadow: 1pt 1pt 5px #fdca01;
+    -moz-box-shadow: 1pt 1pt 5px #fdca01; }
+  body .media {
+    -webkit-box-shadow: 1pt 1pt 5px #0169c9;
+    -moz-box-shadow: 1pt 1pt 5px #0169c9; }
   body #content_wrapper {
     min-height: 100%;
     height: auto !important;
@@ -186,5 +198,4 @@ body {
     #footer #footer_container .logo-sponsor {
       width: 80px;
       height: 80px;
-      background-color: white;
       margin-right: 15px; }

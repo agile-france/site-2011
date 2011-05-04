@@ -5,6 +5,10 @@ $footersize: 10em
 $margin: 10px
 $gutter: 2*$margin
 $menuItemRotation: 5deg
+$platinium: #888888
+$gold: #fdca01
+$webmail: #005d00
+$media: #0169c9
 
 @mixin content()
   margin-left: auto
@@ -22,14 +26,13 @@ $menuItemRotation: 5deg
 @mixin pad($unit)
   padding: 0 $unit
 
-@mixin nice-border()
-  -webkit-box-shadow: 1pt 1pt 5px #ccc
-  -moz-box-shadow: 1pt 1pt 5px #ccc
+@mixin nice-border($color = #ccc)
+  -webkit-box-shadow: 1pt 1pt 5px $color
+  -moz-box-shadow: 1pt 1pt 5px $color
 
 @mixin logo-sponsor()
   width: 80px
   height: 80px
-  background-color: white
   margin-right: 15px
 
 /**
@@ -69,6 +72,10 @@ body
   .sponsor-container
     @include logo-sponsor()
     float: left
+    text-align: right
+    font-style: italic
+    font-size: small
+    font-family: cursive
 
   .sponsor
     max-width: 80px
@@ -93,6 +100,15 @@ body
 
   .bordered
     @include nice-border()
+
+  .platinium
+    @include nice-border($platinium)
+
+  .gold
+    @include nice-border($gold)
+
+  .media
+    @include nice-border($media)
 
   #content_wrapper
     min-height: 100%
@@ -211,8 +227,7 @@ body
         .avatar
           border: solid 1px grey
           padding: 1px
-          -webkit-box-shadow: 1pt 1pt 5px #ccc
-          -moz-box-shadow: 1pt 1pt 5px #ccc
+          @include nice-border()
 
         h3
           font-family: serif
