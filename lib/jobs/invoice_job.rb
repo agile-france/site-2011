@@ -12,9 +12,7 @@ class InvoiceJob
       # doh!
       puts "invoicing #{user.greeter_name} : #{invoice.amount}"
       # post and get back xero InvoiceNumber
-      xml = to_xml(invoice)
-      require 'ruby-debug'; debugger
-      node = post! xml
+      node = client.put! :invoices, body: to_xml(invoice)
       invoice.ref = node.xpath('/Response/Invoices/Invoice/InvoiceNumber').first.content
       # save
       invoice.save!
@@ -25,13 +23,11 @@ class InvoiceJob
       @erb ||= XeroMin::Erb.new(File.expand_path('../xero/templates', __FILE__))
     end
     def client
-      @client ||= XeroMin::Client.new
+      Xero.client
     end
     def to_xml(invoice)
-      erb.render(invoice: invoice).tap{|xml| File.open("invoice-#{invoice.id}.xml", 'w'){|f| f << xml}}
-    end
-    def post!(xml)
-      client.post!(:invoices, body: xml)
+      erb.render(invoice: invoice).gsub(%r((\s*)<), '<')
+      # xml.tap{|xml| File.open("invoice-#{invoice.user.email}.xml", 'w') {|f| f << xml}}
     end
   end
 end

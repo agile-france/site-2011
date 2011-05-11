@@ -7,10 +7,10 @@ class Execution
   belongs_to :order
   # execution linking
   belongs_to :matchee, :class_name => "Execution", :foreign_key => :matchee_id, :inverse_of => :matchee
-  # named registrations for ordered product
-  has_many :registrations, :autosave => true, :dependent => :destroy
   # invoice
   belongs_to :invoice
+  # named registrations for ordered product
+  has_many :registrations, :autosave => true, :dependent => :destroy
 
   # Public : Side of order B=bid or A=ask
   field :side, :default => Order::Side::BID

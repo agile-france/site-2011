@@ -1,5 +1,7 @@
 class Invoice
   include Mongoid::Document
+  include Mongoid::Timestamps
+
   field :ref
   validates_length_of :ref, maximum: 20
 
@@ -22,7 +24,7 @@ class Invoice
     self
   end
 
-  def empty?
-    amount ? amount == 0 : true
+  def invoiceable?
+    amount && amount > 0
   end
 end

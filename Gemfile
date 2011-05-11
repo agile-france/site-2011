@@ -36,7 +36,7 @@ gem 'yajl-ruby', :require => 'yajl'
 gem 'rbtree'
 
 # xero
-gem 'xero-min'
+gem 'xero-min', path: '~/src/ruby/xero-min'
 
 # jobs
 gem 'resque'

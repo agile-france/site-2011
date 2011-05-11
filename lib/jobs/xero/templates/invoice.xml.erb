@@ -3,7 +3,7 @@
   <Type>ACCREC</Type>
   <Contact>
     <ContactNumber><%= invoice.user.id %></ContactNumber>
-    <Name><%= invoice.user.greeter_name %></Name>
+    <Name><%= invoice.user.company ? invoice.user.company.name : invoice.user.greeter_name %></Name>
     <FirstName><%= invoice.user.first_name %></FirstName>
     <LastName><%= invoice.user.last_name %></LastName>
     <EmailAddress><%= invoice.user.email %></EmailAddress>

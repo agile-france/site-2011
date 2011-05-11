@@ -40,11 +40,9 @@ class AccountController < ApplicationController
   def load_user
     @user = current_user
   end
-  # XXX this is a stub
+
   def invoices_for(user, c)
-    invoices = []
-    invoice = c.new_invoice_for(current_user).compute
-    invoices << invoice unless invoice.empty?
-    invoice << user.invoices.where(conference_id)
+    invoices = Execution.booked_for(c).booked_by(user).map{|e| e.invoice}.uniq.compact
+    invoices.each {|invoice| invoice.compute}
   end
 end

@@ -6,14 +6,14 @@ describe AccountController do
     before do
       sign_in user
     end
-    
+
     describe "GET /account/edit" do
       it "should be successful" do
         get :edit
         response.should be_success
       end
     end
-    
+
     describe "POST /account" do
       it 'update user sent attributes' do
         put :update, :user => {:bio => 'man'}
@@ -31,7 +31,7 @@ describe AccountController do
         assert {user.reload.company == awe}
       end
     end
-    
+
     describe "DELETE /account" do
       before do
         delete :destroy
@@ -43,26 +43,14 @@ describe AccountController do
         assert {User.criteria.for_ids(user.id).empty?}
       end
     end
-    
-    # describe "GET /account/sessions" do
-    #   touch_db_with(:xp) {Fabricate(:conference)}
-    #   touch_db_with(:awesome) {Fabricate(:session, :title => 'awesome')}
-    #   before do
-    #     user.propose(awesome, xp)
-    #   end
-    #   it "enable user to see sessions he has submitted" do
-    #     get :sessions
-    #     assert {assigns(:sessions).include? awesome}
-    #   end
-    # end
   end
-  
+
   context 'with no user signed in' do
     describe "GET /account/edit" do
       it "should redirect to /users/sign_in" do
         get :edit
         response.should redirect_to(new_user_session_path)
       end
-    end    
+    end
   end
 end
