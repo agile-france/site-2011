@@ -23,8 +23,8 @@ gem 'rdiscount'
 gem 'mongoid', '>= 2.0.0.beta.19'
 gem 'mongoid_taggable', '~> 0.1'
 gem 'mongoid_rails_migrations'
-gem 'bson_ext', '>= 1.0.9'
-gem 'mongo', '>= 1.0.9'
+gem 'mongo', '~> 1.3'
+gem 'bson_ext', '~> 1.3'
 
 # cant
 gem 'cant'
@@ -40,7 +40,6 @@ gem 'xero-min'
 
 # jobs
 gem 'resque'
-
 
 group :development, :test, :cucumber do
   gem 'thin'
@@ -61,7 +60,6 @@ group :test, :cucumber do
   gem 'mongoid-rspec'
   gem 'wrong', '~> 0.4'
   gem 'jasmine'
-
 
   # cucumber
   gem 'cucumber'
