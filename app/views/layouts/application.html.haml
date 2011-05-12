@@ -89,17 +89,23 @@
           = render 'debug/show' if Rails.env.development?
 
     #footer
-      #footer_container
-        2011 - Organisation Conférence Agile France
-        %br
-        %br
-        %a.logo-sponsor{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
-          %img.sponsor.platinium{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
-        %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
-          %img.sponsor.gold{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
-        %a.logo-sponsor{:href => "http://www.clt-services.com", :title => "CLT Services, sponsor Gold" }
-          %img.sponsor.gold{:src => "/images/logoCLT.jpg", :alt => "CLT Services, sponsor Gold"}
-        %a.logo-sponsor{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
-          %img.sponsor.media{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
-        %a{:href => "/sponsors"}
-          %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
+      .container_12
+        #footer_container.grid_12
+          2011 - Agile France Conférence
+          %br
+          %br
+        .grid_10
+          %a.logo-sponsor{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
+            %img.sponsor.platinium{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
+          %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
+            %img.sponsor.gold{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+          %a.logo-sponsor{:href => "http://www.clt-services.com", :title => "CLT Services, sponsor Gold" }
+            %img.sponsor.gold{:src => "/images/logoCLT.jpg", :alt => "CLT Services, sponsor Gold"}
+          %a.logo-sponsor{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
+            %img.sponsor.media{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
+          %a{:href => "/sponsors"}
+            %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
+        .grid_2
+          %a{:href => "http://www.w3.org/html/logo/"}
+            %img{:width => 73, :height => 32, :title => "HTML5 Powered with CSS3 / Styling", :alt => "HTML5 Powered with CSS3 / Styling", :src => "http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" }
+

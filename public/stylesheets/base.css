@@ -203,7 +203,7 @@ body {
   #footer #footer_container {
     font-size: 80%;
     padding-top: 1em; }
-    #footer #footer_container .logo-sponsor {
-      width: 80px;
-      height: 80px;
-      margin-right: 15px; }
+  #footer .logo-sponsor {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px; }
