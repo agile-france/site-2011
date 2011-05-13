@@ -106,6 +106,9 @@
           %a{:href => "/sponsors"}
             %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
         .grid_2
-          %a{:href => "http://www.w3.org/html/logo/"}
-            %img{:width => 73, :height => 32, :title => "HTML5 Powered with CSS3 / Styling", :alt => "HTML5 Powered with CSS3 / Styling", :src => "http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" }
-
+          %div
+            %a{:href => "http://www.w3.org/html/logo/"}
+              %img{:width => 73, :height => 32, :title => "HTML5 Powered with CSS3 / Styling", :alt => "HTML5 Powered with CSS3 / Styling", :src => "http://www.w3.org/html/logo/badge/html5-badge-h-css3.png" }
+          %br
+          %div
+            = link_to t('user-voice'), 'https://github.com/agile-france/conference-app/issues', :title => t('user-voice-action')

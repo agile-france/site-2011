@@ -198,10 +198,12 @@ body {
   text-align: center;
   clear: both;
   position: relative;
-  height: 10em;
-  color: white; }
+  height: 13em;
+  color: white;
+  font-size: 80%; }
+  #footer a {
+    color: white; }
   #footer #footer_container {
-    font-size: 80%;
     padding-top: 1em; }
   #footer .logo-sponsor {
     width: 80px;
