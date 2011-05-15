@@ -111,6 +111,8 @@ fr:
   invoices:
     invoice:
       amount: Montant
+      pay: Payer
+      ref: Facture Numéro
   features:
     next: Cette fonctionnalité sera prochainement disponible...
   markdown:
@@ -118,6 +120,11 @@ fr:
     hint: "Ce texte est rendu par %{link}"
     preview: Visualiser
     syntax: Markdown
+  payments:
+    new:
+      title: "Payer votre facture %{ref}"
+      transfer: Par virement bancaire
+      paypal: Avec Paypal
   roles:
     animator: Animateur
   registrations:

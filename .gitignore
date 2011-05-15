@@ -4,8 +4,11 @@
 db/*.sqlite3
 log/*.log
 tmp/
-
+keys/
 coverage/
 backup/
 
 config/environments/heroku
+
+.rvmrc
+

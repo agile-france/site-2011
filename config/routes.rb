@@ -6,21 +6,25 @@ ConferenceOnRails::Application.routes.draw do
     :omniauth_callbacks => 'auth/callbacks'
   }
   resources :companies
-  
-  # 2- conferences and sessions 
+
+  resources :conferences do
+    resources :sessions, :only => [:new, :create]
+    resources :registrations, :only => [:new, :create]
+  end
+  # 2- conferences and sessions
   # :as option for sessions is used to unclash name with devise url helper (session_path(resource_or_scope namely))
   resources :sessions, :except => [:new, :create], :as => :awesome_sessions do
     resources :ratings, :only => [:create, :update]
   end
-  
+
   resources :registrations, :except => [:new, :create] do
     get :search, :on => :member
   end
+  # assign registration
   put 'registrations/:registration_id/users/:user_id' => 'registrations#assign', :as => :assign_user_registration
-  
-  resources :conferences do
-    resources :sessions, :only => [:new, :create]
-    resources :registrations, :only => [:new, :create]
+  # pay invoice
+  resources :invoices, only: [] do
+    resources :payments, only: [:new, :create]
   end
 
   # admin interface
@@ -43,6 +47,6 @@ ConferenceOnRails::Application.routes.draw do
   # old pages redirected
   match "/soon" => redirect("/program")
   match "/history" => redirect("/contact")
-   
+
   root :to => 'conferences#recent'
 end

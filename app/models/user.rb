@@ -1,6 +1,6 @@
 class User
   include Mongoid::Document
-  
+
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
@@ -13,7 +13,7 @@ class User
   field :admin, :type => Boolean, :default => false
   field :optins, :type => Array
   field :roles_in_company, :type => Array
-  
+
   # associations
   references_many :authentications, :dependent => :destroy, :autosave => true
   references_many :sessions, :dependent => :destroy
@@ -21,7 +21,8 @@ class User
   references_many :executions
   references_many :registrations
   referenced_in :company
-  
+  has_many :invoices
+
   # white list of accessible attributes
   attr_accessible :email, :password, :password_confirmation, :remember_me
   attr_accessible :first_name, :last_name, :bio
@@ -50,14 +51,14 @@ class User
       s.conference = conference
     end.save
   end
-  
+
   # devise validatable hooks
   # password is not required if authenticated by external service
   def password_required?
     authentications.empty?? super : false
   end
-  
-  # avatar returns 
+
+  # avatar returns
   # - [:provider, url of image of the current authentication] if signed in using an authentication
   # - [:gravatar, gravatar url either]
   def avatar
@@ -67,13 +68,13 @@ class User
     end
     [:gravatar, "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(email)}"]
   end
-  
+
   # generates a random password if blank
   def ensure_password_not_blank!
     self.password = Devise.friendly_token[0,20] if password.blank?
     self
   end
-  
+
   # Public : respond true if user has opted in for given feature
   #
   # symbol_or_string - symbol or string representation for feature
@@ -112,15 +113,15 @@ class User
         rating.user = self
       end
   end
-  
+
   # Public : buy quantity of product at given price
   def buy(quantity, product, price, ref=nil)
     call(quantity, product, price, ref, Order::Side::BID)
   end
-  
+
   # Public : sell quantity of product at given price
   def sell(quantity, product, price, ref=nil)
-    call(quantity, product, price, ref, Order::Side::ASK)    
+    call(quantity, product, price, ref, Order::Side::ASK)
   end
 
   # Public : is registered to product ?

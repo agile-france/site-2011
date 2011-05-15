@@ -1,12 +1,28 @@
 class Invoice
   include Mongoid::Document
-  field :ref, :default => 'PENDING'
-  validates_length_of :ref, :maximum => 20
-  
-  referenced_in :user
-  references_many :executions
-  
-  attr_reader :amount, :lines
+  include Mongoid::Timestamps
+
+  field :ref
+  validates_length_of :ref, maximum: 20
+
+  belongs_to :user
+  has_many :executions, autosave: true
+
+  def amount
+    compute unless @amount
+    @amount
+  end
+
+  def lines
+    compute unless @lines
+    @lines
+  end
+
+  def invoiceable?
+    amount > 0
+  end
+
+  private
   def compute
     @amount, @lines = 0, {}
     executions.to_a.reduce([@amount, @lines]) do |acc, e|
@@ -17,12 +33,8 @@ class Invoice
       else
         @lines[e.product] = {e.price => e.quantity}
       end
-      acc  
+      acc
     end
     self
-  end
-  
-  def empty?
-    amount ? amount == 0 : true
   end
 end

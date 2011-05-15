@@ -11,7 +11,7 @@ defaults: &defaults
 # ha, I killed my development database !!!
 development:
   host: localhost
-  database: conference_on_rails_development
+  database: conference-on-rails-production
 
 cucumber:
   host: localhost

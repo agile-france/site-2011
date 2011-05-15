@@ -20,16 +20,11 @@
             %li
               = t('.unassigned', :count => unassigned.count)
               = link_to(t('.edit'), edit_registration_path(unassigned.first))
-          
   .grid_6
-    .pad_1
-      - unless invoices.empty?
-        %h3
-          = t('.invoices.title')
-        - invoices.each do |invoice|
-          .invoice{:id => "invoice_#{invoice.id}"}
-            = render 'invoices/invoice', :invoice => invoice
-        .hint
-          :markdown
-            #{t('.invoices.hint')}
+    - unless invoices.empty?
+      %h3
+        = t('.invoices.title')
+      - invoices.each do |invoice|
+        .invoice{:id => "invoice_#{invoice.id}"}
+          = render 'invoices/invoice', :invoice => invoice
   .clear

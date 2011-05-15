@@ -1,8 +1,9 @@
 class Product
   include Mongoid::Document
-  referenced_in :conference
-  references_many :orders
-  references_many :executions
+
+  belongs_to :conference
+  has_many :orders
+  has_many :executions
 
   # internal reference
   field :ref

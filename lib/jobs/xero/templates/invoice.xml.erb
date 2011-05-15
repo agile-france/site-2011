@@ -1,0 +1,26 @@
+<%#encoding: utf-8%>
+<Invoice>
+  <Type>ACCREC</Type>
+  <Contact>
+    <ContactNumber><%= invoice.user.id %></ContactNumber>
+    <Name><%= invoice.user.company ? invoice.user.company.name : invoice.user.greeter_name %></Name>
+    <FirstName><%= invoice.user.first_name %></FirstName>
+    <LastName><%= invoice.user.last_name %></LastName>
+    <EmailAddress><%= invoice.user.email %></EmailAddress>
+  </Contact>
+  <Date><%= Time.now.strftime('%Y-%m-%d') %></Date>
+  <DueDate><%= Time.now.strftime('%Y-%m-%d') %></DueDate>
+  <LineAmountTypes>Exclusive</LineAmountTypes>
+  <LineItems>
+  <% invoice.lines.each do |product, lines| %>
+    <% lines.each do |(price, quantity)| %>
+    <LineItem>
+      <ItemCode><%= %></ItemCode>
+      <Description><%= product.ref %></Description>
+      <Quantity><%= quantity %></Quantity>
+      <UnitAmount><%= price %></UnitAmount>
+    </LineItem>
+    <% end %>
+  <% end %>
+  </LineItems>
+</Invoice>

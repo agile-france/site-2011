@@ -23,8 +23,8 @@ gem 'rdiscount'
 gem 'mongoid', '>= 2.0.0.beta.19'
 gem 'mongoid_taggable', '~> 0.1'
 gem 'mongoid_rails_migrations'
-gem 'bson_ext', '>= 1.0.9'
-gem 'mongo', '>= 1.0.9'
+gem 'mongo', '~> 1.3'
+gem 'bson_ext', '~> 1.3'
 
 # cant
 gem 'cant'
@@ -35,16 +35,21 @@ gem 'yajl-ruby', :require => 'yajl'
 # rbtree
 gem 'rbtree'
 
+# xero
+gem 'xero-min', path: '~/src/ruby/xero-min'
+
+# jobs
+gem 'resque'
+
 group :development, :test, :cucumber do
   gem 'thin'
   gem "rspec-rails", ">= 2.1.0"
 
   # factory (required for scaffold)
   gem 'fabrication'
-  
+
   gem 'ruby-debug19', :platforms => :mri_19
-  gem 'ruby-debug', :platforms => :mri_18
-  
+
   # js
   gem 'barista', '~> 1.0'
   gem 'therubyracer', :require => false
@@ -55,7 +60,6 @@ group :test, :cucumber do
   gem 'mongoid-rspec'
   gem 'wrong', '~> 0.4'
   gem 'jasmine'
-
 
   # cucumber
   gem 'cucumber'
