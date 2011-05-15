@@ -1,2 +1,12 @@
-%p
-  payments
+.grid_12
+  %h3.pad_1= t('.title', ref: invoice.ref)
+
+  .pad_1= render 'invoices/invoice', invoice: invoice
+
+.grid_6
+  %h3.pad_1= t('.transfer')
+
+.grid_6
+  %h3.pad_1= t('.paypal')
+
+.clear

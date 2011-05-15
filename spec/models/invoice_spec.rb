@@ -6,13 +6,12 @@ describe Invoice do
   let(:diner) {xp.products.to_a.second}
   let(:invoice) {Invoice.new}
 
-  describe "#compute" do
+  describe "#amount and #lines" do
     before do
       place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
       place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
       place.executions.build(invoice: invoice, :price => 300, :quantity => 5)
       diner.executions.build(invoice: invoice, :price => 50, :quantity => 10)
-      invoice.compute
     end
     it "folds amount" do
       assert {invoice.amount == 4000}
@@ -30,7 +29,7 @@ describe Invoice do
     end
     it "is true when amount to invoice is > 0" do
       place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
-      invoice.compute.should be_invoiceable
+      invoice.should be_invoiceable
     end
   end
 

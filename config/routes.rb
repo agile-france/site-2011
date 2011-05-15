@@ -23,8 +23,9 @@ ConferenceOnRails::Application.routes.draw do
   # assign registration
   put 'registrations/:registration_id/users/:user_id' => 'registrations#assign', :as => :assign_user_registration
   # pay invoice
-  get 'invoices/:id/payments/new' => 'payments#new', :as => :new_payment
-  post 'invoices/:id/payments' => 'payments#create', :as => :payments
+  resources :invoices, only: [] do
+    resources :payments, only: [:new, :create]
+  end
 
   # admin interface
   namespace :admin do

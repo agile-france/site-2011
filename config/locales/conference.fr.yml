@@ -14,7 +14,7 @@ fr:
     seppuku?: "Supprimer mon compte et mes informations ?"
     registrations:
       edit: Attribuer
-      invoices:        
+      invoices:
         hint:
           "Les paiements ne sont pas encore ouverts
 
@@ -25,15 +25,15 @@ fr:
           D'ici là, toutes vos commandes s'accumuleront sur une facture"
         title: Vos factures
       title: Mes Inscriptions
-      unassigned: 
+      unassigned:
         one: 1 inscription à
-        other: "%{count} inscriptions à"      
+        other: "%{count} inscriptions à"
     sessions:
-      title: Mes Sessions   
+      title: Mes Sessions
     updated!: "Votre compte a été mis à jour !"
   app:
     errors:
-      access_denied: Pas autorisé    
+      access_denied: Pas autorisé
   auth:
     accept_authentication?: "Rentrez votre mot de passe pour accepter cette authentification"
     email: Email
@@ -110,19 +110,26 @@ fr:
     trash: Supprimer
   invoices:
     invoice:
-      amount: Montant  
+      amount: Montant
+      pay: Payer
+      ref: Facture Numéro
   features:
     next: Cette fonctionnalité sera prochainement disponible...
   markdown:
     edit: Editer
     hint: "Ce texte est rendu par %{link}"
-    preview: Visualiser    
+    preview: Visualiser
     syntax: Markdown
+  payments:
+    new:
+      title: "Payer votre facture %{ref}"
+      transfer: Par virement bancaire
+      paypal: Avec Paypal
   roles:
     animator: Animateur
   registrations:
     assigns:
-      to: Attribuer cette place à      
+      to: Attribuer cette place à
     edit:
       invite: Ou inviter une personne
       hint:
@@ -142,12 +149,12 @@ fr:
       closed: Les inscriptions sont fermées
       instructions:
         "#### Conditions d'utilisation
-        
+
         Par la validation de votre inscription, vous vous engagez à payer à l'association agile-france.org le montant de cette inscription."
       remaining:
         one: Il reste une place à
         other: "Il reste %{count} places à"
-      title: Inscription       
+      title: Inscription
     rates:
       available: "Places Disponibles"
       price: "Prix"
@@ -170,7 +177,7 @@ fr:
       title: Toutes les Sessions
     new?: "Proposer une session ?"
     ratings:
-      count: 
+      count:
         one: "1 vote"
         other: "%{count} votes"
       denied: Vous ne pouvez pas voter pour vos sessions

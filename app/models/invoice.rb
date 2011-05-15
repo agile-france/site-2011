@@ -8,7 +8,21 @@ class Invoice
   belongs_to :user
   has_many :executions, autosave: true
 
-  attr_reader :amount, :lines
+  def amount
+    compute unless @amount
+    @amount
+  end
+
+  def lines
+    compute unless @lines
+    @lines
+  end
+
+  def invoiceable?
+    amount > 0
+  end
+
+  private
   def compute
     @amount, @lines = 0, {}
     executions.to_a.reduce([@amount, @lines]) do |acc, e|
@@ -22,9 +36,5 @@ class Invoice
       acc
     end
     self
-  end
-
-  def invoiceable?
-    amount && amount > 0
   end
 end
