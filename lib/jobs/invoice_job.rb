@@ -1,4 +1,4 @@
-#encoding: utf-8
+# -*- encoding: utf-8 -*-
 class InvoiceJob
   @queue = :invoice
 
@@ -8,7 +8,6 @@ class InvoiceJob
       user = User.find(user_id)
       executions = execution_ids.map{|execution_id| Execution.find(execution_id)}
       invoice = Invoice.new(user: user, executions: executions)
-      invoice.compute
       # doh!
       puts "invoicing #{user.greeter_name} : #{invoice.amount}"
       # post and get back xero InvoiceNumber
@@ -26,8 +25,7 @@ class InvoiceJob
       Xero.client
     end
     def to_xml(invoice)
-      erb.render(invoice: invoice).gsub(%r((\s*)<), '<')
-      # xml.tap{|xml| File.open("invoice-#{invoice.user.email}.xml", 'w') {|f| f << xml}}
+      erb.render(invoice: invoice)
     end
   end
 end
