@@ -31,18 +31,6 @@ describe AccountController do
         assert {user.reload.company == awe}
       end
     end
-
-    describe "DELETE /account" do
-      before do
-        delete :destroy
-      end
-      it "redirects to home" do
-        assert {response.location = root_path}
-      end
-      it "kills user" do
-        assert {User.criteria.for_ids(user.id).empty?}
-      end
-    end
   end
 
   context 'with no user signed in' do
