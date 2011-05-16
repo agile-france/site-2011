@@ -1,5 +1,3 @@
-require 'jobs/invoice_job'
-
 class InvoicerJob
   @queue = :invoice
 

@@ -6,7 +6,7 @@ class Execution
   belongs_to :product
   belongs_to :order
   # execution linking
-  belongs_to :matchee, :class_name => "Execution", :foreign_key => :matchee_id, :inverse_of => :matchee
+  belongs_to :matchee, :class_name => "Execution", :foreign_key => :matchee_id, :inverse_of => :matchee, :dependent => :destroy
   # invoice
   belongs_to :invoice
   # named registrations for ordered product
