@@ -59,5 +59,23 @@ class Execution
     def invoiceable_for(conference)
       booked_for(conference).where(:user_id.ne => conference.owner.id, :invoice_id => nil)
     end
+
+    # cancel quantity for execution and matchee
+    # removes quantity last registratioins
+    # save e and matchee
+    def cancel!(e, quantity)
+      [e, e.matchee].each do |ex|
+        ex.quantity -= quantity
+        quantity.times {ex.registrations.pop}
+        ex.save
+      end
+    end
+    # update e price and matchee price
+    def update!(e, price)
+      [e, e.matchee].each do |ex|
+        ex.price = price
+        ex.save
+      end
+    end
   end
 end

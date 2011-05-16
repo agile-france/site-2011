@@ -7,7 +7,7 @@ describe Execution do
   it {should be_referenced_in(:matchee)}
   it {should be_referenced_in(:invoice)}
   it {should reference_many(:registrations)}
-  
+
   it {should have_field(:side).with_default_value_of('B')}
   it {should validate_inclusion_of(:side).to_allow('B', 'A')}
 
@@ -16,7 +16,7 @@ describe Execution do
 
   it {should have_field(:quantity).of_type(Integer).with_default_value_of(1)}
   it {should validate_numericality_of(:quantity)}
-  
+
   describe "#amount" do
     it "is quantity * price" do
       Execution.new(:price => 3, :quantity => 4).amount.should == 12
@@ -56,9 +56,9 @@ describe Execution do
     it "can not register more than quantity users" do
       [john, mark].each{|user| execution.registers(user, place)}
       deny {mark.registered_to?(place)}
-    end    
+    end
   end
-  
+
   describe "build_registrations!" do
     let!(:john) {Fabricate.build(:user)}
     let!(:xp) {Fabricate.build(:conference)}
@@ -75,5 +75,29 @@ describe Execution do
         deny {r.user}
       end
     end
-  end    
+  end
+
+  describe ".cancel! or .update!" do
+    let(:john) {Fabricate.build(:user)}
+    let(:mark) {Fabricate.build(:user, :email => 'mark@mail.no')}
+    let(:place) {Fabricate.build(:product)}
+    let(:matchee) {Fabricate.build(:execution, :user => john, :product => place, :quantity => 2, price: 10)}
+    let(:execution) {Fabricate.build(:execution, :user => john, :product => place, :quantity => 2, matchee: matchee, price: 10)}
+    before do
+      execution.registers(john, place)
+      execution.registers(mark, place)
+    end
+    it ".cancel! decrease execution quantity and destroys extra registrations, and same for matchee" do
+      Execution.cancel!(execution, 1)
+      assert {execution.quantity == 1}
+      assert {execution.registrations.size == 1}
+      assert {matchee.quantity == 1}
+      assert {matchee.registrations.size == 0}
+    end
+    it ".update! updates execution price, execution and matchee" do
+      Execution.update!(execution, 5)
+      assert {execution.price == 5}
+      assert {matchee.price == 5}
+    end
+  end
 end
