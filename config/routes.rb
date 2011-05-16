@@ -30,6 +30,7 @@ ConferenceOnRails::Application.routes.draw do
   # admin interface
   namespace :admin do
     get '/' => 'admin#show'
+    mount Resque::Server, at: '/jobs', as: :jobs
     resources :users, :only => [:index, :edit, :update]
   end
 
