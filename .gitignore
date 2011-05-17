@@ -6,8 +6,8 @@ log/*.log
 tmp/
 keys/
 coverage/
-backup/
-
+dump/
+public/uploads/
 config/environments/heroku
 
 .rvmrc

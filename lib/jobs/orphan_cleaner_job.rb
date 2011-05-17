@@ -1,4 +1,4 @@
-class OrphansJob
+class OrphanCleanerJob
   @queue = :cancellation
 
   def self.perform()

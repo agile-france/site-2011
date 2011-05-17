@@ -1,6 +1,7 @@
 class Invoice
   include Mongoid::Document
   include Mongoid::Timestamps
+  mount_uploader :pdf, PdfUploader
 
   field :ref
   validates_length_of :ref, maximum: 20

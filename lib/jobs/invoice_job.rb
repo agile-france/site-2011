@@ -15,6 +15,8 @@ class InvoiceJob
       invoice.ref = node.xpath('/Response/Invoices/Invoice/InvoiceNumber').first.content
       # save
       invoice.save!
+      puts "processing PdfJob #{invoice.id.to_s}"
+      Resque.enqueue(PdfJob, invoice.id.to_s)
     end
 
     private

@@ -38,6 +38,9 @@ gem 'rbtree'
 # xero
 gem 'xero-min', '>= 0.0.7'
 
+# uploader
+gem 'carrierwave'
+
 # jobs
 gem 'resque'
 
