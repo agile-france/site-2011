@@ -289,7 +289,7 @@ GEM
       ruby_parser (~> 2.0.4)
       sexp_processor (~> 3.0)
       sourcify (>= 0.3.0)
-    xero-min (0.0.7)
+    xero-min (0.0.9)
       escape_utils (~> 0.2)
       nokogiri (~> 1)
       oauth (~> 0.4)
