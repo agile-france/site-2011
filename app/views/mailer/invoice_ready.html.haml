@@ -1,0 +1,14 @@
+%p
+  Bonjour
+  = @invoice.user.greeter_name
+%p
+  Votre facture
+  = @invoice.ref
+  est disponible dans sur votre espace
+%p
+  Nous vous demandons de la vérifier et de nous indiquer une erreur de notre part
+%p
+  Veillez à attribuer nominativement vos places et diner sous
+  = registrations_account_path(@invoice.user)
+
+
