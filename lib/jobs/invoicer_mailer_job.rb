@@ -3,7 +3,8 @@ class InvoicerMailerJob
 
   def self.perform
     Invoice.all.each do |invoice|
-      Resque.enqueue(InvoiceJob, invoice.id.to_s)
+      puts "processing InvoiceMailerJob #{invoice.id.to_s}"
+      Resque.enqueue(InvoiceMailerJob, invoice.id.to_s)
     end
   end
 end

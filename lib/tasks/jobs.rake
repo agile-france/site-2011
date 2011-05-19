@@ -13,4 +13,9 @@ namespace :jobs do
   task :invoice => :environment do
     InvoicerJob.perform
   end
+
+  desc "emails to the rescue"
+  task :email_invoices => :environment do
+    InvoicerMailerJob.perform
+  end
 end
