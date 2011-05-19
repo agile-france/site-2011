@@ -1,0 +1,11 @@
+%tr
+  %td= registration.user.first_name if registration.user
+  %td= registration.user.last_name if registration.user
+  %td= registration.user.email if registration.user
+  %td= registration.product.ref
+  %td= registration.execution.price
+  %td= registration.execution.quantity
+  %td= registration.execution.user.first_name if registration.execution.user
+  %td= registration.execution.user.last_name if registration.execution.user
+  %td= registration.execution.user.email if registration.execution.user
+  
