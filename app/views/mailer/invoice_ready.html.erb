@@ -1,0 +1,19 @@
+<p>
+  Bonjour <%= @invoice.user.greeter_name %>
+</p>
+<p>
+  Votre facture <%= @invoice.ref %> est jointe
+</p>
+<p>
+  Contactez nous si il y a
+  <ul>
+    <li>une erreur de notre part</li>
+    <li>si il manque une information sur la facture</li>
+  </ul>
+</p>
+<p>
+  Veillez à <strong>attribuer nominativement</strong> vos places et diner sous <%= link_to t('account.registrations.title'), registrations_account_url %>
+</p>
+<p>
+  Bonne journée, et au plaisir de vous voir bientôt
+</p>

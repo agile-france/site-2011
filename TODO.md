@@ -36,9 +36,7 @@ inscription free
 tasks
 -----
 
-    rake jobs:clean_orphans
-    rake jobs:auto_assign
-    rake jobs:invoice
+    rake jobs:clean_orphans jobs:assign_self jobs:invoice
 
 background jobs
 ---------------
