@@ -1,5 +1,5 @@
 class SelfAssignerJob
-  @queue = :registrations
+  @queue = :registration
 
   def self.perform
     executions = Registration.where(:user_id => nil).reduce([]) do |acc, r|
