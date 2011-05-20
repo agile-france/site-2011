@@ -33,6 +33,7 @@ ConferenceOnRails::Application.routes.draw do
     mount Resque::Server, at: '/jobs', as: :jobs
     resources :users, :only => [:index, :edit, :update]
     resources :registrations, :only => [:index]
+    resources :badges
   end
 
   # bug there as of 3.0.0, infered controller is 'accounts'

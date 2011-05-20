@@ -3,7 +3,6 @@ module Admin
     respond_to :html
     
     def index
-      criteria = {}
       @registrations = Registration.all()
     end
     
