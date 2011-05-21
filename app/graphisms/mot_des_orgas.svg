@@ -1,0 +1,1273 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="mot_des_orgas.svg"
+   inkscape:export-filename="D:\agile-france-badge\gitrepo\agile-france-publicity\src\mot_des_orgas.png"
+   inkscape:export-xdpi="119.98721"
+   inkscape:export-ydpi="119.98721">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective84" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11642">
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:1;"
+         offset="0"
+         id="stop11644" />
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:0;"
+         offset="1"
+         id="stop11646" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient10301">
+      <stop
+         style="stop-color:#deeaf5;stop-opacity:1;"
+         offset="0"
+         id="stop10303" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop10305" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3918">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3920" />
+      <stop
+         style="stop-color:#deeaf5;stop-opacity:0;"
+         offset="1"
+         id="stop3922" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3918"
+       id="radialGradient3932"
+       cx="452.85715"
+       cy="243.07648"
+       fx="452.85715"
+       fy="243.07648"
+       r="84.285713"
+       gradientTransform="matrix(-3.0080416e-8,1,-1,-3.0080414e-8,695.93364,-167.63782)"
+       gradientUnits="userSpaceOnUse" />
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient10301"
+       id="radialGradient10309"
+       cx="353.55341"
+       cy="75.957581"
+       fx="353.55341"
+       fy="75.957581"
+       r="383.85798"
+       gradientTransform="matrix(0.9692315,0,0,0.69686452,-214.62784,72.53023)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11642"
+       id="linearGradient11648"
+       x1="744.09448"
+       y1="842.85712"
+       x2="744.09448"
+       y2="885.74353"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.15678499,0,802.3982)" />
+    <inkscape:perspective
+       id="perspective2927"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient11642-7"
+       id="linearGradient11648-1"
+       x1="744.09448"
+       y1="842.85712"
+       x2="744.09448"
+       y2="885.74353"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.15678499,0,798.3982)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11642-7">
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:1;"
+         offset="0"
+         id="stop11644-4" />
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:0;"
+         offset="1"
+         id="stop11646-0" />
+    </linearGradient>
+    <linearGradient
+       y2="885.74353"
+       x2="744.09448"
+       y1="842.85712"
+       x1="744.09448"
+       gradientTransform="matrix(0.95574631,0,0,0.15678499,14.809902,25.42431)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2936"
+       xlink:href="#linearGradient11642-7"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective2966"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       y2="885.74353"
+       x2="744.09448"
+       y1="842.85712"
+       x1="744.09448"
+       gradientTransform="matrix(0.94624339,0,0,0.15678499,14.809902,115.42431)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2936-4"
+       xlink:href="#linearGradient11642-7-8"
+       inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient11642-7-8">
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:1;"
+         offset="0"
+         id="stop11644-4-8" />
+      <stop
+         style="stop-color:#c1c3c8;stop-opacity:0;"
+         offset="1"
+         id="stop11646-0-2" />
+    </linearGradient>
+    <linearGradient
+       y2="885.74353"
+       x2="744.09448"
+       y1="842.85712"
+       x1="744.09448"
+       gradientTransform="matrix(1.0702803,0,0,0.15678499,-931.73791,-110.93789)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient2975"
+       xlink:href="#linearGradient11642-7-8"
+       inkscape:collect="always" />
+    <inkscape:perspective
+       id="perspective3273"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3410"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3583"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3583-2"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3730"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3818"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3901"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3971"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4036"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4104"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4144"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4185"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="155.60331"
+     inkscape:cy="519.86602"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1400"
+     inkscape:window-height="1026"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     showguides="true"
+     inkscape:guide-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="64.649762,943.48247"
+       id="guide3035" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="686.90373,989.94949"
+       id="guide3037" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="359.6143,1002.0713"
+       id="guide3039" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="384.86812,1003.5865"
+       id="guide3041" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="51.785714,645"
+       id="guide3108" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       ry="0"
+       rx="0"
+       y="157.57166"
+       x="14.809891"
+       height="6.7239408"
+       width="711.16553"
+       id="rect11632-9"
+       style="fill:url(#linearGradient2936);fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <rect
+       ry="0"
+       rx="0"
+       y="21.20945"
+       x="-931.73798"
+       height="6.7239408"
+       width="796.38965"
+       id="rect11632-9-4"
+       style="fill:url(#linearGradient2975);fill-opacity:1;fill-rule:evenodd;stroke:none"
+       transform="matrix(0,-1,1,0,0,0)" />
+    <path
+       style="fill:#deeaf5;fill-opacity:1;fill-rule:evenodd;stroke:none"
+       d="m 0,0 0,935.46472 744.09375,0 L 744.09375,0 0,0 z m 30.75,158.0625 691.9375,0 0,752.77722 c 0,5.17028 -4.17347,9.34375 -9.34375,9.34375 L 21.5,920.18347 21.40625,167.375 c 0,-5.17028 4.173477,-9.3125 9.34375,-9.3125 z"
+       id="rect3142"
+       sodipodi:nodetypes="cccccccccccc" />
+    <path
+       id="path10298"
+       style="fill:url(#radialGradient10309);fill-opacity:1;stroke:none"
+       d="m 500.09447,125.46236 -372.04725,-15.14667 372.04727,-15.14668 -2e-5,30.29335 z M 493.19701,59.63323 128.04722,110.31569 481.63755,30.3721 493.19701,59.63323 z M 461.41518,-2.742021 128.04722,110.3157 439.08403,-28.976839 461.41518,-2.742021 z M 406.91487,-57.412567 128.04722,110.3157 375.33385,-78.833204 l 31.58102,21.420637 z m -73.50465,-43.240153 -205.363,210.96842 166.68427,-226.11509 38.67873,15.14667 z m -87.49983,-28.86301 -117.86315,239.83143 74.72266,-247.67195 43.14049,7.84052 z m -95.53199,-12.5189 -22.33116,252.35033 -22.33118,-252.35034 44.66234,1e-5 z m -97.05381,4.67839 74.72265,247.67194 -117.86316,-239.83144 43.14051,-7.8405 z m -91.9616,21.55685 166.68425,226.11509 -205.36297,-210.96842 38.67872,-15.14667 z m -80.60235,36.966186 247.2866,189.148904 -278.86764,-167.728274 31.58104,-21.42063 z M -182.98952,-28.976839 128.04724,110.3157 -205.3207,-2.742021 -182.98952,-28.976839 z M -225.54306,30.3721 128.04724,110.3157 -237.10253,59.63323 -225.54306,30.3721 z M -244,95.16901 l 372.04724,15.14669 -372.04723,15.14667 0,-30.29336 z" />
+    <path
+       sodipodi:type="arc"
+       style="fill:url(#radialGradient3932);fill-opacity:1;stroke:none"
+       id="path3916"
+       sodipodi:cx="452.85715"
+       sodipodi:cy="285.21933"
+       sodipodi:rx="84.285713"
+       sodipodi:ry="84.285713"
+       d="m 537.14286,285.21933 a 84.285713,84.285713 0 1 1 -168.57143,0 84.285713,84.285713 0 1 1 168.57143,0 z"
+       transform="matrix(4.4141199,0,0,-1.5621028,-1870.9185,549.20485)" />
+    <text
+       xml:space="preserve"
+       style="font-size:16.51693153px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001430;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="269.93332"
+       y="98.300728"
+       id="text2816"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2818"
+         x="269.93332"
+         y="98.300728">Le</tspan></text>
+    <rect
+       style="fill:#f9f9f9"
+       id="rect2984"
+       width="0"
+       height="119.99999"
+       x="166.54027"
+       y="220.0116"
+       ry="8.5714283" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3063"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-913.45973,-112.35058)"><flowRegion
+         id="flowRegion3065"><rect
+           id="rect3067"
+           width="320"
+           height="60"
+           x="97.14286"
+           y="169.50504" /></flowRegion><flowPara
+         id="flowPara3069" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3071"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-913.45973,-112.35058)"><flowRegion
+         id="flowRegion3073"><rect
+           id="rect3075"
+           width="40"
+           height="80"
+           x="242.85715"
+           y="215.21933" /></flowRegion><flowPara
+         id="flowPara3077" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3087"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(-913.45973,-112.35058)"><flowRegion
+         id="flowRegion3089"><rect
+           id="rect3091"
+           width="342.85715"
+           height="48.57143"
+           x="77.14286"
+           y="295.21933" /></flowRegion><flowPara
+         id="flowPara3093" /></flowRoot>    <rect
+       style="fill:#c1c3c8;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3355"
+       width="117.1777"
+       height="66.670067"
+       x="-166.50858"
+       y="-1.2150748"
+       rx="11.428572"
+       ry="11.428572" />
+    <rect
+       style="fill:#001430;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3357"
+       width="117.178"
+       height="66.669998"
+       x="-166.5087"
+       y="73.887276"
+       rx="11.047647"
+       ry="11.785702" />
+    <rect
+       style="fill:#1f2f4d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3359"
+       width="117.178"
+       height="66.669998"
+       x="-166.5087"
+       y="148.98953"
+       rx="10.521569"
+       ry="8.5714197" />
+    <rect
+       style="fill:#deeaf5;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3361"
+       width="117.178"
+       height="66.669998"
+       x="-166.5087"
+       y="224.09184"
+       rx="9.0802584"
+       ry="7.6967854" />
+    <rect
+       style="fill:#bf210d;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3363"
+       width="117.178"
+       height="66.669998"
+       x="-166.5087"
+       y="299.19406"
+       rx="9.0802584"
+       ry="8.9795828" />
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="-369.91263"
+       y="386.79654"
+       id="text2453"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2455"
+         x="-369.91263"
+         y="386.79654">palette from:</tspan><tspan
+         sodipodi:role="line"
+         x="-369.91263"
+         y="401.79654"
+         id="tspan2457">http://www.colourlovers.com/palette/99630/July_14th</tspan></text>
+    <rect
+       style="opacity:0.66000001;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3969"
+       width="0"
+       height="8"
+       x="-384.24808"
+       y="1403.7863" />
+    <text
+       xml:space="preserve"
+       style="font-size:32.38399887px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#980101;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       id="text2485"
+       sodipodi:linespacing="125%"
+       transform="translate(-3512.4059,-1861.7332)"
+       inkscape:transform-center-x="-77.331435"
+       inkscape:transform-center-y="-477.46786"
+       x="-6944.616"
+       y="-2609.2027"><tspan
+         id="tspan2487"
+         style="font-size:32.38399887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#980101;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New Bold">I support</tspan><tspan
+         style="font-size:32.38399887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#980101;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New Bold"
+         id="tspan2489" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:23.95521355px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#980101;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       id="text2491"
+       sodipodi:linespacing="125%"
+       transform="translate(-3513.6253,-1860.07)"
+       inkscape:transform-center-x="-130.88773"
+       inkscape:transform-center-y="-315.56405"
+       x="-6842.0944"
+       y="-2426.0761"><tspan
+         style="font-size:32.38399887px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#980101;fill-opacity:1;font-family:Courier New;-inkscape-font-specification:Courier New Bold"
+         id="tspan2493">2010</tspan></text>
+    <rect
+       style="opacity:0.66000001;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3969-9"
+       width="0"
+       height="8"
+       x="-2018.2753"
+       y="-637.75415" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="-2779.5403"
+       y="-528.54858"
+       id="text4195"><tspan
+         sodipodi:role="line"
+         id="tspan4197"
+         x="-2779.5403"
+         y="-528.54858" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:34.61997223px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001430;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="300.44315"
+       y="108.07974"
+       id="text2816-8"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="300.44315"
+         y="108.07974"
+         id="tspan11699">mot</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:16.51725769px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001430;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="387.82788"
+       y="97.739899"
+       id="text2816-6"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2818-9"
+         x="387.82788"
+         y="97.739899">des</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:32.91028595px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001430;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="430.7348"
+       y="113.59713"
+       id="text2816-62"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan2818-38"
+         x="430.7348"
+         y="113.59713">Organisateurs</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="93.117981"
+       y="1040.2095"
+       id="text11767"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan11769"
+         x="93.117981"
+         y="1040.2095">platinium</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11785"
+       y="1040.1626"
+       x="305.55527"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#c1c3c8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="1040.1626"
+         x="305.55527"
+         id="tspan11787"
+         sodipodi:role="line">gold</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11785-2"
+       y="1041.3726"
+       x="572.67651"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#c1c3c8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="1041.3726"
+         x="572.67651"
+         id="tspan11787-0"
+         sodipodi:role="line">web</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11785-8"
+       y="1040.1626"
+       x="451.39972"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#c1c3c8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="1040.1626"
+         x="451.39972"
+         id="tspan11787-9"
+         sodipodi:role="line">gold</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text11785-8-2"
+       y="1041.3726"
+       x="658.71472"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#c1c3c8;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         y="1041.3726"
+         x="658.71472"
+         id="tspan11787-9-8"
+         sodipodi:role="line">media</tspan></text>
+    <rect
+       ry="0"
+       rx="0"
+       y="934.54553"
+       x="0"
+       height="6.7239408"
+       width="744.09448"
+       id="rect11632"
+       style="fill:url(#linearGradient11648);fill-opacity:1;fill-rule:evenodd;stroke:none" />
+    <text
+       sodipodi:linespacing="125%"
+       id="text2974"
+       y="910.49683"
+       x="539.64618"
+       style="font-size:12px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#001430;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3028"
+         y="910.49683"
+         x="539.64618"
+         sodipodi:role="line">Le comité d'organisation</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="51.785713"
+       y="420.8728"
+       id="text2996"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="51.785713"
+         y="420.8728"
+         id="tspan3026">AG Agile France</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156"
+       y="556.51105"
+       x="51.785713"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182"
+         y="556.51105"
+         x="51.785713"
+         sodipodi:role="line">Vidéo (Ubicast)</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-5"
+       y="493.62384"
+       x="51.785713"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-2"
+         y="493.62384"
+         x="51.785713"
+         sodipodi:role="line">Barque</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3"
+       y="662.21924"
+       x="51.785713"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9"
+         y="662.21924"
+         x="51.785713"
+         sodipodi:role="line">Wifi</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7"
+       y="813.5119"
+       x="51.26524"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1"
+         y="813.5119"
+         x="51.26524"
+         sodipodi:role="line">Buvette</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-3"
+       y="741.15948"
+       x="51.395916"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-1"
+         y="741.15948"
+         x="51.395916"
+         sodipodi:role="line">Keynotes</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9"
+       y="408.9668"
+       x="372.86813"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-0"
+         y="408.9668"
+         x="372.86813"
+         sodipodi:role="line">Repas</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9-0"
+       y="551.99341"
+       x="372.86813"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3176-6-3-2-8"
+         y="551.99341"
+         x="372.86813"
+         sodipodi:role="line">Questionnaire en ligne</tspan><tspan
+         id="tspan3182-9-1-0-4"
+         y="569.49341"
+         x="372.86813"
+         sodipodi:role="line" /></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9-0-4"
+       y="482.83704"
+       x="371.61429"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-0-4-4"
+         y="482.83704"
+         x="371.61429"
+         sodipodi:role="line">Limite des sessions</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9-0-9"
+       y="729.54443"
+       x="374.86813"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-0-4-8"
+         y="729.54443"
+         x="374.86813"
+         sodipodi:role="line">Remerciement</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9-0-8"
+       y="646.74042"
+       x="374.86813"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-0-4-3"
+         y="646.74042"
+         x="374.86813"
+         sodipodi:role="line">Coder Academy</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3156-3-7-9-0-5"
+       y="807.1825"
+       x="373.61429"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       xml:space="preserve"><tspan
+         id="tspan3182-9-1-0-4-0"
+         y="807.1825"
+         x="373.61429"
+         sodipodi:role="line">Sponsoring</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="192.76173"
+       id="text2948"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="192.76173"
+         id="tspan3077"><tspan
+   style="font-size:11px;font-weight:bold;-inkscape-font-specification:Bitstream Vera Sans Bold"
+   id="tspan4088">B</tspan>ienvenue à la 5ème édition Agile France (autrefois XPDay France)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="371.57666"
+       id="text3024"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="371.57666"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3033">La salle G - Verriere est disponible (sauf une session par</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="384.07666"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3047">jour et repas) pour les orateurs qui souhaitent finaliser</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="396.57666"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3872">leurs sessions.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="51.785713"
+       y="354.24109"
+       id="text3079"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="51.785713"
+         y="354.24109"
+         id="tspan3081">Salle de repos</tspan></text>
+    <text
+       id="text3083"
+       y="435.43378"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="435.43378"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3100">Comme l'année précédente, l'AG de l'association &quot;Agile</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="447.93378"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3102">France&quot; se déroule en même temps que la conférence.</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="460.43378"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3104">Rendez vous dans le parc pour ceux qui souhaitent y as-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="472.93378"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3106">sister (salle G - Verriere si le temps ne le permet pas)</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="510.29089"
+       id="text3110"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="510.29089"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3136">Vous souhaitez vous détendre ? Que dites-vous d'un tour</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="522.79089"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3138">de barque autour du lac ? Rendez-vous le lundi à 18h30</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="535.29089"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3894">dans le parc.</tspan></text>
+    <text
+       id="text3140"
+       y="576.00519"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="576.00519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3898">Grosse nouveauté cette année, l'ensemble des sessions</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="588.50519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3159">de la salle A - grand parc sera filmé par la société fran-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="601.00519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3161">çaise Ubicast, spécialisée dans les événements de com-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="613.50519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3163">munication. L'avantage d'ubicast est la fourniture de ma-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="626.00519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3167">tériel maison (station Easycast) trés simple d'utilisation. Si</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="638.50519"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3169">vous souhaitez filmer des conférences, faites appel à eux !</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="676.47736"
+       id="text3171"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="676.47736"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3228">Pour information, il est possible d'avoir du Wifi mais à un</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="688.97736"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3230">tarif assez élévé (c'est la raison de l'absence de wifi ou-</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="701.47736"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3232">vert). Si vous souhaitez quand même en profiter, deman-</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="713.97736"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3234">dez à l'organisation.</tspan></text>
+    <text
+       id="text3236"
+       y="757.19971"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="757.19971"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3703">Deux keynotes cette année ! Bruno Sbille le premier jour,</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="769.69971"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3249">et en vedette américaine Esther Derby (son livre le plus</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="782.19971"
+         x="64.649765"
+         sodipodi:role="line"
+         id="tspan3711">connu étant surement &quot;Agile Retrospective&quot;).</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3257"
+       y="210.61888"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan3287"
+         y="210.61888"
+         x="64.649765"
+         sodipodi:role="line">Cette édition en quelques chiffres : 300 visiteurs, 73 sessions, 7 salles, 90 000€ de budget.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="215.61888"
+       id="text3413"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3417"
+         x="64.649765"
+         y="215.61888" /><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="228.11888"
+         id="tspan3846">Pour la seconde année consécutive, nous avons choisi la Porte Jaune et son île de 10 000 m2. Mais ce n'est plus 5 mais 7</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="240.61888"
+         id="tspan4094">salles qui sont prêtes pour accueillir les sessions.</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3533"
+       y="246.76173"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="246.76173"
+         x="64.649765"
+         id="tspan3535"
+         sodipodi:role="line" /><tspan
+         id="tspan3557"
+         y="259.26172"
+         x="64.649765"
+         sodipodi:role="line">Le cadeau Agile France 2010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text3597"
+       y="263.61887"
+       x="64.649765"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         y="263.61887"
+         x="64.649765"
+         id="tspan3599"
+         sodipodi:role="line" /><tspan
+         y="276.11887"
+         x="64.649765"
+         id="tspan3613"
+         sodipodi:role="line">La capacité à produire est essentielle, rapidement et efficacement. Mais cela ne peut se produire sans prendre le temps,</tspan><tspan
+         y="288.61887"
+         x="64.649765"
+         id="tspan3615"
+         sodipodi:role="line">périodiquement, de revoir ses actions passées. Vérifier si l'objectif est atteint, si les moyens ont été utilisés à bon escient</tspan><tspan
+         y="301.11887"
+         x="64.649765"
+         id="tspan3617"
+         sodipodi:role="line">ou dans une atmosphère adaptée. C'est l'enjeu de la rétrospective, moment privilégié pour étudier et améliorer son cadre</tspan><tspan
+         y="313.61887"
+         x="64.649765"
+         id="tspan3619"
+         sodipodi:role="line">de travail. Au travers du superbe jeu de carte rétrospective (initiative de François Bachmann et Jacques Couvreur), nous</tspan><tspan
+         id="tspan3621"
+         y="326.11887"
+         x="64.649765"
+         sodipodi:role="line">espérons que vous appreniez...</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="64.649765"
+       y="827.84058"
+       id="text3713"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="827.84058"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3736">Autre nouveauté cette année, une buvette sera disponible</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="840.34058"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3738">les 2 jours ! Eau, café, jus de fruit seront à disposition pour</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="852.84058"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3740">vous aider à tenir ces deux jours intenses. Rendez vous</tspan><tspan
+         sodipodi:role="line"
+         x="64.649765"
+         y="865.34058"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3742">dans la salle des sponsors.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:14px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#1f2f4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans Bold"
+       x="370.86813"
+       y="357.09821"
+       id="text3744"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="370.86813"
+         y="357.09821"
+         id="tspan3750">Buffet (Lundi 31 mai / 18h30 - 19h30)</tspan></text>
+    <text
+       id="text3756"
+       y="373.22772"
+       x="384.86813"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="373.22772"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan3782">Cette année, le buffet est ouvert à l'ensemble des partici-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="385.72772"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan3968">pants. </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="384.86813"
+       y="427.79913"
+       id="text3784"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="427.79913"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3794">Si vous êtes inscrits pour le repas, vérifiez bien que votre</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="440.29913"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3796">badge intègre le logo repas (noir, en bas à gauche). C'est</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="452.79913"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3976">votre sésame pour rentrer.</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="465.29913"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3792" /></text>
+    <text
+       id="text3798"
+       y="498.51343"
+       x="384.86813"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"
+       sodipodi:linespacing="125%"><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="498.51343"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan3817">Demande importante de l'édition précédente, l'écriture du</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="511.01343"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan3819">nombre maximum de participants dans chaque session.</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="523.51343"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan3984">C'est chose faite pour 2010.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="384.86813"
+       y="570.65631"
+       id="text3821"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="570.65631"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3834">Au vu du nombre de personnes, il n'est plus possible de fai-</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="583.15631"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3836">re des questionnaires papiers (plus de 20h l'année dernière</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="595.65631"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3838">pour dépouiller les résultats). C'est donc un questionnaire</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="608.15631"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3840">en ligne qui prend le relais. Rendez vous sur :</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="620.65631"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan3842">http://www.surveymonkey.com/s/agilefrance2010</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4000"
+       y="662.79919"
+       x="384.86813"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan4010"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="662.79919"
+         x="384.86813"
+         sodipodi:role="line">Comme chaque année, il existe des sessions &quot;décalées&quot;.</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="675.29919"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan4026">Cette année, Eric Lefèvre-Ardant nous propose un concours</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="687.79919"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan4028">de codage avec des mentors. Cela se déroule en salle A</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="700.29919"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan4030">pendant les repas du midi.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       x="384.86813"
+       y="743.51349"
+       id="text4032"
+       sodipodi:linespacing="125%"><tspan
+         id="tspan4040"
+         sodipodi:role="line"
+         x="384.86813"
+         y="743.51349"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans">Eric Le Merdy pour les magnifiques logo et plaquettes (quel</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="756.01349"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan4051">talent !), Jacques Couvreur et François Bachmann pour le</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="768.51349"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan4053">goodies (bravo les gars), les orateurs (comme d'hab, c'est</tspan><tspan
+         sodipodi:role="line"
+         x="384.86813"
+         y="781.01349"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         id="tspan4055">vous qui faites la conf).</tspan></text>
+    <text
+       sodipodi:linespacing="125%"
+       id="text4057"
+       y="824.22778"
+       x="384.86813"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         id="tspan4065"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="824.22778"
+         x="384.86813"
+         sodipodi:role="line">Agile France n'existerait pas sans sponsor. Si vous êtes inté-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="836.72778"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan4076">ressé, ou si vous pensez que votre société peut être intéres-</tspan><tspan
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;font-family:Bitstream Vera Sans;-inkscape-font-specification:Bitstream Vera Sans"
+         y="849.22778"
+         x="384.86813"
+         sodipodi:role="line"
+         id="tspan4078">sé, n'hésitez pas à venir nous voir.</tspan></text>
+    <image
+       y="39.255352"
+       x="87.201965"
+       id="image3300"
+       xlink:href="file:///home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
+       height="99.167488"
+       width="99.167488" />
+    <image
+       y="969.11121"
+       x="16.284256"
+       id="image3491"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/Logo_Micropole_Baseline_1000x196.jpg"
+       height="42.760822"
+       width="218.16745" />
+    <image
+       y="974.94623"
+       x="540.6344"
+       id="image3553"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/Logo%20Valtech%20300dpi.jpg"
+       height="31.09078"
+       width="91.775627" />
+    <image
+       y="959.328"
+       x="248.94547"
+       id="image3615"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/CLT-RVB-logo-vertical.jpg"
+       height="62.32724"
+       width="142.31725" />
+    <image
+       y="946.35077"
+       x="405.75647"
+       id="image3677"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/logoSoat.png"
+       height="88.281723"
+       width="120.38416" />
+    <image
+       y="957.91803"
+       x="646.90381"
+       id="image3739"
+       xlink:href="file:///home/ericlemerdy/conference-app/app/graphisms/duchessfr_300px_90dpi_nom.jpg"
+       height="65.147171"
+       width="65.147171" />
+  </g>
+</svg>
