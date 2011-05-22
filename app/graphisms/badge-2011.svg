@@ -339,17 +339,9 @@
          style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
          inkscape:connector-curvature="0" />
       <path
-         sodipodi:end="2.8797933"
-         sodipodi:start="0.26179939"
-         d="m -250.164354,28.37211 a 6.361517,6.361517 0 0 1 -12.2895075,0"
-         sodipodi:ry="6.361517"
-         sodipodi:rx="6.361517"
-         sodipodi:cy="118.72563"
-         sodipodi:cx="-14.6875"
+         d="m 250.164354,28.37211 a 6.361517,6.361517 0 0 1 -12.2895075,0"
          id="path3451"
-         style="opacity:0.98999999;fill:none;stroke:#ffffff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         sodipodi:type="arc"
-         sodipodi:open="true" />
+         style="opacity:0.98999999;fill:none;stroke:#ffffff;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
       <path
          sodipodi:nodetypes="cc"
          id="path3453"
