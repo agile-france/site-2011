@@ -1,26 +1,39 @@
 .pad_2
 
-  %div.grid_7
+  %div
   
     %h2= "Programme"
 
     %p= "Voici le programme final de la conférence Agile France 2011:"
-    %p
-      %a#download.prefix_1{ :href => "/programme/2011/final.pdf", :target => "_blank" }
+    #downloads
+      %a.download.prefix_1.grid_5{ :href => "/programme/2011/final.pdf", :target => "_blank" }
         %img{ :src => "/images/pdf_ico.png", :alt => "PDF Icon" }
-        Programme 2011 - final - 20110518.pdf
-    %p= "Le programme sera finalisé dès que tous les orateurs auront confirmé leur session."
+        Programme 2011 - final - 20110523.pdf
+      %a.download.prefix_1.grid_4{ :href => "/programme/2011/long.pdf", :target => "_blank" }
+        %img{ :src => "/images/pdf_ico.png", :alt => "PDF Icon" }
+        Programme 2011 - détaillé.pdf
+  .clear
 
-  %div.grid_7
+  %div
     %h3#final= "Derniers changements"
     %ul
-      %li= "Echange de session Atelier Story Map <-> Clinique TDD (jeudi après-midi/vendredi après-midi)"
-      %li= "Changement de couleur pour l'atelier d'Emilie"
-      %li= "Changement d'orateur principal pour la session 'iPhoniste'"
+      %li= "Echange de session Atelier Story Map <-> Visitez une Obeya ! (vendredi matin matin/vendredi après-midi)"
+      %li= "Mise en forme sur deux pages"
+      %li= "Puvblication du programme détaillé"
 
-  %div.grid_4
+  %div
     %h3= "Versions précédentes"
-    %ul
+    %ul.changelog
+      %li
+        %a#draft5{ :href => "/programme/2011/draft/5.pdf", :target => "_blank" }
+          Programme 2011 - 5.pdf
+        %br
+        Echange de session Atelier Story Map <-> Clinique TDD (jeudi après-midi/vendredi après-midi)
+        %br
+        Changement de couleur pour l'atelier d'Emilie
+        %br
+        Changement d'orateur principal pour la session 'iPhoniste'
+        
       %li
         %a#draft4{ :href => "/programme/2011/draft/4.pdf", :target => "_blank" }
           Programme 2011 - 4.pdf

@@ -137,6 +137,8 @@ body {
         background-color: white;
         margin-bottom: 10px;
         padding: 20px 0; }
+        body #content_wrapper #content #content_container .changelog {
+          font-size: 75%; }
         body #content_wrapper #content #content_container #promote-ressources img {
           max-width: 220px; }
         body #content_wrapper #content #content_container .bordered {
@@ -152,9 +154,9 @@ body {
         body #content_wrapper #content #content_container img.logoSponsor {
           max-width: 145px;
           max-height: 145px; }
-        body #content_wrapper #content #content_container #download {
+        body #content_wrapper #content #content_container .download {
           text-decoration: none; }
-        body #content_wrapper #content #content_container #download > img {
+        body #content_wrapper #content #content_container .download > img {
           vertical-align: middle; }
         body #content_wrapper #content #content_container .buttons {
           height: 34px;
