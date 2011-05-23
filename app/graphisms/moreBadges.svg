@@ -15,7 +15,7 @@
    id="svg2387"
    inkscape:version="0.48.1 r9760"
    version="1.1"
-   sodipodi:docname="show.svg"
+   sodipodi:docname="moreBadges.svg"
    style="display:inline">
   <defs
      id="defs2389">
@@ -177,7 +177,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="369.52052"
+     inkscape:cx="166.66338"
      inkscape:cy="518.9676"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -194,7 +194,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -203,10 +203,10 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(0,3.2861328e-6)"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_64"
@@ -358,7 +358,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_65"
@@ -451,55 +451,6 @@
          inkscape:connector-curvature="0" />
       <!-- end of diner -->
     </g>
-    <g
-       id="g3817_9_65">
-      <rect
-         ry="5.2499995"
-         rx="5.2499995"
-         y="40.432381"
-         x="607.71045"
-         height="31.249998"
-         width="31.999998"
-         id="rect3301_9_65"
-         style="fill:#4e9a06;fill-opacity:1;stroke:#4e8006;stroke-width:4.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3303)" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:#888a85;stroke-width:1.04888785;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path3423_9_65"
-         d="m 611.3314,40.17478 c -2.34856,0 -3.66877,1.203621 -3.66877,3.662826 l 0,25.350918 c 0,2.300271 1.18697,3.50468 3.53361,3.50468 l 25.68297,0 c 2.34674,0 3.53552,-1.144425 3.53552,-3.50468 l 0,-25.350918 c 0,-2.399231 -1.18878,-3.662826 -3.60923,-3.662826 0,0 -25.48222,-0.0083 -25.4741,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
-         id="path3787_9_65"
-         d="m 611.31434,38.900887 c -2.35329,0 -3.67616,1.234742 -3.67616,3.757532 l 0,26.006392 c 0,2.359746 1.18936,3.595296 3.54073,3.595296 l 25.73463,0 c 2.35147,0 3.54264,-1.174015 3.54264,-3.595296 l 0,-26.006392 c 0,-2.461266 -1.19117,-3.757532 -3.61649,-3.757532 0,0 -25.53349,-0.0085 -25.52535,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#4e9a06;fill-opacity:1;stroke:none"
-         id="path3427_9_65"
-         d="m 611.92952,39.697972 c -2.23959,0 -3.49854,1.175724 -3.49854,3.577925 l 0,24.763364 c 0,2.246958 1.13189,3.423458 3.36965,3.423458 l 24.49127,0 c 2.23786,0 3.37148,-1.117901 3.37148,-3.423458 l 0,-24.763364 c 0,-2.343624 -1.13362,-3.577925 -3.44176,-3.577925 0,0 -24.29984,-0.0078 -24.2921,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="ccssssssssssssssscsccc"
-         id="rect3443_9_65"
-         d="m 624.04718,41.921735 c -2.6052,0 -4.72284,2.100409 -4.74894,4.699476 0,0.21023 6.33192,0.0028 6.33192,0.213066 0,0.21023 0,0.838126 0,1.048356 0,0.210259 -6.33192,-0.08998 -6.33192,0.120269 0,0.210244 0,0.930938 0,1.141182 0,0.21023 6.33192,0.0028 6.33192,0.213066 0,0.210244 0,0.838126 0,1.048371 0,0.210244 -6.33192,-0.04359 -6.33192,0.16666 0,0.210229 0,0.884546 0,1.094776 0,0.210229 6.33192,0.0028 6.33192,0.213066 0,0.210244 0,0.838126 0,1.04837 0,0.210245 -6.33192,-0.04358 -6.33192,0.16666 0,0.210245 0,0.884547 0,1.094777 0,0.210244 6.33192,0.0028 6.33192,0.213066 0,0.210244 0,0.838126 0,1.048385 0,0.210229 -6.33192,-0.04358 -6.33192,0.166645 0,0.21023 0,0.884547 0,1.094776 0.0261,2.599068 2.14374,4.699477 4.74894,4.699477 2.60518,0 4.72283,-2.100409 4.74894,-4.699477 0,-3.363835 0,-6.727655 0,-10.091491 -0.0261,-2.599067 -2.14376,-4.699476 -4.74894,-4.699476 z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 630.16435,58.37211 a 6.361517,6.361517 0 0 1 -12.2895,0"
-         id="path3451_9_65"
-         style="fill:none;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         id="path3453_9_65"
-         d="m 624.04718,63.042355 0,4.976679"
-         style="fill:none;stroke:#ffffff;stroke-width:2.22747922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         id="path3455_9_65"
-         d="m 628.22226,68.492997 -8.35017,0"
-         style="fill:none;stroke:#ffffff;stroke-width:1.48498619;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-    </g>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -510,7 +461,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_66"
@@ -603,55 +554,6 @@
          inkscape:connector-curvature="0" />
       <!-- end of diner -->
     </g>
-    <g
-       id="g3817_9_66">
-      <rect
-         ry="5.2499995"
-         rx="5.2499995"
-         y="260.43237"
-         x="237.71043"
-         height="31.249998"
-         width="31.999998"
-         id="rect3301_9_66"
-         style="fill:#4e9a06;fill-opacity:1;stroke:#4e8006;stroke-width:4.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3303)" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:#888a85;stroke-width:1.04888785;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path3423_9_66"
-         d="m 241.3314,260.17478 c -2.34856,0 -3.66877,1.20362 -3.66877,3.66283 l 0,25.35091 c 0,2.30027 1.18697,3.50468 3.53361,3.50468 l 25.68297,0 c 2.34674,0 3.53552,-1.14442 3.53552,-3.50468 l 0,-25.35091 c 0,-2.39924 -1.18878,-3.66283 -3.60923,-3.66283 0,0 -25.48222,-0.008 -25.4741,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
-         id="path3787_9_66"
-         d="m 241.31434,258.90089 c -2.35329,0 -3.67616,1.23474 -3.67616,3.75753 l 0,26.00639 c 0,2.35975 1.18936,3.5953 3.54073,3.5953 l 25.73463,0 c 2.35147,0 3.54264,-1.17402 3.54264,-3.5953 l 0,-26.00639 c 0,-2.46127 -1.19117,-3.75753 -3.61649,-3.75753 0,0 -25.53349,-0.009 -25.52535,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#4e9a06;fill-opacity:1;stroke:none"
-         id="path3427_9_66"
-         d="m 241.92952,259.69797 c -2.23959,0 -3.49854,1.17573 -3.49854,3.57793 l 0,24.76336 c 0,2.24696 1.13189,3.42346 3.36965,3.42346 l 24.49127,0 c 2.23786,0 3.37148,-1.1179 3.37148,-3.42346 l 0,-24.76336 c 0,-2.34363 -1.13362,-3.57793 -3.44176,-3.57793 0,0 -24.29984,-0.008 -24.2921,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="ccssssssssssssssscsccc"
-         id="rect3443_9_66"
-         d="m 254.04718,261.92173 c -2.6052,0 -4.72284,2.10041 -4.74894,4.69948 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21023 0,0.83812 0,1.04835 0,0.21026 -6.33192,-0.09 -6.33192,0.12027 0,0.21025 0,0.93094 0,1.14118 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21023 0,0.88455 0,1.09478 0,0.21023 6.33192,0.003 6.33192,0.21306 0,0.21025 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21025 0,0.88455 0,1.09478 0,0.21024 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83812 0,1.04838 0,0.21023 -6.33192,-0.0436 -6.33192,0.16665 0,0.21023 0,0.88454 0,1.09477 0.0261,2.59907 2.14374,4.69948 4.74894,4.69948 2.60518,0 4.72283,-2.10041 4.74894,-4.69948 0,-3.36383 0,-6.72765 0,-10.09149 -0.0261,-2.59907 -2.14376,-4.69947 -4.74894,-4.69947 z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 260.16435,278.37211 a 6.361517,6.361517 0 0 1 -12.2895,0"
-         id="path3451_9_66"
-         style="fill:none;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         id="path3453_9_66"
-         d="m 254.04718,283.04235 0,4.97668"
-         style="fill:none;stroke:#ffffff;stroke-width:2.22747922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         id="path3455_9_66"
-         d="m 258.22226,288.493 -8.35017,0"
-         style="fill:none;stroke:#ffffff;stroke-width:1.48498619;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-    </g>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -662,7 +564,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_67"
@@ -755,55 +657,6 @@
          inkscape:connector-curvature="0" />
       <!-- end of diner -->
     </g>
-    <g
-       id="g3817_9_67">
-      <rect
-         ry="5.2499995"
-         rx="5.2499995"
-         y="260.43237"
-         x="607.71045"
-         height="31.249998"
-         width="31.999998"
-         id="rect3301_9_67"
-         style="fill:#4e9a06;fill-opacity:1;stroke:#4e8006;stroke-width:4.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3303)" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:#888a85;stroke-width:1.04888785;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path3423_9_67"
-         d="m 611.3314,260.17478 c -2.34856,0 -3.66877,1.20362 -3.66877,3.66283 l 0,25.35091 c 0,2.30027 1.18697,3.50468 3.53361,3.50468 l 25.68297,0 c 2.34674,0 3.53552,-1.14442 3.53552,-3.50468 l 0,-25.35091 c 0,-2.39924 -1.18878,-3.66283 -3.60923,-3.66283 0,0 -25.48222,-0.008 -25.4741,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
-         id="path3787_9_67"
-         d="m 611.31434,258.90089 c -2.35329,0 -3.67616,1.23474 -3.67616,3.75753 l 0,26.00639 c 0,2.35975 1.18936,3.5953 3.54073,3.5953 l 25.73463,0 c 2.35147,0 3.54264,-1.17402 3.54264,-3.5953 l 0,-26.00639 c 0,-2.46127 -1.19117,-3.75753 -3.61649,-3.75753 0,0 -25.53349,-0.009 -25.52535,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#4e9a06;fill-opacity:1;stroke:none"
-         id="path3427_9_67"
-         d="m 611.92952,259.69797 c -2.23959,0 -3.49854,1.17573 -3.49854,3.57793 l 0,24.76336 c 0,2.24696 1.13189,3.42346 3.36965,3.42346 l 24.49127,0 c 2.23786,0 3.37148,-1.1179 3.37148,-3.42346 l 0,-24.76336 c 0,-2.34363 -1.13362,-3.57793 -3.44176,-3.57793 0,0 -24.29984,-0.008 -24.2921,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="ccssssssssssssssscsccc"
-         id="rect3443_9_67"
-         d="m 624.04718,261.92173 c -2.6052,0 -4.72284,2.10041 -4.74894,4.69948 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21023 0,0.83812 0,1.04835 0,0.21026 -6.33192,-0.09 -6.33192,0.12027 0,0.21025 0,0.93094 0,1.14118 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21023 0,0.88455 0,1.09478 0,0.21023 6.33192,0.003 6.33192,0.21306 0,0.21025 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21025 0,0.88455 0,1.09478 0,0.21024 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83812 0,1.04838 0,0.21023 -6.33192,-0.0436 -6.33192,0.16665 0,0.21023 0,0.88454 0,1.09477 0.0261,2.59907 2.14374,4.69948 4.74894,4.69948 2.60518,0 4.72283,-2.10041 4.74894,-4.69948 0,-3.36383 0,-6.72765 0,-10.09149 -0.0261,-2.59907 -2.14376,-4.69947 -4.74894,-4.69947 z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 630.16435,278.37211 a 6.361517,6.361517 0 0 1 -12.2895,0"
-         id="path3451_9_67"
-         style="fill:none;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         id="path3453_9_67"
-         d="m 624.04718,283.04235 0,4.97668"
-         style="fill:none;stroke:#ffffff;stroke-width:2.22747922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         id="path3455_9_67"
-         d="m 628.22226,288.493 -8.35017,0"
-         style="fill:none;stroke:#ffffff;stroke-width:1.48498619;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-    </g>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -814,7 +667,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_68"
@@ -907,55 +760,6 @@
          inkscape:connector-curvature="0" />
       <!-- end of diner -->
     </g>
-    <g
-       id="g3817_9_68">
-      <rect
-         ry="5.2499995"
-         rx="5.2499995"
-         y="480.43237"
-         x="237.71043"
-         height="31.249998"
-         width="31.999998"
-         id="rect3301_9_68"
-         style="fill:#4e9a06;fill-opacity:1;stroke:#4e8006;stroke-width:4.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3303)" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:#888a85;stroke-width:1.04888785;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path3423_9_68"
-         d="m 241.3314,480.17478 c -2.34856,0 -3.66877,1.20362 -3.66877,3.66283 l 0,25.35091 c 0,2.30027 1.18697,3.50468 3.53361,3.50468 l 25.68297,0 c 2.34674,0 3.53552,-1.14442 3.53552,-3.50468 l 0,-25.35091 c 0,-2.39924 -1.18878,-3.66283 -3.60923,-3.66283 0,0 -25.48222,-0.008 -25.4741,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
-         id="path3787_9_68"
-         d="m 241.31434,478.90089 c -2.35329,0 -3.67616,1.23474 -3.67616,3.75753 l 0,26.00639 c 0,2.35975 1.18936,3.5953 3.54073,3.5953 l 25.73463,0 c 2.35147,0 3.54264,-1.17402 3.54264,-3.5953 l 0,-26.00639 c 0,-2.46127 -1.19117,-3.75753 -3.61649,-3.75753 0,0 -25.53349,-0.009 -25.52535,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#4e9a06;fill-opacity:1;stroke:none"
-         id="path3427_9_68"
-         d="m 241.92952,479.69797 c -2.23959,0 -3.49854,1.17573 -3.49854,3.57793 l 0,24.76336 c 0,2.24696 1.13189,3.42346 3.36965,3.42346 l 24.49127,0 c 2.23786,0 3.37148,-1.1179 3.37148,-3.42346 l 0,-24.76336 c 0,-2.34363 -1.13362,-3.57793 -3.44176,-3.57793 0,0 -24.29984,-0.008 -24.2921,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="ccssssssssssssssscsccc"
-         id="rect3443_9_68"
-         d="m 254.04718,481.92173 c -2.6052,0 -4.72284,2.10041 -4.74894,4.69948 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21023 0,0.83812 0,1.04835 0,0.21026 -6.33192,-0.09 -6.33192,0.12027 0,0.21025 0,0.93094 0,1.14118 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21023 0,0.88455 0,1.09478 0,0.21023 6.33192,0.003 6.33192,0.21306 0,0.21025 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21025 0,0.88455 0,1.09478 0,0.21024 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83812 0,1.04838 0,0.21023 -6.33192,-0.0436 -6.33192,0.16665 0,0.21023 0,0.88454 0,1.09477 0.0261,2.59907 2.14374,4.69948 4.74894,4.69948 2.60518,0 4.72283,-2.10041 4.74894,-4.69948 0,-3.36383 0,-6.72765 0,-10.09149 -0.0261,-2.59907 -2.14376,-4.69947 -4.74894,-4.69947 z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 260.16435,498.37211 a 6.361517,6.361517 0 0 1 -12.2895,0"
-         id="path3451_9_68"
-         style="fill:none;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         id="path3453_9_68"
-         d="m 254.04718,503.04235 0,4.97668"
-         style="fill:none;stroke:#ffffff;stroke-width:2.22747922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         id="path3455_9_68"
-         d="m 258.22226,508.493 -8.35017,0"
-         style="fill:none;stroke:#ffffff;stroke-width:1.48498619;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-    </g>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -966,7 +770,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_69"
@@ -1059,55 +863,6 @@
          inkscape:connector-curvature="0" />
       <!-- end of diner -->
     </g>
-    <g
-       id="g3817_9_69">
-      <rect
-         ry="5.2499995"
-         rx="5.2499995"
-         y="480.43237"
-         x="607.71045"
-         height="31.249998"
-         width="31.999998"
-         id="rect3301_9_69"
-         style="fill:#4e9a06;fill-opacity:1;stroke:#4e8006;stroke-width:4.99999809;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;filter:url(#filter3303)" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:#888a85;stroke-width:1.04888785;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         id="path3423_9_69"
-         d="m 611.3314,480.17478 c -2.34856,0 -3.66877,1.20362 -3.66877,3.66283 l 0,25.35091 c 0,2.30027 1.18697,3.50468 3.53361,3.50468 l 25.68297,0 c 2.34674,0 3.53552,-1.14442 3.53552,-3.50468 l 0,-25.35091 c 0,-2.39924 -1.18878,-3.66283 -3.60923,-3.66283 0,0 -25.48222,-0.008 -25.4741,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:url(#linearGradient3843);fill-opacity:1;stroke:none"
-         id="path3787_9_69"
-         d="m 611.31434,478.90089 c -2.35329,0 -3.67616,1.23474 -3.67616,3.75753 l 0,26.00639 c 0,2.35975 1.18936,3.5953 3.54073,3.5953 l 25.73463,0 c 2.35147,0 3.54264,-1.17402 3.54264,-3.5953 l 0,-26.00639 c 0,-2.46127 -1.19117,-3.75753 -3.61649,-3.75753 0,0 -25.53349,-0.009 -25.52535,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         style="fill:#4e9a06;fill-opacity:1;stroke:none"
-         id="path3427_9_69"
-         d="m 611.92952,479.69797 c -2.23959,0 -3.49854,1.17573 -3.49854,3.57793 l 0,24.76336 c 0,2.24696 1.13189,3.42346 3.36965,3.42346 l 24.49127,0 c 2.23786,0 3.37148,-1.1179 3.37148,-3.42346 l 0,-24.76336 c 0,-2.34363 -1.13362,-3.57793 -3.44176,-3.57793 0,0 -24.29984,-0.008 -24.2921,0 z"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="ccssssssssssssssscsccc"
-         id="rect3443_9_69"
-         d="m 624.04718,481.92173 c -2.6052,0 -4.72284,2.10041 -4.74894,4.69948 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21023 0,0.83812 0,1.04835 0,0.21026 -6.33192,-0.09 -6.33192,0.12027 0,0.21025 0,0.93094 0,1.14118 0,0.21023 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21023 0,0.88455 0,1.09478 0,0.21023 6.33192,0.003 6.33192,0.21306 0,0.21025 0,0.83813 0,1.04837 0,0.21025 -6.33192,-0.0436 -6.33192,0.16666 0,0.21025 0,0.88455 0,1.09478 0,0.21024 6.33192,0.003 6.33192,0.21307 0,0.21024 0,0.83812 0,1.04838 0,0.21023 -6.33192,-0.0436 -6.33192,0.16665 0,0.21023 0,0.88454 0,1.09477 0.0261,2.59907 2.14374,4.69948 4.74894,4.69948 2.60518,0 4.72283,-2.10041 4.74894,-4.69948 0,-3.36383 0,-6.72765 0,-10.09149 -0.0261,-2.59907 -2.14376,-4.69947 -4.74894,-4.69947 z"
-         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m 630.16435,498.37211 a 6.361517,6.361517 0 0 1 -12.2895,0"
-         id="path3451_9_69"
-         style="fill:none;stroke:#ffffff;stroke-width:1;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         sodipodi:nodetypes="cc"
-         id="path3453_9_69"
-         d="m 624.04718,503.04235 0,4.97668"
-         style="fill:none;stroke:#ffffff;stroke-width:2.22747922;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-      <path
-         id="path3455_9_69"
-         d="m 628.22226,508.493 -8.35017,0"
-         style="fill:none;stroke:#ffffff;stroke-width:1.48498619;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-         inkscape:connector-curvature="0" />
-    </g>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1118,7 +873,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_70"
@@ -1271,7 +1026,7 @@
          x="327.29669"
          y="209.33588"
          id="societe_17_128-6"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">Valtech Technology</tspan></text>
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">Valtech</tspan></text>
     <!-- end of speaker -->
     <rect
        style="fill:none;stroke:#000000;stroke-width:0.2;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
@@ -1294,7 +1049,7 @@
          style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">SecurActive</tspan></text>
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_9_71"
@@ -1341,7 +1096,7 @@
          x="697.29657"
          y="649.33588"
          id="societe_17_133-1"
-         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">Valtech Technology</tspan></text>
+         style="font-size:22px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold">Valtech</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:24px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:end;line-height:100%;writing-mode:lr-tb;text-anchor:end;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Liberation Sans;-inkscape-font-specification:Liberation Sans Bold"
@@ -1472,7 +1227,7 @@
     <!-- next layer -->
   </g>
   <g
-     style="display:none"
+     style="display:inline"
      transform="translate(0,3.2861328e-6)"
      id="layer2"
      inkscape:groupmode="layer"
@@ -1483,7 +1238,7 @@
        id="image6377"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -1612,7 +1367,7 @@
        id="image6429"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -1741,7 +1496,7 @@
        id="image6481"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -1870,7 +1625,7 @@
        id="image6533"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -1999,7 +1754,7 @@
        id="image6585"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -2128,7 +1883,7 @@
        id="image6637"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -2257,7 +2012,7 @@
        id="image6689"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -2386,7 +2141,7 @@
        id="image6741"
        height="59.370998"
        width="59.370525"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png" />
     <path
        inkscape:connector-curvature="0"
@@ -2516,10 +2271,10 @@
      inkscape:groupmode="layer"
      id="layer3"
      transform="translate(0,3.2861328e-6)"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_128"
@@ -2609,7 +2364,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_129"
@@ -2699,7 +2454,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_130"
@@ -2789,7 +2544,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_131"
@@ -2879,7 +2634,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_132"
@@ -2969,7 +2724,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_133"
@@ -3059,7 +2814,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_134"
@@ -3149,7 +2904,7 @@
        y="700.09973" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_17_135"
@@ -3244,10 +2999,10 @@
      inkscape:groupmode="layer"
      id="layer4"
      transform="translate(0,3.2861328e-6)"
-     style="display:none">
+     style="display:inline">
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_192"
@@ -3303,7 +3058,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_193"
@@ -3359,7 +3114,7 @@
        y="30.099758" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_194"
@@ -3415,7 +3170,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_195"
@@ -3471,7 +3226,7 @@
        y="250.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_196"
@@ -3527,7 +3282,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_197"
@@ -3583,7 +3338,7 @@
        y="470.09976" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_198"
@@ -3639,7 +3394,7 @@
        y="700.09973" />
     <image
        sodipodi:absref="/home/ericlemerdy/conference-app/public/images/AgileFranceConference2011-logo.png"
-       xlink:href="/images/AgileFranceConference2011-logo.png"
+       xlink:href="images/AgileFranceConference2011-logo.png"
        width="59.370525"
        height="59.370998"
        id="logo_25_199"
