@@ -11,5 +11,6 @@ class PdfJob
     (class << io; self; end).module_eval "def original_filename; '#{invoice.ref}.pdf'; end"
     invoice.pdf = io
     invoice.save!
+    InvoiceMailerJob.perform(invoice.id.to_s)
   end
 end

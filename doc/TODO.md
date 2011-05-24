@@ -36,7 +36,8 @@ inscription free
 tasks
 -----
 
-    rake jobs:clean_orphans jobs:assign_self jobs:invoice
+    rake jobs:clean_orphans
+    rake jobs:assign_self jobs:invoice
 
 background jobs
 ---------------
@@ -54,6 +55,24 @@ Coherence
      => 204
     ruby-1.9.2-p136 :031 > Registration.count
      => 204
+
+    Execution.where(side: 'B', product_id: Product.where(ref: 'place').first.id).group_by{|e| e.price}.map{|price, executions| [price, executions.reduce(0) {|acc, e| acc += e.quantity}] }
+
+INRA
+----
+    people = File.read('inra.txt').split($/).map{|s| s.split}.map{|first, last|
+      login="#{first[0]}#{last}".downcase
+      User.create! first_name: first, last_name: last, email: "#{login}@versailles.inra.fr", password: 'git rocks', password_confirmation: 'git rocks'
+    }
+
+    oi = User.identified_by_email /oinizan/
+    vd = User.identified_by_email /dorothee.valdenaire@versailles.inra.fr/
+
+    inras = [people, oi, vd].flatten
+
+    places = oi.executions.first.registrations
+
+    13.times {|i| places[i].tap{|p| p.user = inras[i]}.save}
 
 
 
