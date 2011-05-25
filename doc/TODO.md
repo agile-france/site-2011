@@ -74,5 +74,7 @@ INRA
 
     13.times {|i| places[i].tap{|p| p.user = inras[i]}.save}
 
-
+Sending late emails
+-------------------
+    (27..31).map {|i| "INV-11%02d" % i}.map {|ref| InvoiceMailerJob.perform Invoice.where(ref: ref).first.id.to_s}
 
