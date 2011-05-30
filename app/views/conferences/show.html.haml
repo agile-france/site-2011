@@ -1,12 +1,10 @@
 %h1.pad_2
   = render @conference
 
-.buttons.prefix_4= link_to t('registrations.new?'), new_conference_registration_path(@conference)
-
 - @sessions.each do |session|
   = render 'sessions/header', :session => session
   = render 'sessions/summary', :session => session
-  
+
 .pagination
   = will_paginate @sessions
-  
+
