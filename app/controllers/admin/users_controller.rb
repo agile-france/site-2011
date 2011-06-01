@@ -6,7 +6,7 @@ module Admin
     def index
       criteria = {}
       criteria[:email] = params[:q] unless params[:q].blank?
-      @users = search(User, criteria).order_by(:email.asc).paginate(pager_options)
+      @users = search(User, criteria).order_by(:email.asc)
     end
     
     def edit
