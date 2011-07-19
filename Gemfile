@@ -8,23 +8,24 @@ gem 'jquery-rails'
 
 # views
 gem 'haml'
+gem 'sass'
 gem 'haml-rails'
 gem 'will_paginate', '>= 3.0.pre2'
 
 # authentication
-gem 'devise', '>= 1.2.rc'
-gem 'oa-oauth', '>= 0.2.0.beta1', :require => "omniauth/oauth"
-gem 'oa-openid', '>= 0.2.0.beta1', :require => "omniauth/openid"
+gem 'devise'
+gem 'oa-oauth'
+gem 'oa-openid'
 
 # rdiscount
 gem 'rdiscount'
 
 # mongo
-gem 'mongoid', '>= 2.0.0.beta.19'
-gem 'mongoid_taggable', '~> 0.1'
+gem 'mongoid'
+gem 'mongoid_taggable'
 gem 'mongoid_rails_migrations'
-gem 'mongo', '~> 1.3'
-gem 'bson_ext', '~> 1.3'
+gem 'mongo'
+gem 'bson_ext'
 
 # cant
 gem 'cant'
@@ -46,7 +47,7 @@ gem 'resque'
 
 group :development, :test, :cucumber do
   gem 'thin'
-  gem "rspec-rails", ">= 2.1.0"
+  gem "rspec-rails"
 
   # factory (required for scaffold)
   gem 'fabrication'
@@ -54,14 +55,14 @@ group :development, :test, :cucumber do
   gem 'ruby-debug19', :platforms => :mri_19
 
   # js
-  gem 'barista', '~> 1.0'
+  gem 'barista'
   gem 'therubyracer', :require => false
 end
 
 group :test, :cucumber do
   gem "rspec_tag_matchers"
   gem 'mongoid-rspec'
-  gem 'wrong', '~> 0.4'
+  gem 'wrong'
   gem 'jasmine'
 
   # cucumber
@@ -70,7 +71,7 @@ group :test, :cucumber do
   gem 'database_cleaner'
 
   # spork, drb server
-  gem 'spork', '>= 0.9.0.rc2'
+  gem 'spork', '>= 0.9.0.rc9'
 
   # capybara
   gem 'capybara'

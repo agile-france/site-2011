@@ -11,7 +11,7 @@ rvm 1.9.2
 * read notes
 
         rvm notes
-    
+
   look at whether additional libraries are required
 
 * install 1.9.2
@@ -38,7 +38,7 @@ resources are on mongodb site
 * [query?](http://www.mongodb.org/display/DOCS/Advanced+Queries)
 * [upsert?](http://www.mongodb.org/display/DOCS/Updating)
 
-recipe : admin role 
+recipe : admin role
 -------------------
 
 launch mongo shell, with correct database
@@ -70,26 +70,26 @@ resource
 Revoke admin role to randy
 
     ruby-1.9.2-p0 > randy = User.where(:email => /^randy/).first
-     => #<User _id: 4cb4e0cc1c94a27e7a000005, email: "randy@couture.com", encrypted_password: "$2a$10$OVi7LsFCgOIf8QZ/9YSWRuNFaGiPbfEI4PEvTxf9eiH7f1sD5aM7.", password_salt: "$2a$10$OVi7LsFCgOIf8QZ/9YSWRu", remember_token: nil, remember_created_at: nil, reset_password_token: nil, sign_in_count: 4, current_sign_in_at: 2010-11-24 22:22:22 UTC, last_sign_in_at: 2010-10-18 20:52:29 UTC, current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", first_name: "", last_name: "", bio: "yessssssssss", avatar: nil, admin: true> 
+     => #<User _id: 4cb4e0cc1c94a27e7a000005, email: "randy@couture.com", encrypted_password: "$2a$10$OVi7LsFCgOIf8QZ/9YSWRuNFaGiPbfEI4PEvTxf9eiH7f1sD5aM7.", password_salt: "$2a$10$OVi7LsFCgOIf8QZ/9YSWRu", remember_token: nil, remember_created_at: nil, reset_password_token: nil, sign_in_count: 4, current_sign_in_at: 2010-11-24 22:22:22 UTC, last_sign_in_at: 2010-10-18 20:52:29 UTC, current_sign_in_ip: "127.0.0.1", last_sign_in_ip: "127.0.0.1", first_name: "", last_name: "", bio: "yessssssssss", avatar: nil, admin: true>
     ruby-1.9.2-p0 > randy.tap {|r|r.admin=false}.save!
-     => true 
+     => true
     ruby-1.9.2-p0 > randy.admin?
      => false
 
 Tests
 =====
 
-Unit 
+Unit
 ----
 see http://github.com/rspec/rspec
 
 ### flow them!
 		guard
-		
+
 or for one shot,
 
 		rspec spec/
-		
+
 ### dunno why it fails :(
 add a debugger statement, and type then
 
@@ -103,7 +103,7 @@ Javascripts
 -----------
 
     rake jasmine
-    
+
 then goto http://localhost:8888 ... a graphical interface for test is quite annoying ...
 
 And at this time, jasmine-1.0.1.1 webrick server resists to STOP, HUP... but not KILL :)
@@ -125,14 +125,16 @@ There is no automation for command line
 Have spork ran for cucumber on its own port
 
     ~/src/ruby/conference-on-rails (vote)$ spork cucumber --port 12345
-    
+
 Then, can use following options to have cuke connect to it
 
     ./script/cucumber --drb --port 12345 features/session_rate.feature
 
 **Gotcha**
-    
+
     **@javascript tests using default js driver (selenium) are failing when spork is up**
+
+    ** requires ff5 **
 
 ### run them!
 
@@ -145,7 +147,7 @@ or
 
 see [cucumber and tags](http://github.com/aslakhellesoy/cucumber/wiki/tags), and [capybara tags](http://github.com/jnicklas/capybara)
 
-		
+
 ### dunno why it fails :(
 Add a handy step before offending step
 
@@ -172,7 +174,7 @@ where the bloody site ?
 seed database at least once
 
     rake db:seed
-    
+
 look out for seeds under #{Rails.root}/db/seeds/development (there is an admin there)
 
 then

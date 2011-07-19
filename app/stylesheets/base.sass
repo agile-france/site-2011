@@ -27,7 +27,7 @@ $transition-logo: max-width 0.2s ease-out, max-height 0.2s ease-out
 @mixin pad($unit)
   padding: 0 $unit
 
-@mixin nice-border($color = #ccc)
+@mixin nice-border($color: #ccc)
   -webkit-box-shadow: 1pt 1pt 5px $color
   -moz-box-shadow: 1pt 1pt 5px $color
 
@@ -82,19 +82,19 @@ body
     max-width: 80px
     max-height: 80px
     background-color: white
-  
+
   .hint
     font-size: 10px
     font-style: italic
 
   .pad_2
-    @include pad(2*$margin)  
+    @include pad(2*$margin)
   .pad_1
     @include pad($margin)
-    
+
   .toolbar
     text-align: right
-    
+
   .instructions
     font-size: 12px
     font-style: italic
@@ -152,7 +152,7 @@ body
         text-align: center
         text-decoration: none
         font-size: 11px
-        
+
         div
           -moz-transform: rotate($menuItemRotation)
           -webkit-transform: rotate($menuItemRotation)
