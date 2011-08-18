@@ -22,18 +22,20 @@ describe Admin::UsersController do
 
         it "should find one exact match on email" do
           get :index, :q => email
-          assigns(:users).should == User.where(:email => email)
+          emails = assigns(:users).map {|u| u.email}
+          assert { emails == [email] }
         end
         it "should find regular match" do
           get :index, :q => "/-0/"
-          assigns(:users).should == User.where(:email => email)
+          emails = assigns(:users).map {|u| u.email}
+          assert { emails == [email] }
         end
         it "should return all when query is blank" do
           get :index, :q => ""
           users = assigns(:users)
           assert {users.count == User.count}
-        end        
-      end      
+        end
+      end
     end
 
     describe "GET 'edit'" do
@@ -51,7 +53,7 @@ describe Admin::UsersController do
       end
     end
   end
-  
+
   it 'redirects unsigned user to sign' do
     get :index
     response.should redirect_to new_user_session_path
