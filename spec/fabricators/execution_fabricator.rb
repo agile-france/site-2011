@@ -1,2 +1,0 @@
-Fabricator(:execution) do
-end

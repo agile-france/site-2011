@@ -8,18 +8,18 @@ describe Invoice do
 
   describe "#amount and #lines" do
     before do
-      place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
-      place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
-      place.executions.build(invoice: invoice, :price => 300, :quantity => 5)
-      diner.executions.build(invoice: invoice, :price => 50, :quantity => 10)
+      place.registrations.build(invoice: invoice, :price => 200, :ref => "E")
+      place.registrations.build(invoice: invoice, :price => 300, :ref => "S")
+      place.registrations.build(invoice: invoice, :price => 300, :ref => "S")
+      diner.registrations.build(invoice: invoice, :price => 50, :ref => "D")
     end
     it "folds amount" do
-      assert {invoice.amount == 4000}
+      assert {invoice.amount == 850}
     end
     it "folds lines" do
       lines = invoice.lines
-      assert {lines[place] == {200.0 => 10, 300.0 => 5}}
-      assert {lines[diner] == {50.0 => 10}}
+      assert {lines[place] == {200.0 => 1, 300.0 => 2}}
+      assert {lines[diner] == {50.0 => 1}}
     end
   end
 
@@ -28,7 +28,7 @@ describe Invoice do
       deny {invoice.invoiceable?}
     end
     it "is true when amount to invoice is > 0" do
-      place.executions.build(invoice: invoice, :price => 200, :quantity => 5)
+      place.registrations.build(invoice: invoice, :price => 200)
       invoice.should be_invoiceable
     end
   end

@@ -41,8 +41,7 @@ class AccountController < ApplicationController
     @user = current_user
   end
 
-  def invoices_for(user, c)
-    invoices = Execution.booked_for(c).booked_by(user).map{|e| e.invoice}.uniq.compact
-    invoices.each {|invoice| invoice.compute}
+  def invoices_for(user, conference)
+    invoices = Invoice.payed_by(user).for(conference)
   end
 end

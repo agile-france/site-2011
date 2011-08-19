@@ -16,26 +16,26 @@ module Admin
       @byers = Hash.new
       Registration.all().each do |r|
         byer = Byer.new(0, 0, "", "")
-        if !r.execution.user.nil?
-          byer.name = r.execution.user.last_name
-          byer.company = r.execution.user.company.name unless r.execution.user.company.nil?
+        if !r.invoice.user.nil?
+          byer.name = r.invoice.user.last_name
+          byer.company = r.invoice.user.company.name unless r.invoice.user.company.nil?
           if r.product.ref == "diner"
             diner = 0
-            if !@byers[r.execution.user.email].nil? && !@byers[r.execution.user.email].diner.nil?
-              diner = @byers[r.execution.user.email].diner
+            if !@byers[r.invoice.user.email].nil? && !@byers[r.invoice.user.email].diner.nil?
+              diner = @byers[r.invoice.user.email].diner
             end
             byer.diner = diner + 1
           else
             place = 0
-            if !@byers[r.execution.user.email].nil? && !@byers[r.execution.user.email].place.nil?
-              place = @byers[r.execution.user.email].place
+            if !@byers[r.invoice.user.email].nil? && !@byers[r.invoice.user.email].place.nil?
+              place = @byers[r.invoice.user.email].place
             end
             byer.place = place + 1
           end
-          @byers[r.execution.user.email] = byer
+          @byers[r.invoice.user.email] = byer
         end
       end
-      
+
       # build registered users list
       allRegistrations = Registration.all()
 
@@ -60,19 +60,19 @@ module Admin
             insert = true
           end
           if insert == true
-            buyer = @byers[r.execution.user.email]
+            buyer = @byers[r.invoice.user.email]
             if r.product.ref == "diner"
-              if !r.execution.user.nil? && !@byers[r.execution.user.email].nil?
+              if !r.invoice.user.nil? && !@byers[r.invoice.user.email].nil?
                 buyer.diner = buyer.diner - 1
               end
             else
-              if !r.execution.user.nil? && !@byers[r.execution.user.email].nil?
+              if !r.invoice.user.nil? && !@byers[r.invoice.user.email].nil?
                 buyer.place = buyer.place - 1
-                @byers[r.execution.user.email] = buyer
+                @byers[r.invoice.user.email] = buyer
               end
             end
-            @byers[r.execution.user.email] = buyer
-            logger.info "p: #{@byers[r.execution.user.email].place} d:#{@byers[r.execution.user.email].diner} #{@byers[r.execution.user.email].name}"
+            @byers[r.invoice.user.email] = buyer
+            logger.info "p: #{@byers[r.invoice.user.email].place} d:#{@byers[r.invoice.user.email].diner} #{@byers[r.invoice.user.email].name}"
             @users[email] = person
           end
         end
@@ -111,7 +111,7 @@ module Admin
           logger.info "push a diner because of p:#{b.place} d:#{b.diner} #{b.name}"
         end
       end
-      
+
       logger.info "#{@badges.length()}"
 
       respond_to do |format|

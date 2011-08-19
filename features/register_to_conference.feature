@@ -9,9 +9,5 @@ Feature: Register to conference
         |ref    |quantity |price  |
         |early  |100      |220    |
     When I go to "/conferences/xp-2033/registrations/new?locale=fr"
-    Then I should see /reste 100 places/
-    When I fill in "orders[][quantity]" with "1"
-      And I press "Valider"
-    Then I should see /inscription(.+)enregistrée/
-    
-    
+    Then I should see /unavailable/
+

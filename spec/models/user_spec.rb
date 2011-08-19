@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe User do    
+describe User do
   describe '#greeter_name' do
     it 'should be first and last name' do
       User.new(:first_name => 'John', :last_name =>'Doe').greeter_name.should == 'John Doe'
@@ -24,12 +24,12 @@ describe User do
     # XXX DATABASE ACCESS
     before(:all) {@john = Fabricate(:user, :first_name => 'john', :last_name => 'doe')}
     after(:all) {@john.destroy}
-    
+
     it 'first name is capitalized on validation' do
       @john.first_name.should == 'John'
     end
     it 'last name is capitalized on validation' do
-      @john.last_name.should == 'Doe'  
+      @john.last_name.should == 'Doe'
     end
   end
 
@@ -51,7 +51,7 @@ describe User do
       cheesy.sessions.should include(cheddar)
     end
   end
-  
+
   # admin
   it {should have_fields(:admin).of_type(Boolean).with_default_value_of(false)}
   describe '#admin?' do
@@ -60,10 +60,10 @@ describe User do
       deny {john.admin?}
     end
   end
-  
+
   describe "#avatar" do
     context "twitter authentication" do
-      touch_db_with(:user) do 
+      touch_db_with(:user) do
         Fabricate(:user).tap{|u| u.authentications.create!({:active => true}.merge(Authentications::Twitter.data))}
       end
       before do
@@ -76,7 +76,7 @@ describe User do
       end
     end
     context "github authentication" do
-      touch_db_with(:user) do 
+      touch_db_with(:user) do
         Fabricate(:user).tap{|u| u.authentications.create!({:active => true}.merge(Authentications::Github.data))}
       end
       it "is image from gravatar" do
@@ -84,7 +84,7 @@ describe User do
       end
     end
   end
-  
+
   describe "#destroy" do
     let(:user) {Fabricate(:user)}
     before do
@@ -121,7 +121,7 @@ describe User do
       end
     end
   end
-  
+
   describe "reviewing feature" do
     touch_db_with(:john) {Fabricate(:user)}
     touch_db_with(:explained) {Fabricate(:session)}
@@ -130,27 +130,4 @@ describe User do
       assert {explained.ratings.first.user == john}
     end
   end
-  
-  describe "buy/sell" do
-    let(:product) {Fabricate.build(:product)}
-    let(:john) {Fabricate.build(:user)}
-    it "buy builds a BID order with self as owner and payer" do
-      buy = john.buy(10, product, 220)
-      assert {buy.side == Order::Side::BID}
-      assert {buy.product == product}
-      assert {buy.quantity == 10}
-      assert {buy.price == 220}
-      assert {buy.user == john}
-      assert {buy.new_record?}
-    end
-    it "sell builds a ASK order with self as owner and payer" do
-      sell = john.sell(10, product, 0)
-      assert {sell.side == Order::Side::ASK}
-      assert {sell.product == product}
-      assert {sell.quantity == 10}
-      assert {sell.price == 0}
-      assert {sell.user == john}
-      assert {sell.new_record?}
-    end
-  end  
 end
