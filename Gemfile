@@ -57,13 +57,13 @@ group :development, :test, :cucumber do
   # js
   gem 'barista'
   gem 'therubyracer', :require => false
+  gem 'jasmine'
 end
 
 group :test, :cucumber do
   gem "rspec_tag_matchers"
   gem 'mongoid-rspec'
   gem 'wrong'
-  gem 'jasmine'
 
   # cucumber
   gem 'cucumber'
