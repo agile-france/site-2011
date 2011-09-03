@@ -3,14 +3,13 @@ def mac?
   RUBY_PLATFORM =~ /darwin/
 end
 
-gem 'rails', '>= 3.0.0'
-gem 'jquery-rails'
+gem 'rails', '~> 3.1'
 
 # views
 gem 'haml'
 gem 'sass'
 gem 'haml-rails'
-gem 'will_paginate', '>= 3.0.pre2'
+gem 'kaminari'
 
 # authentication
 gem 'devise'
@@ -33,14 +32,11 @@ gem 'cant'
 # json
 gem 'yajl-ruby', :require => 'yajl'
 
-# rbtree
-gem 'rbtree'
-
 # xero
 gem 'xero-min', '>= 0.0.7'
 
 # uploader
-gem 'carrierwave'
+gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 
 # jobs
 gem 'resque'
@@ -55,8 +51,6 @@ group :development, :test, :cucumber do
   gem 'ruby-debug19', :platforms => :mri_19
 
   # js
-  gem 'barista'
-  gem 'therubyracer', :require => false
   gem 'jasmine'
 end
 

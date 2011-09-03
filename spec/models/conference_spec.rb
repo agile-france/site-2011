@@ -3,18 +3,8 @@ require 'spec_helper'
 describe Conference do
   it {should reference_many(:products)}
 
-  it 'has a conpound id : #{name}-#{edition}' do
+  it 'has a compound id : #{name}-#{edition}' do
     assert {Conference.new(:name => 'xp', :edition => '2030').id == "xp-2030"}
-  end
-
-  describe "#owner" do
-    let(:xp) {Fabricate.build(:conference)}
-    let(:xp_dot_org) {Fabricate.build(:user, :email => 'conf@xp.org')}
-    it "is a user, representing organization of conference" do
-      assert {xp.owner == nil}
-      xp.owner = xp_dot_org
-      assert {xp.owner == xp_dot_org}
-    end
   end
 
   describe "#new_invoice_for" do

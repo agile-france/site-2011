@@ -5,8 +5,7 @@ describe RegistrationsController do
   # what a pain ! conference_path(xp) raises when conference is not persisted ...
   # stub(xp).persisted? {true} and stub(xp).new_record? {false} are not enough to change behavior :(
   #
-  touch_db_with(:xp_dot_org) {Fabricate(:user, :email => 'conf@xp.org')}
-  touch_db_with(:xp) {Fabricate(:conference, :owner => xp_dot_org)}
+  touch_db_with(:xp) {Fabricate(:conference)}
   touch_db_with(:place) {Fabricate(:product, :conference => xp)}
   touch_db_with(:john) {Fabricate(:user)}
 

@@ -5,8 +5,8 @@ class Session
   include Mongoid::Taggable
   include Mongoid::Timestamps
 
-  referenced_in :conference
-  referenced_in :user
+  belongs_to :conference
+  belongs_to :user
   embeds_many :ratings
 
   field :title

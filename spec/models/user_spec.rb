@@ -37,18 +37,19 @@ describe User do
     # XXX DATABASE ACCESS
     touch_db_with(:john) {Fabricate(:user)}
     touch_db_with(:cheesy) {Fabricate(:conference, :name => 'cheesy')}
-    touch_db_with(:cheddar) {Fabricate.build(:session, :title => 'cheddar')}
+    touch_db_with(:cheddar) {Fabricate(:session, :title => 'cheddar')}
     before(:all) do
-      john.propose(cheddar, @cheesy)
+      john.propose(cheddar, cheesy)
     end
 
     it 'then session and user are wired' do
-      assert {cheddar.user == john}
-      assert {john.sessions.include? cheddar}
+      assert { cheddar.user == john }
+      assert { john.reload.sessions.include? cheddar }
     end
 
     it 'then session and conference are wired' do
-      cheesy.sessions.should include(cheddar)
+      assert { cheddar.conference == cheesy }
+      assert { cheesy.reload.sessions.include? cheddar}
     end
   end
 

@@ -5,7 +5,6 @@ class Conference
   has_many :products
   has_many :registrations
   has_many :invoices
-  referenced_in :owner, :class_name => "User", :foreign_key => :owner_id
 
   field :name
   field :edition

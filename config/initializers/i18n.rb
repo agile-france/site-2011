@@ -1,1 +1,0 @@
-I18n.exception_handler = lambda {|*args| raise args.first}

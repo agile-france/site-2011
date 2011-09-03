@@ -6,22 +6,18 @@ describe ConferencesController do
     describe 'with existing conference params' do
       touch_db_with(:deep) {Fabricate(:conference, :name => 'deep', :edition => '2011')}
       it "should be successful for an existing conference" do
-        get :show, {:id => @deep.id}
+        get :show, {:id => deep.id}
         response.should be_success
       end
     end
 
     describe 'with flunky parameters' do
       before do
-        get :show, {:id => id(2)}
+        get :show, {id: 'foo'}
       end
 
-      it 'should redirect to root_path' do
+      it 'should redirect to root_path (???!)' do
         response.should redirect_to root_path
-      end
-
-      it 'should flash ya' do
-        flash[:error].should_not be_nil
       end
     end
   end

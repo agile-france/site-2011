@@ -12,15 +12,15 @@ class ConferencesController < ApplicationController
 
   def index
     @conferences = Conference.all
-    respond_with @conferences.paginate(pager_options)
+    respond_with @conferences.page(params[:page])
   end
 
   def show
     respond_with sort_and_paginate(Conference.find(params[:id]))
   end
-  
+
   private
   def sort_and_paginate(conference)
-    conference.tap {|c| @conference = c; @sessions = c.sessions.desc(:updated_at).paginate(pager_options) if c}
+    conference.tap {|c| @conference = c; @sessions = c.sessions.desc(:updated_at).page(params[:page]) if c}
   end
 end
