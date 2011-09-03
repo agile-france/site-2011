@@ -79,6 +79,17 @@ Revoke admin role to randy
 Tests
 =====
 
+One line
+--------
+
+cuke is red with selenium, and do not want to fix this (ff6 and selenium-webdriver-2.5.0) ?
+
+    time(rspec spec && ./script/cucumber --tags ~@javascript)
+
+or cuke is green
+
+    time(rspec spec && ./script/cucumber)
+
 Unit
 ----
 see http://github.com/rspec/rspec

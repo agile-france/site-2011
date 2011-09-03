@@ -1,22 +1,24 @@
 source 'http://rubygems.org'
-def mac?
-  RUBY_PLATFORM =~ /darwin/
-end
 
 gem 'rails', '~> 3.1'
 
-# views
-gem 'haml'
-gem 'sass'
-gem 'haml-rails'
+# js
+gem 'jquery-rails'
+
+# pagination
 gem 'kaminari'
+
+# views
+gem 'jquery-rails'
+gem 'haml'
+gem 'haml-rails'
 
 # authentication
 gem 'devise'
 gem 'oa-oauth'
 gem 'oa-openid'
 
-# rdiscount
+# mardown
 gem 'rdiscount'
 
 # mongo
@@ -41,9 +43,18 @@ gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 # jobs
 gem 'resque'
 
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "  ~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
+
+
 group :development, :test, :cucumber do
   gem 'thin'
-  gem "rspec-rails"
+  gem 'rspec-rails'
 
   # factory (required for scaffold)
   gem 'fabrication'

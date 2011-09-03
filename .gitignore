@@ -9,6 +9,7 @@ keys/
 coverage/
 dump/
 public/uploads/
+public/assets/
 config/environments/heroku
 
 .rvmrc

@@ -3,16 +3,13 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html', :charset => 'utf-8'}
     = favicon_link_tag 'favicon.png'
+
     %title Conference Agile France 2011
-    = stylesheet_link_tag 'reset'
-    = stylesheet_link_tag '960'
-    = stylesheet_link_tag 'text'
-    
-    = stylesheet_link_tag 'base'
-    = stylesheet_link_tag 'errors'
+
+    = stylesheet_link_tag     "application"
+    = javascript_include_tag  "application"
+
     = csrf_meta_tag
-    = javascript_include_tag :defaults
-    = yield :javascript
     %script{:type => "text/javascript", :src  => "http://referentiel.institut-agile.fr/souligneur.js"}
 
   %body
@@ -20,12 +17,13 @@
       #header
         .grid_3
           %a{:href => "/"}
-            %img#thumb{:src => "/images/AgileFranceConference2011-logo.png", :alt => "Logo Agile France"}
+            = image_tag("AgileFranceConference2011-logo.png", alt: "Logo Agile France", id: "thumbs")
+
         .grid_9
           .toolbar.grid_9.alpha
             - if user_signed_in?
               %span= t('auth.greet', :user => current_user.greeter_name)
-              | 
+              |
               %span= link_to t('account.title'), edit_account_path
               |
               %span#sign_out= link_to t('auth.sign_out'), destroy_user_session_path
@@ -64,18 +62,18 @@
         %div.sponsor-container= "Platinium"
         %a{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
           %div.sponsor-container
-            %img.sponsor.platinium{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
+            %img.sponsor.platinium{:src => image_path("logoMicropole.png"), :alt => "Micropole, sponsor Platinium"}
         %div.sponsor-container= "Gold"
         %a{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
           %div.sponsor-container
-            %img.sponsor.gold{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+            %img.sponsor.gold{:src => image_path("logoSoat.png"), :alt => "So@t, sponsor Gold"}
         %a{:href => "http://www.clt-services.com", :title => "CLT Services, sponsor Gold" }
           %div.sponsor-container
-            %img.sponsor.gold{:src => "/images/logoCLT.jpg", :alt => "CLT Services, sponsor Gold"}
+            %img.sponsor.gold{:src => image_path("logoCLT.jpg"), :alt => "CLT Services, sponsor Gold"}
         %div.sponsor-container= "Media"
         %a{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
           %div.sponsor-container
-            %img.sponsor.media{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
+            %img.sponsor.media{:src => image_path("duchessfr_300px_90dpi_nom.jpg"), :alt => "Duchess France, partenaire média"}
         %div.clear
 
       %br
@@ -83,7 +81,7 @@
       #content
         #content_container
           = yield
-        
+
         .grid_12
           = render 'debug/show' if Rails.env.development?
 
@@ -95,15 +93,15 @@
           %br
         .grid_10
           %a.logo-sponsor{:href => "http://www.micropole.com", :title => "Micropole, sponsor Platinium" }
-            %img.sponsor.platinium{:src => "/images/logoMicropole.png", :alt => "Micropole, sponsor Platinium"}
+            %img.sponsor.platinium{:src => image_path("logoMicropole.png"), :alt => "Micropole, sponsor Platinium"}
           %a.logo-sponsor{:href => "http://www.soat.fr/", :title => "So@t, sponsor Gold" }
-            %img.sponsor.gold{:src => "/images/logoSoat.png", :alt => "So@t, sponsor Gold"}
+            %img.sponsor.gold{:src => image_path("logoSoat.png"), :alt => "So@t, sponsor Gold"}
           %a.logo-sponsor{:href => "http://www.clt-services.com", :title => "CLT Services, sponsor Gold" }
-            %img.sponsor.gold{:src => "/images/logoCLT.jpg", :alt => "CLT Services, sponsor Gold"}
+            %img.sponsor.gold{:src => image_path("logoCLT.jpg"), :alt => "CLT Services, sponsor Gold"}
           %a.logo-sponsor{:href => "http://jduchess.org/duchess-france", :title => "Duchess France, partenaire média" }
-            %img.sponsor.media{:src => "/images/duchessfr_300px_90dpi_nom.jpg", :alt => "Duchess France, partenaire média"}
+            %img.sponsor.media{:src => image_path("duchessfr_300px_90dpi_nom.jpg"), :alt => "Duchess France, partenaire média"}
           %a{:href => "/sponsors"}
-            %img#badge-sponsor{:src => "/images/sponsor-2011.png", :alt => "Devenir sponsor 2011"}
+            %img#badge-sponsor{:src => image_path("sponsor-2011.png"), :alt => "Devenir sponsor 2011"}
         .grid_2
           %div
             %a{:href => "http://www.w3.org/html/logo/"}

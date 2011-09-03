@@ -10,9 +10,9 @@ toggleUnselected = (option, options) ->
 
 toggleive = (action, options = actions) ->
   $("a.[action='#{action}']").live('click', (event) ->
-    event.preventDefault() 
+    event.preventDefault()
     toggleUnselected($(this), options)
   )
-  
-for action in actions 
+
+for action in actions
   toggleive(action)
