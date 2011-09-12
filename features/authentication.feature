@@ -7,7 +7,7 @@ Feature: Authentication
       And I fill in "user_email" with "thierry.henrio@gmail.com"
       And I fill in "user_password" with "devise_rocks"
       And I fill in "user_password_confirmation" with "devise_rocks"
-      And I press "user_submit"
+      And I validate "#user_new" form
     Then I should see "Bonjour thierry.henrio@gmail.com"
       And I should be on "/account/edit"
 
@@ -16,5 +16,5 @@ Feature: Authentication
     When I go to the "/users/sign_in"
       And I fill in "user_email" with "gitster@git.org"
       And I fill in "user_password" with "git rocks"
-      And I press "user_submit"
+      And I validate "#user_new" form
     Then I should see "Bonjour gitster@git.org"

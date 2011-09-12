@@ -17,7 +17,13 @@ Given /^I complete sign in form with email "([^"]*)" and password "([^"]*)"$/ do
   Given %{I go to the user session page}
     And %{I fill in "user_email" with "#{email}"}
     And %{I fill in "user_password" with "#{password}"}
-    And %{I press "user_submit"}  
+    # And %(show me the page)
+    # And %{I press "commit"}
+
+  within("#user_new") do
+    button = XPath.descendant(:input)[XPath.attr(:type) == 'submit']
+    find(:xpath, button, message: 'ouch!!').click
+  end
 end
 
 Given /^I (?:signed|sign) in as "([^"]*)"$/ do |email|

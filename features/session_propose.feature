@@ -8,6 +8,6 @@ Feature: Propose a new session
         |xp   |2033   |
     When I go to "/conferences/xp-2033/sessions/new"
       And I fill in "session_title" with "courage"
-      And I press "session_submit"
+      And I validate "#new_session" form
     Then I should be on "/conferences/xp-2033"
       And I should see "courage"
