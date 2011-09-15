@@ -13,10 +13,6 @@ development:
   host: localhost
   database: conference-on-rails-production
 
-cucumber:
-  host: localhost
-  database: conference_on_rails_test
-
 test:
   host: localhost
   database: conference_on_rails_test

@@ -51,8 +51,7 @@ group :assets do
   gem 'uglifier'
 end
 
-
-group :development, :test, :cucumber do
+group :development, :test do
   gem 'thin'
   gem 'rspec-rails'
 
@@ -65,7 +64,7 @@ group :development, :test, :cucumber do
   gem 'jasmine'
 end
 
-group :test, :cucumber do
+group :test do
   gem "rspec_tag_matchers"
   gem 'mongoid-rspec'
   gem 'wrong'
