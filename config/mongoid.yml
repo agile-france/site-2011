@@ -19,8 +19,8 @@ test:
 
 # set these environment variables on your prod server
 production:
-  <% if ENV['MONGOHQ_URL'] %>
-  uri: <%= ENV['MONGOHQ_URL'] %>
+  <% if ENV['MONGOLAB_URI'] %>
+  uri: <%= ENV['MONGOLAB_URI'] %>
   <% else %>
   host: localhost
   database: conference-on-rails-production
