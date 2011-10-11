@@ -4,12 +4,6 @@ class RegistrationsController < ApplicationController
   before_filter :load_conference, :only => [:new, :create]
   before_filter :load_registration, :only => [:edit, :update, :search]
 
-  cant do |action, registration|
-    if action == :assign
-      not current_user.admin? unless registration.invoice.user == current_user
-    end
-  end
-
   def new
     onoes :service_unavailable
   end
@@ -33,12 +27,6 @@ class RegistrationsController < ApplicationController
     @users = params[:q] ? User.where(:email => %r{#{params[:q]}}i) : User.all
     @users = @users.select {|u| not u.registered_to?(@registration.product)}
     respond_with(@users)
-  end
-
-  def assign
-    registration = Registration.find(params[:registration_id])
-    registration.update_attributes(:user_id => params[:user_id]) unless die_if_cant!(:update, registration)
-    redirect_to registrations_account_path
   end
 
   private

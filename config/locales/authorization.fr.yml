@@ -1,0 +1,4 @@
+fr:
+  unauthorized:
+    manage:
+      all: "Pas autorisé à %{action} ce(tte) %{subject}"

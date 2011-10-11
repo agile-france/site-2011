@@ -3,18 +3,11 @@ class SessionsController < ApplicationController
   # 1. authentication, for Create, Update
   # 2. authorization, for Update
   before_filter :authenticate_user!, :except => [:show]
-  before_filter :authorize_user!, :only => [:edit, :update, :destroy, :index]
-  cant do |action|
-    if action == :index
-      not current_user.admin?
-    else
-      current_user.nil? or not (current_user.admin? or current_session.user == current_user)
-    end
-  end
+  load_and_authorize_resource except: [:show]
 
   # supported formats
   respond_to :html, :json
-  
+
   def new
     @session = Session.new
   end
@@ -22,7 +15,7 @@ class SessionsController < ApplicationController
   def create
     @session = Session.new(params[:session])
     if current_user.propose(@session, current_conference)
-      redirect_to conference_path(current_conference), :notice => t('sessions.created!') 
+      redirect_to conference_path(current_conference), :notice => t('sessions.created!')
     else
       render :new
     end
@@ -53,11 +46,11 @@ class SessionsController < ApplicationController
     redirect_to sessions_account_path unless request.xhr?
   end
 
-  private  
+  private
   def current_session
     @session ||= Session.find(params[:id])
   end
-  
+
   # looks like this current_#{symbol} is a pattern
   # is it a good one ?, dunno at this time ... and looks like symbol requested in params is a pain
   def current_conference

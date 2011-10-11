@@ -16,16 +16,6 @@ class ApplicationController < ActionController::Base
     session[:locale] ? {:locale => session[:locale]} : {}
   end
 
-  # cancan does not integrate with mongoid
-  # see https://github.com/ryanb/cancan/pull/172
-  # so crafted an authorization library, named cant
-  include Cant::Embeddable
-  die {raise Cant::AccessDenied, I18n.translate('app.errors.access_denied')}
-  helper_method :cant?
-  def authorize_user!
-    die_if_cant!(params[:action])
-  end
-
   # seems to have a bug within [will_paginate, mongoid]
   # - not providing :per_page option cause unfunctional pager in view (Previous is unreachable)
   # - per_page is not looked in underlying model
@@ -45,6 +35,7 @@ class ApplicationController < ActionController::Base
     highlight(symbol, message)
   end
 
+  # devise hook
   def after_sign_in_path_for(resource_or_scope)
     edit_account_path
   end
@@ -52,7 +43,7 @@ class ApplicationController < ActionController::Base
   # rescues are strange ... https://rails.lighthouseapp.com/projects/8994/tickets/4444-can-no-longer-rescue_from-actioncontrollerroutingerror
   # from a testing point a view, dedicated middleware is appealing
   #
-  [Mongoid::Errors::DocumentNotFound, Cant::AccessDenied].each do |problem|
+  [Mongoid::Errors::DocumentNotFound, CanCan::AccessDenied].each do |problem|
     rescue_from(problem) do |error|
       rescue_with_appropriate_format_for(error)
     end

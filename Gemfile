@@ -18,7 +18,7 @@ gem 'devise'
 gem 'oa-oauth'
 gem 'oa-openid'
 
-# mardown
+# markdown
 gem 'rdiscount'
 
 # mongo
@@ -28,8 +28,8 @@ gem 'mongoid_rails_migrations'
 gem 'mongo'
 gem 'bson_ext'
 
-# cant
-gem 'cant'
+# authorization
+gem 'cancan'
 
 # json
 gem 'yajl-ruby', require: 'yajl'
@@ -65,12 +65,11 @@ group :development, :test do
 end
 
 group :test do
-  gem "rspec_tag_matchers"
+  gem 'rspec_tag_matchers'
   gem 'mongoid-rspec'
   gem 'wrong'
 
   # cucumber
-  gem 'cucumber'
   gem 'cucumber-rails'
   gem 'database_cleaner'
 

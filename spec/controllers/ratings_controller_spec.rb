@@ -8,7 +8,7 @@ describe RatingsController do
     before do
       sign_in(john)
     end
-    
+
     describe "can vote for mark session (POST /sessions/:awesome_session_id/ratings)" do
       before do
         post :create, :awesome_session_id => explained.id, :rating => {:stars => "5"}
@@ -21,7 +21,7 @@ describe RatingsController do
         assert {explained.ratings.first.stars == 5}
       end
     end
-        
+
     describe "can update its vote (PUT /sessions/:awesome_session_id/ratings/:id)" do
       before do
         [mark, john].each{|u| u.rate(explained, :stars => 5).save}
@@ -35,17 +35,6 @@ describe RatingsController do
         explained.reload
         assert {explained.stars == 3}
       end
-    end
-  end
-  
-  describe "authorization" do
-    touch_db_with(:john) {Fabricate(:user)} 
-    touch_db_with(:own) {Fabricate(:session, :title => 'own session', :user => john)}
-    before do
-      sign_in(john)
-    end 
-    it "john can vote for mark session" do
-      assert {@controller.cant?(:rate, own)}
     end
   end
 end

@@ -1,5 +1,5 @@
 .pad_2
   %h1= t('sessions.new?')
   = render 'form', :url => conference_sessions_path(@conference)
--# or embedd into .grid_12 | .clear,
--# .clear enable to see the end and have parent margin not fusioned : visual => parent background disappear
+
+= javascript_include_tag 'markdown'

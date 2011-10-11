@@ -9,7 +9,7 @@ describe Admin::AdminController do
       response.should redirect_to(new_user_session_path)
     end
   end
-  
+
   context "when signed in as a user" do
     touch_db_with(:user) {Fabricate(:user)}
     before do
