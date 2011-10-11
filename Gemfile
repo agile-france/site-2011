@@ -32,7 +32,7 @@ gem 'bson_ext'
 gem 'cant'
 
 # json
-gem 'yajl-ruby', :require => 'yajl'
+gem 'yajl-ruby', require: 'yajl'
 
 # xero
 gem 'xero-min', '>= 0.0.7'
@@ -52,13 +52,13 @@ group :assets do
 end
 
 group :development, :test do
-  gem 'thin'
+  gem 'rails-footnotes', '>= 3.7.5'
   gem 'rspec-rails'
 
   # factory (required for scaffold)
   gem 'fabrication'
 
-  gem 'ruby-debug19', :platforms => :mri_19
+  gem 'ruby-debug19', platforms: :mri_19
 
   # js
   gem 'jasmine'
@@ -91,5 +91,5 @@ group :test do
   gem 'mocha'
 
   # coverage
-  gem 'simplecov', :platforms => :mri_19, :require => false
+  gem 'simplecov', platforms: :mri_19, require: false
 end
