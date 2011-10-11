@@ -4,20 +4,3 @@
 %h3= link_to('Jobs', admin_jobs_path)
 %h3= link_to('Registrations', admin_registrations_path)
 %h3= link_to('Badges', 'admin/badges/show.svg')
-%p
-  Sauver le fichier en show.svg. Chaque page est un 'layer'. Il faut utiliser inkscape pour décomposer chaque layer en un fichier pdf:
-  %pre
-    inkscape --without-gui --file=show.svg --export-pdf=01_.pdf --export-id-only --export-area-page --export-id="layer1"
-  %pre
-    inkscape --without-gui --file=show.svg --export-pdf=02_.pdf --export-id-only --export-area-page --export-id="layer2"
-%p
-  Fusionner les pages pdf en un seul document:
-  %ul
-    %li
-      Sans perte de qualité:
-      %pre
-        pdftk *_.pdf cat output final.pdf
-    %li
-      Avec compression (sous Windows):
-      %pre
-        gswin32 -dNOPAUSE -sDEVICE=pdfwrite -sOUTPUTFILE=final-gs.pdf -dBATCH 01.pdf 02.pdf

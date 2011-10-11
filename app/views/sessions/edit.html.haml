@@ -1,3 +1,5 @@
 .pad_2
   %h1= t('sessions.update?')
   = render 'form', :url => awesome_session_path(@session)
+
+= javascript_include_tag 'markdown'
