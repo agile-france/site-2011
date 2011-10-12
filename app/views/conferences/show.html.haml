@@ -3,7 +3,8 @@
 
 %aside
   .buttons.grid_3.prefix_3= link_to t('sessions.new?'), new_conference_session_path(@conference)
-  .buttons.grid_3.suffix_3= link_to t('registrations.new?'), new_conference_registration_path(@conference)
+  - @conference.registration_engines.each do |engine|
+    .buttons.grid_3.suffix_3= link_to t('registrations.new?'), engine
 
 - @sessions.each do |session|
   = render 'sessions/header', :session => session

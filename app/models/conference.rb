@@ -8,7 +8,8 @@ class Conference
 
   field :name
   field :edition
-  attr_accessible :name, :edition
+  field :registration_engines, type: Array
+  attr_accessible :name, :edition, :registration_engines
   key :name, :edition
 
   # Public : new empty invoice for user
